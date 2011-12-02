@@ -9,8 +9,8 @@ CodeBuilder is a lightweight base Database Physical Data Model's C#/java/ruby co
 
 2.development tools
 
-  a.vs2010 professional or later,sharpdevelop4.1 (recommended)
-  b.ms.net 4.0 or mono.net2.10 
+  a.vs2010 professional or later,<a href="http://www.icsharpcode.net/opensource/sd/" target="_blank">sharpdevelop4.1</a> (recommended)
+  b.ms.net 4.0 or <a href="http://mono-project.com/Main_Page" target="_blank">mono.net2.10</a>
   c.nunit2.5 or later (http://nunit.org)
   d.moq3 or later (http://code.google.com/p/moq/)
   
