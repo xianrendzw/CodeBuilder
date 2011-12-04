@@ -40,7 +40,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\DatabaseException.cs" />
+    <Compile Include="Exporter\BaseExporter.cs" />
+    <Compile Include="Exporter\ExportConfig.cs" />
+    <Compile Include="Exporter\IExporter.cs" />
+    <Compile Include="Exporter\MySQL\MySqlExporter.cs" />
+    <Compile Include="Exporter\Oracle\Oracle8iExporter.cs" />
+    <Compile Include="Exporter\PowerDesigner\PowerDesigner12Exporter.cs" />
+    <Compile Include="Exporter\SQLServer\SqlServer2000Exporter.cs" />
+    <Compile Include="Exporter\SQLServer\SqlServer2005Exporter.cs" />
+    <Compile Include="Exporter\SQLServer\SqlServer2008Exporter.cs" />
+    <Compile Include="PhysicalDataModel\Column.cs" />
+    <Compile Include="PhysicalDataModel\Columns.cs" />
+    <Compile Include="PhysicalDataModel\Model.cs" />
+    <Compile Include="PhysicalDataModel\Table.cs" />
+    <Compile Include="PhysicalDataModel\Tables.cs" />
+    <Compile Include="PhysicalDataModel\View.cs" />
+    <Compile Include="PhysicalDataModel\Views.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplateEngine\ITemplateEngine.cs" />
+    <Compile Include="TypeMapping\DefaultTypeMapper.cs" />
+    <Compile Include="TypeMapping\ITypeMapper.cs" />
+    <Compile Include="TypeMapping\LanguageType.cs" />
+    <Compile Include="TypeMapping\TypeMapperFactory.cs" />
+    <Compile Include="Util\Enums.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
