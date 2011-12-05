@@ -31,14 +31,14 @@ namespace CodeBuilder.Util
         Oracle8i = 4,
 
         /// <summary>
-        /// SQL Lite2
+        /// SQLite2
         /// </summary>
-        SQLLite2 = 5,
+        SQLite2 = 5,
 
         /// <summary>
-        /// SQL Lite3
+        /// SQLite3
         /// </summary>
-        SQLLite3 = 6
+        SQLite3 = 6
     }
 
     /// <summary>

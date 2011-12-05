@@ -9,6 +9,7 @@ namespace CodeBuilder.DataSource.Exporter.PowerDesigner.Test
     using PowerDesigner;
     using PhysicalDataModel;
 
+    [Category("Exporter")]
     public class PowerDesigner12ExporterTest
     {
         private IExporter exporter;
