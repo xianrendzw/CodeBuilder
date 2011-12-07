@@ -1,4 +1,4 @@
-CodeBuilder is a lightweight base Database Physical Data Model's C#/java/ruby code generation tool.support microsoft .net framework 2.0,3.0,4.0 or mono.net runtime enviroments
+锘緾odeBuilder is a lightweight base Database Physical Data Model's C#/java/ruby code generation tool.support microsoft .net framework 2.0,3.0,4.0 or mono.net runtime enviroments
 
 1.Features
 
@@ -22,4 +22,3 @@ CodeBuilder is a lightweight base Database Physical Data Model's C#/java/ruby co
   d.Vici Engine http://viciproject.com/
  
 4.How to Building?
- 陈良仔到此一游
