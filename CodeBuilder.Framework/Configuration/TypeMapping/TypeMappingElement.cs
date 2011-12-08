@@ -22,11 +22,11 @@ namespace CodeBuilder.Configuration
             set { base["database"] = value; }
         }
 
-        [ConfigurationProperty("langauge", IsRequired = true, DefaultValue = "csharp")]
-        public String Langauge
+        [ConfigurationProperty("language", IsRequired = true, DefaultValue = "csharp")]
+        public String Language
         {
-            get { return base["langauge"].ToString(); }
-            set { base["langauge"] = value; }
+            get { return base["language"].ToString(); }
+            set { base["language"] = value; }
         }
 
         [ConfigurationProperty("types", IsRequired = true)]

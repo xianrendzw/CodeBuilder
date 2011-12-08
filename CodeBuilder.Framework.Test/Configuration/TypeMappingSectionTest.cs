@@ -15,7 +15,7 @@ namespace CodeBuilder.Configuration.Test
         [SetUp]
         public void Setup()
         {
-            this.section = (TypeMappingSection)ConfigurationManager.GetSection("codebuilder.typemapping");
+            this.section = (TypeMappingSection)ConfigurationManager.GetSection("codebuilder/typeMapping");
         }
 
         [Test]
@@ -27,11 +27,11 @@ namespace CodeBuilder.Configuration.Test
         [Test]
         public void Should_Return_Corrected_Values()
         {
-            Assert.That(2, Is.EqualTo(this.section.TypeMappings.Count));
-            Assert.That("sqlserver2005-csharp", Is.EqualTo(this.section.TypeMappings[0].Name));
-            Assert.That("sqlserver2005", Is.EqualTo(this.section.TypeMappings[0].Database));
-            Assert.That("csharp", Is.EqualTo(this.section.TypeMappings[0].Langauge));
-            Assert.That(1, Is.EqualTo(this.section.TypeMappings[0].Types.Count));
+            Assert.That(this.section.Mappings.Count, Is.EqualTo(4));
+            Assert.That(this.section.Mappings[0].Name, Is.EqualTo("sqlserver2005-csharp"));
+            Assert.That(this.section.Mappings[0].Database, Is.EqualTo("sqlserver2005"));
+            Assert.That(this.section.Mappings[0].Language, Is.EqualTo("csharp"));
+            Assert.That(this.section.Mappings[0].Types.Count, Is.EqualTo(25));
         }
 
         [TearDown]

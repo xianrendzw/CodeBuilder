@@ -6,7 +6,7 @@ using System.Configuration;
 
 namespace CodeBuilder.Configuration
 {
-    [ConfigurationCollection(typeof(TypeMappingElement), AddItemName = "typemapping")]
+    [ConfigurationCollection(typeof(TypeMappingElement), AddItemName = "mapping")]
     public sealed class TypeMappingElementCollection : ConfigurationElementCollection
     {
         public new TypeMappingElement this[string name]

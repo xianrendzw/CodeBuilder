@@ -8,10 +8,10 @@ namespace CodeBuilder.Configuration
 {
     public class TypeMappingSection : ConfigurationSection
     {
-        [ConfigurationProperty("typemappings", IsRequired = true)]
-        public TypeMappingElementCollection TypeMappings
+        [ConfigurationProperty("mappings", IsRequired = true)]
+        public TypeMappingElementCollection Mappings
         {
-            get { return (TypeMappingElementCollection)base["typemappings"]; }
+            get { return (TypeMappingElementCollection)base["mappings"]; }
         }
 
         protected override void PostDeserialize()
