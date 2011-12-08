@@ -22,7 +22,6 @@ namespace CodeBuilder.PhysicalDataModel
         protected bool _isNullable;
         protected bool _hasDefault;
         protected bool _isComputed;
-       
 
         /// <summary>
         /// 构造函数。

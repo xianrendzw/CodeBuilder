@@ -210,7 +210,7 @@ namespace CodeBuilder.DataSource.Exporter.PowerDesigner
             if (targetModelNodes == null ||
                 targetModelNodes.Count == 0)
             {
-                throw new DatabaseException("模型中未指定数据库系统类型,请指定一个数据库系统类型。");
+                throw new NotSetDatabaseException();
             }
 
             return targetModelNodes[0]["a:Code"].InnerText.Trim();

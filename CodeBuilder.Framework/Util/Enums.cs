@@ -6,7 +6,7 @@ using System.Text;
 namespace CodeBuilder.Util
 {
     /// <summary>
-    /// 数据库枚举
+    /// enumerator of database type
     /// </summary>
     public enum Database : uint
     {
@@ -42,22 +42,22 @@ namespace CodeBuilder.Util
     }
 
     /// <summary>
-    /// 程序设计语言枚举
+    /// enumerator of programming design languages
     /// </summary>
     public enum Language : uint
     {
         /// <summary>
-        /// C#程序设计语言
+        /// C#
         /// </summary>
         CSharp = 1,
 
         /// <summary>
-        /// JAVA程序设计语言
+        /// JAVA
         /// </summary>
         Java = 2,
 
         /// <summary>
-        /// Ruby程序设计语言
+        /// Ruby
         /// </summary>
         Ruby = 3,
     }

@@ -43,6 +43,5 @@ namespace CodeBuilder.DataSource.Exporter.PowerDesigner.Test
         {
             this.exporter = null;
         }
-
     }
 }
