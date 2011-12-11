@@ -38,22 +38,21 @@
             this.toolsSettngsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsSeparator1MenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.toolsDSConfigMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.templatesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.helpF1MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpSeparator1MenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.helpAboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.statusBarReady = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusBarDatabase = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusBarLanguage = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusBarEncoding = new System.Windows.Forms.ToolStripStatusLabel();
             this.openPDMFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.treeView = new System.Windows.Forms.TreeView();
             this.gbxResult = new System.Windows.Forms.GroupBox();
             this.gbxGenItems = new System.Windows.Forms.GroupBox();
-            this.statusBarReady = new System.Windows.Forms.ToolStripStatusLabel();
-            this.templatesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.mainMenuStrip.SuspendLayout();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
@@ -90,12 +89,14 @@
             this.fileImportPdmMenuItem.Name = "fileImportPdmMenuItem";
             this.fileImportPdmMenuItem.Size = new System.Drawing.Size(282, 22);
             this.fileImportPdmMenuItem.Text = "Import From &PowerDesigner PDM File...";
+            this.fileImportPdmMenuItem.Click += new System.EventHandler(this.fileImportPdmMenuItem_Click);
             // 
             // fileImportMenuItem
             // 
             this.fileImportMenuItem.Name = "fileImportMenuItem";
             this.fileImportMenuItem.Size = new System.Drawing.Size(282, 22);
             this.fileImportMenuItem.Text = "&Import...";
+            this.fileImportMenuItem.Click += new System.EventHandler(this.fileImportMenuItem_Click);
             // 
             // fileSeparator1MenuItem
             // 
@@ -107,6 +108,7 @@
             this.fileExitMenuItem.Name = "fileExitMenuItem";
             this.fileExitMenuItem.Size = new System.Drawing.Size(282, 22);
             this.fileExitMenuItem.Text = "&Exit";
+            this.fileExitMenuItem.Click += new System.EventHandler(this.fileExitMenuItem_Click);
             // 
             // toolsMenu
             // 
@@ -136,6 +138,12 @@
             this.toolsDSConfigMenuItem.Size = new System.Drawing.Size(220, 22);
             this.toolsDSConfigMenuItem.Text = "&DataSource Configuration...";
             // 
+            // templatesMenuItem
+            // 
+            this.templatesMenuItem.Name = "templatesMenuItem";
+            this.templatesMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.templatesMenuItem.Text = "&Templates...";
+            // 
             // helpMenu
             // 
             this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -153,6 +161,7 @@
             this.helpF1MenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.helpF1MenuItem.Size = new System.Drawing.Size(195, 22);
             this.helpF1MenuItem.Text = "CodeBuilder Help...";
+            this.helpF1MenuItem.Click += new System.EventHandler(this.helpF1MenuItem_Click);
             // 
             // helpSeparator1MenuItem
             // 
@@ -164,19 +173,42 @@
             this.helpAboutMenuItem.Name = "helpAboutMenuItem";
             this.helpAboutMenuItem.Size = new System.Drawing.Size(195, 22);
             this.helpAboutMenuItem.Text = "About CodeBuilder...";
+            this.helpAboutMenuItem.Click += new System.EventHandler(this.helpAboutMenuItem_Click);
             // 
             // mainStatusStrip
             // 
             this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusBarReady,
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2,
-            this.toolStripStatusLabel3,
-            this.toolStripStatusLabel4});
+            this.statusBarDatabase,
+            this.statusBarLanguage,
+            this.statusBarEncoding});
             this.mainStatusStrip.Location = new System.Drawing.Point(0, 430);
             this.mainStatusStrip.Name = "mainStatusStrip";
             this.mainStatusStrip.Size = new System.Drawing.Size(744, 22);
             this.mainStatusStrip.TabIndex = 1;
+            // 
+            // statusBarReady
+            // 
+            this.statusBarReady.Name = "statusBarReady";
+            this.statusBarReady.Size = new System.Drawing.Size(729, 17);
+            this.statusBarReady.Spring = true;
+            this.statusBarReady.Text = "Ready";
+            this.statusBarReady.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // statusBarDatabase
+            // 
+            this.statusBarDatabase.Name = "statusBarDatabase";
+            this.statusBarDatabase.Size = new System.Drawing.Size(0, 17);
+            // 
+            // statusBarLanguage
+            // 
+            this.statusBarLanguage.Name = "statusBarLanguage";
+            this.statusBarLanguage.Size = new System.Drawing.Size(0, 17);
+            // 
+            // statusBarEncoding
+            // 
+            this.statusBarEncoding.Name = "statusBarEncoding";
+            this.statusBarEncoding.Size = new System.Drawing.Size(0, 17);
             // 
             // openPDMFileDialog
             // 
@@ -234,44 +266,6 @@
             this.gbxGenItems.TabStop = false;
             this.gbxGenItems.Text = "Generation Settings";
             // 
-            // statusBarReady
-            // 
-            this.statusBarReady.Name = "statusBarReady";
-            this.statusBarReady.Size = new System.Drawing.Size(257, 17);
-            this.statusBarReady.Spring = true;
-            this.statusBarReady.Text = "Ready";
-            this.statusBarReady.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // templatesMenuItem
-            // 
-            this.templatesMenuItem.Name = "templatesMenuItem";
-            this.templatesMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.templatesMenuItem.Text = "&Templates...";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
-            // 
-            // toolStripStatusLabel3
-            // 
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel3.Text = "toolStripStatusLabel3";
-            // 
-            // toolStripStatusLabel4
-            // 
-            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel4.Text = "toolStripStatusLabel4";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,10 +315,9 @@
         private System.Windows.Forms.GroupBox gbxResult;
         private System.Windows.Forms.ToolStripMenuItem templatesMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel statusBarReady;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
+        private System.Windows.Forms.ToolStripStatusLabel statusBarDatabase;
+        private System.Windows.Forms.ToolStripStatusLabel statusBarLanguage;
+        private System.Windows.Forms.ToolStripStatusLabel statusBarEncoding;
     }
 }
 
