@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\CodeBuilderConfiguration.cs" />
     <Compile Include="Configuration\Settings\SettingsSection.cs" />
     <Compile Include="Configuration\TypeMapping\TypeElement.cs" />
     <Compile Include="Configuration\TypeMapping\TypeElementCollection.cs" />
@@ -93,7 +94,11 @@
     <Compile Include="TypeMapping\ITypeMapper.cs" />
     <Compile Include="TypeMapping\LanguageType.cs" />
     <Compile Include="TypeMapping\TypeMapperFactory.cs" />
+    <Compile Include="Util\AssemblyHelper.cs" />
     <Compile Include="Util\Enums.cs" />
+    <Compile Include="Util\Logging\InternalTrace.cs" />
+    <Compile Include="Util\Logging\InternalTraceWriter.cs" />
+    <Compile Include="Util\Logging\Logger.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

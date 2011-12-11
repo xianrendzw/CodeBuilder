@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CodeBuilder.Exceptions
 {
-    public class NotSetDatabaseException : ApplicationException
+    public class NotSetDatabaseException : Exception
     {
         public NotSetDatabaseException()
             : this("模型中未指定数据库系统类型,请指定一个数据库系统类型。")

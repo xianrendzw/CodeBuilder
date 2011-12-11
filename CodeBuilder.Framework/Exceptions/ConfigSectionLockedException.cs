@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CodeBuilder.Exceptions
 {
-    public class ConfigSectionLockedException: ApplicationException
+    public class ConfigSectionLockedException: Exception
     {
         public ConfigSectionLockedException()
             :this("配置节被锁定。")

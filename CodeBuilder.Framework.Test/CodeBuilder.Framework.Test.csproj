@@ -74,6 +74,7 @@
     <Compile Include="Configuration\TypeMappingSectionTest.cs" />
     <Compile Include="Exporter\PowerDesigner\PowerDesigner12ExporterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Logging\LoggerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodeBuilder.Framework\CodeBuilder.Framework.csproj">

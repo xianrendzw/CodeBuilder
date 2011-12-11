@@ -8,37 +8,32 @@ namespace CodeBuilder.Util
     /// <summary>
     /// enumerator of database type
     /// </summary>
-    public enum Database : uint
+    public enum Database
     {
         /// <summary>
         /// Microsoft SQL Server 2000
         /// </summary>
-        MSSQLServer2000 = 1,
+        MSSQLServer2000,
 
         /// <summary>
         /// Microsoft SQL Server 2005
         /// </summary>
-        MSSQLServer2005 = 2,
+        MSSQLServer2005,
 
         /// <summary>
         /// MySQL 5.0
         /// </summary>
-        MySQL5 = 3,
+        MySQL5,
 
         /// <summary>
         /// Oracle8i
         /// </summary>
-        Oracle8i = 4,
-
-        /// <summary>
-        /// SQLite2
-        /// </summary>
-        SQLite2 = 5,
+        Oracle8i,
 
         /// <summary>
         /// SQLite3
         /// </summary>
-        SQLite3 = 6
+        SQLite3
     }
 
     /// <summary>
@@ -49,16 +44,16 @@ namespace CodeBuilder.Util
         /// <summary>
         /// C#
         /// </summary>
-        CSharp = 1,
+        CSharp,
 
         /// <summary>
         /// JAVA
         /// </summary>
-        Java = 2,
+        Java,
 
         /// <summary>
         /// Ruby
         /// </summary>
-        Ruby = 3,
+        Ruby,
     }
 }
