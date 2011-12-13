@@ -2,10 +2,6 @@ using System;
 
 namespace CodeBuilder.Util
 {
-    /// <summary>
-    /// InternalTraceLevel is an enumeration controlling the
-    /// level of detailed presented in the internal log.
-    /// </summary>
     public enum InternalTraceLevel
     {
         Default,
@@ -16,9 +12,6 @@ namespace CodeBuilder.Util
         Verbose
     }
     
-    /// <summary>
-	/// Summary description for Logger.
-	/// </summary>
 	public class InternalTrace
 	{
         private readonly static string TIME_FMT = "HH:mm:ss.fff";

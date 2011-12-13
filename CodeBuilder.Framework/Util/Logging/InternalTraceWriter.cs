@@ -4,10 +4,6 @@ using System.IO;
 
 namespace CodeBuilder.Util
 {
-	/// <summary>
-	/// A trace listener that writes to a separate file per domain
-	/// and process using it.
-	/// </summary>
 	public class InternalTraceWriter : TextWriter
 	{
         StreamWriter writer;

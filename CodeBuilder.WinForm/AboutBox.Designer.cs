@@ -100,13 +100,13 @@
             // 
             // infoLinkLabel
             // 
-            this.infoLinkLabel.LinkArea = new System.Windows.Forms.LinkArea(0, 37);
+            this.infoLinkLabel.LinkArea = new System.Windows.Forms.LinkArea(0, 48);
             this.infoLinkLabel.Location = new System.Drawing.Point(157, 104);
             this.infoLinkLabel.Name = "infoLinkLabel";
             this.infoLinkLabel.Size = new System.Drawing.Size(266, 16);
             this.infoLinkLabel.TabIndex = 18;
             this.infoLinkLabel.TabStop = true;
-            this.infoLinkLabel.Text = "http://www.dengzhiwei.com/codebuilder";
+            this.infoLinkLabel.Text = "http://www.dengzhiwei.com/category/codebuilder\r\n";
             this.infoLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.infoLinkLabel_LinkClicked);
             // 
             // label3
