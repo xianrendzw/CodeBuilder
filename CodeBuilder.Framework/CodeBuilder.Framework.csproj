@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\CodeBuilderConfiguration.cs" />
+    <Compile Include="Configuration\Interfaces\ISettings.cs" />
     <Compile Include="Configuration\Settings\SettingsSection.cs" />
     <Compile Include="Configuration\TypeMapping\TypeElement.cs" />
     <Compile Include="Configuration\TypeMapping\TypeElementCollection.cs" />

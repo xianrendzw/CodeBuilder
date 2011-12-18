@@ -1,6 +1,6 @@
-﻿namespace CodeBuilder.WinForm.SettingsPages
+﻿namespace CodeBuilder.WinForm.UiKit
 {
-    partial class BasicSettingsPage
+    partial class SettingsPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // BaseSettingsPage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "BaseSettingsPage";
+            this.Size = new System.Drawing.Size(456, 336);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

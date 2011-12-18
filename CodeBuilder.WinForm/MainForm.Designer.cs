@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileOpenMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileSeparator2MenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.fileImportPdmMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileImportMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileSeparator1MenuItem = new System.Windows.Forms.ToolStripSeparator();
@@ -48,17 +52,28 @@
             this.statusBarDatabase = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusBarLanguage = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusBarEncoding = new System.Windows.Forms.ToolStripStatusLabel();
-            this.openPDMFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.treeView = new System.Windows.Forms.TreeView();
             this.gbxResult = new System.Windows.Forms.GroupBox();
             this.gbxGenItems = new System.Windows.Forms.GroupBox();
+            this.treeNodeImageList = new System.Windows.Forms.ImageList(this.components);
+            this.generateBtn = new System.Windows.Forms.Button();
+            this.treeViewContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.importPDMCtxMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openCtxMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importDataSourceCtxMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearCtxMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ctxSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.mainMenuStrip.SuspendLayout();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
+            this.gbxGenItems.SuspendLayout();
+            this.treeViewContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenuStrip
@@ -76,6 +91,8 @@
             // fileMenu
             // 
             this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileOpenMenuItem,
+            this.fileSeparator2MenuItem,
             this.fileImportPdmMenuItem,
             this.fileImportMenuItem,
             this.fileSeparator1MenuItem,
@@ -83,6 +100,18 @@
             this.fileMenu.Name = "fileMenu";
             this.fileMenu.Size = new System.Drawing.Size(37, 20);
             this.fileMenu.Text = "&File";
+            // 
+            // fileOpenMenuItem
+            // 
+            this.fileOpenMenuItem.Name = "fileOpenMenuItem";
+            this.fileOpenMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.fileOpenMenuItem.Text = "&Open";
+            this.fileOpenMenuItem.Click += new System.EventHandler(this.fileOpenMenuItem_Click);
+            // 
+            // fileSeparator2MenuItem
+            // 
+            this.fileSeparator2MenuItem.Name = "fileSeparator2MenuItem";
+            this.fileSeparator2MenuItem.Size = new System.Drawing.Size(279, 6);
             // 
             // fileImportPdmMenuItem
             // 
@@ -126,6 +155,7 @@
             this.toolsSettngsMenuItem.Name = "toolsSettngsMenuItem";
             this.toolsSettngsMenuItem.Size = new System.Drawing.Size(220, 22);
             this.toolsSettngsMenuItem.Text = "&Settings...";
+            this.toolsSettngsMenuItem.Click += new System.EventHandler(this.toolsSettngsMenuItem_Click);
             // 
             // toolsSeparator1MenuItem
             // 
@@ -210,10 +240,9 @@
             this.statusBarEncoding.Name = "statusBarEncoding";
             this.statusBarEncoding.Size = new System.Drawing.Size(0, 17);
             // 
-            // openPDMFileDialog
+            // openFileDialog
             // 
-            this.openPDMFileDialog.Filter = "Physical Data Model (*.pdm)|*.pdm";
-            this.openPDMFileDialog.Title = "Open PowerDesigner PDM File";
+            this.openFileDialog.Title = "Open PowerDesigner PDM File";
             // 
             // splitContainer
             // 
@@ -238,11 +267,17 @@
             // 
             // treeView
             // 
+            this.treeView.CheckBoxes = true;
+            this.treeView.ContextMenuStrip = this.treeViewContextMenu;
             this.treeView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView.ImageIndex = 0;
+            this.treeView.ImageList = this.treeNodeImageList;
             this.treeView.Location = new System.Drawing.Point(3, 3);
             this.treeView.Name = "treeView";
+            this.treeView.SelectedImageIndex = 0;
             this.treeView.Size = new System.Drawing.Size(200, 400);
             this.treeView.TabIndex = 0;
+            this.treeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.treeView_AfterCheck);
             // 
             // gbxResult
             // 
@@ -259,12 +294,82 @@
             this.gbxGenItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbxGenItems.Controls.Add(this.generateBtn);
             this.gbxGenItems.Location = new System.Drawing.Point(1, 3);
             this.gbxGenItems.Name = "gbxGenItems";
             this.gbxGenItems.Size = new System.Drawing.Size(531, 259);
             this.gbxGenItems.TabIndex = 0;
             this.gbxGenItems.TabStop = false;
             this.gbxGenItems.Text = "Generation Settings";
+            // 
+            // treeNodeImageList
+            // 
+            this.treeNodeImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("treeNodeImageList.ImageStream")));
+            this.treeNodeImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.treeNodeImageList.Images.SetKeyName(0, "folderClosed.gif");
+            this.treeNodeImageList.Images.SetKeyName(1, "folderOpen.gif");
+            this.treeNodeImageList.Images.SetKeyName(2, "leaf.gif");
+            // 
+            // generateBtn
+            // 
+            this.generateBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.generateBtn.Location = new System.Drawing.Point(446, 218);
+            this.generateBtn.Name = "generateBtn";
+            this.generateBtn.Size = new System.Drawing.Size(75, 23);
+            this.generateBtn.TabIndex = 1;
+            this.generateBtn.Text = "Generate";
+            this.generateBtn.UseVisualStyleBackColor = true;
+            this.generateBtn.Click += new System.EventHandler(this.generateBtn_Click);
+            // 
+            // treeViewContextMenu
+            // 
+            this.treeViewContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openCtxMenuItem,
+            this.ctxSeparator1,
+            this.importPDMCtxMenuItem,
+            this.importDataSourceCtxMenuItem,
+            this.ctxSeparator2,
+            this.clearCtxMenuItem});
+            this.treeViewContextMenu.Name = "treeViewContextMenu";
+            this.treeViewContextMenu.Size = new System.Drawing.Size(227, 104);
+            // 
+            // importPDMCtxMenuItem
+            // 
+            this.importPDMCtxMenuItem.Name = "importPDMCtxMenuItem";
+            this.importPDMCtxMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.importPDMCtxMenuItem.Text = "Import From PDM Files...";
+            this.importPDMCtxMenuItem.Click += new System.EventHandler(this.importPDMCtxMenuItem_Click);
+            // 
+            // openCtxMenuItem
+            // 
+            this.openCtxMenuItem.Name = "openCtxMenuItem";
+            this.openCtxMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.openCtxMenuItem.Text = "Open Generation Items File...";
+            this.openCtxMenuItem.Click += new System.EventHandler(this.openCtxMenuItem_Click);
+            // 
+            // importDataSourceCtxMenuItem
+            // 
+            this.importDataSourceCtxMenuItem.Name = "importDataSourceCtxMenuItem";
+            this.importDataSourceCtxMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.importDataSourceCtxMenuItem.Text = "Import From DataSource...";
+            this.importDataSourceCtxMenuItem.Click += new System.EventHandler(this.importDataSourceCtxMenuItem_Click);
+            // 
+            // clearCtxMenuItem
+            // 
+            this.clearCtxMenuItem.Name = "clearCtxMenuItem";
+            this.clearCtxMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.clearCtxMenuItem.Text = "Clear";
+            this.clearCtxMenuItem.Click += new System.EventHandler(this.clearCtxMenuItem_Click);
+            // 
+            // ctxSeparator1
+            // 
+            this.ctxSeparator1.Name = "ctxSeparator1";
+            this.ctxSeparator1.Size = new System.Drawing.Size(223, 6);
+            // 
+            // ctxSeparator2
+            // 
+            this.ctxSeparator2.Name = "ctxSeparator2";
+            this.ctxSeparator2.Size = new System.Drawing.Size(223, 6);
             // 
             // MainForm
             // 
@@ -277,6 +382,7 @@
             this.MainMenuStrip = this.mainMenuStrip;
             this.MinimumSize = new System.Drawing.Size(160, 38);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CodeBuilder";
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();
@@ -286,6 +392,8 @@
             this.splitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
+            this.gbxGenItems.ResumeLayout(false);
+            this.treeViewContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,7 +416,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileExitMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolsSeparator1MenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsDSConfigMenuItem;
-        private System.Windows.Forms.OpenFileDialog openPDMFileDialog;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.SplitContainer splitContainer;
         private System.Windows.Forms.TreeView treeView;
         private System.Windows.Forms.GroupBox gbxGenItems;
@@ -318,6 +426,17 @@
         private System.Windows.Forms.ToolStripStatusLabel statusBarDatabase;
         private System.Windows.Forms.ToolStripStatusLabel statusBarLanguage;
         private System.Windows.Forms.ToolStripStatusLabel statusBarEncoding;
+        private System.Windows.Forms.ToolStripMenuItem fileOpenMenuItem;
+        private System.Windows.Forms.ToolStripSeparator fileSeparator2MenuItem;
+        private System.Windows.Forms.ImageList treeNodeImageList;
+        private System.Windows.Forms.Button generateBtn;
+        private System.Windows.Forms.ContextMenuStrip treeViewContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem openCtxMenuItem;
+        private System.Windows.Forms.ToolStripSeparator ctxSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem importPDMCtxMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importDataSourceCtxMenuItem;
+        private System.Windows.Forms.ToolStripSeparator ctxSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem clearCtxMenuItem;
     }
 }
 

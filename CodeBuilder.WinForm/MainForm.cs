@@ -10,6 +10,8 @@ using System.Windows.Forms;
 namespace CodeBuilder.WinForm
 {
     using Configuration;
+    using UiKit;
+    using Util;
 
     public partial class MainForm : Form
     {
@@ -21,11 +23,29 @@ namespace CodeBuilder.WinForm
         #region Menu Handlers
 
         #region File Menu
+        private void fileOpenMenuItem_Click(object sender, EventArgs e)
+        {
+            this.openFileDialog.Filter = "Generation Settings (*.xml)|*.xml";
+            if (this.openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string xmlFileName = this.openFileDialog.FileName;
+            }
+        }
+
         private void fileImportPdmMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.openPDMFileDialog.ShowDialog() == DialogResult.OK)
+            this.openFileDialog.Filter = "Physical Data Model (*.pdm)|*.pdm";
+            if (this.openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string pdmFileName = this.openPDMFileDialog.FileName;
+                string pdmFileName = this.openFileDialog.FileName;
+                try
+                {
+                    ImportModelHelper.Import(pdmFileName, this.treeView);
+                }
+                catch (Exception ex)
+                {
+                    MessageBoxHelper.Display(ex.Message);
+                }
             }
         }
 
@@ -38,10 +58,20 @@ namespace CodeBuilder.WinForm
         {
             this.Close();
         }
+
+        private void treeView_AfterCheck(object sender, TreeViewEventArgs e)
+        {
+            ImportModelHelper.CheckedTreeNode(e.Node);
+        }
+
         #endregion
 
         #region Tools Menu
 
+        private void toolsSettngsMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingsOptionDialog.Display(this);
+        }
 
         #endregion
 
@@ -62,7 +92,32 @@ namespace CodeBuilder.WinForm
 
         #endregion
 
+        private void generateBtn_Click(object sender, EventArgs e)
+        {
+            List<string> l = ImportModelHelper.GetCheckedTags(this.treeView.Nodes);
+            int n = l.Count;
+        }
+
         #endregion
 
+        private void openCtxMenuItem_Click(object sender, EventArgs e)
+        {
+            this.fileOpenMenuItem_Click(sender, e);
+        }
+
+        private void importPDMCtxMenuItem_Click(object sender, EventArgs e)
+        {
+            this.fileImportPdmMenuItem_Click(sender, e);
+        }
+
+        private void importDataSourceCtxMenuItem_Click(object sender, EventArgs e)
+        {
+            this.fileImportMenuItem_Click(sender, e);
+        }
+
+        private void clearCtxMenuItem_Click(object sender, EventArgs e)
+        {
+            this.treeView.Nodes.Clear();
+        }
     }
 }

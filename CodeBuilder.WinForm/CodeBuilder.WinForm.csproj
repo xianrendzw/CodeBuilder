@@ -89,11 +89,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SettingsPages\BasicSettingsPage.cs">
+    <Compile Include="SettingsOptionDialog.cs" />
+    <Compile Include="UiKit\AppContainer.cs" />
+    <Compile Include="UiKit\Forms\SettingsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SettingsPages\BasicSettingsPage.Designer.cs">
-      <DependentUpon>BasicSettingsPage.cs</DependentUpon>
+    <Compile Include="UiKit\Forms\SettingsPage.Designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="SettingsPages\TraceSettingsPage.cs">
       <SubType>UserControl</SubType>
@@ -113,6 +115,20 @@
     <Compile Include="TemplatePages\NormalTemplatePage.Designer.cs">
       <DependentUpon>NormalTemplatePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UiKit\Forms\BaseSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiKit\Forms\BaseSettingsDialog.Designer.cs">
+      <DependentUpon>BaseSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiKit\Forms\TreeSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiKit\Forms\TreeSettingsDialog.Designer.cs">
+      <DependentUpon>TreeSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiKit\Helpers\ImportModelHelper.cs" />
+    <Compile Include="UiKit\Helpers\MessageBoxHelper.cs" />
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +148,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SettingsPages\TraceSettingsPage.resx">
+      <DependentUpon>TraceSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplatePages\ArchitectureTemplatePage.resx">
+      <DependentUpon>ArchitectureTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiKit\Forms\BaseSettingsDialog.resx">
+      <DependentUpon>BaseSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiKit\Forms\SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiKit\Forms\TreeSettingsDialog.resx">
+      <DependentUpon>TreeSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -149,7 +180,11 @@
       <Name>CodeBuilder.Framework</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\Images\folderClosed.gif" />
+    <Content Include="Resources\Images\folderOpen.gif" />
+    <Content Include="Resources\Images\leaf.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

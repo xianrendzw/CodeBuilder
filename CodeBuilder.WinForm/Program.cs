@@ -5,6 +5,8 @@ using System.Windows.Forms;
 
 namespace CodeBuilder.WinForm
 {
+    using UiKit;
+
     static class Program
     {
         /// <summary>
@@ -15,7 +17,12 @@ namespace CodeBuilder.WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            AppContainer c = new AppContainer();
+            MainForm form = new MainForm();
+            c.Add(form);
+
+            Application.Run(form);
         }
     }
 }
