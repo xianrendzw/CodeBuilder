@@ -1,4 +1,4 @@
-﻿namespace CodeBuilder.WinForm.UiKit
+﻿namespace CodeBuilder.WinForm.UI
 {
     partial class TreeSettingsDialog
     {

@@ -6,8 +6,8 @@ using System.Windows.Forms;
 
 namespace CodeBuilder.WinForm
 {
-    using UiKit;
-    using SettingsPages;
+    using UI;
+    using UI.SettingsPages;
 
     public class SettingsOptionDialog
     {

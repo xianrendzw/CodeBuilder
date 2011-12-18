@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace CodeBuilder.WinForm
 {
-    using UiKit;
+    using UI;
 
     static class Program
     {

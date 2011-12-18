@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Reflection;
 
-namespace CodeBuilder.WinForm
+namespace CodeBuilder.WinForm.UI
 {
     public partial class AboutBox : Form
     {

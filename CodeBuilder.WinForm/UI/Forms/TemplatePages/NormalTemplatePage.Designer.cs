@@ -1,4 +1,4 @@
-﻿namespace CodeBuilder.WinForm.TemplatePages
+﻿namespace CodeBuilder.WinForm.UI.TemplatePages
 {
     partial class NormalTemplatePage
     {

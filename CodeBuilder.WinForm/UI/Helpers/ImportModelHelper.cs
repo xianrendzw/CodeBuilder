@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CodeBuilder.WinForm.UiKit
+namespace CodeBuilder.WinForm.UI
 {
     using PhysicalDataModel;
     using DataSource.Exporter;

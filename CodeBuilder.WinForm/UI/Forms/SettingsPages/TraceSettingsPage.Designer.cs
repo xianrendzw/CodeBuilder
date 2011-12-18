@@ -1,4 +1,4 @@
-﻿namespace CodeBuilder.WinForm.SettingsPages
+﻿namespace CodeBuilder.WinForm.UI.SettingsPages
 {
     partial class TraceSettingsPage
     {

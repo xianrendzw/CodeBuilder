@@ -69,16 +69,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox.cs">
+    <Compile Include="UI\Forms\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutBox.Designer.cs">
+    <Compile Include="UI\Forms\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataSourceConfigBox.cs">
+    <Compile Include="UI\Forms\SettingsPages\DataSourceConfigBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DataSourceConfigBox.Designer.cs">
+    <Compile Include="UI\Forms\SettingsPages\DataSourceConfigBox.Designer.cs">
       <DependentUpon>DataSourceConfigBox.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -89,50 +89,50 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SettingsOptionDialog.cs" />
-    <Compile Include="UiKit\AppContainer.cs" />
-    <Compile Include="UiKit\Forms\SettingsPage.cs">
+    <Compile Include="UI\SettingsOptionDialog.cs" />
+    <Compile Include="UI\AppContainer.cs" />
+    <Compile Include="UI\Forms\SettingsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UiKit\Forms\SettingsPage.Designer.cs">
+    <Compile Include="UI\Forms\SettingsPage.Designer.cs">
       <DependentUpon>SettingsPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="SettingsPages\TraceSettingsPage.cs">
+    <Compile Include="UI\Forms\SettingsPages\TraceSettingsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SettingsPages\TraceSettingsPage.Designer.cs">
+    <Compile Include="UI\Forms\SettingsPages\TraceSettingsPage.Designer.cs">
       <DependentUpon>TraceSettingsPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="TemplatePages\ArchitectureTemplatePage.cs">
+    <Compile Include="UI\Forms\TemplatePages\ArchitectureTemplatePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TemplatePages\ArchitectureTemplatePage.Designer.cs">
+    <Compile Include="UI\Forms\TemplatePages\ArchitectureTemplatePage.Designer.cs">
       <DependentUpon>ArchitectureTemplatePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="TemplatePages\NormalTemplatePage.cs">
+    <Compile Include="UI\Forms\TemplatePages\NormalTemplatePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TemplatePages\NormalTemplatePage.Designer.cs">
+    <Compile Include="UI\Forms\TemplatePages\NormalTemplatePage.Designer.cs">
       <DependentUpon>NormalTemplatePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UiKit\Forms\BaseSettingsDialog.cs">
+    <Compile Include="UI\Forms\BaseSettingsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UiKit\Forms\BaseSettingsDialog.Designer.cs">
+    <Compile Include="UI\Forms\BaseSettingsDialog.Designer.cs">
       <DependentUpon>BaseSettingsDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="UiKit\Forms\TreeSettingsDialog.cs">
+    <Compile Include="UI\Forms\TreeSettingsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UiKit\Forms\TreeSettingsDialog.Designer.cs">
+    <Compile Include="UI\Forms\TreeSettingsDialog.Designer.cs">
       <DependentUpon>TreeSettingsDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="UiKit\Helpers\ImportModelHelper.cs" />
-    <Compile Include="UiKit\Helpers\MessageBoxHelper.cs" />
-    <EmbeddedResource Include="AboutBox.resx">
+    <Compile Include="UI\Helpers\ImportModelHelper.cs" />
+    <Compile Include="UI\Helpers\MessageBoxHelper.cs" />
+    <EmbeddedResource Include="UI\Forms\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataSourceConfigBox.resx">
+    <EmbeddedResource Include="UI\Forms\SettingsPages\DataSourceConfigBox.resx">
       <DependentUpon>DataSourceConfigBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -148,19 +148,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SettingsPages\TraceSettingsPage.resx">
+    <EmbeddedResource Include="UI\Forms\SettingsPages\TraceSettingsPage.resx">
       <DependentUpon>TraceSettingsPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TemplatePages\ArchitectureTemplatePage.resx">
+    <EmbeddedResource Include="UI\Forms\TemplatePages\ArchitectureTemplatePage.resx">
       <DependentUpon>ArchitectureTemplatePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UiKit\Forms\BaseSettingsDialog.resx">
+    <EmbeddedResource Include="UI\Forms\BaseSettingsDialog.resx">
       <DependentUpon>BaseSettingsDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UiKit\Forms\SettingsPage.resx">
+    <EmbeddedResource Include="UI\Forms\SettingsPage.resx">
       <DependentUpon>SettingsPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UiKit\Forms\TreeSettingsDialog.resx">
+    <EmbeddedResource Include="UI\Forms\TreeSettingsDialog.resx">
       <DependentUpon>TreeSettingsDialog.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />

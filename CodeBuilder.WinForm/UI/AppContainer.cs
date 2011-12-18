@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Windows.Forms;
 
-namespace CodeBuilder.WinForm.UiKit
+namespace CodeBuilder.WinForm.UI
 {
     public class AppContainer : Container
     {

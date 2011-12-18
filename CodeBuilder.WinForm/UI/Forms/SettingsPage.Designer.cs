@@ -1,6 +1,6 @@
-﻿namespace CodeBuilder.WinForm.TemplatePages
+﻿namespace CodeBuilder.WinForm.UI
 {
-    partial class ArchitectureTemplatePage
+    partial class SettingsPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // ArchitectureTemplatePage
+            // BaseSettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "ArchitectureTemplatePage";
-            this.Size = new System.Drawing.Size(374, 337);
+            this.Name = "BaseSettingsPage";
+            this.Size = new System.Drawing.Size(456, 336);
             this.ResumeLayout(false);
 
         }

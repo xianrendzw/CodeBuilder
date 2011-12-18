@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace CodeBuilder.WinForm
 {
     using Configuration;
-    using UiKit;
+    using UI;
     using Util;
 
     public partial class MainForm : Form

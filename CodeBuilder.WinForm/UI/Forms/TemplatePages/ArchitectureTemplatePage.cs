@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CodeBuilder.WinForm.TemplatePages
+namespace CodeBuilder.WinForm.UI.TemplatePages
 {
-    public partial class NormalTemplatePage : UserControl
+    public partial class ArchitectureTemplatePage : UserControl
     {
-        public NormalTemplatePage()
+        public ArchitectureTemplatePage()
         {
             InitializeComponent();
         }

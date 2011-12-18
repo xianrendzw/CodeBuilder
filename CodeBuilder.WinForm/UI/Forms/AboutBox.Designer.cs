@@ -1,4 +1,4 @@
-﻿namespace CodeBuilder.WinForm
+﻿namespace CodeBuilder.WinForm.UI
 {
     partial class AboutBox
     {
