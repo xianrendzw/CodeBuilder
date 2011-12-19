@@ -29,6 +29,7 @@ namespace CodeBuilder.WinForm
             if (this.openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string xmlFileName = this.openFileDialog.FileName;
+                this.clearCtxMenuItem.Enabled = true;
             }
         }
 
@@ -41,6 +42,8 @@ namespace CodeBuilder.WinForm
                 try
                 {
                     ImportModelHelper.Import(pdmFileName, this.treeView);
+                    this.treeView.ExpandAll();
+                    this.clearCtxMenuItem.Enabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -118,6 +121,19 @@ namespace CodeBuilder.WinForm
         private void clearCtxMenuItem_Click(object sender, EventArgs e)
         {
             this.treeView.Nodes.Clear();
+            this.clearCtxMenuItem.Enabled = false;
+        }
+
+        private void treeView_AfterCollapse(object sender, TreeViewEventArgs e)
+        {
+            e.Node.ImageIndex = 0;
+            e.Node.SelectedImageIndex = 0;
+        }
+
+        private void treeView_AfterExpand(object sender, TreeViewEventArgs e)
+        {
+            e.Node.ImageIndex = 1;
+            e.Node.SelectedImageIndex = 1;
         }
     }
 }

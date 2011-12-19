@@ -20,10 +20,9 @@ namespace CodeBuilder.WinForm.UI
 
         public static void Import(ExportConfig exportConfig, TreeView treeView)
         {
-            TreeNode rootNode = new TreeNode(exportConfig.ConnectionString);
+            TreeNode rootNode = new TreeNode(exportConfig.ConnectionString, 1, 1);
             treeView.Nodes.Add(rootNode);
             Import(exportConfig, rootNode);
-            treeView.ExpandAll();
         }
 
         public static void Import(ExportConfig exportConfig, TreeNode rootNode)
@@ -80,13 +79,15 @@ namespace CodeBuilder.WinForm.UI
             if (tables == null ||
                 tables.Count == 0) return;
 
-            TreeNode childNode = new TreeNode("Tables");
+            TreeNode childNode = new TreeNode("Tables", 1, 1);
             foreach (Table table in tables.Values)
             {
                 TreeNode newNode = new TreeNode();
                 newNode.Tag = table.Id;
                 newNode.Text = table.Name;
                 newNode.ToolTipText = table.Name;
+                newNode.ImageIndex = 2;
+                newNode.SelectedImageIndex = 2;
                 childNode.Nodes.Add(newNode);
             }
 
@@ -98,13 +99,15 @@ namespace CodeBuilder.WinForm.UI
             if (views == null ||
                 views.Count == 0) return;
 
-            TreeNode childNode = new TreeNode("Views");
+            TreeNode childNode = new TreeNode("Views", 1, 1);
             foreach (View view in views.Values)
             {
                 TreeNode newNode = new TreeNode();
                 newNode.Tag = view.Id;
                 newNode.Text = view.Name;
                 newNode.ToolTipText = view.Name;
+                newNode.ImageIndex = 2;
+                newNode.SelectedImageIndex = 2;
                 childNode.Nodes.Add(newNode);
             }
 
