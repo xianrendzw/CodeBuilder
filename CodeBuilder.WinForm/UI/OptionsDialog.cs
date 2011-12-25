@@ -7,14 +7,15 @@ using System.Windows.Forms;
 namespace CodeBuilder.WinForm
 {
     using UI;
-    using UI.SettingsPages;
+    using UI.OptionsPages;
 
-    public class SettingsOptionDialog
+    public class OptionsDialog
     {
         public static void Display(Form owner)
         {
-            TreeSettingsDialog.Display(owner,
-                new TraceSettingsPage("Advanced Settings.Internal Trace"));
+            TreeOptionsDialog.Display(owner,
+                new GenerationOptionsPage("Generation.Code Generation"),
+                new TraceOptionsPage("Tracing.Internal Trace"));
         }
     }
 }

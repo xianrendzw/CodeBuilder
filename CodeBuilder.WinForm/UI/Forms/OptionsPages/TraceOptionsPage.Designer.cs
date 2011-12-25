@@ -1,6 +1,6 @@
-﻿namespace CodeBuilder.WinForm.UI.SettingsPages
+﻿namespace CodeBuilder.WinForm.UI.OptionsPages
 {
-    partial class TraceSettingsPage
+    partial class TraceOptionsPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -117,7 +117,7 @@
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             // 
-            // TraceSettingsPage
+            // TraceOptionsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,7 +129,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox3);
-            this.Name = "TraceSettingsPage";
+            this.Name = "TraceOptionsPage";
             this.ResumeLayout(false);
             this.PerformLayout();
 

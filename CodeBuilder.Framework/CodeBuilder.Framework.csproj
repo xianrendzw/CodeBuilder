@@ -65,7 +65,17 @@
   <ItemGroup>
     <Compile Include="Configuration\CodeBuilderConfiguration.cs" />
     <Compile Include="Configuration\Interfaces\ISettings.cs" />
+    <Compile Include="Configuration\Settings\AppSettingsElement.cs" />
+    <Compile Include="Configuration\Settings\AppSettingsElementCollection.cs" />
     <Compile Include="Configuration\Settings\SettingsSection.cs" />
+    <Compile Include="Configuration\Settings\TemplateEngineElement.cs" />
+    <Compile Include="Configuration\Settings\TemplateEngineElementCollection.cs" />
+    <Compile Include="Configuration\Settings\DatabaseElementCollection.cs" />
+    <Compile Include="Configuration\Settings\DatabaseElement.cs" />
+    <Compile Include="Configuration\Settings\ExporterElement.cs" />
+    <Compile Include="Configuration\Settings\ExporterElementCollection.cs" />
+    <Compile Include="Configuration\Settings\LanguageElement.cs" />
+    <Compile Include="Configuration\Settings\LanguageElementCollection.cs" />
     <Compile Include="Configuration\TypeMapping\TypeElement.cs" />
     <Compile Include="Configuration\TypeMapping\TypeElementCollection.cs" />
     <Compile Include="Configuration\TypeMapping\TypeMappingElement.cs" />

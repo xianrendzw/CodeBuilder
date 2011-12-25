@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBox));
             this.dotNetVersionLabel = new System.Windows.Forms.Label();
             this.clrTypeLabel = new System.Windows.Forms.Label();
             this.copyright = new System.Windows.Forms.Label();
@@ -64,7 +65,7 @@
             this.copyright.Name = "copyright";
             this.copyright.Size = new System.Drawing.Size(297, 84);
             this.copyright.TabIndex = 23;
-            this.copyright.Text = "Copyright (C) 2011-2012 Tom Deng\r\nAll Rights Reserved.";
+            this.copyright.Text = "Copyright (C) 2009-2012 Tom Deng\r\nAll Rights Reserved.";
             // 
             // label7
             // 
@@ -80,7 +81,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(215, 29);
             this.label6.TabIndex = 21;
-            this.label6.Text = "Emil Song";
+            this.label6.Text = "Emil Song,Richard Li";
             // 
             // label5
             // 
@@ -115,7 +116,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(287, 48);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Tom Deng,Peter Chen,Gallop Chen";
+            this.label3.Text = "Tom Deng,Peter Chen,Gallop Chen,Taven Li,Chanle Chen";
             // 
             // label2
             // 
@@ -172,6 +173,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.OkButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutBox";

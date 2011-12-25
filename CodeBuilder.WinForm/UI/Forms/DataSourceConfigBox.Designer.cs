@@ -1,13 +1,13 @@
-﻿namespace CodeBuilder.WinForm.UI.TemplatePages
+﻿namespace CodeBuilder.WinForm.UI
 {
-    partial class ArchitectureTemplatePage
+    partial class DataSourceConfigBox
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,22 +20,28 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             this.SuspendLayout();
             // 
-            // ArchitectureTemplatePage
+            // DataSourceConfigBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "ArchitectureTemplatePage";
-            this.Size = new System.Drawing.Size(374, 337);
+            this.ClientSize = new System.Drawing.Size(672, 416);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "DataSourceConfigBox";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "DataSource Configuration";
             this.ResumeLayout(false);
 
         }

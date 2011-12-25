@@ -6,9 +6,13 @@ using System.Windows.Forms;
 namespace CodeBuilder.WinForm
 {
     using UI;
+    using Util;
+    using Configuration;
 
     static class Program
     {
+        static Logger log = InternalTrace.GetLogger(typeof(Program));
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -23,6 +27,8 @@ namespace CodeBuilder.WinForm
             c.Add(form);
 
             Application.Run(form);
+
+            InternalTrace.Close();
         }
     }
 }

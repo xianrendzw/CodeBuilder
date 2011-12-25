@@ -7,20 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CodeBuilder.WinForm.UI.SettingsPages
+namespace CodeBuilder.WinForm.UI.OptionsPages
 {
     using Util;
     using Configuration;
 
-    public partial class TraceSettingsPage : UI.SettingsPage
+    public partial class TraceOptionsPage : BaseOptionsPage
     {
-        public TraceSettingsPage()
+        public TraceOptionsPage()
         {
             InitializeComponent();
         }
 
-
-        public TraceSettingsPage(string key)
+        public TraceOptionsPage(string key)
             : base(key)
         {
             InitializeComponent();

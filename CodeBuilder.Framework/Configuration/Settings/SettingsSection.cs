@@ -10,13 +10,34 @@ namespace CodeBuilder.Configuration
 
     public class SettingsSection : ConfigurationSection
     {
-        public void Save()
+        [ConfigurationProperty("databases", IsRequired = true)]
+        public DatabaseElementCollection Databases
         {
-            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            SettingsSection section = (SettingsSection)config.GetSection("codebuilder.settings");
-            if (section == null) return;
-            if (!section.ElementInformation.IsLocked) config.Save();
-            else throw new ConfigSectionLockedException();
+            get { return (DatabaseElementCollection)base["databases"]; }
+        }
+
+        [ConfigurationProperty("exporters", IsRequired = true)]
+        public ExporterElementCollection Exporters
+        {
+            get { return (ExporterElementCollection)base["exporters"]; }
+        }
+
+        [ConfigurationProperty("languages", IsRequired = true)]
+        public LanguageElementCollection Languages
+        {
+            get { return (LanguageElementCollection)base["languages"]; }
+        }
+
+        [ConfigurationProperty("templateEngines", IsRequired = true)]
+        public TemplateEngineElementCollection TemplateEngines
+        {
+            get { return (TemplateEngineElementCollection)base["templateEngines"]; }
+        }
+
+        [ConfigurationProperty("appSettings", IsRequired = true)]
+        public AppSettingsElementCollection AppSettings
+        {
+            get { return (AppSettingsElementCollection)base["appSettings"]; }
         }
 
         protected override void PostDeserialize()

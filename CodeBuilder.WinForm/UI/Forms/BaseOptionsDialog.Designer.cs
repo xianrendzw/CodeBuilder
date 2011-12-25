@@ -1,6 +1,6 @@
 ﻿namespace CodeBuilder.WinForm.UI
 {
-    partial class BaseSettingsDialog
+    partial class BaseOptionsDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -53,7 +53,7 @@
             this.okButton.Text = "OK";
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
-            // BaseSettingsDialog
+            // BaseOptionsDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -64,7 +64,7 @@
             this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "BaseSettingsDialog";
+            this.Name = "BaseOptionsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Settings";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BaseSettingsDialog_FormClosed);

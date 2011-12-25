@@ -11,18 +11,18 @@ namespace CodeBuilder.WinForm.UI
 {
     using Configuration;
 
-    public partial class SettingsPage : UserControl
+    public partial class BaseOptionsPage : UserControl
     {
         protected ISettings settings;
         private string key;
         private string title;
 
-        public SettingsPage()
+        public BaseOptionsPage()
         {
             InitializeComponent();
         }
 
-        public SettingsPage(string key)
+        public BaseOptionsPage(string key)
             : this()
         {
             this.key = key;

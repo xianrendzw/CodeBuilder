@@ -11,20 +11,20 @@ namespace CodeBuilder.WinForm.UI
 {
     using Configuration;
 
-    public partial class BaseSettingsDialog : Form
+    public partial class BaseOptionsDialog : Form
     {
-        public BaseSettingsDialog()
+        public BaseOptionsDialog()
         {
             InitializeComponent();
-            this.settingsPages = new SettingsPageList(6);
+            this.optionsPages = new OptionsPageList(6);
         }
 
         #region Properties
 
-        private SettingsPageList settingsPages;
-        public SettingsPageList SettingsPages
+        private OptionsPageList optionsPages;
+        public OptionsPageList OptionsPages
         {
-            get { return settingsPages; }
+            get { return optionsPages; }
         }
 
         #endregion
@@ -33,7 +33,7 @@ namespace CodeBuilder.WinForm.UI
 
         public void ApplySettings()
         {
-            foreach (SettingsPage page in settingsPages)
+            foreach (BaseOptionsPage page in optionsPages)
             {
                 if (page.SettingsLoaded) page.ApplySettings();
             }
@@ -75,7 +75,7 @@ namespace CodeBuilder.WinForm.UI
         {
             get
             {
-                foreach (SettingsPage page in settingsPages)
+                foreach (BaseOptionsPage page in optionsPages)
                 {
                     if (page.SettingsLoaded && page.HasChangesRequiringReload)
                         return true;
@@ -87,17 +87,17 @@ namespace CodeBuilder.WinForm.UI
 
         #region Nested SettingsPageCollection Class
 
-        public class SettingsPageList : List<SettingsPage>
+        public class OptionsPageList : List<BaseOptionsPage>
         {
-            public SettingsPageList()
+            public OptionsPageList()
                 : base() { }
 
-            public SettingsPageList(int capacity)
+            public OptionsPageList(int capacity)
                 : base(capacity)
             {
             }
 
-            public SettingsPage this[string key]
+            public BaseOptionsPage this[string key]
             {
                 get
                 {

@@ -45,25 +45,37 @@ namespace CodeBuilder.Configuration
 
         #region Public Properties
 
-        #region ApplicationDataDirectory
-        private static string applicationDirectory;
-        public static string ApplicationDirectory
+        public static SettingsSection Settings
+        {
+            get { return settings; }
+        }
+
+        public static TypeMappingSection TypeMapping
+        {
+            get { return typeMapping; }
+        }
+
+        private static string applicationDataDirectory;
+        public static string ApplicationDataDirectory
         {
             get
             {
-                if (applicationDirectory == null)
+                if (applicationDataDirectory == null)
                 {
-                    applicationDirectory = Path.Combine(
+                    applicationDataDirectory = Path.Combine(
                         Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
                         "CodeBuilder");
                 }
 
-                return applicationDirectory;
+                return applicationDataDirectory;
             }
         }
-        #endregion
 
-        #region LibDirectory
+        public static string AppCurrentDirectory
+        {
+            get { return Environment.CurrentDirectory; }
+        }
+
         private static string libDirectory;
         public static string LibDirectory
         {
@@ -78,9 +90,7 @@ namespace CodeBuilder.Configuration
                 return libDirectory;
             }
         }
-        #endregion
 
-        #region BinDirectory
         private static string binDirectory;
         public static string BinDirectory
         {
@@ -96,20 +106,18 @@ namespace CodeBuilder.Configuration
                 return binDirectory;
             }
         }
-        #endregion
 
-        #region HelpUrl
         public static string HelpUrl
         {
             get
             {
-                string helpUrl = System.Configuration.ConfigurationManager.AppSettings["helpUrl"];
+                string helpUrl = Settings.AppSettings["helpUrl"].Value;
                 if (helpUrl != null)
                 {
                     return helpUrl;
                 }
 
-                helpUrl = "http://www.dengzhiwei.com/codebuilder";
+                helpUrl = "http://www.dengzhiwei.com/category/codebuilder";
                 string dir = Path.GetDirectoryName(BinDirectory);
                 if (dir == null)
                 {
@@ -134,8 +142,19 @@ namespace CodeBuilder.Configuration
                 return helpUrl;
             }
         }
-        #endregion
 
+        public static string FeedbackUrl
+        {
+            get
+            {
+                string feedbackUrl = Settings.AppSettings["feedbackUrl"].Value;
+                if (feedbackUrl != null)
+                {
+                    return feedbackUrl;
+                }
+                return feedbackUrl = "http://www.dengzhiwei.com/category/codebuilder-feedback";
+            }
+        }
         #endregion
     }
 }

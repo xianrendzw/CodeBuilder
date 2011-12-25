@@ -1,6 +1,6 @@
 ﻿namespace CodeBuilder.WinForm.UI
 {
-    partial class TreeSettingsDialog
+    partial class TreeOptionsDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TreeSettingsDialog));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TreeOptionsDialog));
             this.buttomLineGbx = new System.Windows.Forms.GroupBox();
             this.pagePanel = new System.Windows.Forms.Panel();
             this.optionTreeView = new System.Windows.Forms.TreeView();
@@ -80,7 +80,7 @@
             this.treeNodeImageList.Images.SetKeyName(1, "folderOpen.gif");
             this.treeNodeImageList.Images.SetKeyName(2, "leaf.gif");
             // 
-            // TreeSettingsDialog
+            // TreeOptionsDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,7 +88,7 @@
             this.Controls.Add(this.buttomLineGbx);
             this.Controls.Add(this.pagePanel);
             this.Controls.Add(this.optionTreeView);
-            this.Name = "TreeSettingsDialog";
+            this.Name = "TreeOptionsDialog";
             this.Load += new System.EventHandler(this.TreeSettingsDialog_Load);
             this.Controls.SetChildIndex(this.okButton, 0);
             this.Controls.SetChildIndex(this.cancelButton, 0);

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CodeBuilder.WinForm.UI.TemplatePages
+namespace CodeBuilder.WinForm.UI
 {
-    public partial class ArchitectureTemplatePage : UserControl
+    public partial class TemplateConfigBox : Form
     {
-        public ArchitectureTemplatePage()
+        public TemplateConfigBox()
         {
             InitializeComponent();
         }

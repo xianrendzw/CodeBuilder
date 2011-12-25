@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 namespace CodeBuilder.WinForm.UI
 {
-    public partial class TreeSettingsDialog : BaseSettingsDialog
+    public partial class TreeOptionsDialog : BaseOptionsDialog
     {
-        private SettingsPage current;
+        private BaseOptionsPage current;
 
-        public TreeSettingsDialog()
+        public TreeOptionsDialog()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace CodeBuilder.WinForm.UI
         private void optionTreeView_AfterSelect(object sender, System.Windows.Forms.TreeViewEventArgs e)
         {
             string key = e.Node.FullPath;
-            SettingsPage page = SettingsPages[key];
+            BaseOptionsPage page = OptionsPages[key];
             //Services.UserSettings.SaveSetting("Gui.Settings.InitialPage", key);
 
             if (page != null && page != current)
@@ -48,20 +48,20 @@ namespace CodeBuilder.WinForm.UI
 
         #endregion
 
-        public static void Display(Form owner, params SettingsPage[] pages)
+        public static void Display(Form owner, params BaseOptionsPage[] pages)
         {
-            using (TreeSettingsDialog dialog = new TreeSettingsDialog())
+            using (TreeOptionsDialog dialog = new TreeOptionsDialog())
             {
                 owner.Site.Container.Add(dialog);
                 dialog.Font = owner.Font;
-                dialog.SettingsPages.AddRange(pages);
+                dialog.OptionsPages.AddRange(pages);
                 dialog.ShowDialog();
             }
         }
 
         private void TreeSettingsDialog_Load(object sender, System.EventArgs e)
         {
-            foreach (SettingsPage page in SettingsPages)
+            foreach (BaseOptionsPage page in OptionsPages)
                 AddBranchToTree(optionTreeView.Nodes, page.Key);
 
             if (optionTreeView.VisibleCount >= optionTreeView.GetNodeCount(true))

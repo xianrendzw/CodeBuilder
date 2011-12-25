@@ -14,6 +14,21 @@
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -56,6 +71,9 @@
     <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Images\App.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -75,10 +93,10 @@
     <Compile Include="UI\Forms\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Forms\SettingsPages\DataSourceConfigBox.cs">
+    <Compile Include="UI\Forms\DataSourceConfigBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Forms\SettingsPages\DataSourceConfigBox.Designer.cs">
+    <Compile Include="UI\Forms\DataSourceConfigBox.Designer.cs">
       <DependentUpon>DataSourceConfigBox.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -89,50 +107,50 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\SettingsOptionDialog.cs" />
+    <Compile Include="UI\Forms\OptionsPages\GenerationOptionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\GenerationOptionsPage.Designer.cs">
+      <DependentUpon>GenerationOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\TemplateConfigBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\TemplateConfigBox.Designer.cs">
+      <DependentUpon>TemplateConfigBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OptionsDialog.cs" />
     <Compile Include="UI\AppContainer.cs" />
-    <Compile Include="UI\Forms\SettingsPage.cs">
+    <Compile Include="UI\Forms\BaseOptionsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Forms\SettingsPage.Designer.cs">
-      <DependentUpon>SettingsPage.cs</DependentUpon>
+    <Compile Include="UI\Forms\BaseOptionsPage.Designer.cs">
+      <DependentUpon>BaseOptionsPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Forms\SettingsPages\TraceSettingsPage.cs">
+    <Compile Include="UI\Forms\OptionsPages\TraceOptionsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Forms\SettingsPages\TraceSettingsPage.Designer.cs">
-      <DependentUpon>TraceSettingsPage.cs</DependentUpon>
+    <Compile Include="UI\Forms\OptionsPages\TraceOptionsPage.Designer.cs">
+      <DependentUpon>TraceOptionsPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Forms\TemplatePages\ArchitectureTemplatePage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Forms\TemplatePages\ArchitectureTemplatePage.Designer.cs">
-      <DependentUpon>ArchitectureTemplatePage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Forms\TemplatePages\NormalTemplatePage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Forms\TemplatePages\NormalTemplatePage.Designer.cs">
-      <DependentUpon>NormalTemplatePage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Forms\BaseSettingsDialog.cs">
+    <Compile Include="UI\Forms\BaseOptionsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Forms\BaseSettingsDialog.Designer.cs">
-      <DependentUpon>BaseSettingsDialog.cs</DependentUpon>
+    <Compile Include="UI\Forms\BaseOptionsDialog.Designer.cs">
+      <DependentUpon>BaseOptionsDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Forms\TreeSettingsDialog.cs">
+    <Compile Include="UI\Forms\TreeOptionsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Forms\TreeSettingsDialog.Designer.cs">
-      <DependentUpon>TreeSettingsDialog.cs</DependentUpon>
+    <Compile Include="UI\Forms\TreeOptionsDialog.Designer.cs">
+      <DependentUpon>TreeOptionsDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Helpers\ImportModelHelper.cs" />
     <Compile Include="UI\Helpers\MessageBoxHelper.cs" />
     <EmbeddedResource Include="UI\Forms\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Forms\SettingsPages\DataSourceConfigBox.resx">
+    <EmbeddedResource Include="UI\Forms\DataSourceConfigBox.resx">
       <DependentUpon>DataSourceConfigBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -148,20 +166,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\Forms\SettingsPages\TraceSettingsPage.resx">
-      <DependentUpon>TraceSettingsPage.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\GenerationOptionsPage.resx">
+      <DependentUpon>GenerationOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Forms\TemplatePages\ArchitectureTemplatePage.resx">
-      <DependentUpon>ArchitectureTemplatePage.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\TraceOptionsPage.resx">
+      <DependentUpon>TraceOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Forms\BaseSettingsDialog.resx">
-      <DependentUpon>BaseSettingsDialog.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Forms\BaseOptionsDialog.resx">
+      <DependentUpon>BaseOptionsDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Forms\SettingsPage.resx">
-      <DependentUpon>SettingsPage.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Forms\BaseOptionsPage.resx">
+      <DependentUpon>BaseOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Forms\TreeSettingsDialog.resx">
-      <DependentUpon>TreeSettingsDialog.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Forms\TemplateConfigBox.resx">
+      <DependentUpon>TemplateConfigBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\TreeOptionsDialog.resx">
+      <DependentUpon>TreeOptionsDialog.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
@@ -181,9 +202,36 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\DataSources.xml" />
+    <Content Include="bin\Debug\Options.xml" />
+    <Content Include="bin\Debug\Templates.xml" />
+    <Content Include="Resources\Images\cb.bmp" />
+    <Content Include="Resources\Images\App.ico" />
     <Content Include="Resources\Images\folderClosed.gif" />
     <Content Include="Resources\Images\folderOpen.gif" />
     <Content Include="Resources\Images\leaf.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
