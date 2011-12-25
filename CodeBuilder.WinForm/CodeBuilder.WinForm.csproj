@@ -202,14 +202,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\DataSources.xml" />
-    <Content Include="bin\Debug\Options.xml" />
-    <Content Include="bin\Debug\Templates.xml" />
     <Content Include="Resources\Images\cb.bmp" />
     <Content Include="Resources\Images\App.ico" />
     <Content Include="Resources\Images\folderClosed.gif" />
     <Content Include="Resources\Images\folderOpen.gif" />
     <Content Include="Resources\Images\leaf.gif" />
+    <Content Include="Xml\DataSources.xml" />
+    <Content Include="Xml\Options.xml" />
+    <Content Include="Xml\Templates.xml" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -232,6 +232,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

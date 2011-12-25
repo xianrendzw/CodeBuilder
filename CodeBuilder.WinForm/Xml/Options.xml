@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeBuilderOptions>
+  <Options>
+    <Option name="Gui.DisplayFormat" value="Full" />
+    <Option name="Gui.MainForm.Font" value="Microsoft Sans Serif, 8.25pt" />
+    <Option name="Gui.MainForm.Height" value="481" />
+    <Option name="Gui.MainForm.Left" value="55" />
+    <Option name="Gui.MainForm.Maximized" value="False" />
+    <Option name="Gui.MainForm.SplitPosition" value="254" />
+    <Option name="Gui.MainForm.Top" value="137" />
+    <Option name="Gui.MainForm.Width" value="775" />
+    <Option name="Gui.RecentProjects.File1" value="" />
+    <Option name="Gui.RecentProjects.MaxFiles" value="3" />
+    <Option name="Gui.ResultTabs.ErrorsTabSplitterPosition" value="128" />
+    <Option name="Gui.ResultTabs.SelectedTab" value="0" />
+    <Option name="Gui.Settings.InitialPage" value="Advanced Settings.Internal Trace" />
+    <Option name="Options.InternalTraceLevel" value="Error" />
+  </Options>
+</CodeBuilderOptions>
