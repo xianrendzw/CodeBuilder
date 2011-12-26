@@ -9,43 +9,44 @@ namespace CodeBuilder.Configuration
     {
         event SettingsEventHandler Changed;
 
-        object GetSetting(string settingName);
+        object Get(string name);
 
-        object GetSetting(string settingName, object defaultValue);
+        object Get(string name, object defaultValue);
 
-        int GetSetting(string settingName, int defaultValue);
+        int Get(string name, int defaultValue);
 
-        float GetSetting(string settingName, float defaultValue);
+        float Get(string name, float defaultValue);
 
-        bool GetSetting(string settingName, bool defaultValue);
+        bool Get(string name, bool defaultValue);
 
-        string GetSetting(string settingName, string defaultValue);
+        string Get(string name, string defaultValue);
 
-        System.Enum GetSetting(string settingName, System.Enum defaultValue);
+        System.Enum Get(string name, System.Enum defaultValue);
 
-        //System.Drawing.Font GetSetting(string settingName, System.Drawing.Font defaultFont);
+        //System.Drawing.Font Get(string settingName, System.Drawing.Font defaultFont);
 
-        void RemoveSetting(string settingName);
+        void Remove(string name);
 
         void RemoveGroup(string groupName);
 
-        void SaveSetting(string settingName, object settingValue);
+        void Save(string name, object settingValue);
     }
 
     public delegate void SettingsEventHandler(object sender, SettingsEventArgs args);
 
     public class SettingsEventArgs : EventArgs
     {
-        private string settingName;
+        private string _name;
 
-        public SettingsEventArgs(string settingName)
+        public SettingsEventArgs(string name)
         {
-            this.settingName = settingName;
+            this._name = name;
         }
 
-        public string SettingName
+        public string Name
         {
-            get { return settingName; }
+            get { return this._name; }
         }
     }
 }
+

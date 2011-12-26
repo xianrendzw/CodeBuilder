@@ -13,9 +13,6 @@ namespace CodeBuilder.WinForm
     {
         static Logger log = InternalTrace.GetLogger(typeof(Program));
 
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {

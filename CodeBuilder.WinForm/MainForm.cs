@@ -22,9 +22,9 @@ namespace CodeBuilder.WinForm
             this.InitializeUIData();
         }
 
-        public void InitializeUIData()
+        private void InitializeUIData()
         {
-            this.SetComboBox();
+            this.SetComboBoxData();
         }
 
         #region Menu Handlers
@@ -209,20 +209,30 @@ namespace CodeBuilder.WinForm
 
         #region Helper methods for modifying the UI display
 
-        private void SetComboBox()
+        private void SetComboBoxData()
         {
-            foreach (var language in CodeBuilderConfiguration.Settings.Languages)
+            this.languageCombx.Items.Clear();
+            this.templateEngineCombox.Items.Clear();
+            this.codeFileEncodingCombox.Items.Clear();
+
+            foreach (LanguageElement language in CodeBuilderConfiguration.Settings.Languages)
             {
-                //this.languageCombx.Items.Add(language.
-            }
-            foreach (var language in CodeBuilderConfiguration.Settings.TemplateEngines)
-            {
-                //this.templateEngineCombox.DataSource = 
+                this.languageCombx.Items.Add(language.Name);
             }
 
-            this.codeFileEncodingCombox.DataSource = Encoding.GetEncodings();
-            this.codeFileEncodingCombox.DisplayMember = "Name";
-            this.codeFileEncodingCombox.Text = "utf-8";
+            foreach (TemplateEngineElement templateEngine in CodeBuilderConfiguration.Settings.TemplateEngines)
+            {
+                this.templateEngineCombox.Items.Add(templateEngine.Name);
+            }
+
+            foreach (var encodingInfo in Encoding.GetEncodings())
+            {
+                this.codeFileEncodingCombox.Items.Add(encodingInfo.Name.ToUpper());
+            }
+
+            this.languageCombx.Text = this.languageCombx.Items[0].ToString();
+            this.templateEngineCombox.Text = this.templateEngineCombox.Items[0].ToString();
+            this.codeFileEncodingCombox.Text = "UTF-8";
         }
 
         #endregion	

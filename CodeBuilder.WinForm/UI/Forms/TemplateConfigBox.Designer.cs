@@ -42,7 +42,7 @@
             this.Name = "TemplateConfigBox";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Template Settings";
+            this.Text = "TemplateSettings Settings";
             this.ResumeLayout(false);
 
         }

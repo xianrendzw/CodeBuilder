@@ -22,8 +22,8 @@
   </databases>
   <templateEngines>
     <templateEngine name="NVelocity" adapter="" />
-    <templateEngine name="Vici" adapter="" />
     <templateEngine name="Razor" adapter="" />
+    <templateEngine name="Vici" adapter="" />
     <templateEngine name="Ader" adapter="" />
   </templateEngines>
   <appSettings>

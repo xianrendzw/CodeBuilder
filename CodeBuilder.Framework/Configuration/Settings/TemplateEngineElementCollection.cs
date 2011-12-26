@@ -6,7 +6,7 @@ using System.Configuration;
 
 namespace CodeBuilder.Configuration
 {
-    [ConfigurationCollection(typeof(ExporterElement), AddItemName = "templateEngine")]
+    [ConfigurationCollection(typeof(TemplateEngineElement), AddItemName = "templateEngine")]
     public sealed class TemplateEngineElementCollection : ConfigurationElementCollection
     {
         public new TemplateEngineElement this[string name]

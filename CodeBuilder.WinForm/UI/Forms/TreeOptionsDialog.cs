@@ -24,7 +24,7 @@ namespace CodeBuilder.WinForm.UI
         {
             string key = e.Node.FullPath;
             BaseOptionsPage page = OptionsPages[key];
-            //Services.UserSettings.SaveSetting("Gui.Settings.InitialPage", key);
+            //Services.UserSettings.Save("Gui.Settings.InitialPage", key);
 
             if (page != null && page != current)
             {
@@ -73,7 +73,7 @@ namespace CodeBuilder.WinForm.UI
 
         private void SelectInitialPage()
         {
-            string initialPage = null;//Services.UserSettings.GetSetting("Gui.Settings.InitialPage") as string;
+            string initialPage = null;//Services.UserSettings.GetOption("Gui.Settings.InitialPage") as string;
 
             if (initialPage != null)
                 SelectPage(initialPage);

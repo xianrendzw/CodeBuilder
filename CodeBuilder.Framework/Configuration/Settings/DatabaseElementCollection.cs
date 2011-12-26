@@ -6,7 +6,7 @@ using System.Configuration;
 
 namespace CodeBuilder.Configuration
 {
-    [ConfigurationCollection(typeof(LanguageElement), AddItemName = "database")]
+    [ConfigurationCollection(typeof(DatabaseElement), AddItemName = "database")]
     public sealed class DatabaseElementCollection : ConfigurationElementCollection
     {
         public new DatabaseElement this[string name]

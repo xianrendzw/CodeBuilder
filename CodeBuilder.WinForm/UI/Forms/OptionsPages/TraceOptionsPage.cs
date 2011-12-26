@@ -27,13 +27,13 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
         public override void LoadSettings()
         {
-            traceLevelComboBox.SelectedIndex = (int)(InternalTraceLevel)settings.GetSetting("Options.InternalTraceLevel", InternalTraceLevel.Default);
+            traceLevelComboBox.SelectedIndex = (int)(InternalTraceLevel)settings.Get("Options.InternalTraceLevel", InternalTraceLevel.Default);
             logDirectoryLabel.Text = CodeBuilderConfiguration.LogDirectory;
         }
 
         public override void ApplySettings()
         {
-           settings.SaveSetting("Options.InternalTraceLevel", (InternalTraceLevel)traceLevelComboBox.SelectedIndex);
+           settings.Save("Options.InternalTraceLevel", (InternalTraceLevel)traceLevelComboBox.SelectedIndex);
         }
     }
 }

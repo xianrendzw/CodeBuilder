@@ -80,6 +80,7 @@
             this.saveGenSettingCtxMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.genSettingsCtxSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.generateCtxMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.templateListBox = new System.Windows.Forms.ListBox();
             this.databaseNameLbl = new System.Windows.Forms.Label();
             this.databaseLbl = new System.Windows.Forms.Label();
             this.templateEngineCombox = new System.Windows.Forms.ComboBox();
@@ -90,7 +91,6 @@
             this.codeFileEncodingLbl = new System.Windows.Forms.Label();
             this.languageCombx = new System.Windows.Forms.ComboBox();
             this.languageLbl = new System.Windows.Forms.Label();
-            this.templateCombox = new System.Windows.Forms.ComboBox();
             this.templateLbl = new System.Windows.Forms.Label();
             this.versionTxtBox = new System.Windows.Forms.TextBox();
             this.versionLbl = new System.Windows.Forms.Label();
@@ -152,7 +152,7 @@
             // 
             this.fileImportDataSourceMenuItem.Name = "fileImportDataSourceMenuItem";
             this.fileImportDataSourceMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.fileImportDataSourceMenuItem.Text = "&Import From DataSource";
+            this.fileImportDataSourceMenuItem.Text = "&Import From DataSourceSettings";
             this.fileImportDataSourceMenuItem.Click += new System.EventHandler(this.fileImportDataSourceMenuItem_Click);
             // 
             // fileSeparator2MenuItem
@@ -200,26 +200,26 @@
             // toolsDSConfigMenuItem
             // 
             this.toolsDSConfigMenuItem.Name = "toolsDSConfigMenuItem";
-            this.toolsDSConfigMenuItem.Size = new System.Drawing.Size(210, 22);
-            this.toolsDSConfigMenuItem.Text = "&DataSource Configuration...";
+            this.toolsDSConfigMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.toolsDSConfigMenuItem.Text = "&DataSourceSettings Configuration...";
             this.toolsDSConfigMenuItem.Click += new System.EventHandler(this.toolsDSConfigMenuItem_Click);
             // 
             // templatesMenuItem
             // 
             this.templatesMenuItem.Name = "templatesMenuItem";
-            this.templatesMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.templatesMenuItem.Size = new System.Drawing.Size(249, 22);
             this.templatesMenuItem.Text = "&Templates...";
             this.templatesMenuItem.Click += new System.EventHandler(this.templatesMenuItem_Click);
             // 
             // toolsSeparator1MenuItem
             // 
             this.toolsSeparator1MenuItem.Name = "toolsSeparator1MenuItem";
-            this.toolsSeparator1MenuItem.Size = new System.Drawing.Size(207, 6);
+            this.toolsSeparator1MenuItem.Size = new System.Drawing.Size(246, 6);
             // 
             // toolsOptionsMenuItem
             // 
             this.toolsOptionsMenuItem.Name = "toolsOptionsMenuItem";
-            this.toolsOptionsMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.toolsOptionsMenuItem.Size = new System.Drawing.Size(249, 22);
             this.toolsOptionsMenuItem.Text = "&Options...";
             this.toolsOptionsMenuItem.Click += new System.EventHandler(this.toolsOptionsMenuItem_Click);
             // 
@@ -356,7 +356,7 @@
             // 
             this.importDataSourceCtxMenuItem.Name = "importDataSourceCtxMenuItem";
             this.importDataSourceCtxMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.importDataSourceCtxMenuItem.Text = "Import From DataSource";
+            this.importDataSourceCtxMenuItem.Text = "Import From DataSourceSettings";
             this.importDataSourceCtxMenuItem.Click += new System.EventHandler(this.importDataSourceCtxMenuItem_Click);
             // 
             // ctxSeparator2
@@ -482,6 +482,7 @@
             // genItemsGbx
             // 
             this.genItemsGbx.ContextMenuStrip = this.genSettingsCtxMenuStrip;
+            this.genItemsGbx.Controls.Add(this.templateListBox);
             this.genItemsGbx.Controls.Add(this.databaseNameLbl);
             this.genItemsGbx.Controls.Add(this.databaseLbl);
             this.genItemsGbx.Controls.Add(this.templateEngineCombox);
@@ -492,7 +493,6 @@
             this.genItemsGbx.Controls.Add(this.codeFileEncodingLbl);
             this.genItemsGbx.Controls.Add(this.languageCombx);
             this.genItemsGbx.Controls.Add(this.languageLbl);
-            this.genItemsGbx.Controls.Add(this.templateCombox);
             this.genItemsGbx.Controls.Add(this.templateLbl);
             this.genItemsGbx.Controls.Add(this.versionTxtBox);
             this.genItemsGbx.Controls.Add(this.versionLbl);
@@ -550,6 +550,15 @@
             this.generateCtxMenuItem.Text = "Generate";
             this.generateCtxMenuItem.Click += new System.EventHandler(this.generateCtxMenuItem_Click);
             // 
+            // templateListBox
+            // 
+            this.templateListBox.FormattingEnabled = true;
+            this.templateListBox.Location = new System.Drawing.Point(357, 122);
+            this.templateListBox.Name = "templateListBox";
+            this.templateListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.templateListBox.Size = new System.Drawing.Size(150, 95);
+            this.templateListBox.TabIndex = 19;
+            // 
             // databaseNameLbl
             // 
             this.databaseNameLbl.Location = new System.Drawing.Point(86, 26);
@@ -584,19 +593,19 @@
             // 
             // isStandardizeNameChkbox
             // 
-            this.isStandardizeNameChkbox.Location = new System.Drawing.Point(10, 201);
+            this.isStandardizeNameChkbox.Location = new System.Drawing.Point(10, 234);
             this.isStandardizeNameChkbox.Name = "isStandardizeNameChkbox";
             this.isStandardizeNameChkbox.Size = new System.Drawing.Size(210, 17);
-            this.isStandardizeNameChkbox.TabIndex = 24;
+            this.isStandardizeNameChkbox.TabIndex = 23;
             this.isStandardizeNameChkbox.Text = "Is Standardize Table And Field Name";
             this.isStandardizeNameChkbox.UseVisualStyleBackColor = true;
             // 
             // isOmitTablePrefixChkbox
             // 
-            this.isOmitTablePrefixChkbox.Location = new System.Drawing.Point(270, 201);
+            this.isOmitTablePrefixChkbox.Location = new System.Drawing.Point(10, 200);
             this.isOmitTablePrefixChkbox.Name = "isOmitTablePrefixChkbox";
             this.isOmitTablePrefixChkbox.Size = new System.Drawing.Size(130, 17);
-            this.isOmitTablePrefixChkbox.TabIndex = 25;
+            this.isOmitTablePrefixChkbox.TabIndex = 22;
             this.isOmitTablePrefixChkbox.Text = "Is Omit Table Prefix";
             this.isOmitTablePrefixChkbox.UseVisualStyleBackColor = true;
             // 
@@ -607,14 +616,14 @@
             this.codeFileEncodingCombox.Location = new System.Drawing.Point(120, 158);
             this.codeFileEncodingCombox.Name = "codeFileEncodingCombox";
             this.codeFileEncodingCombox.Size = new System.Drawing.Size(116, 21);
-            this.codeFileEncodingCombox.TabIndex = 23;
+            this.codeFileEncodingCombox.TabIndex = 21;
             // 
             // codeFileEncodingLbl
             // 
             this.codeFileEncodingLbl.Location = new System.Drawing.Point(10, 166);
             this.codeFileEncodingLbl.Name = "codeFileEncodingLbl";
             this.codeFileEncodingLbl.Size = new System.Drawing.Size(110, 13);
-            this.codeFileEncodingLbl.TabIndex = 22;
+            this.codeFileEncodingLbl.TabIndex = 20;
             this.codeFileEncodingLbl.Text = "Encoding:";
             // 
             // languageCombx
@@ -633,15 +642,6 @@
             this.languageLbl.Size = new System.Drawing.Size(70, 13);
             this.languageLbl.TabIndex = 6;
             this.languageLbl.Text = "Language:";
-            // 
-            // templateCombox
-            // 
-            this.templateCombox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.templateCombox.FormattingEnabled = true;
-            this.templateCombox.Location = new System.Drawing.Point(357, 123);
-            this.templateCombox.Name = "templateCombox";
-            this.templateCombox.Size = new System.Drawing.Size(150, 21);
-            this.templateCombox.TabIndex = 19;
             // 
             // templateLbl
             // 
@@ -718,10 +718,10 @@
             // saveSettingsBtn
             // 
             this.saveSettingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveSettingsBtn.Location = new System.Drawing.Point(354, 233);
+            this.saveSettingsBtn.Location = new System.Drawing.Point(353, 234);
             this.saveSettingsBtn.Name = "saveSettingsBtn";
             this.saveSettingsBtn.Size = new System.Drawing.Size(94, 23);
-            this.saveSettingsBtn.TabIndex = 26;
+            this.saveSettingsBtn.TabIndex = 24;
             this.saveSettingsBtn.Text = "Save Settings";
             this.saveSettingsBtn.UseVisualStyleBackColor = true;
             this.saveSettingsBtn.Click += new System.EventHandler(this.saveSettingsBtn_Click);
@@ -729,10 +729,10 @@
             // generateBtn
             // 
             this.generateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.generateBtn.Location = new System.Drawing.Point(455, 233);
+            this.generateBtn.Location = new System.Drawing.Point(454, 234);
             this.generateBtn.Name = "generateBtn";
             this.generateBtn.Size = new System.Drawing.Size(75, 23);
-            this.generateBtn.TabIndex = 27;
+            this.generateBtn.TabIndex = 25;
             this.generateBtn.Text = "Generate";
             this.generateBtn.UseVisualStyleBackColor = true;
             this.generateBtn.Click += new System.EventHandler(this.generateBtn_Click);
@@ -823,7 +823,6 @@
         private System.Windows.Forms.Label authorLbl;
         private System.Windows.Forms.TextBox tablePrefixTxtBox;
         private System.Windows.Forms.Label tablePrefixLbl;
-        private System.Windows.Forms.ComboBox templateCombox;
         private System.Windows.Forms.Label templateLbl;
         private System.Windows.Forms.ComboBox codeFileEncodingCombox;
         private System.Windows.Forms.Label codeFileEncodingLbl;
@@ -846,6 +845,7 @@
         private System.Windows.Forms.Label databaseNameLbl;
         private System.Windows.Forms.Label databaseLbl;
         private System.Windows.Forms.ToolStripMenuItem helpFeedbackMenuItem;
+        private System.Windows.Forms.ListBox templateListBox;
     }
 }
 

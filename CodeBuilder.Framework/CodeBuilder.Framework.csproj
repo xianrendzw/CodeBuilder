@@ -69,6 +69,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\TemplateEngines\Razor2.1\System.Web.Razor.dll</HintPath>
@@ -84,7 +85,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\CodeBuilderConfiguration.cs" />
+    <Compile Include="Configuration\DataSource\DataSourceSettings.cs" />
+    <Compile Include="Configuration\DataSource\DataSourceSettingsList.cs" />
+    <Compile Include="Configuration\Generation\GenerationSettings.cs" />
     <Compile Include="Configuration\Interfaces\ISettings.cs" />
+    <Compile Include="Configuration\Options\OptionSettings.cs" />
     <Compile Include="Configuration\Settings\AppSettingsElement.cs" />
     <Compile Include="Configuration\Settings\AppSettingsElementCollection.cs" />
     <Compile Include="Configuration\Settings\SettingsSection.cs" />
@@ -96,6 +101,8 @@
     <Compile Include="Configuration\Settings\ExporterElementCollection.cs" />
     <Compile Include="Configuration\Settings\LanguageElement.cs" />
     <Compile Include="Configuration\Settings\LanguageElementCollection.cs" />
+    <Compile Include="Configuration\Template\TemplateSettings.cs" />
+    <Compile Include="Configuration\Template\TemplateSettingsList.cs" />
     <Compile Include="Configuration\TypeMapping\TypeElement.cs" />
     <Compile Include="Configuration\TypeMapping\TypeElementCollection.cs" />
     <Compile Include="Configuration\TypeMapping\TypeMappingElement.cs" />
@@ -125,6 +132,7 @@
     <Compile Include="TemplateEngine\Adapters\RazorEngineAdapter.cs" />
     <Compile Include="TemplateEngine\Adapters\ViciEngineAdapter.cs" />
     <Compile Include="TemplateEngine\ITemplateEngine.cs" />
+    <Compile Include="TemplateEngine\TemplateData.cs" />
     <Compile Include="TypeMapping\DefaultTypeMapper.cs" />
     <Compile Include="TypeMapping\ITypeMapper.cs" />
     <Compile Include="TypeMapping\LanguageType.cs" />

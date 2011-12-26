@@ -5,8 +5,12 @@ using System.Text;
 
 namespace CodeBuilder.TemplateEngine
 {
-    public interface ITemplateEngine
+    using Util;
+    using Configuration;
+    using PhysicalDataModel;
+
+    public class TemplateData
     {
-        void Run(TemplateData templateData);
+        public TemplateData() { }
     }
 }
