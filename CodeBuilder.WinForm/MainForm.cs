@@ -18,11 +18,13 @@ namespace CodeBuilder.WinForm
         public MainForm()
         {
             InitializeComponent();
+
+            this.InitializeUIData();
         }
 
-        public void InitializeData()
+        public void InitializeUIData()
         {
-            this.languageCombx.Text = this.languageCombx.Items[0].ToString();
+            this.SetComboBox();
         }
 
         #region Menu Handlers
@@ -30,6 +32,7 @@ namespace CodeBuilder.WinForm
         #region File
         private void fileOpenMenuItem_Click(object sender, EventArgs e)
         {
+            this.openFileDialog.Title = "Open Generation Settings File";
             this.openFileDialog.Filter = "Generation Settings (*.xml)|*.xml";
             if (this.openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -52,6 +55,7 @@ namespace CodeBuilder.WinForm
 
         private void fileImportPdmMenuItem_Click(object sender, EventArgs e)
         {
+            this.openFileDialog.Title = "Open PowerDesigner PDM File";
             this.openFileDialog.Filter = "Physical Data Model (*.pdm)|*.pdm";
             if (this.openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -203,6 +207,24 @@ namespace CodeBuilder.WinForm
 
         #endregion
 
+        #region Helper methods for modifying the UI display
 
+        private void SetComboBox()
+        {
+            foreach (var language in CodeBuilderConfiguration.Settings.Languages)
+            {
+                //this.languageCombx.Items.Add(language.
+            }
+            foreach (var language in CodeBuilderConfiguration.Settings.TemplateEngines)
+            {
+                //this.templateEngineCombox.DataSource = 
+            }
+
+            this.codeFileEncodingCombox.DataSource = Encoding.GetEncodings();
+            this.codeFileEncodingCombox.DisplayMember = "Name";
+            this.codeFileEncodingCombox.Text = "utf-8";
+        }
+
+        #endregion	
     }
 }

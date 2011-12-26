@@ -8,7 +8,7 @@ namespace CodeBuilder.Exceptions
     public class ConfigSectionLockedException: Exception
     {
         public ConfigSectionLockedException()
-            :this("配置节被锁定。")
+            :this("Section is locked.")
         {
         }
 

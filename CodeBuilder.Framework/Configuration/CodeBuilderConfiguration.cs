@@ -107,6 +107,11 @@ namespace CodeBuilder.Configuration
             }
         }
 
+        public static string LogDirectory
+        {
+            get { return Path.Combine(Environment.CurrentDirectory, "logs"); }
+        }
+
         public static string HelpUrl
         {
             get

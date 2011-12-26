@@ -15,7 +15,7 @@ namespace CodeBuilder.Util
             {
                 if (logDirectory == null)
                 {
-                    logDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs");
+                    logDirectory = Path.Combine(Environment.CurrentDirectory, "logs");
                     if (!Directory.Exists(logDirectory))
                         Directory.CreateDirectory(logDirectory);
                 }

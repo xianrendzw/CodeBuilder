@@ -89,6 +89,7 @@
             this.Controls.Add(this.pagePanel);
             this.Controls.Add(this.optionTreeView);
             this.Name = "TreeOptionsDialog";
+            this.Text = "Options";
             this.Load += new System.EventHandler(this.TreeSettingsDialog_Load);
             this.Controls.SetChildIndex(this.okButton, 0);
             this.Controls.SetChildIndex(this.cancelButton, 0);

@@ -66,7 +66,7 @@
             this.MinimizeBox = false;
             this.Name = "BaseOptionsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Settings";
+            this.Text = "Options";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BaseSettingsDialog_FormClosed);
             this.ResumeLayout(false);
 
