@@ -13,7 +13,12 @@ namespace CodeBuilder.WinForm
     {
         public static void Display(Form owner)
         {
-            TreeOptionsDialog.Display(owner,
+            Display(owner, null);
+        }
+
+        public static void Display(Form owner, string initialPage)
+        {
+            TreeOptionsDialog.Display(owner, initialPage,
                 new RecentFilesOptionsPage("Environment.Recent Files"),
                 new CodeFileOptionsPage("Code Generation.Code File"),
                 new DataSourceOptionsPage("DataSource Manager.DataSources"),

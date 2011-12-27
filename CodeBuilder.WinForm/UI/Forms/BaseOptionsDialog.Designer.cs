@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param typeName="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -67,7 +67,7 @@
             this.Name = "BaseOptionsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Options";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BaseSettingsDialog_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BaseOptionsDialog_FormClosed);
             this.ResumeLayout(false);
 
         }

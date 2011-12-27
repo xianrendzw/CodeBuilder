@@ -21,7 +21,7 @@ namespace CodeBuilder.PhysicalDataModel
         /// <summary>
         /// 构造函数。
         /// </summary>
-        /// <param name="tables">数据模型中表对象集合</param>
+        /// <param typeName="tables">数据模型中表对象集合</param>
         public Model(Tables tables)
         {
             this._tables = tables;
@@ -30,7 +30,7 @@ namespace CodeBuilder.PhysicalDataModel
         /// <summary>
         /// 构造函数。
         /// </summary>
-        /// <param name="views">数据模型中视图对象集合</param>
+        /// <param typeName="views">数据模型中视图对象集合</param>
         public Model(Views views)
         {
             this._views = views;
@@ -39,8 +39,8 @@ namespace CodeBuilder.PhysicalDataModel
         /// <summary>
         /// 构造函数。
         /// </summary>
-        /// <param name="tables">数据模型中表对象集合</param>
-        /// <param name="views">数据模型中视图对象集合</param>
+        /// <param typeName="tables">数据模型中表对象集合</param>
+        /// <param typeName="views">数据模型中视图对象集合</param>
         public Model(Tables tables, Views views)
             : this(tables)
         {

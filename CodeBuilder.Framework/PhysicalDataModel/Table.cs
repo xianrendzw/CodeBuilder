@@ -25,9 +25,9 @@ namespace CodeBuilder.PhysicalDataModel
         /// <summary>
         /// 构造函数。
         /// </summary>
-        /// <param name="id">表的唯一标识名称</param>
-        /// <param name="name">表的友好名称</param>
-        /// <param name="code">表的名称(建议用英文字母表示)</param>
+        /// <param typeName="id">表的唯一标识名称</param>
+        /// <param typeName="typeName">表的友好名称</param>
+        /// <param typeName="code">表的名称(建议用英文字母表示)</param>
         public Table(string id, string name, string code)
             : this(id, name, code, string.Empty)
         {
@@ -36,10 +36,10 @@ namespace CodeBuilder.PhysicalDataModel
         /// <summary>
         /// 构造函数。
         /// </summary>
-        /// <param name="id">表的唯一标识名称</param>
-        /// <param name="name">表的友好名称</param>
-        /// <param name="code">表的名称(建议用英文字母表示)</param>
-        /// <param name="comment">表的说明或注释。</param>
+        /// <param typeName="id">表的唯一标识名称</param>
+        /// <param typeName="typeName">表的友好名称</param>
+        /// <param typeName="code">表的名称(建议用英文字母表示)</param>
+        /// <param typeName="comment">表的说明或注释。</param>
         public Table(string id, string name, string code, string comment)
         {
             this._id = id;

@@ -54,7 +54,7 @@ namespace CodeBuilder.DataSource.Exporter.PowerDesigner
         /// <summary>
         /// 导出模型文件中的表对象集合。
         /// </summary>
-        /// <param name="tableNodes">模型文件中table结点集合</param>
+        /// <param typeName="tableNodes">模型文件中table结点集合</param>
         /// <returns>表对象集合</returns>
         private Tables GetTables(XmlNodeList tableNodes)
         {
@@ -82,7 +82,7 @@ namespace CodeBuilder.DataSource.Exporter.PowerDesigner
         /// <summary>
         /// 导出模型文件中的视图对象集合。
         /// </summary>
-        /// <param name="viewNodes">模型文件中view结点集合</param>
+        /// <param typeName="viewNodes">模型文件中view结点集合</param>
         /// <returns>视图对象集合</returns>
         private Views GetViews(XmlNodeList viewNodes)
         {
@@ -109,7 +109,7 @@ namespace CodeBuilder.DataSource.Exporter.PowerDesigner
         /// <summary>
         /// 导出模型文件中的表或视图对象的列集合。
         /// </summary>
-        /// <param name="columnsNode">模型文件中table或view结点的columns结点</param>
+        /// <param typeName="columnsNode">模型文件中table或view结点的columns结点</param>
         /// <returns>表或视图对象的列集合</returns>
         private Columns GetColumns(XmlNode tableOrViewNode)
         {
@@ -154,8 +154,8 @@ namespace CodeBuilder.DataSource.Exporter.PowerDesigner
         /// <summary>
         /// 导出模型文件中的表象的键集合。
         /// </summary>
-        /// <param name="tableNode">模型文件中table结点</param>
-        /// <param name="tableColumns">当前表中所有的列对象集合</param>
+        /// <param typeName="tableNode">模型文件中table结点</param>
+        /// <param typeName="tableColumns">当前表中所有的列对象集合</param>
         /// <returns>表对象的键集合</returns>
         private Columns GetKeys(XmlNode tableNode, Columns tableColumns)
         {
@@ -183,8 +183,8 @@ namespace CodeBuilder.DataSource.Exporter.PowerDesigner
         /// <summary>
         /// 导出模型文件中的表对象的主键集合。
         /// </summary>
-        /// <param name="keysNode">模型文件中table结点</param>
-        /// <param name="tableColumns">当前表中所有的列对象集合</param>
+        /// <param typeName="keysNode">模型文件中table结点</param>
+        /// <param typeName="tableColumns">当前表中所有的列对象集合</param>
         /// <returns>表对象的主键集合</returns>
         private Columns GetPrimaryKeys(XmlNode tableNode, Columns tableColumns)
         {

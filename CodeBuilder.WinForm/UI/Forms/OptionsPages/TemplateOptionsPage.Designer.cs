@@ -10,7 +10,7 @@
         /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param typeName="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -193,6 +193,11 @@
             this.noteLbl.Size = new System.Drawing.Size(50, 18);
             this.noteLbl.TabIndex = 45;
             this.noteLbl.Text = "Note:";
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.Filter = "Template Text File (*.txt)|*.txt\"";
+            this.openFileDialog.Title = "Select Template Text File";
             // 
             // getItFromOnlineBtn
             // 

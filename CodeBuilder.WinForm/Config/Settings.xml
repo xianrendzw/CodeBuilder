@@ -27,6 +27,7 @@
     <templateEngine name="Ader" adapter="" />
   </templateEngines>
   <appSettings>
+    <add key="typeMapper" value="CodeBuilder.TypeMapping.DefaultTypeMapper,CodeBuilder.Framework" />
     <add key="onlineTemplateUrl" value="http://www.dengzhiwei.com/category/codebuilder/templates"/>
     <add key="helpUrl" value="http://www.dengzhiwei.com/category/codebuilder"/>
     <add key="feedbackUrl" value="http://www.dengzhiwei.com/category/codebuilder-feedback"/>

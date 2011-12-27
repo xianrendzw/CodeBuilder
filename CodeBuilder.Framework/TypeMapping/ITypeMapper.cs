@@ -12,9 +12,9 @@ namespace CodeBuilder.TypeMapping
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="database"></param>
-        /// <param name="language"></param>
-        /// <param name="dbDataTypeName"></param>
+        /// <param typeName="database"></param>
+        /// <param typeName="language"></param>
+        /// <param typeName="dbDataTypeName"></param>
         /// <returns></returns>
         LanguageType GetLanguageType(string database, string language, string dbDataTypeName);
     }

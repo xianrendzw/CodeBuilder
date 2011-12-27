@@ -5,13 +5,20 @@ using System.Text;
 
 namespace CodeBuilder.TypeMapping
 {
+    using Configuration;
+
     public class TypeMapperFactory
     {
         private static ITypeMapper instance;
 
         public static ITypeMapper Creator()
         {
-            instance = new DefaultTypeMapper();
+            if (instance == null)
+            {
+                string typeName = CodeBuilderConfiguration.Settings.AppSettings["typeMapper"].Value;
+                instance = (ITypeMapper)Activator.CreateInstance(Type.GetType(typeName));
+            }
+
             return instance;
         }
     }

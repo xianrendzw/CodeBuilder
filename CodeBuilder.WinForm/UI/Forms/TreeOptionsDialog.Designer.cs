@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param typeName="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -90,7 +90,7 @@
             this.Controls.Add(this.optionTreeView);
             this.Name = "TreeOptionsDialog";
             this.ShowInTaskbar = false;
-            this.Load += new System.EventHandler(this.TreeSettingsDialog_Load);
+            this.Load += new System.EventHandler(this.TreeOptionsDialog_Load);
             this.Controls.SetChildIndex(this.okButton, 0);
             this.Controls.SetChildIndex(this.cancelButton, 0);
             this.Controls.SetChildIndex(this.optionTreeView, 0);

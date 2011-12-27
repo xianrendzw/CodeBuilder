@@ -14,7 +14,7 @@ namespace CodeBuilder.WinForm.UI
     {
         public static TreeNode Export(string connectionString, TreeView treeView)
         {
-            ExportConfig exportConfig = new ExportConfig(connectionString);
+            ExportConfig exportConfig = new ExportConfig(connectionString,"mysql50","csharp");
             return Export(exportConfig, treeView);
         }
 

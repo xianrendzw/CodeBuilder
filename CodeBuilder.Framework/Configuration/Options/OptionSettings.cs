@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CodeBuilder.Configuration
 {
-    public class OptionSettings:ISettings
+    public class OptionSettings : ISettings
     {
         public event SettingsEventHandler Changed;
 

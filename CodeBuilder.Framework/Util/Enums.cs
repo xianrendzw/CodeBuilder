@@ -6,7 +6,7 @@ using System.Text;
 namespace CodeBuilder.Util
 {
     /// <summary>
-    /// enumerator of database type
+    /// enumerator of database dbType
     /// </summary>
     public enum Database
     {

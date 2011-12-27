@@ -95,18 +95,12 @@ namespace CodeBuilder.WinForm
 
         private void toolsDSConfigMenuItem_Click(object sender, EventArgs e)
         {
-            using (DataSourceConfigBox dialog = new DataSourceConfigBox())
-            {
-                dialog.ShowDialog();
-            }
+            OptionsDialog.Display(this,"DataSource Manager.DataSources");
         }
 
         private void toolsTemplatesMenuItem_Click(object sender, EventArgs e)
         {
-            using (TemplateConfigBox dialog = new TemplateConfigBox())
-            {
-                dialog.ShowDialog();
-            }
+            OptionsDialog.Display(this, "Template Manager.Templates");
         }
         #endregion
 
@@ -248,7 +242,6 @@ namespace CodeBuilder.WinForm
             }
         }
         #endregion	
-
 
     }
 }

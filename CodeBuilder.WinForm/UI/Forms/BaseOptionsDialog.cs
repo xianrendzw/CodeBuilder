@@ -35,7 +35,7 @@ namespace CodeBuilder.WinForm.UI
         {
             foreach (BaseOptionsPage page in optionsPages)
             {
-                if (page.SettingsLoaded) page.ApplySettings();
+                if (page.IsLoaded) page.ApplySettings();
             }
         }
 
@@ -44,7 +44,7 @@ namespace CodeBuilder.WinForm.UI
         #region Event Handlers
 
         //private bool reloadProjectOnClose;
-        private void BaseSettingsDialog_FormClosed(object sender, FormClosedEventArgs e)
+        private void BaseOptionsDialog_FormClosed(object sender, FormClosedEventArgs e)
         {
             //if (this.reloadProjectOnClose)
             //    Services.TestLoader.ReloadTest();
@@ -77,7 +77,7 @@ namespace CodeBuilder.WinForm.UI
             {
                 foreach (BaseOptionsPage page in optionsPages)
                 {
-                    if (page.SettingsLoaded && page.HasChangesRequiringReload)
+                    if (page.IsLoaded && page.HasChangesRequiringReload)
                         return true;
                 }
                 return false;

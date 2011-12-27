@@ -33,9 +33,9 @@ namespace CodeBuilder.PhysicalDataModel
         /// <summary>
         /// 构造函数。
         /// </summary>
-        /// <param name="id">列的唯一标识名称</param>
-        /// <param name="name">列的友好名称</param>
-        /// <param name="code">列的名称(建议用英文字母表示)</param>
+        /// <param typeName="id">列的唯一标识名称</param>
+        /// <param typeName="typeName">列的友好名称</param>
+        /// <param typeName="code">列的名称(建议用英文字母表示)</param>
         public Column(string id, string name, string code)
         {
             this._id = id;
@@ -46,10 +46,10 @@ namespace CodeBuilder.PhysicalDataModel
         /// <summary>
         /// 构造函数。
         /// </summary>
-        /// <param name="id">列的唯一标识名称</param>
-        /// <param name="name">列的友好名称</param>
-        /// <param name="code">列的名称(建议用英文字母表示)</param>
-        /// <param name="dataType">列的数据类型(如:int,char,datetime等)</param>
+        /// <param typeName="id">列的唯一标识名称</param>
+        /// <param typeName="typeName">列的友好名称</param>
+        /// <param typeName="code">列的名称(建议用英文字母表示)</param>
+        /// <param typeName="dataType">列的数据类型(如:int,char,datetime等)</param>
         public Column(string id, string name, string code, string dataType)
             : this(id, name, code)
         {
@@ -59,11 +59,11 @@ namespace CodeBuilder.PhysicalDataModel
         /// <summary>
         /// 构造函数。
         /// </summary>
-        /// <param name="id">列的唯一标识名称</param>
-        /// <param name="name">列的友好名称</param>
-        /// <param name="code">列的名称(建议用英文字母表示)</param>
-        /// <param name="dataType">列的数据类型(如:int,char,datetime等)</param>
-        /// <param name="comment">列的说明或注释</param>
+        /// <param typeName="id">列的唯一标识名称</param>
+        /// <param typeName="typeName">列的友好名称</param>
+        /// <param typeName="code">列的名称(建议用英文字母表示)</param>
+        /// <param typeName="dataType">列的数据类型(如:int,char,datetime等)</param>
+        /// <param typeName="comment">列的说明或注释</param>
         public Column(string id, string name, string code, string dataType, string comment)
             : this(id, name, code, dataType)
         {

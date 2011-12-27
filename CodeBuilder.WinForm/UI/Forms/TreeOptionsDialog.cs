@@ -12,6 +12,7 @@ namespace CodeBuilder.WinForm.UI
     public partial class TreeOptionsDialog : BaseOptionsDialog
     {
         private BaseOptionsPage current;
+        private static string initialPage;
 
         public TreeOptionsDialog()
         {
@@ -48,8 +49,9 @@ namespace CodeBuilder.WinForm.UI
 
         #endregion
 
-        public static void Display(Form owner, params BaseOptionsPage[] pages)
+        public static void Display(Form owner, string initialPageName, params BaseOptionsPage[] pages)
         {
+            initialPage = initialPageName;
             using (TreeOptionsDialog dialog = new TreeOptionsDialog())
             {
                 owner.Site.Container.Add(dialog);
@@ -59,13 +61,13 @@ namespace CodeBuilder.WinForm.UI
             }
         }
 
-        private void TreeSettingsDialog_Load(object sender, System.EventArgs e)
+        private void TreeOptionsDialog_Load(object sender, System.EventArgs e)
         {
             foreach (BaseOptionsPage page in OptionsPages)
                 AddBranchToTree(optionTreeView.Nodes, page.Key);
 
-            if (optionTreeView.VisibleCount >= optionTreeView.GetNodeCount(true))
-                optionTreeView.ExpandAll();
+            //if (optionTreeView.VisibleCount >= optionTreeView.GetNodeCount(true))
+            //    optionTreeView.ExpandAll();
 
             SelectInitialPage();
             optionTreeView.Select();
@@ -73,8 +75,6 @@ namespace CodeBuilder.WinForm.UI
 
         private void SelectInitialPage()
         {
-            string initialPage = null;//Services.UserSettings.GetOption("Gui.Settings.InitialPage") as string;
-
             if (initialPage != null)
                 SelectPage(initialPage);
             else if (optionTreeView.Nodes.Count > 0)

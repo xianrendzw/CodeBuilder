@@ -21,7 +21,7 @@ namespace CodeBuilder.PhysicalDataModel
         /// <summary>
         /// 构造函数。
         /// </summary>
-        /// <param name="capacity">初始分配的容量数</param>
+        /// <param typeName="capacity">初始分配的容量数</param>
         public Tables(int capacity)
             : base(capacity)
         {

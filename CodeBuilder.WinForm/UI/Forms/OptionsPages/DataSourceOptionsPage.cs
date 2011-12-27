@@ -27,11 +27,14 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
         public override void LoadSettings()
         {
+            this.SetComboBoxItems();
         }
 
         public override void ApplySettings()
         {
         }
+
+        #region Event Handlers
 
         private void datasourceListbox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -47,5 +50,22 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
         {
 
         }
+
+        #endregion
+
+        #region Helper methods for modifying the UI display
+
+        private void SetComboBoxItems()
+        {
+            this.exporterCombox.Items.Clear();
+            foreach (ExporterElement exporter in CodeBuilderConfiguration.Settings.Exporters)
+            {
+                this.exporterCombox.Items.Add(exporter.Name);
+            }
+
+            this.exporterCombox.Text = this.exporterCombox.Items[0].ToString();
+        }
+
+        #endregion	
     }
 }

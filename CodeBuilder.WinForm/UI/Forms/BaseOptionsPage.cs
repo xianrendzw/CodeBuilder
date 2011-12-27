@@ -54,7 +54,7 @@ namespace CodeBuilder.WinForm.UI
             get { return title; }
         }
 
-        public bool SettingsLoaded
+        public bool IsLoaded
         {
             get { return settings != null; }
         }

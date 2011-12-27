@@ -21,7 +21,7 @@ namespace CodeBuilder.DataSource.Exporter
         /// <summary>
         /// 构造函数。
         /// </summary>
-        /// <param name="connectionString">数据源连接字符串(如:数据模型文件路径,数据库连接字符串等)。</param>
+        /// <param typeName="connectionString">数据源连接字符串(如:数据模型文件路径,数据库连接字符串等)。</param>
         public ExportConfig(string connectionString)
         {
             this._connectionString = connectionString;
@@ -30,9 +30,9 @@ namespace CodeBuilder.DataSource.Exporter
         /// <summary>
         /// 构造函数。
         /// </summary>
-        /// <param name="connectionString">数据源连接字符串(如:数据模型文件路径,数据库连接字符串等)。</param>
-        /// <param name="database">数据库系统</param>
-        /// <param name="language">程序设计语言</param>
+        /// <param typeName="connectionString">数据源连接字符串(如:数据模型文件路径,数据库连接字符串等)。</param>
+        /// <param typeName="database">数据库系统</param>
+        /// <param typeName="language">程序设计语言</param>
         public ExportConfig(string connectionString,string database,string language)
         {
             this._database = database;
