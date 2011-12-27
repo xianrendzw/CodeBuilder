@@ -10,32 +10,33 @@ namespace CodeBuilder.WinForm.UI
     using DataSource.Exporter;
     using DataSource.Exporter.PowerDesigner;
 
-    public class ImportModelHelper
+    public class ExportModelHelper
     {
-        public static void Import(string connectionString, TreeView treeView)
+        public static TreeNode Export(string connectionString, TreeView treeView)
         {
             ExportConfig exportConfig = new ExportConfig(connectionString);
-            Import(exportConfig, treeView);
+            return Export(exportConfig, treeView);
         }
 
-        public static void Import(ExportConfig exportConfig, TreeView treeView)
+        public static TreeNode Export(ExportConfig exportConfig, TreeView treeView)
         {
             TreeNode rootNode = new TreeNode(exportConfig.ConnectionString, 1, 1);
             treeView.Nodes.Add(rootNode);
-            Import(exportConfig, rootNode);
+            Export(exportConfig, rootNode);
+            return rootNode;
         }
 
-        public static void Import(ExportConfig exportConfig, TreeNode rootNode)
+        public static void Export(ExportConfig exportConfig, TreeNode rootNode)
         {
             IExporter exporter = new PowerDesigner12Exporter();
             Model model = exporter.Export(exportConfig);
-            Import(model, rootNode);
+            Export(model, rootNode);
         }
 
-        public static void Import(Model model, TreeNode parentNode)
+        public static void Export(Model model, TreeNode parentNode)
         {
-            ImportTables(model.Tables, parentNode);
-            ImportViews(model.Views, parentNode);
+            ExportTables(model.Tables, parentNode);
+            ExportViews(model.Views, parentNode);
         }
 
         public static void CheckedTreeNode(TreeNode tn)
@@ -74,7 +75,7 @@ namespace CodeBuilder.WinForm.UI
             }
         }
 
-        private static void ImportTables(Tables tables, TreeNode parentNode)
+        private static void ExportTables(Tables tables, TreeNode parentNode)
         {
             if (tables == null ||
                 tables.Count == 0) return;
@@ -94,7 +95,7 @@ namespace CodeBuilder.WinForm.UI
             parentNode.Nodes.Add(childNode);
         }
 
-        private static void ImportViews(Views views, TreeNode parentNode)
+        private static void ExportViews(Views views, TreeNode parentNode)
         {
             if (views == null ||
                 views.Count == 0) return;
@@ -113,6 +114,5 @@ namespace CodeBuilder.WinForm.UI
 
             parentNode.Nodes.Add(childNode);
         }
-
     }
 }

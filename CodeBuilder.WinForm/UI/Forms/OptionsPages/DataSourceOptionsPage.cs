@@ -12,14 +12,14 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
     using Util;
     using Configuration;
 
-    public partial class TraceOptionsPage : BaseOptionsPage
+    public partial class DataSourceOptionsPage : BaseOptionsPage
     {
-        public TraceOptionsPage()
+        public DataSourceOptionsPage()
         {
             InitializeComponent();
         }
 
-        public TraceOptionsPage(string key)
+        public DataSourceOptionsPage(string key)
             : base(key)
         {
             InitializeComponent();
@@ -27,13 +27,25 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
         public override void LoadSettings()
         {
-           // traceLevelCombox.SelectedIndex = (int)(InternalTraceLevel)settings.Get("Options.InternalTraceLevel", InternalTraceLevel.Default);
-            logDirectoryLabel.Text = CodeBuilderConfiguration.LogDirectory;
         }
 
         public override void ApplySettings()
         {
-           settings.Save("Options.InternalTraceLevel", (InternalTraceLevel)traceLevelCombox.SelectedIndex);
+        }
+
+        private void datasourceListbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void removeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newsaveBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

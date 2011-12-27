@@ -14,8 +14,11 @@ namespace CodeBuilder.WinForm
         public static void Display(Form owner)
         {
             TreeOptionsDialog.Display(owner,
-                new GenerationOptionsPage("Generation.Code Generation"),
-                new TraceOptionsPage("Tracing.Internal Trace"));
+                new RecentFilesOptionsPage("Environment.Recent Files"),
+                new CodeFileOptionsPage("Code Generation.Code File"),
+                new DataSourceOptionsPage("DataSource Manager.DataSources"),
+                new TemplateOptionsPage("Template Manager.Templates"),
+                new TraceOptionsPage("Advanced Settings.Internal Trace"));
         }
     }
 }

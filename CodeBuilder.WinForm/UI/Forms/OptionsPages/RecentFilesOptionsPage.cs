@@ -12,14 +12,14 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
     using Util;
     using Configuration;
 
-    public partial class GenerationOptionsPage : BaseOptionsPage
+    public partial class RecentFilesOptionsPage : BaseOptionsPage
     {
-        public GenerationOptionsPage()
+        public RecentFilesOptionsPage()
         {
             InitializeComponent();
         }
 
-        public GenerationOptionsPage(string key)
+        public RecentFilesOptionsPage(string key)
             : base(key)
         {
             InitializeComponent();

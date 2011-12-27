@@ -28,107 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.noteTextLbl = new System.Windows.Forms.Label();
+            this.noteLbl = new System.Windows.Forms.Label();
             this.logDirectoryLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.traceLevelComboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.logDirectoryLbl = new System.Windows.Forms.Label();
+            this.traceLevelCombox = new System.Windows.Forms.ComboBox();
+            this.tracLevelLbl = new System.Windows.Forms.Label();
+            this.internalTraceLbl = new System.Windows.Forms.Label();
+            this.topGbx = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
-            // label5
+            // noteTextLbl
             // 
-            this.label5.Location = new System.Drawing.Point(102, 130);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(329, 40);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Changes in the Trace Level will not affect the current session. After changing th" +
+            this.noteTextLbl.Location = new System.Drawing.Point(102, 130);
+            this.noteTextLbl.Name = "noteTextLbl";
+            this.noteTextLbl.Size = new System.Drawing.Size(329, 40);
+            this.noteTextLbl.TabIndex = 29;
+            this.noteTextLbl.Text = "Changes in the Trace Level will not affect the current session. After changing th" +
     "e level, you should shut down and restart the Gui.";
             // 
-            // label2
+            // noteLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(47, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Note:";
+            this.noteLbl.AutoSize = true;
+            this.noteLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noteLbl.Location = new System.Drawing.Point(47, 130);
+            this.noteLbl.Name = "noteLbl";
+            this.noteLbl.Size = new System.Drawing.Size(38, 13);
+            this.noteLbl.TabIndex = 28;
+            this.noteLbl.Text = "Note:";
             // 
             // logDirectoryLabel
             // 
-            this.logDirectoryLabel.AutoSize = true;
-            this.logDirectoryLabel.Location = new System.Drawing.Point(102, 87);
+            this.logDirectoryLabel.Location = new System.Drawing.Point(105, 87);
             this.logDirectoryLabel.Name = "logDirectoryLabel";
-            this.logDirectoryLabel.Size = new System.Drawing.Size(0, 13);
+            this.logDirectoryLabel.Size = new System.Drawing.Size(300, 13);
             this.logDirectoryLabel.TabIndex = 27;
             // 
-            // label4
+            // logDirectoryLbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Log Directory:";
+            this.logDirectoryLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logDirectoryLbl.Location = new System.Drawing.Point(19, 87);
+            this.logDirectoryLbl.Name = "logDirectoryLbl";
+            this.logDirectoryLbl.Size = new System.Drawing.Size(75, 13);
+            this.logDirectoryLbl.TabIndex = 26;
+            this.logDirectoryLbl.Text = "Log Directory:";
             // 
-            // traceLevelComboBox
+            // traceLevelCombox
             // 
-            this.traceLevelComboBox.FormattingEnabled = true;
-            this.traceLevelComboBox.Items.AddRange(new object[] {
+            this.traceLevelCombox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.traceLevelCombox.FormattingEnabled = true;
+            this.traceLevelCombox.Items.AddRange(new object[] {
             "Default",
             "Off",
             "Error",
             "Warning",
             "Info",
             "Verbose"});
-            this.traceLevelComboBox.Location = new System.Drawing.Point(105, 43);
-            this.traceLevelComboBox.Name = "traceLevelComboBox";
-            this.traceLevelComboBox.Size = new System.Drawing.Size(61, 21);
-            this.traceLevelComboBox.TabIndex = 25;
+            this.traceLevelCombox.Location = new System.Drawing.Point(105, 43);
+            this.traceLevelCombox.Name = "traceLevelCombox";
+            this.traceLevelCombox.Size = new System.Drawing.Size(62, 21);
+            this.traceLevelCombox.TabIndex = 25;
             // 
-            // label1
+            // tracLevelLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Trace Level:";
+            this.tracLevelLbl.Location = new System.Drawing.Point(19, 46);
+            this.tracLevelLbl.Name = "tracLevelLbl";
+            this.tracLevelLbl.Size = new System.Drawing.Size(75, 13);
+            this.tracLevelLbl.TabIndex = 24;
+            this.tracLevelLbl.Text = "Trace Level:";
             // 
-            // label3
+            // internalTraceLbl
             // 
-            this.label3.Location = new System.Drawing.Point(9, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Internal Trace";
+            this.internalTraceLbl.Location = new System.Drawing.Point(9, 5);
+            this.internalTraceLbl.Name = "internalTraceLbl";
+            this.internalTraceLbl.Size = new System.Drawing.Size(80, 16);
+            this.internalTraceLbl.TabIndex = 23;
+            this.internalTraceLbl.Text = "Internal Trace";
             // 
-            // groupBox3
+            // topGbx
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.topGbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Location = new System.Drawing.Point(105, 5);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(344, 8);
-            this.groupBox3.TabIndex = 22;
-            this.groupBox3.TabStop = false;
+            this.topGbx.Location = new System.Drawing.Point(90, 5);
+            this.topGbx.Name = "topGbx";
+            this.topGbx.Size = new System.Drawing.Size(360, 8);
+            this.topGbx.TabIndex = 22;
+            this.topGbx.TabStop = false;
             // 
             // TraceOptionsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.noteTextLbl);
+            this.Controls.Add(this.noteLbl);
             this.Controls.Add(this.logDirectoryLabel);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.traceLevelComboBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.logDirectoryLbl);
+            this.Controls.Add(this.traceLevelCombox);
+            this.Controls.Add(this.tracLevelLbl);
+            this.Controls.Add(this.internalTraceLbl);
+            this.Controls.Add(this.topGbx);
             this.Name = "TraceOptionsPage";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -137,14 +135,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label noteTextLbl;
+        private System.Windows.Forms.Label noteLbl;
         private System.Windows.Forms.Label logDirectoryLabel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox traceLevelComboBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label logDirectoryLbl;
+        private System.Windows.Forms.ComboBox traceLevelCombox;
+        private System.Windows.Forms.Label tracLevelLbl;
+        private System.Windows.Forms.Label internalTraceLbl;
+        private System.Windows.Forms.GroupBox topGbx;
 
     }
 }

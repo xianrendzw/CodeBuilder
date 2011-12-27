@@ -23,22 +23,7 @@ namespace CodeBuilder.Configuration
         /// </summary>
         static CodeBuilderConfiguration()
         {
-            try
-            {
-                settings = (SettingsSection)GetConfigSection("codebuilder/settings");
-                typeMapping = (TypeMappingSection)GetConfigSection("codebuilder/typeMapping");
-            }
-            catch (Exception ex)
-            {
-                string msg = string.Format("Invalid configuration in {0}",
-                    AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
-                throw new ApplicationException(msg, ex);
-            }
-        }
-
-        private static object GetConfigSection(string name)
-        {
-            return System.Configuration.ConfigurationManager.GetSection(name);
+            Load();
         }
 
         #endregion
@@ -161,5 +146,31 @@ namespace CodeBuilder.Configuration
             }
         }
         #endregion
+
+        public static void Reload()
+        {
+            Load();
+        }
+
+        private static void Load()
+        {
+            try
+            {
+                settings = (SettingsSection)GetConfigSection("codebuilder/settings");
+                typeMapping = (TypeMappingSection)GetConfigSection("codebuilder/typeMapping");
+            }
+            catch (Exception ex)
+            {
+                string msg = string.Format("Invalid configuration in {0}",
+                    AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
+                throw new ApplicationException(msg, ex);
+            }
+        }
+
+        private static object GetConfigSection(string name)
+        {
+            return System.Configuration.ConfigurationManager.GetSection(name);
+        }
+
     }
 }

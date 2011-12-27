@@ -92,11 +92,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Forms\OptionsPages\GenerationOptionsPage.cs">
+    <Compile Include="UI\Forms\OptionsPages\DataSourceOptionsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Forms\OptionsPages\GenerationOptionsPage.Designer.cs">
-      <DependentUpon>GenerationOptionsPage.cs</DependentUpon>
+    <Compile Include="UI\Forms\OptionsPages\DataSourceOptionsPage.Designer.cs">
+      <DependentUpon>DataSourceOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\CodeFileOptionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\CodeFileOptionsPage.Designer.cs">
+      <DependentUpon>CodeFileOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\RecentFilesOptionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\RecentFilesOptionsPage.Designer.cs">
+      <DependentUpon>RecentFilesOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\TemplateOptionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\TemplateOptionsPage.Designer.cs">
+      <DependentUpon>TemplateOptionsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Forms\TemplateConfigBox.cs">
       <SubType>Form</SubType>
@@ -130,7 +148,7 @@
     <Compile Include="UI\Forms\TreeOptionsDialog.Designer.cs">
       <DependentUpon>TreeOptionsDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Helpers\ImportModelHelper.cs" />
+    <Compile Include="UI\Helpers\ExportModelHelper.cs" />
     <Compile Include="UI\Helpers\MessageBoxHelper.cs" />
     <EmbeddedResource Include="UI\Forms\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
@@ -151,8 +169,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\Forms\OptionsPages\GenerationOptionsPage.resx">
-      <DependentUpon>GenerationOptionsPage.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\DataSourceOptionsPage.resx">
+      <DependentUpon>DataSourceOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\CodeFileOptionsPage.resx">
+      <DependentUpon>CodeFileOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\RecentFilesOptionsPage.resx">
+      <DependentUpon>RecentFilesOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\TemplateOptionsPage.resx">
+      <DependentUpon>TemplateOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\OptionsPages\TraceOptionsPage.resx">
       <DependentUpon>TraceOptionsPage.cs</DependentUpon>

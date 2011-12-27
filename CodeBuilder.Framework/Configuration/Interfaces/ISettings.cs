@@ -29,7 +29,7 @@ namespace CodeBuilder.Configuration
 
         void RemoveGroup(string groupName);
 
-        void Save(string name, object settingValue);
+        void Save(string name, object value);
     }
 
     public delegate void SettingsEventHandler(object sender, SettingsEventArgs args);

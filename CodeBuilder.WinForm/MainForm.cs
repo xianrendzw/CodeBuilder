@@ -24,7 +24,9 @@ namespace CodeBuilder.WinForm
 
         private void InitializeUIData()
         {
-            this.SetComboBoxData();
+            this.SetComboBoxItems();
+            this.AddDataSourceMenuItems(this.fileExportDataSourceMenuItem);
+            this.AddDataSourceMenuItems(this.exportDataSourceCtxMenuItem);
         }
 
         #region Menu Handlers
@@ -53,7 +55,7 @@ namespace CodeBuilder.WinForm
             }
         }
 
-        private void fileImportPdmMenuItem_Click(object sender, EventArgs e)
+        private void fileExportPdmMenuItem_Click(object sender, EventArgs e)
         {
             this.openFileDialog.Title = "Open PowerDesigner PDM File";
             this.openFileDialog.Filter = "Physical Data Model (*.pdm)|*.pdm";
@@ -62,7 +64,7 @@ namespace CodeBuilder.WinForm
                 string pdmFileName = this.openFileDialog.FileName;
                 try
                 {
-                    ImportModelHelper.Import(pdmFileName, this.treeView);
+                    ExportModelHelper.Export(pdmFileName, this.treeView);
                     this.treeView.ExpandAll();
                     this.clearCtxMenuItem.Enabled = true;
                 }
@@ -73,7 +75,7 @@ namespace CodeBuilder.WinForm
             }
         }
 
-        private void fileImportDataSourceMenuItem_Click(object sender, EventArgs e)
+        private void fileExportDataSourceMenuItem_Click(object sender, EventArgs e)
         {
         }
 
@@ -99,7 +101,7 @@ namespace CodeBuilder.WinForm
             }
         }
 
-        private void templatesMenuItem_Click(object sender, EventArgs e)
+        private void toolsTemplatesMenuItem_Click(object sender, EventArgs e)
         {
             using (TemplateConfigBox dialog = new TemplateConfigBox())
             {
@@ -135,14 +137,14 @@ namespace CodeBuilder.WinForm
         #region Context Menu Handlers
 
         #region TreeView
-        private void importPDMCtxMenuItem_Click(object sender, EventArgs e)
+        private void exportPDMCtxMenuItem_Click(object sender, EventArgs e)
         {
-            this.fileImportPdmMenuItem_Click(sender, e);
+            this.fileExportPdmMenuItem_Click(sender, e);
         }
 
-        private void importDataSourceCtxMenuItem_Click(object sender, EventArgs e)
+        private void exportDataSourceCtxMenuItem_Click(object sender, EventArgs e)
         {
-            this.fileImportDataSourceMenuItem_Click(sender, e);
+            this.fileExportDataSourceMenuItem_Click(sender, e);
         }
 
         private void clearCtxMenuItem_Click(object sender, EventArgs e)
@@ -188,7 +190,7 @@ namespace CodeBuilder.WinForm
 
         private void treeView_AfterCheck(object sender, TreeViewEventArgs e)
         {
-            ImportModelHelper.CheckedTreeNode(e.Node);
+            ExportModelHelper.CheckedTreeNode(e.Node);
         }
         #endregion
 
@@ -201,15 +203,15 @@ namespace CodeBuilder.WinForm
 
         private void generateBtn_Click(object sender, EventArgs e)
         {
-            List<string> l = ImportModelHelper.GetCheckedTags(this.treeView.Nodes);
+            List<string> l = ExportModelHelper.GetCheckedTags(this.treeView.Nodes);
             int n = l.Count;
+            MessageBoxHelper.Display(n.ToString());
         }
-
         #endregion
 
         #region Helper methods for modifying the UI display
 
-        private void SetComboBoxData()
+        private void SetComboBoxItems()
         {
             this.languageCombx.Items.Clear();
             this.templateEngineCombox.Items.Clear();
@@ -235,6 +237,18 @@ namespace CodeBuilder.WinForm
             this.codeFileEncodingCombox.Text = "UTF-8";
         }
 
+        private void AddDataSourceMenuItems(ToolStripMenuItem parent)
+        {
+            parent.DropDownItems.Clear();
+            for (int i = 0; i < 10; i++)
+            {
+                ToolStripMenuItem ds = new ToolStripMenuItem("DataSource1");
+                ds.Click += new EventHandler(generateBtn_Click);
+                parent.DropDownItems.Add(ds);
+            }
+        }
         #endregion	
+
+
     }
 }

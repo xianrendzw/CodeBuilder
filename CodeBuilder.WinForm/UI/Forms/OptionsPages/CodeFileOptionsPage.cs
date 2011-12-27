@@ -12,14 +12,14 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
     using Util;
     using Configuration;
 
-    public partial class TraceOptionsPage : BaseOptionsPage
+    public partial class CodeFileOptionsPage : BaseOptionsPage
     {
-        public TraceOptionsPage()
+        public CodeFileOptionsPage()
         {
             InitializeComponent();
         }
 
-        public TraceOptionsPage(string key)
+        public CodeFileOptionsPage(string key)
             : base(key)
         {
             InitializeComponent();
@@ -27,13 +27,18 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
         public override void LoadSettings()
         {
-           // traceLevelCombox.SelectedIndex = (int)(InternalTraceLevel)settings.Get("Options.InternalTraceLevel", InternalTraceLevel.Default);
-            logDirectoryLabel.Text = CodeBuilderConfiguration.LogDirectory;
         }
 
         public override void ApplySettings()
         {
-           settings.Save("Options.InternalTraceLevel", (InternalTraceLevel)traceLevelCombox.SelectedIndex);
+        }
+
+        private void openFolderDialogBtn_Click(object sender, EventArgs e)
+        {
+            if (this.folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                this.ouputPathTextBox.Text = this.folderBrowserDialog.SelectedPath;
+            }
         }
     }
 }

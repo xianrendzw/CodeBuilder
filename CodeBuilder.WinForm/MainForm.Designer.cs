@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileImportPdmMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileImportDataSourceMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileExportPdmMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileExportDataSourceMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileSeparator2MenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.fileOpenMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileSaveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +41,7 @@
             this.fileExitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsDSConfigMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.templatesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsTemplatesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsSeparator1MenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.toolsOptionsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,8 +58,8 @@
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.treeView = new System.Windows.Forms.TreeView();
             this.treeViewContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.importPDMCtxMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importDataSourceCtxMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportPDMCtxMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportDataSourceCtxMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.clearCtxMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.treeNodeImageList = new System.Windows.Forms.ImageList(this.components);
@@ -130,8 +130,8 @@
             // fileMenu
             // 
             this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileImportPdmMenuItem,
-            this.fileImportDataSourceMenuItem,
+            this.fileExportPdmMenuItem,
+            this.fileExportDataSourceMenuItem,
             this.fileSeparator2MenuItem,
             this.fileOpenMenuItem,
             this.fileSaveMenuItem,
@@ -141,19 +141,19 @@
             this.fileMenu.Size = new System.Drawing.Size(35, 20);
             this.fileMenu.Text = "&File";
             // 
-            // fileImportPdmMenuItem
+            // fileExportPdmMenuItem
             // 
-            this.fileImportPdmMenuItem.Name = "fileImportPdmMenuItem";
-            this.fileImportPdmMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.fileImportPdmMenuItem.Text = "Import &PowerDesigner PDM Files...";
-            this.fileImportPdmMenuItem.Click += new System.EventHandler(this.fileImportPdmMenuItem_Click);
+            this.fileExportPdmMenuItem.Name = "fileExportPdmMenuItem";
+            this.fileExportPdmMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.fileExportPdmMenuItem.Text = "Export &PowerDesigner PDM Files...";
+            this.fileExportPdmMenuItem.Click += new System.EventHandler(this.fileExportPdmMenuItem_Click);
             // 
-            // fileImportDataSourceMenuItem
+            // fileExportDataSourceMenuItem
             // 
-            this.fileImportDataSourceMenuItem.Name = "fileImportDataSourceMenuItem";
-            this.fileImportDataSourceMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.fileImportDataSourceMenuItem.Text = "&Import From DataSourceSettings";
-            this.fileImportDataSourceMenuItem.Click += new System.EventHandler(this.fileImportDataSourceMenuItem_Click);
+            this.fileExportDataSourceMenuItem.Name = "fileExportDataSourceMenuItem";
+            this.fileExportDataSourceMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.fileExportDataSourceMenuItem.Text = "&Export From DataSource";
+            this.fileExportDataSourceMenuItem.Click += new System.EventHandler(this.fileExportDataSourceMenuItem_Click);
             // 
             // fileSeparator2MenuItem
             // 
@@ -190,7 +190,7 @@
             // 
             this.toolsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolsDSConfigMenuItem,
-            this.templatesMenuItem,
+            this.toolsTemplatesMenuItem,
             this.toolsSeparator1MenuItem,
             this.toolsOptionsMenuItem});
             this.toolsMenu.Name = "toolsMenu";
@@ -200,26 +200,26 @@
             // toolsDSConfigMenuItem
             // 
             this.toolsDSConfigMenuItem.Name = "toolsDSConfigMenuItem";
-            this.toolsDSConfigMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.toolsDSConfigMenuItem.Text = "&DataSourceSettings Configuration...";
+            this.toolsDSConfigMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.toolsDSConfigMenuItem.Text = "&DataSource Configuration...";
             this.toolsDSConfigMenuItem.Click += new System.EventHandler(this.toolsDSConfigMenuItem_Click);
             // 
-            // templatesMenuItem
+            // toolsTemplatesMenuItem
             // 
-            this.templatesMenuItem.Name = "templatesMenuItem";
-            this.templatesMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.templatesMenuItem.Text = "&Templates...";
-            this.templatesMenuItem.Click += new System.EventHandler(this.templatesMenuItem_Click);
+            this.toolsTemplatesMenuItem.Name = "toolsTemplatesMenuItem";
+            this.toolsTemplatesMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.toolsTemplatesMenuItem.Text = "&Templates...";
+            this.toolsTemplatesMenuItem.Click += new System.EventHandler(this.toolsTemplatesMenuItem_Click);
             // 
             // toolsSeparator1MenuItem
             // 
             this.toolsSeparator1MenuItem.Name = "toolsSeparator1MenuItem";
-            this.toolsSeparator1MenuItem.Size = new System.Drawing.Size(246, 6);
+            this.toolsSeparator1MenuItem.Size = new System.Drawing.Size(207, 6);
             // 
             // toolsOptionsMenuItem
             // 
             this.toolsOptionsMenuItem.Name = "toolsOptionsMenuItem";
-            this.toolsOptionsMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.toolsOptionsMenuItem.Size = new System.Drawing.Size(210, 22);
             this.toolsOptionsMenuItem.Text = "&Options...";
             this.toolsOptionsMenuItem.Click += new System.EventHandler(this.toolsOptionsMenuItem_Click);
             // 
@@ -338,26 +338,26 @@
             // treeViewContextMenu
             // 
             this.treeViewContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.importPDMCtxMenuItem,
-            this.importDataSourceCtxMenuItem,
+            this.exportPDMCtxMenuItem,
+            this.exportDataSourceCtxMenuItem,
             this.ctxSeparator2,
             this.clearCtxMenuItem});
             this.treeViewContextMenu.Name = "treeViewContextMenu";
             this.treeViewContextMenu.Size = new System.Drawing.Size(242, 76);
             // 
-            // importPDMCtxMenuItem
+            // exportPDMCtxMenuItem
             // 
-            this.importPDMCtxMenuItem.Name = "importPDMCtxMenuItem";
-            this.importPDMCtxMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.importPDMCtxMenuItem.Text = "Import PowerDesigner PDM Files...";
-            this.importPDMCtxMenuItem.Click += new System.EventHandler(this.importPDMCtxMenuItem_Click);
+            this.exportPDMCtxMenuItem.Name = "exportPDMCtxMenuItem";
+            this.exportPDMCtxMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.exportPDMCtxMenuItem.Text = "Export PowerDesigner PDM Files...";
+            this.exportPDMCtxMenuItem.Click += new System.EventHandler(this.exportPDMCtxMenuItem_Click);
             // 
-            // importDataSourceCtxMenuItem
+            // exportDataSourceCtxMenuItem
             // 
-            this.importDataSourceCtxMenuItem.Name = "importDataSourceCtxMenuItem";
-            this.importDataSourceCtxMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.importDataSourceCtxMenuItem.Text = "Import From DataSourceSettings";
-            this.importDataSourceCtxMenuItem.Click += new System.EventHandler(this.importDataSourceCtxMenuItem_Click);
+            this.exportDataSourceCtxMenuItem.Name = "exportDataSourceCtxMenuItem";
+            this.exportDataSourceCtxMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.exportDataSourceCtxMenuItem.Text = "Export From DataSource";
+            this.exportDataSourceCtxMenuItem.Click += new System.EventHandler(this.exportDataSourceCtxMenuItem_Click);
             // 
             // ctxSeparator2
             // 
@@ -553,6 +553,16 @@
             // templateListBox
             // 
             this.templateListBox.FormattingEnabled = true;
+            this.templateListBox.Items.AddRange(new object[] {
+            "LightFramework-BLL",
+            "LightFramework-DTO",
+            "LightFramework-DAL",
+            "PetShop-BLL",
+            "PetShop-Entity",
+            "PetShop-DAL",
+            "",
+            "",
+            ""});
             this.templateListBox.Location = new System.Drawing.Point(357, 122);
             this.templateListBox.Name = "templateListBox";
             this.templateListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
@@ -701,6 +711,7 @@
             // 
             // packageTxtBox
             // 
+            this.packageTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.packageTxtBox.ImeMode = System.Windows.Forms.ImeMode.On;
             this.packageTxtBox.Location = new System.Drawing.Point(86, 54);
             this.packageTxtBox.Name = "packageTxtBox";
@@ -782,8 +793,8 @@
         private System.Windows.Forms.StatusStrip mainStatusStrip;
         private System.Windows.Forms.ToolStripSeparator helpSeparator1MenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileMenu;
-        private System.Windows.Forms.ToolStripMenuItem fileImportPdmMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fileImportDataSourceMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fileExportPdmMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fileExportDataSourceMenuItem;
         private System.Windows.Forms.ToolStripSeparator fileSeparator1MenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileExitMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolsSeparator1MenuItem;
@@ -793,7 +804,7 @@
         private System.Windows.Forms.TreeView treeView;
         private System.Windows.Forms.GroupBox genItemsGbx;
         private System.Windows.Forms.GroupBox resultGbx;
-        private System.Windows.Forms.ToolStripMenuItem templatesMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsTemplatesMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel statusBarReady;
         private System.Windows.Forms.ToolStripStatusLabel statusBarDatabase;
         private System.Windows.Forms.ToolStripStatusLabel statusBarLanguage;
@@ -803,8 +814,8 @@
         private System.Windows.Forms.ImageList treeNodeImageList;
         private System.Windows.Forms.Button generateBtn;
         private System.Windows.Forms.ContextMenuStrip treeViewContextMenu;
-        private System.Windows.Forms.ToolStripMenuItem importPDMCtxMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importDataSourceCtxMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportPDMCtxMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportDataSourceCtxMenuItem;
         private System.Windows.Forms.ToolStripSeparator ctxSeparator2;
         private System.Windows.Forms.ToolStripMenuItem clearCtxMenuItem;
         private System.Windows.Forms.ContextMenuStrip genSettingsCtxMenuStrip;
