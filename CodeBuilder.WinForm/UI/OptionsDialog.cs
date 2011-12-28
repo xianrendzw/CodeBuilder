@@ -20,7 +20,7 @@ namespace CodeBuilder.WinForm
         {
             TreeOptionsDialog.Display(owner, initialPage,
                 new RecentFilesOptionsPage("Environment.Recent Files"),
-                new CodeFileOptionsPage("Code Generation.Code File"),
+                new CodeGeneralOptionsPage("Code Generation.General"),
                 new DataSourceOptionsPage("DataSource Manager.DataSources"),
                 new TemplateOptionsPage("Template Manager.Templates"),
                 new TraceOptionsPage("Advanced Settings.Internal Trace"));

@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Component Designer generated displayName
 
         /// <summary> 
         /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
+        /// the contents of this method with the displayName editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -122,6 +122,7 @@
             // nameTxtbox
             // 
             this.nameTxtbox.Location = new System.Drawing.Point(256, 100);
+            this.nameTxtbox.MaxLength = 200;
             this.nameTxtbox.Name = "nameTxtbox";
             this.nameTxtbox.Size = new System.Drawing.Size(121, 20);
             this.nameTxtbox.TabIndex = 38;

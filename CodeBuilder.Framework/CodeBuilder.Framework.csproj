@@ -69,6 +69,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\TemplateEngines\Razor2.1\System.Web.Razor.dll</HintPath>
@@ -118,6 +119,7 @@
     <Compile Include="Exporter\SQLServer\SqlServer2000Exporter.cs" />
     <Compile Include="Exporter\SQLServer\SqlServer2005Exporter.cs" />
     <Compile Include="Exporter\SQLServer\SqlServer2008Exporter.cs" />
+    <Compile Include="PhysicalDataModel\BaseTable.cs" />
     <Compile Include="PhysicalDataModel\Column.cs" />
     <Compile Include="PhysicalDataModel\Columns.cs" />
     <Compile Include="PhysicalDataModel\Model.cs" />
@@ -141,6 +143,7 @@
     <Compile Include="Util\Logging\InternalTrace.cs" />
     <Compile Include="Util\Logging\InternalTraceWriter.cs" />
     <Compile Include="Util\Logging\Logger.cs" />
+    <Compile Include="Util\SerializeHelper.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

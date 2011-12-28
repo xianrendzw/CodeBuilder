@@ -15,6 +15,9 @@ namespace CodeBuilder.WinForm
 
     public partial class MainForm : Form
     {
+        private string currentGenerationSettingsFile;
+        private static Logger logger = InternalTrace.GetLogger(typeof(MainForm));
+
         public MainForm()
         {
             InitializeComponent();
@@ -27,6 +30,7 @@ namespace CodeBuilder.WinForm
             this.SetComboBoxItems();
             this.AddDataSourceMenuItems(this.fileExportDataSourceMenuItem);
             this.AddDataSourceMenuItems(this.exportDataSourceCtxMenuItem);
+            this.SetStatusItems();
         }
 
         #region Menu Handlers
@@ -39,20 +43,51 @@ namespace CodeBuilder.WinForm
             if (this.openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string xmlFileName = this.openFileDialog.FileName;
+                try
+                {
+                    this.SetGenerationSettings(xmlFileName);
+                }
+                catch (Exception ex)
+                {
+                    logger.Error("Open Generation Settings File", ex);
+                    MessageBoxHelper.DisplayFailure(ex.Message);
+                    return;
+                }
+                this.currentGenerationSettingsFile = xmlFileName;
                 this.clearCtxMenuItem.Enabled = true;
             }
         }
 
         private void fileSaveMenuItem_Click(object sender, EventArgs e)
         {
-            this.saveFileDialog.Filter = "Generation Settings (*.xml)|*.xml";
-            this.saveFileDialog.DefaultExt = ".xml";
-            this.saveFileDialog.FileName = "New_GenerationSettings.xml";
-            if (this.saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string xmlFileName = this.saveFileDialog.FileName;
+            GenerationSettings settings = GetGenerationSettings();
 
+            string xmlFileName = this.currentGenerationSettingsFile;
+            string readybarText = "Modified Generation Settings";
+            if (string.IsNullOrEmpty(xmlFileName))
+            {
+                readybarText = "Saved Generation Settings";
+                this.saveFileDialog.Filter = "Generation Settings (*.xml)|*.xml";
+                this.saveFileDialog.DefaultExt = ".xml";
+                this.saveFileDialog.FileName = "New_GenerationSettings.xml";
+                if (this.saveFileDialog.ShowDialog() == DialogResult.OK)
+                    xmlFileName = this.saveFileDialog.FileName;
+                else return;
             }
+
+            try
+            {
+                GenerationSettingsHelper.Save(xmlFileName, settings);
+                this.SetStatusReadyBarText(readybarText);
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Save Generation Settings File", ex);
+                MessageBoxHelper.DisplayFailure(ex.Message);
+                return;
+            }
+
+            this.currentGenerationSettingsFile = xmlFileName;
         }
 
         private void fileExportPdmMenuItem_Click(object sender, EventArgs e)
@@ -201,6 +236,17 @@ namespace CodeBuilder.WinForm
             int n = l.Count;
             MessageBoxHelper.Display(n.ToString());
         }
+
+        private void languageCombx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.statusBarLanguage.Text = this.languageCombx.Text;
+        }
+
+        private void codeFileEncodingCombox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.statusBarEncoding.Text = this.codeFileEncodingCombox.Text;
+        }
+
         #endregion
 
         #region Helper methods for modifying the UI display
@@ -241,7 +287,44 @@ namespace CodeBuilder.WinForm
                 parent.DropDownItems.Add(ds);
             }
         }
-        #endregion	
 
+        private void SetStatusItems()
+        {
+            this.statusBarDatabase.Text = this.databaseNameLbl.Text;
+            this.statusBarEncoding.Text = this.codeFileEncodingCombox.Text;
+            this.statusBarLanguage.Text = this.languageCombx.Text;
+        }
+
+        private void SetStatusReadyBarText(string text)
+        {
+            this.statusBarReady.Text = text;
+        }
+
+        private void SetGenerationSettings(string filePath)
+        {
+            GenerationSettings settings = GenerationSettingsHelper.GetSettings(filePath);
+            this.languageCombx.Text = settings.Language;
+            this.templateEngineCombox.Text = settings.TemplateEngine;
+            this.packageTxtBox.Text = settings.Package;
+            this.tablePrefixTxtBox.Text = settings.TablePrefix;
+            this.authorTxtBox.Text = settings.Author;
+            this.versionTxtBox.Text = settings.Version;
+            this.templateListBox.SelectedItem = settings.Template;
+            this.codeFileEncodingCombox.Text = settings.Encoding;
+            this.isOmitTablePrefixChkbox.Checked = settings.IsOmitTablePrefix;
+            this.isStandardizeNameChkbox.Checked = settings.IsStandardizeName;
+        }
+
+        private GenerationSettings GetGenerationSettings()
+        {
+            GenerationSettings settings = new GenerationSettings(this.languageCombx.Text,
+                this.templateEngineCombox.Text, this.packageTxtBox.Text, this.tablePrefixTxtBox.Text,
+                this.authorTxtBox.Text, this.versionTxtBox.Text,
+                this.templateListBox.SelectedItem == null ? string.Empty : this.templateListBox.SelectedItem.ToString(),
+                this.codeFileEncodingCombox.Text, this.isOmitTablePrefixChkbox.Checked, this.isStandardizeNameChkbox.Checked);
+            return settings;
+        }
+
+        #endregion	
     }
 }

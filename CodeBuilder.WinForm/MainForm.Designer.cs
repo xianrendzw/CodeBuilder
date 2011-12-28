@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Windows Form Designer generated displayName
 
         /// <summary>
         /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// the contents of this method with the displayName editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -276,26 +276,30 @@
             // 
             // statusBarReady
             // 
+            this.statusBarReady.AutoSize = false;
             this.statusBarReady.Name = "statusBarReady";
-            this.statusBarReady.Size = new System.Drawing.Size(737, 17);
+            this.statusBarReady.Size = new System.Drawing.Size(437, 17);
             this.statusBarReady.Spring = true;
             this.statusBarReady.Text = "Ready";
             this.statusBarReady.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // statusBarDatabase
             // 
+            this.statusBarDatabase.AutoSize = false;
             this.statusBarDatabase.Name = "statusBarDatabase";
-            this.statusBarDatabase.Size = new System.Drawing.Size(0, 17);
+            this.statusBarDatabase.Size = new System.Drawing.Size(120, 17);
             // 
             // statusBarLanguage
             // 
+            this.statusBarLanguage.AutoSize = false;
             this.statusBarLanguage.Name = "statusBarLanguage";
-            this.statusBarLanguage.Size = new System.Drawing.Size(0, 17);
+            this.statusBarLanguage.Size = new System.Drawing.Size(100, 17);
             // 
             // statusBarEncoding
             // 
+            this.statusBarEncoding.AutoSize = false;
             this.statusBarEncoding.Name = "statusBarEncoding";
-            this.statusBarEncoding.Size = new System.Drawing.Size(0, 17);
+            this.statusBarEncoding.Size = new System.Drawing.Size(80, 17);
             // 
             // splitContainer
             // 
@@ -520,7 +524,7 @@
             this.genSettingsCtxSeparator1,
             this.generateCtxMenuItem});
             this.genSettingsCtxMenuStrip.Name = "genSettingsCtxMenuStrip";
-            this.genSettingsCtxMenuStrip.Size = new System.Drawing.Size(230, 76);
+            this.genSettingsCtxMenuStrip.Size = new System.Drawing.Size(230, 98);
             // 
             // openGenSettingsCtxMenuItem
             // 
@@ -531,7 +535,6 @@
             // 
             // saveGenSettingCtxMenuItem
             // 
-            this.saveGenSettingCtxMenuItem.Enabled = false;
             this.saveGenSettingCtxMenuItem.Name = "saveGenSettingCtxMenuItem";
             this.saveGenSettingCtxMenuItem.Size = new System.Drawing.Size(229, 22);
             this.saveGenSettingCtxMenuItem.Text = "Save Generation Setting...";
@@ -544,7 +547,6 @@
             // 
             // generateCtxMenuItem
             // 
-            this.generateCtxMenuItem.Enabled = false;
             this.generateCtxMenuItem.Name = "generateCtxMenuItem";
             this.generateCtxMenuItem.Size = new System.Drawing.Size(229, 22);
             this.generateCtxMenuItem.Text = "Generate";
@@ -627,6 +629,7 @@
             this.codeFileEncodingCombox.Name = "codeFileEncodingCombox";
             this.codeFileEncodingCombox.Size = new System.Drawing.Size(116, 21);
             this.codeFileEncodingCombox.TabIndex = 21;
+            this.codeFileEncodingCombox.SelectedIndexChanged += new System.EventHandler(this.codeFileEncodingCombox_SelectedIndexChanged);
             // 
             // codeFileEncodingLbl
             // 
@@ -644,6 +647,7 @@
             this.languageCombx.Name = "languageCombx";
             this.languageCombx.Size = new System.Drawing.Size(92, 21);
             this.languageCombx.TabIndex = 7;
+            this.languageCombx.SelectedIndexChanged += new System.EventHandler(this.languageCombx_SelectedIndexChanged);
             // 
             // languageLbl
             // 
@@ -665,6 +669,7 @@
             // 
             this.versionTxtBox.ImeMode = System.Windows.Forms.ImeMode.On;
             this.versionTxtBox.Location = new System.Drawing.Point(357, 89);
+            this.versionTxtBox.MaxLength = 100;
             this.versionTxtBox.Name = "versionTxtBox";
             this.versionTxtBox.Size = new System.Drawing.Size(150, 20);
             this.versionTxtBox.TabIndex = 15;
@@ -681,6 +686,7 @@
             // 
             this.authorTxtBox.ImeMode = System.Windows.Forms.ImeMode.On;
             this.authorTxtBox.Location = new System.Drawing.Point(86, 89);
+            this.authorTxtBox.MaxLength = 100;
             this.authorTxtBox.Name = "authorTxtBox";
             this.authorTxtBox.Size = new System.Drawing.Size(150, 20);
             this.authorTxtBox.TabIndex = 13;
@@ -697,6 +703,7 @@
             // 
             this.tablePrefixTxtBox.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tablePrefixTxtBox.Location = new System.Drawing.Point(357, 55);
+            this.tablePrefixTxtBox.MaxLength = 50;
             this.tablePrefixTxtBox.Name = "tablePrefixTxtBox";
             this.tablePrefixTxtBox.Size = new System.Drawing.Size(150, 20);
             this.tablePrefixTxtBox.TabIndex = 11;
@@ -714,6 +721,7 @@
             this.packageTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.packageTxtBox.ImeMode = System.Windows.Forms.ImeMode.On;
             this.packageTxtBox.Location = new System.Drawing.Point(86, 54);
+            this.packageTxtBox.MaxLength = 200;
             this.packageTxtBox.Name = "packageTxtBox";
             this.packageTxtBox.Size = new System.Drawing.Size(150, 20);
             this.packageTxtBox.TabIndex = 9;

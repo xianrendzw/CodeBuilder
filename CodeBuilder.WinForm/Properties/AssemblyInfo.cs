@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("www.dengzhiwei.com")]
 [assembly: AssemblyProduct("CodeBuilder.WinForm")]
-[assembly: AssemblyCopyright("Copyright © Tom Deng 2011-2012")]
+[assembly: AssemblyCopyright("Copyright © Tom Deng 2009-2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

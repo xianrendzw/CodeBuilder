@@ -6,19 +6,20 @@
     <language name="PHP" alias="php"/>
   </languages>
   <exporters>
-    <exporter name="powerdesinger12" type=""/>
-    <exporter name="mysql5" type=""/>
-    <exporter name="sqlserver2000" type=""/>
-    <exporter name="sqlserver2005" type=""/>
-    <exporter name="sqlserver2005" type=""/>
+    <exporter name="PowerDesinger12" type=""/>
+    <exporter name="MySQL5" type=""/>
+    <exporter name="SqlServer2000" type=""/>
+    <exporter name="SqlServer2005" type=""/>
+    <exporter name="SqlServer2008" type=""/>
+    <exporter name="Oracle" type=""/>
   </exporters>
   <databases>
-    <database name="mysql50" exporter="mysql5"/>
-    <database name="sqlserver2000" exporter="sqlserver2000"/>
-    <database name="sqlserver2005" exporter="sqlserver2005"/>
-    <database name="sqlserver2008" exporter="sqlserver2005"/>
-    <database name="oracle8i" exporter="oracle"/>
-    <database name="oracle9i" exporter="oracle"/>
+    <database name="MySQL50" exporter="MySQL5"/>
+    <database name="SqlServer2000" exporter="SqlServer2000"/>
+    <database name="SqlServer2005" exporter="SqlServer2005"/>
+    <database name="SqlServer2008" exporter="SqlServer2008"/>
+    <database name="Oracle8i" exporter="Oracle"/>
+    <database name="Oracle9i" exporter="Oracle"/>
   </databases>
   <templateEngines>
     <templateEngine name="NVelocity" adapter="" />

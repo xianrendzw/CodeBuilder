@@ -6,21 +6,23 @@ using System.Xml.Serialization;
 
 namespace CodeBuilder.Configuration
 {
-    [Serializable]
+    [Serializable,
+    XmlRoot("Template")]
     public class TemplateSettings
     {
         private string _name;
         private string _language;
         private string _engine;
         private string _path;
+        private string _url;
+        private string _description;
 
         public TemplateSettings() { }
-        public TemplateSettings(string name, string language, string engine, string path)
+        public TemplateSettings(string name, string language, string engine)
         {
             this._name = name;
             this._language = language;
             this._engine = engine;
-            this._path = path;
         }
 
         [XmlAttribute("name")]
@@ -49,6 +51,20 @@ namespace CodeBuilder.Configuration
         {
             get { return this._path; }
             set { this._path = value; }
+        }
+
+        [XmlAttribute("url")]
+        public string Url
+        {
+            get { return this._url; }
+            set { this._url = value; }
+        }
+
+        [XmlAttribute("desc")]
+        public string Description
+        {
+            get { return this._description; }
+            set { this._description = value; }
         }
     }
 }

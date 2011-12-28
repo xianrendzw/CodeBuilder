@@ -35,8 +35,8 @@ namespace CodeBuilder.WinForm.UI
 
         public static void Export(Model model, TreeNode parentNode)
         {
-            ExportTables(model.Tables, parentNode);
-            ExportViews(model.Views, parentNode);
+            ExportObjects(model.Tables, parentNode);
+            ExportObjects(model.Views, parentNode);
         }
 
         public static void CheckedTreeNode(TreeNode tn)
@@ -75,43 +75,23 @@ namespace CodeBuilder.WinForm.UI
             }
         }
 
-        private static void ExportTables(Tables tables, TreeNode parentNode)
+        private static void ExportObjects<T>(Dictionary<string, T> objects, TreeNode parentNode) where T : BaseTable
         {
-            if (tables == null ||
-                tables.Count == 0) return;
+            if (objects == null ||
+                objects.Count == 0) return;
 
-            TreeNode childNode = new TreeNode("Tables", 1, 1);
-            foreach (Table table in tables.Values)
+            string text = typeof(T).Name.Equals("Table") ? "Tables" : "Views";
+            TreeNode childNode = new TreeNode(text, 1, 1);
+            foreach (BaseTable baseTable in objects.Values)
             {
                 TreeNode newNode = new TreeNode();
-                newNode.Tag = table.Id;
-                newNode.Text = table.Name;
-                newNode.ToolTipText = table.Name;
+                newNode.Tag = baseTable.Id;
+                newNode.Text = baseTable.DisplayName;
+                newNode.ToolTipText = baseTable.DisplayName;
                 newNode.ImageIndex = 2;
                 newNode.SelectedImageIndex = 2;
                 childNode.Nodes.Add(newNode);
             }
-
-            parentNode.Nodes.Add(childNode);
-        }
-
-        private static void ExportViews(Views views, TreeNode parentNode)
-        {
-            if (views == null ||
-                views.Count == 0) return;
-
-            TreeNode childNode = new TreeNode("Views", 1, 1);
-            foreach (View view in views.Values)
-            {
-                TreeNode newNode = new TreeNode();
-                newNode.Tag = view.Id;
-                newNode.Text = view.Name;
-                newNode.ToolTipText = view.Name;
-                newNode.ImageIndex = 2;
-                newNode.SelectedImageIndex = 2;
-                childNode.Nodes.Add(newNode);
-            }
-
             parentNode.Nodes.Add(childNode);
         }
     }

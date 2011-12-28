@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Component Designer generated displayName
 
         /// <summary> 
         /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
+        /// the contents of this method with the displayName editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -57,6 +57,7 @@
             // recentFilesCountTextBox
             // 
             this.recentFilesCountTextBox.Location = new System.Drawing.Point(91, 33);
+            this.recentFilesCountTextBox.MaxLength = 50;
             this.recentFilesCountTextBox.Name = "recentFilesCountTextBox";
             this.recentFilesCountTextBox.Size = new System.Drawing.Size(40, 20);
             this.recentFilesCountTextBox.TabIndex = 38;

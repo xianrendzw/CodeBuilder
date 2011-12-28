@@ -9,7 +9,7 @@ namespace CodeBuilder.DataSource.Exporter
 
     public class SqlServer2005Exporter : BaseExporter, IExporter
     {
-        #region IExporter 成员
+        #region IExporter Members
 
         public override Model Export(ExportConfig config)
         {

@@ -9,7 +9,7 @@ namespace CodeBuilder.DataSource.Exporter.MySQL
 
     public class MySqlExporter : BaseExporter, IExporter
     {
-        #region IExporter 成员
+        #region IExporter Members
 
         public override Model Export(ExportConfig config)
         {

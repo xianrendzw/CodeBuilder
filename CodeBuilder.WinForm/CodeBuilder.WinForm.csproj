@@ -78,12 +78,6 @@
     <Compile Include="UI\Forms\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Forms\DataSourceConfigBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Forms\DataSourceConfigBox.Designer.cs">
-      <DependentUpon>DataSourceConfigBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,11 +92,11 @@
     <Compile Include="UI\Forms\OptionsPages\DataSourceOptionsPage.Designer.cs">
       <DependentUpon>DataSourceOptionsPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Forms\OptionsPages\CodeFileOptionsPage.cs">
+    <Compile Include="UI\Forms\OptionsPages\CodeGeneralOptionsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Forms\OptionsPages\CodeFileOptionsPage.Designer.cs">
-      <DependentUpon>CodeFileOptionsPage.cs</DependentUpon>
+    <Compile Include="UI\Forms\OptionsPages\CodeGeneralOptionsPage.Designer.cs">
+      <DependentUpon>CodeGeneralOptionsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Forms\OptionsPages\RecentFilesOptionsPage.cs">
       <SubType>UserControl</SubType>
@@ -116,12 +110,7 @@
     <Compile Include="UI\Forms\OptionsPages\TemplateOptionsPage.Designer.cs">
       <DependentUpon>TemplateOptionsPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Forms\TemplateConfigBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Forms\TemplateConfigBox.Designer.cs">
-      <DependentUpon>TemplateConfigBox.cs</DependentUpon>
-    </Compile>
+    <Compile Include="UI\Helpers\GenerationSettingsHelper.cs" />
     <Compile Include="UI\OptionsDialog.cs" />
     <Compile Include="UI\AppContainer.cs" />
     <Compile Include="UI\Forms\BaseOptionsPage.cs">
@@ -153,9 +142,6 @@
     <EmbeddedResource Include="UI\Forms\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Forms\DataSourceConfigBox.resx">
-      <DependentUpon>DataSourceConfigBox.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,8 +158,8 @@
     <EmbeddedResource Include="UI\Forms\OptionsPages\DataSourceOptionsPage.resx">
       <DependentUpon>DataSourceOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Forms\OptionsPages\CodeFileOptionsPage.resx">
-      <DependentUpon>CodeFileOptionsPage.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\CodeGeneralOptionsPage.resx">
+      <DependentUpon>CodeGeneralOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\OptionsPages\RecentFilesOptionsPage.resx">
       <DependentUpon>RecentFilesOptionsPage.cs</DependentUpon>
@@ -189,9 +175,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\BaseOptionsPage.resx">
       <DependentUpon>BaseOptionsPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Forms\TemplateConfigBox.resx">
-      <DependentUpon>TemplateConfigBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\TreeOptionsDialog.resx">
       <DependentUpon>TreeOptionsDialog.cs</DependentUpon>

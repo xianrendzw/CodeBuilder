@@ -12,14 +12,14 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
     using Util;
     using Configuration;
 
-    public partial class CodeFileOptionsPage : BaseOptionsPage
+    public partial class CodeGeneralOptionsPage : BaseOptionsPage
     {
-        public CodeFileOptionsPage()
+        public CodeGeneralOptionsPage()
         {
             InitializeComponent();
         }
 
-        public CodeFileOptionsPage(string key)
+        public CodeGeneralOptionsPage(string key)
             : base(key)
         {
             InitializeComponent();
@@ -33,11 +33,19 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
         {
         }
 
-        private void openFolderDialogBtn_Click(object sender, EventArgs e)
+        private void ouputPathBtn_Click(object sender, EventArgs e)
         {
             if (this.folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
-                this.ouputPathTextBox.Text = this.folderBrowserDialog.SelectedPath;
+                this.ouputPathTxtbox.Text = this.folderBrowserDialog.SelectedPath;
+            }
+        }
+
+        private void templatePathBtn_Click(object sender, EventArgs e)
+        {
+            if (this.folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                this.templatePathTxtbox.Text = this.folderBrowserDialog.SelectedPath;
             }
         }
     }

@@ -11,7 +11,7 @@ namespace CodeBuilder.WinForm
 
     static class Program
     {
-        static Logger log = InternalTrace.GetLogger(typeof(Program));
+        static Logger logger = InternalTrace.GetLogger(typeof(Program));
 
         [STAThread]
         static void Main()

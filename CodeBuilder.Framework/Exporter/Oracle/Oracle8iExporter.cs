@@ -9,7 +9,7 @@ namespace CodeBuilder.DataSource.Exporter.Oracle
 
     public class Oracle8iExporter : BaseExporter, IExporter
     {
-        #region IExporter 成员
+        #region IExporter Members
 
         public override Model Export(ExportConfig config)
         {
