@@ -21,6 +21,8 @@ namespace CodeBuilder.Configuration
         private bool _isOmitTablePrefix;
         private bool _isStandardizeName;
 
+        public GenerationSettings() { }
+
         public GenerationSettings(string language, string templateEngine)
         {
             this._language = language;
@@ -95,7 +97,7 @@ namespace CodeBuilder.Configuration
         [XmlElement("Encoding")]
         public string Encoding
         {
-            get { return this._encoding ?? string.Empty; }
+            get { return this._encoding ?? "UTF-8"; }
             set { this._encoding = value; }
         }
 

@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace CodeBuilder.Configuration
 {
-    [XmlRoot(ElementName = "DataSources")]
+    [Serializable, XmlRoot("DataSources")]
     public class DataSourceSettingsList : List<DataSourceSettings>
     {
         public DataSourceSettingsList()

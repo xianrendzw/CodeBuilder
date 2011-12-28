@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataSources>
+  <DataSource name="test1" connectionString="e:\test1.pdm" exporter="PowerDesigner12" />
+  <DataSource name="test2" connectionString="" exporter="SqlServer2005" />
+  <DataSource name="test3" connectionString="" exporter="SqlServer2005" />
+</DataSources>

@@ -44,7 +44,7 @@ namespace CodeBuilder.DataSource.Exporter.PowerDesigner
 
         #endregion
 
-        #region 私有Members
+        #region Private Members
 
         private Tables GetTables(XmlNodeList tableNodes)
         {
@@ -115,12 +115,12 @@ namespace CodeBuilder.DataSource.Exporter.PowerDesigner
                 column.IsNullable = mandatory.Equals("1");
                 column.DefaultValue = defaultValue;
 
-                string dataTypeName = Regex.Replace(column.DataType, "\\(.*?\\)", "");
-                LanguageType langType = TypeMapperFactory.Creator().GetLanguageType(
-                    this._config.Database,
-                    this._config.Language, dataTypeName);
-                column.LanguageType = langType.TypeName;
-                column.LanguageDefaultValue = langType.DefaultValue;
+                //string dataTypeName = Regex.Replace(column.DataType, "\\(.*?\\)", "");
+                //LanguageType langType = TypeMapperFactory.Creator().GetLanguageType(
+                //    this._config.Database,
+                //    this._config.Language, dataTypeName);
+                //column.LanguageType = langType.TypeName;
+                //column.LanguageDefaultValue = langType.DefaultValue;
                 columns.Add(id, column);
             }
 

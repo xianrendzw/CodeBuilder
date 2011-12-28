@@ -10,6 +10,9 @@ namespace CodeBuilder.PhysicalDataModel
     /// </summary>
     public class Model
     {
+        protected string _database;
+        protected string _databaseName;
+        protected string _schema;
         protected Tables _tables;
         protected Views _views;
 
@@ -41,6 +44,24 @@ namespace CodeBuilder.PhysicalDataModel
         {
             get { return this._views; }
             set { this._views = value; }
+        }
+
+        public string Database
+        {
+            get { return this._database; }
+            set { this._database = value; }
+        }
+
+        public string DatabaseName
+        {
+            get { return this._databaseName; }
+            set { this._databaseName = value; }
+        }
+
+        public string Schema
+        {
+            get { return this._schema; }
+            set { this._schema = value; }
         }
     }
 }

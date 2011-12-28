@@ -60,13 +60,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="typeMapping.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodeBuilder.Framework\CodeBuilder.Framework.csproj">
       <Project>{1FDA5B2E-BD7D-4BB1-9579-C25130156A43}</Project>
       <Name>CodeBuilder.Framework</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ConfigFile Include="Config\DataSources.xml" />
+    <ConfigFile Include="Config\Options.xml" />
+    <ConfigFile Include="Config\Templates.xml" />
+    <ConfigFile Include="Config\Settings.xml" />
+    <ConfigFile Include="Config\TypeMapping.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -76,4 +82,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="BeforeBuild">
+    <Copy SourceFiles="@(ConfigFile)" DestinationFolder="$(OutputPath)\Config" />
+  </Target>
 </Project>

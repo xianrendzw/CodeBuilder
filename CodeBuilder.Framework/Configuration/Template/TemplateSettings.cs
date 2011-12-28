@@ -6,8 +6,7 @@ using System.Xml.Serialization;
 
 namespace CodeBuilder.Configuration
 {
-    [Serializable,
-    XmlRoot("Template")]
+    [Serializable, XmlType("Template")]
     public class TemplateSettings
     {
         private string _name;

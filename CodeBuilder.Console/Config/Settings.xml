@@ -1,0 +1,36 @@
+﻿<settings>
+  <languages>
+    <language name="C#" alias="csharp"/>
+    <language name="JAVA" alias="java"/>
+    <language name="Ruby" alias="ruby"/>
+    <language name="PHP" alias="php"/>
+  </languages>
+  <exporters>
+    <exporter name="PowerDesinger12" type=""/>
+    <exporter name="MySQL5" type=""/>
+    <exporter name="SqlServer2000" type=""/>
+    <exporter name="SqlServer2005" type=""/>
+    <exporter name="SqlServer2008" type=""/>
+    <exporter name="Oracle" type=""/>
+  </exporters>
+  <databases>
+    <database name="MySQL50" exporter="MySQL5"/>
+    <database name="SqlServer2000" exporter="SqlServer2000"/>
+    <database name="SqlServer2005" exporter="SqlServer2005"/>
+    <database name="SqlServer2008" exporter="SqlServer2008"/>
+    <database name="Oracle8i" exporter="Oracle"/>
+    <database name="Oracle9i" exporter="Oracle"/>
+  </databases>
+  <templateEngines>
+    <templateEngine name="NVelocity" adapter="" />
+    <templateEngine name="Razor" adapter="" />
+    <templateEngine name="Vici" adapter="" />
+    <templateEngine name="Ader" adapter="" />
+  </templateEngines>
+  <appSettings>
+    <add key="typeMapper" value="CodeBuilder.TypeMapping.DefaultTypeMapper,CodeBuilder.Framework" />
+    <add key="onlineTemplateUrl" value="http://www.dengzhiwei.com/category/codebuilder/templates"/>
+    <add key="helpUrl" value="http://www.dengzhiwei.com/category/codebuilder"/>
+    <add key="feedbackUrl" value="http://www.dengzhiwei.com/category/codebuilder-feedback"/>
+  </appSettings>
+</settings>

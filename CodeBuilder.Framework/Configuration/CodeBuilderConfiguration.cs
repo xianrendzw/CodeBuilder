@@ -15,6 +15,8 @@ namespace CodeBuilder.Configuration
     {
         private static SettingsSection settings;
         private static TypeMappingSection typeMapping;
+        private static DataSourceSettingsList dataSources;
+        private static TemplateSettingsList templates;
 
         #region Class Constructor
 
@@ -38,6 +40,16 @@ namespace CodeBuilder.Configuration
         public static TypeMappingSection TypeMapping
         {
             get { return typeMapping; }
+        }
+
+        public static DataSourceSettingsList DataSources
+        {
+            get { return dataSources; }
+        }
+
+        public static TemplateSettingsList Templates
+        {
+            get { return templates; }
         }
 
         private static string applicationDataDirectory;
@@ -95,6 +107,26 @@ namespace CodeBuilder.Configuration
         public static string LogDirectory
         {
             get { return Path.Combine(Environment.CurrentDirectory, "logs"); }
+        }
+
+        public static string ConfigFileDirectory
+        {
+            get { return Path.Combine(Environment.CurrentDirectory, "Config"); }
+        }
+
+        public static string OptionSettingsFileName
+        {
+            get { return Path.Combine(ConfigFileDirectory, "Options.xml"); }
+        }
+
+        public static string DataSourceSettingsFileName
+        {
+            get { return Path.Combine(ConfigFileDirectory, "DataSources.xml"); }
+        }
+
+        public static string TemplateSettingsFileName
+        {
+            get { return Path.Combine(ConfigFileDirectory, "Templates.xml"); }
         }
 
         public static string HelpUrl
@@ -158,6 +190,8 @@ namespace CodeBuilder.Configuration
             {
                 settings = (SettingsSection)GetConfigSection("codebuilder/settings");
                 typeMapping = (TypeMappingSection)GetConfigSection("codebuilder/typeMapping");
+                dataSources = SerializeHelper.XmlDeserialize<DataSourceSettingsList>(DataSourceSettingsFileName);
+                templates = SerializeHelper.XmlDeserialize<TemplateSettingsList>(TemplateSettingsFileName);
             }
             catch (Exception ex)
             {

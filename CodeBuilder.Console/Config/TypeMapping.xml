@@ -60,7 +60,7 @@
         <add name="varchar" langtype="String" default="" />
       </types>
     </mapping>
-    <mapping name="mysql5-csharp" database="mysql5" language="csharp">
+    <mapping name="mysql50-csharp" database="mysql50" language="csharp">
       <types>
         <add name="nvarchar" langtype="String" default="" />
         <add name="bigint" langtype="Int64" default="" />
@@ -90,7 +90,7 @@
         <add name="varchar" langtype="String" default="" />
       </types>
     </mapping>
-    <mapping name="mysql5-java" database="mysql5" language="java">
+    <mapping name="mysql50-java" database="mysql5" language="java">
       <types>
         <add name="nvarchar" langtype="String" default="" />
         <add name="bigint" langtype="Long" default="" />

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Templates>
+  <Template name="template1" language="csharp" engine="NVelocity" url="" desc="" path="e:\test\template1.nv" />
+  <Template name="template2" language="csharp" engine="NVelocity" url="" desc="" path="e:\test\template2.nv" />
+  <Template name="template2" language="csharp" engine="NVelocity" url="" desc="" path="e:\test\template2.nv" />
+  <Template name="template2" language="csharp" engine="NVelocity" url="" desc="" path="e:\test\template2.nv" />
+</Templates>

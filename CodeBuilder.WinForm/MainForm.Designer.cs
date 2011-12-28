@@ -153,7 +153,7 @@
             this.fileExportDataSourceMenuItem.Name = "fileExportDataSourceMenuItem";
             this.fileExportDataSourceMenuItem.Size = new System.Drawing.Size(241, 22);
             this.fileExportDataSourceMenuItem.Text = "&Export From DataSource";
-            this.fileExportDataSourceMenuItem.Click += new System.EventHandler(this.fileExportDataSourceMenuItem_Click);
+            this.fileExportDataSourceMenuItem.MouseHover += new System.EventHandler(this.fileExportDataSourceMenuItem_MouseHover);
             // 
             // fileSeparator2MenuItem
             // 
@@ -361,7 +361,7 @@
             this.exportDataSourceCtxMenuItem.Name = "exportDataSourceCtxMenuItem";
             this.exportDataSourceCtxMenuItem.Size = new System.Drawing.Size(241, 22);
             this.exportDataSourceCtxMenuItem.Text = "Export From DataSource";
-            this.exportDataSourceCtxMenuItem.Click += new System.EventHandler(this.exportDataSourceCtxMenuItem_Click);
+            this.exportDataSourceCtxMenuItem.MouseHover += new System.EventHandler(this.exportDataSourceCtxMenuItem_MouseHover);
             // 
             // ctxSeparator2
             // 
@@ -524,7 +524,7 @@
             this.genSettingsCtxSeparator1,
             this.generateCtxMenuItem});
             this.genSettingsCtxMenuStrip.Name = "genSettingsCtxMenuStrip";
-            this.genSettingsCtxMenuStrip.Size = new System.Drawing.Size(230, 98);
+            this.genSettingsCtxMenuStrip.Size = new System.Drawing.Size(230, 76);
             // 
             // openGenSettingsCtxMenuItem
             // 

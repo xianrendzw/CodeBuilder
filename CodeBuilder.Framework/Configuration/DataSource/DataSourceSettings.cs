@@ -6,8 +6,7 @@ using System.Xml.Serialization;
 
 namespace CodeBuilder.Configuration
 {
-    [Serializable,
-    XmlRoot("DataSource")]
+    [Serializable, XmlType("DataSource")]
     public class DataSourceSettings
     {
         private string _name;

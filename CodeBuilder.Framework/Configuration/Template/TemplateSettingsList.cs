@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace CodeBuilder.Configuration
 {
-    [XmlRoot(ElementName = "Templates")]
+    [XmlRoot("Templates")]
     public class TemplateSettingsList : List<TemplateSettings>
     {
         public TemplateSettingsList()

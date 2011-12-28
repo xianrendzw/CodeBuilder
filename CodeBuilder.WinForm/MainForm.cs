@@ -21,15 +21,12 @@ namespace CodeBuilder.WinForm
         public MainForm()
         {
             InitializeComponent();
-
             this.InitializeUIData();
         }
 
         private void InitializeUIData()
         {
             this.SetComboBoxItems();
-            this.AddDataSourceMenuItems(this.fileExportDataSourceMenuItem);
-            this.AddDataSourceMenuItems(this.exportDataSourceCtxMenuItem);
             this.SetStatusItems();
         }
 
@@ -54,7 +51,7 @@ namespace CodeBuilder.WinForm
                     return;
                 }
                 this.currentGenerationSettingsFile = xmlFileName;
-                this.clearCtxMenuItem.Enabled = true;
+                this.SetStatusReadyBarText(this.openFileDialog.Title);
             }
         }
 
@@ -77,7 +74,7 @@ namespace CodeBuilder.WinForm
 
             try
             {
-                GenerationSettingsHelper.Save(xmlFileName, settings);
+                SerializeHelper.XmlSerialize(settings,xmlFileName);
                 this.SetStatusReadyBarText(readybarText);
             }
             catch (Exception ex)
@@ -97,21 +94,26 @@ namespace CodeBuilder.WinForm
             if (this.openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string pdmFileName = this.openFileDialog.FileName;
+
                 try
                 {
-                    ExportModelHelper.Export(pdmFileName, this.treeView);
-                    this.treeView.ExpandAll();
-                    this.clearCtxMenuItem.Enabled = true;
+                    ExportModelHelper.Export(pdmFileName, this.treeView); 
                 }
                 catch (Exception ex)
                 {
+                    logger.Error("Export PDM File", ex);
                     MessageBoxHelper.Display(ex.Message);
+                    return;
                 }
+
+                this.SetStatusReadyBarText(this.openFileDialog.Title);
+                this.treeView.ExpandAll();
             }
         }
 
-        private void fileExportDataSourceMenuItem_Click(object sender, EventArgs e)
+        private void fileExportDataSourceMenuItem_MouseHover(object sender, EventArgs e)
         {
+            this.AddDataSourceMenuItems(this.fileExportDataSourceMenuItem);
         }
 
         private void fileExitMenuItem_Click(object sender, EventArgs e)
@@ -171,9 +173,9 @@ namespace CodeBuilder.WinForm
             this.fileExportPdmMenuItem_Click(sender, e);
         }
 
-        private void exportDataSourceCtxMenuItem_Click(object sender, EventArgs e)
+        private void exportDataSourceCtxMenuItem_MouseHover(object sender, EventArgs e)
         {
-            this.fileExportDataSourceMenuItem_Click(sender, e);
+            this.AddDataSourceMenuItems(this.exportDataSourceCtxMenuItem);
         }
 
         private void clearCtxMenuItem_Click(object sender, EventArgs e)
@@ -280,9 +282,10 @@ namespace CodeBuilder.WinForm
         private void AddDataSourceMenuItems(ToolStripMenuItem parent)
         {
             parent.DropDownItems.Clear();
-            for (int i = 0; i < 10; i++)
+            foreach (DataSourceSettings dsSettings in CodeBuilderConfiguration.DataSources)
             {
-                ToolStripMenuItem ds = new ToolStripMenuItem("DataSource1");
+                ToolStripMenuItem ds = new ToolStripMenuItem(dsSettings.Name);
+                ds.ToolTipText = dsSettings.ConnectionString;
                 ds.Click += new EventHandler(generateBtn_Click);
                 parent.DropDownItems.Add(ds);
             }
@@ -300,9 +303,9 @@ namespace CodeBuilder.WinForm
             this.statusBarReady.Text = text;
         }
 
-        private void SetGenerationSettings(string filePath)
+        private void SetGenerationSettings(string xmlFileName)
         {
-            GenerationSettings settings = GenerationSettingsHelper.GetSettings(filePath);
+            GenerationSettings settings = SerializeHelper.XmlDeserialize<GenerationSettings>(xmlFileName);
             this.languageCombx.Text = settings.Language;
             this.templateEngineCombox.Text = settings.TemplateEngine;
             this.packageTxtBox.Text = settings.Package;
@@ -326,5 +329,7 @@ namespace CodeBuilder.WinForm
         }
 
         #endregion	
+
+       
     }
 }
