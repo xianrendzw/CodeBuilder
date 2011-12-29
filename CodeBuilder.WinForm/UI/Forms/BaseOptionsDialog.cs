@@ -49,8 +49,8 @@ namespace CodeBuilder.WinForm.UI
 
         private void okButton_Click(object sender, System.EventArgs e)
         {
-             DialogResult answer = MessageBoxHelper.Ask(
-                 "Some changes will be save,are you sure?", MessageBoxButtons.YesNo);
+            DialogResult answer = MessageBoxHelper.Ask(
+                "Some changes will be saved,are you sure?", MessageBoxButtons.YesNo);
 
              if (answer == DialogResult.Yes)
              {
