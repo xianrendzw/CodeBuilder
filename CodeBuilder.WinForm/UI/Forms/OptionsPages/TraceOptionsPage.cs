@@ -14,6 +14,8 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
     public partial class TraceOptionsPage : BaseOptionsPage
     {
+        private static Logger logger = InternalTrace.GetLogger(typeof(TraceOptionsPage));
+
         public TraceOptionsPage()
         {
             InitializeComponent();
@@ -27,13 +29,27 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
         public override void LoadSettings()
         {
-           // traceLevelCombox.SelectedIndex = (int)(InternalTraceLevel)settingsSection.Get("OptionSection.InternalTraceLevel", InternalTraceLevel.Default);
+            this.isLoaded = true;
+            traceLevelCombox.Text = ConfigManager.OptionSection.Options["Options.InternalTraceLevel"].Value;
             logDirectoryLabel.Text = ConfigManager.LogDirectory;
         }
 
         public override void ApplySettings()
         {
-           settings.Save("Options.InternalTraceLevel", (InternalTraceLevel)traceLevelCombox.SelectedIndex);
+            try
+            {
+                ConfigManager.OptionSection.Options["Options.InternalTraceLevel"].Value = traceLevelCombox.Text;
+                ConfigManager.Save();
+                ConfigManager.RefreshOptions();
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Save Options.InternalTraceLevel", ex);
+                return;
+            }
+
+            InternalTraceLevel level = (InternalTraceLevel)Enum.Parse(InternalTraceLevel.Default.GetType(), traceLevelCombox.Text, true);
+            InternalTrace.ReInitialize("CodeBuilder_%p.log", level);
         }
     }
 }

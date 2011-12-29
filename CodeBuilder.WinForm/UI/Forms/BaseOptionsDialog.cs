@@ -43,45 +43,21 @@ namespace CodeBuilder.WinForm.UI
 
         #region Event Handlers
 
-        //private bool reloadProjectOnClose;
         private void BaseOptionsDialog_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //if (this.reloadProjectOnClose)
-            //    Services.TestLoader.ReloadTest();
         }
 
         private void okButton_Click(object sender, System.EventArgs e)
         {
-            //if (Services.TestLoader.IsTestLoaded && this.HasChangesRequiringReload)
-            //{
-            //    DialogResult answer = MessageBoxHelper.Ask(
-            //        "Some changes will only take effect when you reload the test project. Do you want to reload now?",
-            //        "NUnit OptionSection",
-            //        MessageBoxButtons.YesNo);
+             DialogResult answer = MessageBoxHelper.Ask(
+                 "Some changes will be save,are you sure?", MessageBoxButtons.YesNo);
 
-            //    if (answer == DialogResult.Yes)
-            //        this.reloadProjectOnClose = true;
-            //}
-
-            ApplySettings();
-            DialogResult = DialogResult.OK;
-            Close();
-        }
-        #endregion
-
-        #region Helper Methods
-
-        private bool HasChangesRequiringReload
-        {
-            get
-            {
-                foreach (BaseOptionsPage page in optionsPages)
-                {
-                    if (page.IsLoaded && page.HasChangesRequiringReload)
-                        return true;
-                }
-                return false;
-            }
+             if (answer == DialogResult.Yes)
+             {
+                 ApplySettings();
+                 DialogResult = DialogResult.OK;
+                 Close();
+             }
         }
         #endregion
 

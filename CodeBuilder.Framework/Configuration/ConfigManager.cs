@@ -20,6 +20,7 @@ namespace CodeBuilder.Configuration
         private static DataSourceSection dataSourceSection;
         private static TemplateSection templateSection;
         private static OptionSection optionSection;
+        private static System.Configuration.Configuration config;
 
         #region Class Constructor
 
@@ -85,10 +86,8 @@ namespace CodeBuilder.Configuration
             {
                 if (libDirectory == null)
                 {
-                    libDirectory =
-                        AssemblyHelper.GetDirectoryName(Assembly.GetExecutingAssembly());
+                    libDirectory = AssemblyHelper.GetDirectoryName(Assembly.GetExecutingAssembly());
                 }
-
                 return libDirectory;
             }
         }
@@ -104,7 +103,6 @@ namespace CodeBuilder.Configuration
                     if (Path.GetFileName(binDirectory).ToLower() == "lib")
                         binDirectory = Path.GetDirectoryName(binDirectory);
                 }
-
                 return binDirectory;
             }
         }
@@ -195,7 +193,7 @@ namespace CodeBuilder.Configuration
         {
             try
             {
-                settingsSection = (SettingsSection)GetConfigSection("codebuilder/settingsSection");
+                settingsSection = GetConfigSection<SettingsSection>("codebuilder/settingsSection");
             }
             catch (Exception ex)
             {
@@ -207,7 +205,7 @@ namespace CodeBuilder.Configuration
         {
             try
             {
-                typeMappingSection = (TypeMappingSection)GetConfigSection("codebuilder/typeMappingSection");
+                typeMappingSection = GetConfigSection<TypeMappingSection>("codebuilder/typeMappingSection");
             }
             catch (Exception ex)
             {
@@ -219,7 +217,7 @@ namespace CodeBuilder.Configuration
         {
             try
             {
-                dataSourceSection = (DataSourceSection)GetConfigSection("codebuilder/dataSourceSection");
+                dataSourceSection = GetConfigSection<DataSourceSection>("codebuilder/dataSourceSection");
             }
             catch (Exception ex)
             {
@@ -231,7 +229,7 @@ namespace CodeBuilder.Configuration
         {
             try
             {
-                templateSection = (TemplateSection)GetConfigSection("codebuilder/templateSection");
+                templateSection = GetConfigSection<TemplateSection>("codebuilder/templateSection");
             }
             catch (Exception ex)
             {
@@ -243,7 +241,7 @@ namespace CodeBuilder.Configuration
         {
             try
             {
-                optionSection = (OptionSection)GetConfigSection("codebuilder/options");
+                optionSection = GetConfigSection<OptionSection>("codebuilder/optionSection");
             }
             catch (Exception ex)
             {
@@ -259,11 +257,12 @@ namespace CodeBuilder.Configuration
         {
             try
             {
-                settingsSection = (SettingsSection)GetConfigSection("codebuilder/settingsSection");
-                typeMappingSection = (TypeMappingSection)GetConfigSection("codebuilder/typeMappingSection");
-                dataSourceSection = (DataSourceSection)GetConfigSection("codebuilder/dataSourceSection");
-                templateSection = (TemplateSection)GetConfigSection("codebuilder/templateSection");
-                optionSection = (OptionSection)GetConfigSection("codebuilder/optionSection");
+                config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                settingsSection = GetConfigSection<SettingsSection>("codebuilder/settingsSection");
+                typeMappingSection = GetConfigSection<TypeMappingSection>("codebuilder/typeMappingSection");
+                dataSourceSection = GetConfigSection<DataSourceSection>("codebuilder/dataSourceSection");
+                templateSection = GetConfigSection<TemplateSection>("codebuilder/templateSection");
+                optionSection = GetConfigSection<OptionSection>("codebuilder/optionSection");
             }
             catch (Exception ex)
             {
@@ -271,24 +270,24 @@ namespace CodeBuilder.Configuration
             }
         }
 
-        private static object GetConfigSection(string name)
+        private static T GetConfigSection<T>(string name) where T:ConfigurationSection
         {
             ConfigurationManager.RefreshSection(name);
-            return ConfigurationManager.GetSection(name);
+            return (T)config.GetSection(name);
         }
 
         #endregion
 
         public static void Save()
         {
-            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            SettingsSection section = (SettingsSection)config.GetSection("codebuilder.settings");
-            if (section == null) return;
-            if (!section.ElementInformation.IsLocked) 
-                config.Save(ConfigurationSaveMode.Modified);
-            else
-                throw new ConfigSectionLockedException();
+            try
+            {
+                config.Save(ConfigurationSaveMode.Modified, true);
+            }
+            catch (Exception ex)
+            {
+                throw new ConfigurationErrorsException("Save configuration failure", ex);
+            }
         }
-
     }
 }

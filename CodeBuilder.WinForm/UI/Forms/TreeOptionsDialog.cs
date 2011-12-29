@@ -25,7 +25,6 @@ namespace CodeBuilder.WinForm.UI
         {
             string key = e.Node.FullPath;
             BaseOptionsPage page = OptionsPages[key];
-            //Services.UserSettings.Save("Gui.SettingsSection.InitialPage", key);
 
             if (page != null && page != current)
             {
@@ -66,9 +65,6 @@ namespace CodeBuilder.WinForm.UI
             foreach (BaseOptionsPage page in OptionsPages)
                 AddBranchToTree(optionTreeView.Nodes, page.Key);
 
-            //if (optionTreeView.VisibleCount >= optionTreeView.GetNodeCount(true))
-            //    optionTreeView.ExpandAll();
-
             SelectInitialPage();
             optionTreeView.Select();
         }
@@ -81,9 +77,9 @@ namespace CodeBuilder.WinForm.UI
                 SelectFirstPage(optionTreeView.Nodes);
         }
 
-        private void SelectPage(string initialPage)
+        private void SelectPage(string pageName)
         {
-            TreeNode node = FindNode(optionTreeView.Nodes, initialPage);
+            TreeNode node = FindNode(optionTreeView.Nodes, pageName);
             if (node != null)
                 optionTreeView.SelectedNode = node;
             else

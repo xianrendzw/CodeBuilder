@@ -46,6 +46,16 @@ namespace CodeBuilder.Util
 			}
         }
 
+        public static void ReInitialize(string logName, InternalTraceLevel level)
+        {
+            if (initialized){ 
+                Close();
+                initialized=false; 
+            }
+
+            Initialize(logName, level);
+        }
+
         public static void Flush()
         {
             if (writer != null)

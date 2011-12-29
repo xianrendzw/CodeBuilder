@@ -9,13 +9,14 @@ using System.Windows.Forms;
 
 namespace CodeBuilder.WinForm.UI
 {
+    using Util;
     using Configuration;
 
     public partial class BaseOptionsPage : UserControl
     {
-        protected ISettings settings;
         private string key;
         private string title;
+        protected bool isLoaded;
 
         public BaseOptionsPage()
         {
@@ -37,7 +38,6 @@ namespace CodeBuilder.WinForm.UI
 
             if (!DesignMode)
             {
-                //this.settingsSection = Services.UserSettings;
                 this.LoadSettings();
             }
         }
@@ -56,12 +56,7 @@ namespace CodeBuilder.WinForm.UI
 
         public bool IsLoaded
         {
-            get { return settings != null; }
-        }
-
-        public virtual bool HasChangesRequiringReload
-        {
-            get { return false; }
+            get { return this.isLoaded; }
         }
 
         #endregion

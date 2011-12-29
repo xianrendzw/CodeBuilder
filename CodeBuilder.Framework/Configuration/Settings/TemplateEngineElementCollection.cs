@@ -40,12 +40,13 @@ namespace CodeBuilder.Configuration
 
         public void Add(TemplateEngineElement element)
         {
-            base.BaseAdd(element);
+            this[element.Name] = element;
         }
 
         public void Remove(string key)
         {
-            base.BaseRemove(key);
+            if (base.BaseGet(key) != null)
+                base.BaseRemove(key);
         }
 
         protected override ConfigurationElement CreateNewElement()

@@ -27,6 +27,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
         public override void LoadSettings()
         {
+            this.isLoaded = true;
         }
 
         public override void ApplySettings()

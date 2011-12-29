@@ -19,29 +19,32 @@ namespace CodeBuilder.WinForm
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            AppContainer container = new AppContainer();
+            MainForm form = new MainForm();
+            container.Add(form);
+
             try
             {
-                AppContainer c = new AppContainer();
-                MainForm form = new MainForm();
-                c.Add(form);
+                InitializeTraceLevel();
 
+                logger.Info("Starting CodeBuilder");
                 Application.Run(form);
+                logger.Info("CodeBuilder Exit");
             }
             catch (Exception ex)
             {
-                logger.Error("", ex);
+                logger.Error("Startup", ex);
                 MessageBoxHelper.DisplayFailure(ex.Message);
-                return;
             }
 
             InternalTrace.Close();
         }
 
-        static void LoadSettings()
+        static void InitializeTraceLevel()
         {
-            //string traceLevel = Enum.Parse(InternalTraceLevel.Default.GetType(), result.ToString(), true);
-            //InternalTrace.Initialize("CodeBuilder_%p.log",
-            //    (InternalTraceLevel)ConfigManager.OptionSection.Options["Options.InternalTraceLevel"].Value);
+            string traceLevel = ConfigManager.OptionSection.Options["Options.InternalTraceLevel"].Value;
+            InternalTraceLevel level =  (InternalTraceLevel)Enum.Parse(InternalTraceLevel.Default.GetType(), traceLevel, true);
+            InternalTrace.Initialize("CodeBuilder_%p.log", level);
         }
     }
 }

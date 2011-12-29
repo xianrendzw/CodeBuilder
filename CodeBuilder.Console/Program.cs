@@ -20,18 +20,22 @@ namespace CodeBuilder.CLI
             //Logger logger = InternalTrace.GetLogger(typeof(Program));
             //logger.Error("Ok");
 
-            DataSourceSettingsList list = new DataSourceSettingsList(10);
-            for (int i = 0; i < 10; i++)
-            {
-                list.Add(new DataSourceSettings()
-                {
-                    ConnectionString = "connect" + i.ToString(),
-                    Name = "Name" + i.ToString(),
-                    Exporter = "PowerDesigner12"
-                });
-            }
+            //DataSourceSettingsList list = new DataSourceSettingsList(10);
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    list.Add(new DataSourceSettings()
+            //    {
+            //        ConnectionString = "connect" + i.ToString(),
+            //        Name = "Name" + i.ToString(),
+            //        Exporter = "PowerDesigner12"
+            //    });
+            //}
 
-            SerializeHelper.XmlSerialize(list, @"e:\ds.xml");
+            //SerializeHelper.XmlSerialize(list, @"e:\ds.xml");
+
+            ConfigManager.DataSourceSection.DataSources.Add(new DataSourceElement() { Name = "test5", ConnectionString = "test3", Exporter = "test4" });
+            //ConfigManager.DataSourceSection.SectionInformation.ForceSave = true;
+            ConfigManager.Save();
 
             Console.WriteLine("Ok");
             Console.Read();
