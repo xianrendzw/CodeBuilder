@@ -277,8 +277,12 @@
             // statusBarReady
             // 
             this.statusBarReady.AutoSize = false;
+            this.statusBarReady.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.statusBarReady.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.statusBarReady.Name = "statusBarReady";
-            this.statusBarReady.Size = new System.Drawing.Size(437, 17);
+            this.statusBarReady.Size = new System.Drawing.Size(437, 19);
             this.statusBarReady.Spring = true;
             this.statusBarReady.Text = "Ready";
             this.statusBarReady.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -286,20 +290,33 @@
             // statusBarDatabase
             // 
             this.statusBarDatabase.AutoSize = false;
+            this.statusBarDatabase.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.statusBarDatabase.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.statusBarDatabase.Name = "statusBarDatabase";
-            this.statusBarDatabase.Size = new System.Drawing.Size(120, 17);
+            this.statusBarDatabase.Size = new System.Drawing.Size(120, 19);
             // 
             // statusBarLanguage
             // 
             this.statusBarLanguage.AutoSize = false;
+            this.statusBarLanguage.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.statusBarLanguage.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.statusBarLanguage.Name = "statusBarLanguage";
-            this.statusBarLanguage.Size = new System.Drawing.Size(100, 17);
+            this.statusBarLanguage.Size = new System.Drawing.Size(100, 19);
             // 
             // statusBarEncoding
             // 
             this.statusBarEncoding.AutoSize = false;
+            this.statusBarEncoding.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.statusBarEncoding.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.statusBarEncoding.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.statusBarEncoding.Name = "statusBarEncoding";
-            this.statusBarEncoding.Size = new System.Drawing.Size(80, 17);
+            this.statusBarEncoding.Size = new System.Drawing.Size(80, 19);
             // 
             // splitContainer
             // 
@@ -386,6 +403,9 @@
             // 
             // resultGbx
             // 
+            this.resultGbx.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.resultGbx.Controls.Add(this.errorFileCountLbl);
             this.resultGbx.Controls.Add(this.errorFilesLbl);
             this.resultGbx.Controls.Add(this.genFileCountLbl);
@@ -396,10 +416,9 @@
             this.resultGbx.Controls.Add(this.currentGenFileNameLbl);
             this.resultGbx.Controls.Add(this.currentGenFileLbl);
             this.resultGbx.Controls.Add(this.genProgressBar);
-            this.resultGbx.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.resultGbx.Location = new System.Drawing.Point(1, 275);
             this.resultGbx.Name = "resultGbx";
-            this.resultGbx.Size = new System.Drawing.Size(538, 141);
+            this.resultGbx.Size = new System.Drawing.Size(538, 139);
             this.resultGbx.TabIndex = 0;
             this.resultGbx.TabStop = false;
             this.resultGbx.Text = "Results";
@@ -485,6 +504,8 @@
             // 
             // genItemsGbx
             // 
+            this.genItemsGbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.genItemsGbx.ContextMenuStrip = this.genSettingsCtxMenuStrip;
             this.genItemsGbx.Controls.Add(this.templateListBox);
             this.genItemsGbx.Controls.Add(this.databaseNameLbl);
@@ -508,8 +529,7 @@
             this.genItemsGbx.Controls.Add(this.packageLabel);
             this.genItemsGbx.Controls.Add(this.saveSettingsBtn);
             this.genItemsGbx.Controls.Add(this.generateBtn);
-            this.genItemsGbx.Dock = System.Windows.Forms.DockStyle.Top;
-            this.genItemsGbx.Location = new System.Drawing.Point(1, 1);
+            this.genItemsGbx.Location = new System.Drawing.Point(1, 3);
             this.genItemsGbx.Name = "genItemsGbx";
             this.genItemsGbx.Size = new System.Drawing.Size(538, 268);
             this.genItemsGbx.TabIndex = 3;
@@ -554,6 +574,8 @@
             // 
             // templateListBox
             // 
+            this.templateListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.templateListBox.FormattingEnabled = true;
             this.templateListBox.Items.AddRange(new object[] {
             "LightFramework-BLL",
@@ -641,11 +663,13 @@
             // 
             // languageCombx
             // 
+            this.languageCombx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.languageCombx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.languageCombx.FormattingEnabled = true;
             this.languageCombx.Location = new System.Drawing.Point(357, 19);
             this.languageCombx.Name = "languageCombx";
-            this.languageCombx.Size = new System.Drawing.Size(92, 21);
+            this.languageCombx.Size = new System.Drawing.Size(150, 21);
             this.languageCombx.TabIndex = 7;
             this.languageCombx.SelectedIndexChanged += new System.EventHandler(this.languageCombx_SelectedIndexChanged);
             // 
@@ -667,6 +691,8 @@
             // 
             // versionTxtBox
             // 
+            this.versionTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.versionTxtBox.ImeMode = System.Windows.Forms.ImeMode.On;
             this.versionTxtBox.Location = new System.Drawing.Point(357, 89);
             this.versionTxtBox.MaxLength = 100;
@@ -701,6 +727,8 @@
             // 
             // tablePrefixTxtBox
             // 
+            this.tablePrefixTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tablePrefixTxtBox.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tablePrefixTxtBox.Location = new System.Drawing.Point(357, 55);
             this.tablePrefixTxtBox.MaxLength = 50;
@@ -766,8 +794,6 @@
             this.Controls.Add(this.mainMenuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenuStrip;
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(760, 490);
             this.MinimumSize = new System.Drawing.Size(760, 490);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -6,11 +6,12 @@ using System.Configuration;
 
 namespace CodeBuilder.Configuration
 {
-    public sealed class AppSettingsElementCollection : ConfigurationElementCollection
+    [ConfigurationCollection(typeof(DataSourceElement), AddItemName = "dataSource")]
+    public sealed class DataSourceElementCollection : ConfigurationElementCollection
     {
-        public new AppSettingsElement this[string name]
+        public new DataSourceElement this[string name]
         {
-            get { return (AppSettingsElement)base.BaseGet(name); }
+            get { return (DataSourceElement)base.BaseGet(name); }
             set
             {
                 if (base.BaseGet(name) != null)
@@ -24,9 +25,9 @@ namespace CodeBuilder.Configuration
             }
         }
 
-        public AppSettingsElement this[int index]
+        public DataSourceElement this[int index]
         {
-            get { return (AppSettingsElement)base.BaseGet(index); }
+            get { return (DataSourceElement)base.BaseGet(index); }
             set
             {
                 if (base.BaseGet(index) != null)
@@ -37,7 +38,7 @@ namespace CodeBuilder.Configuration
             }
         }
 
-        public void Add(AppSettingsElement element)
+        public void Add(DataSourceElement element)
         {
             base.BaseAdd(element);
         }
@@ -49,12 +50,12 @@ namespace CodeBuilder.Configuration
 
         protected override ConfigurationElement CreateNewElement()
         {
-            return new AppSettingsElement();
+            return new DataSourceElement();
         }
 
         protected override object GetElementKey(ConfigurationElement element)
         {
-            return ((AppSettingsElement)element).key;
+            return ((DataSourceElement)element).Name;
         }
     }
 }

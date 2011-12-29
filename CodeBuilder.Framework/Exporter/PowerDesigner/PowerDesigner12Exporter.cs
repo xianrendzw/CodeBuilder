@@ -118,7 +118,7 @@ namespace CodeBuilder.DataSource.Exporter.PowerDesigner
                 //string dataTypeName = Regex.Replace(column.DataType, "\\(.*?\\)", "");
                 //LanguageType langType = TypeMapperFactory.Creator().GetLanguageType(
                 //    this._config.Database,
-                //    this._config.Language, dataTypeName);
+                //    this._config.Value, dataTypeName);
                 //column.LanguageType = langType.TypeName;
                 //column.LanguageDefaultValue = langType.DefaultValue;
                 columns.Add(id, column);

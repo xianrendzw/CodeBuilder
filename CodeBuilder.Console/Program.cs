@@ -13,7 +13,7 @@ namespace CodeBuilder.CLI
     {
         static void Main(string[] args)
         {
-            //TypeMappingSection section = (TypeMappingSection)ConfigurationManager.GetSection("codebuilder/typeMapping");
+            //TypeMappingSection section = (TypeMappingSection)ConfigurationManager.GetSection("codebuilder/typeMappingSection");
             //Console.WriteLine(section.Mappings.Count);
 
             //InternalTrace.Initialize("Test.txt",InternalTraceLevel.Info);

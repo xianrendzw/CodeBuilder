@@ -15,7 +15,7 @@ namespace CodeBuilder.TypeMapping
         {
             if (instance == null)
             {
-                string typeName = CodeBuilderConfiguration.Settings.AppSettings["typeMapper"].Value;
+                string typeName = ConfigManager.SettingsSection.AppSettings["typeMapper"].Value;
                 instance = (ITypeMapper)Activator.CreateInstance(Type.GetType(typeName));
             }
 

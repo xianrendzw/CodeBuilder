@@ -11,6 +11,17 @@ namespace CodeBuilder.Configuration
         public new TypeElement this[string name]
         {
             get { return (TypeElement)base.BaseGet(name); }
+            set
+            {
+                if (base.BaseGet(name) != null)
+                {
+                    int index = base.BaseIndexOf(base.BaseGet(name));
+                    base.BaseRemoveAt(index);
+                    base.BaseAdd(index, value);
+                    return;
+                }
+                this.BaseAdd(value);
+            }
         }
 
         public TypeElement this[int index]
@@ -24,6 +35,16 @@ namespace CodeBuilder.Configuration
                 }
                 this.BaseAdd(index, value);
             }
+        }
+
+        public void Add(TypeElement element)
+        {
+            base.BaseAdd(element);
+        }
+
+        public void Remove(string key)
+        {
+            base.BaseRemove(key);
         }
 
         protected override ConfigurationElement CreateNewElement()

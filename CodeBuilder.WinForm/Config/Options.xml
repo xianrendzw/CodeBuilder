@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<CodeBuilderOptions>
-  <Options>
-    <Option name="Environment.RecentFiles.MaxFiles" value="3" />
-    <Option name="Environment.RecentFiles.IsCheckFileExist" value="false" />
-    <Option name="CodeGeneration.General.OutputPath" value="" />
-    <Option name="CodeGeneration.General.TemplatePath" value="" />
-    <Option name="Options.InternalTraceLevel" value="Default" />
-  </Options>
-</CodeBuilderOptions>
+<optionSection>
+  <options>
+    <option name="Environment.RecentFiles.MaxFiles" value="3" />
+    <option name="Environment.RecentFiles.IsCheckFileExist" value="false" />
+    <option name="CodeGeneration.General.OutputPath" value="" />
+    <option name="CodeGeneration.General.TemplatePath" value="" />
+    <option name="Options.InternalTraceLevel" value="Default" />
+  </options>
+</optionSection>

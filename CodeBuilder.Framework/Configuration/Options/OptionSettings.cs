@@ -2,61 +2,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace CodeBuilder.Configuration
 {
-    public class OptionSettings : ISettings
+    [Serializable, XmlType("Option")]
+    public class OptionSettings 
     {
-        public event SettingsEventHandler Changed;
+        private string _name;
+        private string _value;
 
-        public object Get(string name)
+        public OptionSettings() { }
+        public OptionSettings(string name, string value)
         {
-            throw new NotImplementedException();
+            this._name = name;
+            this._value = value;
         }
 
-        public object Get(string name, object defaultValue)
+        [XmlAttribute("name")]
+        public string Name
         {
-            throw new NotImplementedException();
+            get { return this._name; }
+            set { this._name = value; }
         }
 
-        public int Get(string name, int defaultValue)
+        [XmlAttribute("value")]
+        public string Value
         {
-            throw new NotImplementedException();
-        }
-
-        public float Get(string name, float defaultValue)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Get(string name, bool defaultValue)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string Get(string name, string defaultValue)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Enum Get(string name, Enum defaultValue)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(string name)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveGroup(string groupName)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Save(string name, object value)
-        {
-            throw new NotImplementedException();
+            get { return this._value; }
+            set { this._value = value; }
         }
     }
 }

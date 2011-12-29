@@ -6,11 +6,12 @@ using System.Configuration;
 
 namespace CodeBuilder.Configuration
 {
-    public sealed class AppSettingsElementCollection : ConfigurationElementCollection
+    [ConfigurationCollection(typeof(TemplateElement), AddItemName = "template")]
+    public sealed class TemplateElementCollection : ConfigurationElementCollection
     {
-        public new AppSettingsElement this[string name]
+        public new TemplateElement this[string name]
         {
-            get { return (AppSettingsElement)base.BaseGet(name); }
+            get { return (TemplateElement)base.BaseGet(name); }
             set
             {
                 if (base.BaseGet(name) != null)
@@ -24,9 +25,9 @@ namespace CodeBuilder.Configuration
             }
         }
 
-        public AppSettingsElement this[int index]
+        public TemplateElement this[int index]
         {
-            get { return (AppSettingsElement)base.BaseGet(index); }
+            get { return (TemplateElement)base.BaseGet(index); }
             set
             {
                 if (base.BaseGet(index) != null)
@@ -37,7 +38,7 @@ namespace CodeBuilder.Configuration
             }
         }
 
-        public void Add(AppSettingsElement element)
+        public void Add(TemplateElement element)
         {
             base.BaseAdd(element);
         }
@@ -49,12 +50,12 @@ namespace CodeBuilder.Configuration
 
         protected override ConfigurationElement CreateNewElement()
         {
-            return new AppSettingsElement();
+            return new TemplateElement();
         }
 
         protected override object GetElementKey(ConfigurationElement element)
         {
-            return ((AppSettingsElement)element).key;
+            return ((TemplateElement)element).Name;
         }
     }
 }

@@ -6,8 +6,6 @@ using System.Configuration;
 
 namespace CodeBuilder.Configuration
 {
-    using Exceptions;
-
     public class SettingsSection : ConfigurationSection
     {
         [ConfigurationProperty("databases", IsRequired = true)]

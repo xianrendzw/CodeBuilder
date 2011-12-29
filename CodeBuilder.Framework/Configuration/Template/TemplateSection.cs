@@ -6,12 +6,12 @@ using System.Configuration;
 
 namespace CodeBuilder.Configuration
 {
-    public class TypeMappingSection : ConfigurationSection
+    public class TemplateSection : ConfigurationSection
     {
-        [ConfigurationProperty("typeMappings", IsRequired = true)]
-        public TypeMappingElementCollection Mappings
+        [ConfigurationProperty("templates", IsRequired = true)]
+        public TemplateElementCollection Templates
         {
-            get { return (TypeMappingElementCollection)base["typeMappings"]; }
+            get { return (TemplateElementCollection)base["templates"]; }
         }
 
         protected override void PostDeserialize()

@@ -27,8 +27,8 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
         public override void LoadSettings()
         {
-           // traceLevelCombox.SelectedIndex = (int)(InternalTraceLevel)settings.Get("Options.InternalTraceLevel", InternalTraceLevel.Default);
-            logDirectoryLabel.Text = CodeBuilderConfiguration.LogDirectory;
+           // traceLevelCombox.SelectedIndex = (int)(InternalTraceLevel)settingsSection.Get("OptionSection.InternalTraceLevel", InternalTraceLevel.Default);
+            logDirectoryLabel.Text = ConfigManager.LogDirectory;
         }
 
         public override void ApplySettings()

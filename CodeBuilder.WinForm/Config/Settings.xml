@@ -1,4 +1,5 @@
-﻿<settings>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settingsSection>
   <languages>
     <language name="C#" alias="csharp"/>
     <language name="JAVA" alias="java"/>
@@ -33,4 +34,4 @@
     <add key="helpUrl" value="http://www.dengzhiwei.com/category/codebuilder"/>
     <add key="feedbackUrl" value="http://www.dengzhiwei.com/category/codebuilder-feedback"/>
   </appSettings>
-</settings>
+</settingsSection>

@@ -56,7 +56,7 @@ namespace CodeBuilder.WinForm.UI
             //{
             //    DialogResult answer = MessageBoxHelper.Ask(
             //        "Some changes will only take effect when you reload the test project. Do you want to reload now?",
-            //        "NUnit Options",
+            //        "NUnit OptionSection",
             //        MessageBoxButtons.YesNo);
 
             //    if (answer == DialogResult.Yes)

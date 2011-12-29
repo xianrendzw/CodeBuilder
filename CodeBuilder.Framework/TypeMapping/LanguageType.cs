@@ -6,7 +6,7 @@ using System.Text;
 namespace CodeBuilder.TypeMapping
 {
     /// <summary>
-    /// programming design language's data dbType.(such as int|string|bool|double| etc.)
+    /// programming design value's data dbType.(such as int|string|bool|double| etc.)
     /// </summary>
     public class LanguageType
     {

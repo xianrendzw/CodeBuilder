@@ -77,12 +77,12 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             this.languageCombox.Items.Clear();
             this.engineCombox.Items.Clear();
 
-            foreach (LanguageElement language in CodeBuilderConfiguration.Settings.Languages)
+            foreach (LanguageElement language in ConfigManager.SettingsSection.Languages)
             {
                 this.languageCombox.Items.Add(language.Name);
             }
 
-            foreach (TemplateEngineElement templateEngine in CodeBuilderConfiguration.Settings.TemplateEngines)
+            foreach (TemplateEngineElement templateEngine in ConfigManager.SettingsSection.TemplateEngines)
             {
                 this.engineCombox.Items.Add(templateEngine.Name);
             }

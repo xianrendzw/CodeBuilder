@@ -58,7 +58,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
         private void SetComboBoxItems()
         {
             this.exporterCombox.Items.Clear();
-            foreach (ExporterElement exporter in CodeBuilderConfiguration.Settings.Exporters)
+            foreach (ExporterElement exporter in ConfigManager.SettingsSection.Exporters)
             {
                 this.exporterCombox.Items.Add(exporter.Name);
             }

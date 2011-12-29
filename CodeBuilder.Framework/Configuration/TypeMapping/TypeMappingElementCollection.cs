@@ -6,12 +6,23 @@ using System.Configuration;
 
 namespace CodeBuilder.Configuration
 {
-    [ConfigurationCollection(typeof(TypeMappingElement), AddItemName = "mapping")]
+    [ConfigurationCollection(typeof(TypeMappingElement), AddItemName = "typeMapping")]
     public sealed class TypeMappingElementCollection : ConfigurationElementCollection
     {
         public new TypeMappingElement this[string name]
         {
             get { return (TypeMappingElement)base.BaseGet(name); }
+            set
+            {
+                if (base.BaseGet(name) != null)
+                {
+                    int index = base.BaseIndexOf(base.BaseGet(name));
+                    base.BaseRemoveAt(index);
+                    base.BaseAdd(index, value);
+                    return;
+                }
+                this.BaseAdd(value);
+            }
         }
 
         public TypeMappingElement this[int index]
@@ -25,6 +36,16 @@ namespace CodeBuilder.Configuration
                 }
                 this.BaseAdd(index, value);
             }
+        }
+
+        public void Add(TypeMappingElement element)
+        {
+            base.BaseAdd(element);
+        }
+
+        public void Remove(string key)
+        {
+            base.BaseRemove(key);
         }
 
         protected override ConfigurationElement CreateNewElement()

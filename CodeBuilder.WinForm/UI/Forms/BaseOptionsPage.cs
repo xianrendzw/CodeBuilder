@@ -37,7 +37,7 @@ namespace CodeBuilder.WinForm.UI
 
             if (!DesignMode)
             {
-                //this.settings = Services.UserSettings;
+                //this.settingsSection = Services.UserSettings;
                 this.LoadSettings();
             }
         }

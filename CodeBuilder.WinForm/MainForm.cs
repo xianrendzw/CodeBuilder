@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -50,8 +51,12 @@ namespace CodeBuilder.WinForm
                     MessageBoxHelper.DisplayFailure(ex.Message);
                     return;
                 }
+
+                string menuItemText = string.Format("Save {0}...", Path.GetFileName(xmlFileName));
+                this.fileSaveMenuItem.Text = menuItemText;
+                this.saveGenSettingCtxMenuItem.Text = menuItemText;
                 this.currentGenerationSettingsFile = xmlFileName;
-                this.SetStatusReadyBarText(this.openFileDialog.Title);
+                this.statusBarReady.Text = string.Format("Open {0}", xmlFileName);
             }
         }
 
@@ -60,10 +65,10 @@ namespace CodeBuilder.WinForm
             GenerationSettings settings = GetGenerationSettings();
 
             string xmlFileName = this.currentGenerationSettingsFile;
-            string readybarText = "Modified Generation Settings";
+            string cmdText = "Modified";
             if (string.IsNullOrEmpty(xmlFileName))
             {
-                readybarText = "Saved Generation Settings";
+                cmdText = "Saved";
                 this.saveFileDialog.Filter = "Generation Settings (*.xml)|*.xml";
                 this.saveFileDialog.DefaultExt = ".xml";
                 this.saveFileDialog.FileName = "New_GenerationSettings.xml";
@@ -75,7 +80,6 @@ namespace CodeBuilder.WinForm
             try
             {
                 SerializeHelper.XmlSerialize(settings,xmlFileName);
-                this.SetStatusReadyBarText(readybarText);
             }
             catch (Exception ex)
             {
@@ -84,6 +88,7 @@ namespace CodeBuilder.WinForm
                 return;
             }
 
+            this.statusBarReady.Text = string.Format("{0} {1}", cmdText, xmlFileName);
             this.currentGenerationSettingsFile = xmlFileName;
         }
 
@@ -106,7 +111,7 @@ namespace CodeBuilder.WinForm
                     return;
                 }
 
-                this.SetStatusReadyBarText(this.openFileDialog.Title);
+                this.statusBarReady.Text = string.Format("Export {0}", pdmFileName);
                 this.treeView.ExpandAll();
             }
         }
@@ -145,12 +150,12 @@ namespace CodeBuilder.WinForm
 
         private void helpF1MenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(CodeBuilderConfiguration.HelpUrl);
+            System.Diagnostics.Process.Start(ConfigManager.HelpUrl);
         }
 
         private void helpFeedbackMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(CodeBuilderConfiguration.HelpUrl);
+            System.Diagnostics.Process.Start(ConfigManager.HelpUrl);
         }
 
         private void helpAboutMenuItem_Click(object sender, EventArgs e)
@@ -185,7 +190,7 @@ namespace CodeBuilder.WinForm
         }
         #endregion
 
-        #region Generation Settings
+        #region Generation SettingsSection
         private void openGenSettingsCtxMenuItem_Click(object sender, EventArgs e)
         {
             this.fileOpenMenuItem_Click(sender, e);
@@ -225,7 +230,7 @@ namespace CodeBuilder.WinForm
         }
         #endregion
 
-        #region Generation Settings Handlers
+        #region Generation SettingsSection Handlers
 
         private void saveSettingsBtn_Click(object sender, EventArgs e)
         {
@@ -234,9 +239,24 @@ namespace CodeBuilder.WinForm
 
         private void generateBtn_Click(object sender, EventArgs e)
         {
-            List<string> l = ExportModelHelper.GetCheckedTags(this.treeView.Nodes);
-            int n = l.Count;
-            MessageBoxHelper.Display(n.ToString());
+            this.generateBtn.Enabled = false;
+            this.completedLbl.Visible = false;
+
+            try
+            {
+                for(int i =1;i<11;i++){
+                    this.genProgressBar.Value = i * 10;
+                    this.currentGenFileNameLbl.Text = i.ToString();
+                    System.Threading.Thread.Sleep(1000);
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Generate", ex);
+            }
+
+            this.generateBtn.Enabled = true;
+            this.completedLbl.Visible = true;
         }
 
         private void languageCombx_SelectedIndexChanged(object sender, EventArgs e)
@@ -259,12 +279,12 @@ namespace CodeBuilder.WinForm
             this.templateEngineCombox.Items.Clear();
             this.codeFileEncodingCombox.Items.Clear();
 
-            foreach (LanguageElement language in CodeBuilderConfiguration.Settings.Languages)
+            foreach (LanguageElement language in ConfigManager.SettingsSection.Languages)
             {
                 this.languageCombx.Items.Add(language.Name);
             }
 
-            foreach (TemplateEngineElement templateEngine in CodeBuilderConfiguration.Settings.TemplateEngines)
+            foreach (TemplateEngineElement templateEngine in ConfigManager.SettingsSection.TemplateEngines)
             {
                 this.templateEngineCombox.Items.Add(templateEngine.Name);
             }
@@ -282,10 +302,10 @@ namespace CodeBuilder.WinForm
         private void AddDataSourceMenuItems(ToolStripMenuItem parent)
         {
             parent.DropDownItems.Clear();
-            foreach (DataSourceSettings dsSettings in CodeBuilderConfiguration.DataSources)
+            foreach (DataSourceElement dataSource in ConfigManager.DataSourceSection.DataSources)
             {
-                ToolStripMenuItem ds = new ToolStripMenuItem(dsSettings.Name);
-                ds.ToolTipText = dsSettings.ConnectionString;
+                ToolStripMenuItem ds = new ToolStripMenuItem(dataSource.Name);
+                ds.ToolTipText = dataSource.ConnectionString;
                 ds.Click += new EventHandler(generateBtn_Click);
                 parent.DropDownItems.Add(ds);
             }
@@ -296,11 +316,6 @@ namespace CodeBuilder.WinForm
             this.statusBarDatabase.Text = this.databaseNameLbl.Text;
             this.statusBarEncoding.Text = this.codeFileEncodingCombox.Text;
             this.statusBarLanguage.Text = this.languageCombx.Text;
-        }
-
-        private void SetStatusReadyBarText(string text)
-        {
-            this.statusBarReady.Text = text;
         }
 
         private void SetGenerationSettings(string xmlFileName)
@@ -329,7 +344,5 @@ namespace CodeBuilder.WinForm
         }
 
         #endregion	
-
-       
     }
 }

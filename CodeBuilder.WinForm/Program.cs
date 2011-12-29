@@ -19,13 +19,29 @@ namespace CodeBuilder.WinForm
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            AppContainer c = new AppContainer();
-            MainForm form = new MainForm();
-            c.Add(form);
+            try
+            {
+                AppContainer c = new AppContainer();
+                MainForm form = new MainForm();
+                c.Add(form);
 
-            Application.Run(form);
+                Application.Run(form);
+            }
+            catch (Exception ex)
+            {
+                logger.Error("", ex);
+                MessageBoxHelper.DisplayFailure(ex.Message);
+                return;
+            }
 
             InternalTrace.Close();
+        }
+
+        static void LoadSettings()
+        {
+            //string traceLevel = Enum.Parse(InternalTraceLevel.Default.GetType(), result.ToString(), true);
+            //InternalTrace.Initialize("CodeBuilder_%p.log",
+            //    (InternalTraceLevel)ConfigManager.OptionSection.Options["Options.InternalTraceLevel"].Value);
         }
     }
 }
