@@ -1,6 +1,7 @@
-﻿<typeMapping>
-  <mappings>
-    <mapping name="sqlserver2005-csharp" database="sqlserver2005" language="csharp">
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<typeMappingSection>
+  <typeMappings>
+    <typeMapping name="sqlserver2005-csharp" database="sqlserver2005" language="csharp">
       <types>
         <add name="nvarchar" langtype="String" default="" />
         <add name="bigint" langtype="Int64" default="" />
@@ -29,8 +30,8 @@
         <add name="varbinary" langtype="Byte[]" default="" />
         <add name="varchar" langtype="String" default="" />
       </types>
-    </mapping>
-    <mapping name="sqlserver2005-java" database="sqlserver2005" language="java">
+    </typeMapping>
+    <typeMapping name="sqlserver2005-java" database="sqlserver2005" language="java">
       <types>
         <add name="nvarchar" langtype="String" default="" />
         <add name="bigint" langtype="Long" default="" />
@@ -59,8 +60,8 @@
         <add name="varbinary" langtype="Byte[]" default="" />
         <add name="varchar" langtype="String" default="" />
       </types>
-    </mapping>
-    <mapping name="mysql5-csharp" database="mysql5" language="csharp">
+    </typeMapping>
+    <typeMapping name="mysql50-csharp" database="mysql50" language="csharp">
       <types>
         <add name="nvarchar" langtype="String" default="" />
         <add name="bigint" langtype="Int64" default="" />
@@ -89,8 +90,8 @@
         <add name="varbinary" langtype="Byte[]" default="" />
         <add name="varchar" langtype="String" default="" />
       </types>
-    </mapping>
-    <mapping name="mysql5-java" database="mysql5" language="java">
+    </typeMapping>
+    <typeMapping name="mysql50-java" database="mysql5" language="java">
       <types>
         <add name="nvarchar" langtype="String" default="" />
         <add name="bigint" langtype="Long" default="" />
@@ -119,6 +120,6 @@
         <add name="varbinary" langtype="Byte[]" default="" />
         <add name="varchar" langtype="String" default="" />
       </types>
-    </mapping>
-  </mappings>
-</typeMapping>
+    </typeMapping>
+  </typeMappings>
+</typeMappingSection>

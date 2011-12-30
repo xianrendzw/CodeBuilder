@@ -44,8 +44,8 @@
             this.noteTextLbl.Name = "noteTextLbl";
             this.noteTextLbl.Size = new System.Drawing.Size(329, 40);
             this.noteTextLbl.TabIndex = 29;
-            this.noteTextLbl.Text = "Changes in the Trace Level will not affect the current session. After changing th" +
-    "e level, you should shut down and restart the Gui.";
+            this.noteTextLbl.Text = "Changes in the Trace Level will affect the current session. After changing the le" +
+    "vel, you should not shut down and restart the Gui.";
             // 
             // noteLbl
             // 

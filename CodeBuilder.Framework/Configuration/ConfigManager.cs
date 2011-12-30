@@ -107,6 +107,38 @@ namespace CodeBuilder.Configuration
             }
         }
 
+        public static string TemplatePath
+        {
+            get
+            {
+                string templatePath = optionSection.Options["CodeGeneration.General.TemplatePath"].Value;
+                if (string.IsNullOrEmpty(templatePath) ||
+                    templatePath.Trim().Length == 0)
+                {
+                    templatePath = Path.Combine(AppCurrentDirectory, "Templates");
+                }
+
+                if (!Directory.Exists(templatePath)) Directory.CreateDirectory(templatePath);
+                return templatePath;
+            }
+        }
+
+        public static string GenerationCodeOuputPath
+        {
+            get
+            {
+                string templatePath = optionSection.Options["CodeGeneration.General.OutputPath"].Value;
+                if (string.IsNullOrEmpty(templatePath) ||
+                    templatePath.Trim().Length == 0)
+                {
+                    templatePath = Path.Combine(AppCurrentDirectory, "GenerationCodes");
+                }
+
+                if (!Directory.Exists(templatePath)) Directory.CreateDirectory(templatePath);
+                return templatePath;
+            }
+        }
+
         public static string LogDirectory
         {
             get { return Path.Combine(Environment.CurrentDirectory, "logs"); }
@@ -282,7 +314,8 @@ namespace CodeBuilder.Configuration
         {
             try
             {
-                config.Save(ConfigurationSaveMode.Modified, true);
+                config.Save(ConfigurationSaveMode.Modified);
+                config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             }
             catch (Exception ex)
             {

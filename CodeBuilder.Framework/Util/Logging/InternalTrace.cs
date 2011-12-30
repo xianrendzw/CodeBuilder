@@ -14,7 +14,7 @@ namespace CodeBuilder.Util
     
 	public class InternalTrace
 	{
-        private readonly static string TIME_FMT = "HH:mm:ss.fff";
+        //private readonly static string TIME_FMT = "HH:mm:ss.fff";
 		private static bool initialized;
 
         private static InternalTraceWriter writer;
@@ -88,7 +88,7 @@ namespace CodeBuilder.Util
         public static void Log(InternalTraceLevel level, string message, string category, Exception ex)
         {
             Writer.WriteLine("{0} {1,-5} [{2,2}] {3}: {4}",
-                DateTime.Now.ToString(TIME_FMT),
+                DateTime.Now.ToString(),
                 level == InternalTraceLevel.Verbose ? "Debug" : level.ToString(),
                 System.Threading.Thread.CurrentThread.ManagedThreadId,
                 category,

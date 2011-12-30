@@ -25,13 +25,10 @@ namespace CodeBuilder.Util
 
 		public InternalTraceWriter(string logName)
 		{
-			int pId = Process.GetCurrentProcess().Id;
-			string domainName = AppDomain.CurrentDomain.FriendlyName;
+            //int pId = Process.GetCurrentProcess().Id;
+            //string domainName = AppDomain.CurrentDomain.FriendlyName;
 
-			string fileName = logName
-				.Replace("%p", pId.ToString() )
-				.Replace("%a", domainName );
-
+            string fileName = logName.Replace("%p", DateTime.Now.ToString("yyyy-MM-dd"));
             string logPath = Path.Combine(LogDirectory, fileName);
             this.writer = new StreamWriter(logPath, true);
             this.writer.AutoFlush = true;

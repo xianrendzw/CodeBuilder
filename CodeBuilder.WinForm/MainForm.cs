@@ -48,7 +48,7 @@ namespace CodeBuilder.WinForm
                 catch (Exception ex)
                 {
                     logger.Error("Open Generation Settings File", ex);
-                    MessageBoxHelper.DisplayFailure(ex.Message);
+                    MessageBoxHelper.DisplayFailure("Invalid Generation Settings File");
                     return;
                 }
 

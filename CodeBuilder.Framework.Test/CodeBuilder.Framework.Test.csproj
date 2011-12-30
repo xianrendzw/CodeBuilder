@@ -86,8 +86,16 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="typeMapping.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ConfigFile Include="Config\DataSources.xml" />
+    <ConfigFile Include="Config\Options.xml" />
+    <ConfigFile Include="Config\Templates.xml" />
+    <ConfigFile Include="Config\Settings.xml" />
+    <ConfigFile Include="Config\TypeMapping.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+    <Target Name="BeforeBuild">
+    <Copy SourceFiles="@(ConfigFile)" DestinationFolder="$(OutputPath)\Config" />
+  </Target>
 </Project>

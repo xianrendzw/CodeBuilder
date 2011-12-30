@@ -28,10 +28,23 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
         public override void LoadSettings()
         {
             this.isLoaded = true;
+            //traceLevelCombox.Text = ConfigManager.OptionSection.Options["Options.InternalTraceLevel"].Value;
+            //logDirectoryLabel.Text = ConfigManager.LogDirectory;
         }
 
         public override void ApplySettings()
         {
+            try
+            {
+                //ConfigManager.OptionSection.Options["Options.InternalTraceLevel"].Value = traceLevelCombox.Text;
+                ConfigManager.Save();
+                ConfigManager.RefreshOptions();
+            }
+            catch (Exception ex)
+            {
+                //logger.Error("Save Options.InternalTraceLevel", ex);
+                return;
+            }
         }
     }
 }

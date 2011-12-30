@@ -49,15 +49,9 @@ namespace CodeBuilder.WinForm.UI
 
         private void okButton_Click(object sender, System.EventArgs e)
         {
-            DialogResult answer = MessageBoxHelper.Ask(
-                "Some changes will be saved,are you sure?", MessageBoxButtons.YesNo);
-
-             if (answer == DialogResult.Yes)
-             {
-                 ApplySettings();
-                 DialogResult = DialogResult.OK;
-                 Close();
-             }
+            ApplySettings();
+            DialogResult = DialogResult.OK;
+            Close();
         }
         #endregion
 
