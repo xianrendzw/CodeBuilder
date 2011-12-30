@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CodeBuilder.DataSource.Exporter.Oracle
+namespace CodeBuilder.DataSource.Exporter
 {
     using PhysicalDataModel;
 
@@ -11,7 +11,7 @@ namespace CodeBuilder.DataSource.Exporter.Oracle
     {
         #region IExporter Members
 
-        public override Model Export(ExportConfig config)
+        public override Model Export(string connectionString)
         {
             return null;
         }

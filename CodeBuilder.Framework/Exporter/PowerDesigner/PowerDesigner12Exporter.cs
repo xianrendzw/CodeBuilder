@@ -5,7 +5,7 @@ using System.Text;
 using System.Xml;
 using System.Text.RegularExpressions;
 
-namespace CodeBuilder.DataSource.Exporter.PowerDesigner
+namespace CodeBuilder.DataSource.Exporter
 {
     using PhysicalDataModel;
     using TypeMapping;
@@ -13,33 +13,29 @@ namespace CodeBuilder.DataSource.Exporter.PowerDesigner
 
     public class PowerDesigner12Exporter : BaseExporter,IExporter
     {
-        private ExportConfig _config;
-
         #region IExporter Members
 
-        public override Model Export(ExportConfig config)
+        public override Model Export(string connectionString)
         {
-            if (config == null)
-                throw new ArgumentNullException("config", "参数不能为null");
-            this._config = config;
+            if (connectionString == null)
+                throw new ArgumentNullException("connectionString", "Argument is null");
 
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(config.ConnectionString);
+            xmlDoc.Load(connectionString);
             XmlElement root = xmlDoc.DocumentElement;
-            this._config.Database = this.GetDatabase(root);
+
+            Model model = new Model();
+            model.Database = this.GetDatabase(root);
 
             XmlNodeList tableNodes = root.GetElementsByTagName("c:Tables");
             XmlNodeList viewNodes = root.GetElementsByTagName("c:Views");
 
-            Tables tables = null;
-            Views views = null;
-
             if (tableNodes != null &&
-                tableNodes[0] != null) tables = this.GetTables(tableNodes[0].ChildNodes);
+                tableNodes[0] != null) model.Tables = this.GetTables(tableNodes[0].ChildNodes);
             if (viewNodes != null &&
-                viewNodes[0] != null) views = this.GetViews(viewNodes[0].ChildNodes);
+                viewNodes[0] != null) model.Views = this.GetViews(viewNodes[0].ChildNodes);
 
-            return (tables != null || views != null) ? new Model(tables, views) : null;
+            return model;
         }
 
         #endregion

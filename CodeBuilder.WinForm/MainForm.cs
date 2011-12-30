@@ -16,8 +16,8 @@ namespace CodeBuilder.WinForm
 
     public partial class MainForm : Form
     {
-        private string currentGenerationSettingsFile;
         private static Logger logger = InternalTrace.GetLogger(typeof(MainForm));
+        private string currentGenerationSettingsFile;
 
         public MainForm()
         {
@@ -102,23 +102,50 @@ namespace CodeBuilder.WinForm
 
                 try
                 {
-                    ExportModelHelper.Export(pdmFileName, this.treeView); 
+                    TreeNode rootNode = ExportModelHelper.ExportPDM(pdmFileName, this.treeView);
+                    rootNode.ExpandAll();
                 }
                 catch (Exception ex)
                 {
+                    if (this.treeView.Nodes.Count > 0) 
+                        this.treeView.Nodes[this.treeView.Nodes.Count - 1].Remove();
+
                     logger.Error("Export PDM File", ex);
                     MessageBoxHelper.Display(ex.Message);
                     return;
                 }
 
+                this.clearCtxMenuItem.Enabled = true;
                 this.statusBarReady.Text = string.Format("Export {0}", pdmFileName);
-                this.treeView.ExpandAll();
             }
         }
 
         private void fileExportDataSourceMenuItem_MouseHover(object sender, EventArgs e)
         {
             this.AddDataSourceMenuItems(this.fileExportDataSourceMenuItem);
+        }
+
+        private void fileExportDataSourceMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem menuItem = sender as ToolStripMenuItem;
+
+            try
+            {
+                TreeNode rootNode = ExportModelHelper.Export(menuItem.Text, this.treeView);
+                rootNode.ExpandAll();
+            }
+            catch (Exception ex)
+            {
+                if (this.treeView.Nodes.Count > 0)
+                    this.treeView.Nodes[this.treeView.Nodes.Count - 1].Remove();
+
+                logger.Error("Export DataSource", ex);
+                MessageBoxHelper.Display(ex.Message);
+                return;
+            }
+
+            this.clearCtxMenuItem.Enabled = true;
+            this.statusBarReady.Text = string.Format("Export DataSource {0}", menuItem.Text);
         }
 
         private void fileExitMenuItem_Click(object sender, EventArgs e)
@@ -230,7 +257,7 @@ namespace CodeBuilder.WinForm
         }
         #endregion
 
-        #region Generation SettingsSection Handlers
+        #region Generation Settings Handlers
 
         private void saveSettingsBtn_Click(object sender, EventArgs e)
         {
@@ -262,11 +289,17 @@ namespace CodeBuilder.WinForm
         private void languageCombx_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.statusBarLanguage.Text = this.languageCombx.Text;
+            this.ChangeTemplateListBox(this.languageCombx.Text, this.templateEngineCombox.Text);
         }
 
         private void codeFileEncodingCombox_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.statusBarEncoding.Text = this.codeFileEncodingCombox.Text;
+        }
+
+        private void templateEngineCombox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.ChangeTemplateListBox(this.languageCombx.Text, this.templateEngineCombox.Text);
         }
 
         #endregion
@@ -299,23 +332,35 @@ namespace CodeBuilder.WinForm
             this.codeFileEncodingCombox.Text = "UTF-8";
         }
 
+        private void SetStatusItems()
+        {
+            this.statusBarDatabase.Text = this.databaseNameLbl.Text;
+            this.statusBarEncoding.Text = this.codeFileEncodingCombox.Text;
+            this.statusBarLanguage.Text = this.languageCombx.Text;
+        }
+
         private void AddDataSourceMenuItems(ToolStripMenuItem parent)
         {
             parent.DropDownItems.Clear();
             foreach (DataSourceElement dataSource in ConfigManager.DataSourceSection.DataSources)
             {
                 ToolStripMenuItem ds = new ToolStripMenuItem(dataSource.Name);
-                ds.ToolTipText = dataSource.ConnectionString;
-                ds.Click += new EventHandler(generateBtn_Click);
+                //ds.ToolTipText = dataSource.ConnectionString;
+                ds.Click += new EventHandler(fileExportDataSourceMenuItem_Click);
                 parent.DropDownItems.Add(ds);
             }
         }
 
-        private void SetStatusItems()
+        private void ChangeTemplateListBox(string language, string engine)
         {
-            this.statusBarDatabase.Text = this.databaseNameLbl.Text;
-            this.statusBarEncoding.Text = this.codeFileEncodingCombox.Text;
-            this.statusBarLanguage.Text = this.languageCombx.Text;
+            this.templateListBox.Items.Clear();
+            language = ConfigManager.SettingsSection.Languages[language].Alias;
+            foreach (TemplateElement template in ConfigManager.TemplateSection.Templates)
+            {
+                if(template.Language.Equals(language,StringComparison.CurrentCultureIgnoreCase) &&
+                    template.Engine.Equals(engine, StringComparison.CurrentCultureIgnoreCase))
+                this.templateListBox.Items.Add(template.Name);
+            }
         }
 
         private void SetGenerationSettings(string xmlFileName)
@@ -344,5 +389,7 @@ namespace CodeBuilder.WinForm
         }
 
         #endregion	
+
+        
     }
 }

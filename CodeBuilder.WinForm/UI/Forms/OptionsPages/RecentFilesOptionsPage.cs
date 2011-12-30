@@ -14,6 +14,8 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
     public partial class RecentFilesOptionsPage : BaseOptionsPage
     {
+        private static Logger logger = InternalTrace.GetLogger(typeof(RecentFilesOptionsPage));
+
         public RecentFilesOptionsPage()
         {
             InitializeComponent();
@@ -28,22 +30,23 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
         public override void LoadSettings()
         {
             this.isLoaded = true;
-            //traceLevelCombox.Text = ConfigManager.OptionSection.Options["Options.InternalTraceLevel"].Value;
-            //logDirectoryLabel.Text = ConfigManager.LogDirectory;
+            this.recentFilesCountTextBox.Text = ConfigManager.OptionSection.Options["Environment.RecentFiles.MaxFiles"].Value;
+            string value = ConfigManager.OptionSection.Options["Environment.RecentFiles.IsCheckFileExist"].Value;
+            this.checkFilesExistCheckBox.Checked = ConvertHelper.GetBoolean(value);
         }
 
         public override void ApplySettings()
         {
             try
             {
-                //ConfigManager.OptionSection.Options["Options.InternalTraceLevel"].Value = traceLevelCombox.Text;
+                ConfigManager.OptionSection.Options["Environment.RecentFiles.MaxFiles"].Value = this.recentFilesCountTextBox.Text;
+                ConfigManager.OptionSection.Options["Environment.RecentFiles.IsCheckFileExist"].Value = this.checkFilesExistCheckBox.Checked.ToString();
                 ConfigManager.Save();
                 ConfigManager.RefreshOptions();
             }
             catch (Exception ex)
             {
-                //logger.Error("Save Options.InternalTraceLevel", ex);
-                return;
+                logger.Error("Save Environment.RecentFiles.MaxFiles", ex);
             }
         }
     }

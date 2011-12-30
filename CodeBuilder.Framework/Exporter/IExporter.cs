@@ -9,8 +9,6 @@ namespace CodeBuilder.DataSource.Exporter
 
     public interface IExporter
     {
-        Model Export(ExportConfig config);
-
-        List<Model> Export(params ExportConfig[] configs);
+        Model Export(string connectionString);
     }
 }

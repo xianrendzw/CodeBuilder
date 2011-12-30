@@ -110,6 +110,7 @@
     <Compile Include="UI\Forms\OptionsPages\TemplateOptionsPage.Designer.cs">
       <DependentUpon>TemplateOptionsPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ModelManager.cs" />
     <Compile Include="UI\OptionsDialog.cs" />
     <Compile Include="UI\AppContainer.cs" />
     <Compile Include="UI\Forms\BaseOptionsPage.cs">

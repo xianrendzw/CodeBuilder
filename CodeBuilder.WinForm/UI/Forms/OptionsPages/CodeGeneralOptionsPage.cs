@@ -15,6 +15,8 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
     public partial class CodeGeneralOptionsPage : BaseOptionsPage
     {
+        private static Logger logger = InternalTrace.GetLogger(typeof(CodeGeneralOptionsPage));
+
         public CodeGeneralOptionsPage()
         {
             InitializeComponent();
@@ -37,19 +39,20 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
         {
             try
             {
-                // if (!Directory.Exists(value)) Directory.CreateDirectory(value);
-                //optionSection.Options["CodeGeneration.General.TemplatePath"].Value = value;
-                //if (!Directory.Exists(value)) Directory.CreateDirectory(value);
-                //optionSection.Options["CodeGeneration.General.OutputPath"].Value = value;
-                //Path
-                ConfigManager.OptionSection.Options["Options.InternalTraceLevel"].Value = string.Empty;
+                string templatePath = this.templatePathTxtbox.Text;
+                string ouputPath = this.ouputPathTxtbox.Text;
+
+                if(!Directory.Exists(templatePath)) Directory.CreateDirectory(templatePath);
+                if(!Directory.Exists(ouputPath)) Directory.CreateDirectory(ouputPath);
+
+                ConfigManager.OptionSection.Options["CodeGeneration.General.TemplatePath"].Value = string.Empty;
+                ConfigManager.OptionSection.Options["CodeGeneration.General.OutputPath"].Value = string.Empty;
                 ConfigManager.Save();
                 ConfigManager.RefreshOptions();
             }
             catch (Exception ex)
             {
-               //logger.Error("Save Options.InternalTraceLevel", ex);
-                return;
+                logger.Error("Save Options.CodeGeneration.General", ex);
             }
         }
 

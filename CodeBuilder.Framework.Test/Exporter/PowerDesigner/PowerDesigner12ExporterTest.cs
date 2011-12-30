@@ -30,8 +30,7 @@ namespace CodeBuilder.DataSource.Exporter.PowerDesigner.Test
         public void Export_Model_From_PowerdesignerFile()
         {
             string connstr = AppDomain.CurrentDomain.BaseDirectory + @"\test.pdm";
-            ExportConfig config = new ExportConfig(connstr,"Mysql","Csharp");
-            Model model = this.exporter.Export(config);
+            Model model = this.exporter.Export(connstr);
 
             Assert.That(model,Is.Not.Null);
             Assert.That(model.Tables.Count, Is.EqualTo(5));

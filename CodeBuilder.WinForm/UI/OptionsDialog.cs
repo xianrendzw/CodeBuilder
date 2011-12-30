@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CodeBuilder.WinForm
+namespace CodeBuilder.WinForm.UI
 {
-    using UI;
-    using UI.OptionsPages;
+    using OptionsPages;
 
     public class OptionsDialog
     {

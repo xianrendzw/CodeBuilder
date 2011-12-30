@@ -577,16 +577,6 @@
             this.templateListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.templateListBox.FormattingEnabled = true;
-            this.templateListBox.Items.AddRange(new object[] {
-            "LightFramework-BLL",
-            "LightFramework-DTO",
-            "LightFramework-DAL",
-            "PetShop-BLL",
-            "PetShop-Entity",
-            "PetShop-DAL",
-            "",
-            "",
-            ""});
             this.templateListBox.Location = new System.Drawing.Point(357, 122);
             this.templateListBox.Name = "templateListBox";
             this.templateListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
@@ -616,6 +606,7 @@
             this.templateEngineCombox.Name = "templateEngineCombox";
             this.templateEngineCombox.Size = new System.Drawing.Size(116, 21);
             this.templateEngineCombox.TabIndex = 17;
+            this.templateEngineCombox.SelectedIndexChanged += new System.EventHandler(this.templateEngineCombox_SelectedIndexChanged);
             // 
             // templateEngineLbl
             // 

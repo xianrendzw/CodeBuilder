@@ -100,7 +100,7 @@ namespace CodeBuilder.Configuration
                 if (binDirectory == null)
                 {
                     binDirectory = LibDirectory;
-                    if (Path.GetFileName(binDirectory).ToLower() == "lib")
+                    if (Path.GetFileName(binDirectory).ToLower() == "Lib")
                         binDirectory = Path.GetDirectoryName(binDirectory);
                 }
                 return binDirectory;
@@ -141,27 +141,7 @@ namespace CodeBuilder.Configuration
 
         public static string LogDirectory
         {
-            get { return Path.Combine(Environment.CurrentDirectory, "logs"); }
-        }
-
-        public static string ConfigFileDirectory
-        {
-            get { return Path.Combine(Environment.CurrentDirectory, "Config"); }
-        }
-
-        public static string OptionSettingsFileName
-        {
-            get { return Path.Combine(ConfigFileDirectory, "Options.xml"); }
-        }
-
-        public static string DataSourceSettingsFileName
-        {
-            get { return Path.Combine(ConfigFileDirectory, "DataSources.xml"); }
-        }
-
-        public static string TemplateSettingsFileName
-        {
-            get { return Path.Combine(ConfigFileDirectory, "Templates.xml"); }
+            get { return Path.Combine(Environment.CurrentDirectory, "Logs"); }
         }
 
         public static string HelpUrl
@@ -210,6 +190,19 @@ namespace CodeBuilder.Configuration
                     return feedbackUrl;
                 }
                 return feedbackUrl = "http://www.dengzhiwei.com/category/codebuilder-feedback";
+            }
+        }
+
+        public static string OnlineTemplateUrl
+        {
+            get
+            {
+                string onlineTemplateUrl = SettingsSection.AppSettings["onlineTemplateUrl"].Value;
+                if (onlineTemplateUrl != null)
+                {
+                    return onlineTemplateUrl;
+                }
+                return onlineTemplateUrl = "http://www.dengzhiwei.com/category/codebuilder-templates";
             }
         }
         #endregion

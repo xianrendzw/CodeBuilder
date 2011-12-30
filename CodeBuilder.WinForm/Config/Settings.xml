@@ -7,12 +7,12 @@
     <language name="PHP" alias="php"/>
   </languages>
   <exporters>
-    <exporter name="PowerDesinger12" type=""/>
-    <exporter name="MySQL5" type=""/>
-    <exporter name="SqlServer2000" type=""/>
-    <exporter name="SqlServer2005" type=""/>
-    <exporter name="SqlServer2008" type=""/>
-    <exporter name="Oracle" type=""/>
+    <exporter name="PowerDesinger12" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
+    <exporter name="MySQL5" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
+    <exporter name="SqlServer2000" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
+    <exporter name="SqlServer2005" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
+    <exporter name="SqlServer2008" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
+    <exporter name="Oracle" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
   </exporters>
   <databases>
     <database name="MySQL50" exporter="MySQL5"/>

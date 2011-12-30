@@ -11,7 +11,7 @@ namespace CodeBuilder.DataSource.Exporter
     {
         #region IExporter Members
 
-        public override Model Export(ExportConfig config)
+        public override Model Export(string connectionString)
         {
             return null;
         }

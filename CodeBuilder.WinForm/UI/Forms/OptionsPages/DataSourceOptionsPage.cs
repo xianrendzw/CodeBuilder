@@ -14,6 +14,8 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
     public partial class DataSourceOptionsPage : BaseOptionsPage
     {
+        private static Logger logger = InternalTrace.GetLogger(typeof(DataSourceOptionsPage));
+
         public DataSourceOptionsPage()
         {
             InitializeComponent();

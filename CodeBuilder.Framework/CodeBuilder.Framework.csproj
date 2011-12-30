@@ -114,7 +114,6 @@
     <Compile Include="Exceptions\ConfigSectionLockedException.cs" />
     <Compile Include="Exceptions\NotSetDatabaseException.cs" />
     <Compile Include="Exporter\BaseExporter.cs" />
-    <Compile Include="Exporter\ExportConfig.cs" />
     <Compile Include="Exporter\IExporter.cs" />
     <Compile Include="Exporter\MySQL\MySqlExporter.cs" />
     <Compile Include="Exporter\Oracle\Oracle8iExporter.cs" />
@@ -142,6 +141,7 @@
     <Compile Include="TypeMapping\LanguageType.cs" />
     <Compile Include="TypeMapping\TypeMapperFactory.cs" />
     <Compile Include="Util\AssemblyHelper.cs" />
+    <Compile Include="Util\ConvertHelper.cs" />
     <Compile Include="Util\Enums.cs" />
     <Compile Include="Util\Logging\InternalTrace.cs" />
     <Compile Include="Util\Logging\InternalTraceWriter.cs" />

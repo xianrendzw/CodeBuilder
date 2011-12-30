@@ -14,6 +14,8 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
     public partial class TemplateOptionsPage : BaseOptionsPage
     {
+        private static Logger logger = InternalTrace.GetLogger(typeof(TemplateOptionsPage));
+
         public TemplateOptionsPage()
         {
             InitializeComponent();
