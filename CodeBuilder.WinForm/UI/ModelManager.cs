@@ -16,7 +16,8 @@ namespace CodeBuilder.WinForm.UI
         {
             if (models.ContainsKey(key))
                 models[key] = model;
-            models.Add(key, model);
+            else
+                models.Add(key, model);
         }
 
         public static void Clear()

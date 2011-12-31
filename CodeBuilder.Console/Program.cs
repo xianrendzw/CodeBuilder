@@ -33,10 +33,9 @@ namespace CodeBuilder.CLI
 
             //SerializeHelper.XmlSerialize(list, @"e:\ds.xml");
 
-            ConfigManager.DataSourceSection.DataSources.Add(new DataSourceElement() { Name = "test5", ConnectionString = "test3", Exporter = "test4" });
+            //ConfigManager.DataSourceSection.DataSources.Add(new DataSourceElement() { Name = "test5", ConnectionString = "test3", Exporter = "test4" });
             //ConfigManager.DataSourceSection.SectionInformation.ForceSave = true;
-            ConfigManager.Save();
-
+            //ConfigManager.Save();
             Console.WriteLine("Ok");
             Console.Read();
         }

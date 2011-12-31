@@ -15,7 +15,14 @@ namespace CodeBuilder.Configuration
             set { base["name"] = value; }
         }
 
-        [ConfigurationProperty("adapter", IsRequired = true, DefaultValue = "String")]
+        [ConfigurationProperty("ext", IsRequired = false, DefaultValue = "tpl")]
+        public String Extension
+        {
+            get { return base["ext"].ToString(); }
+            set { base["ext"] = value; }
+        }
+
+        [ConfigurationProperty("adapter", IsRequired = true)]
         public String Adapter
         {
             get { return base["adapter"].ToString(); }

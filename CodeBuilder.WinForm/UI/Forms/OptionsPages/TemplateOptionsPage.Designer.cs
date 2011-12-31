@@ -197,7 +197,7 @@
             // 
             // openFileDialog
             // 
-            this.openFileDialog.Filter = "Template Text File (*.txt)|*.txt\"";
+            this.openFileDialog.Filter = "Template Text File (*.txt)|*.txt";
             this.openFileDialog.Title = "Select Template Text File";
             // 
             // getItFromOnlineBtn

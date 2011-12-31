@@ -21,6 +21,11 @@ namespace CodeBuilder.Configuration
         private static TemplateSection templateSection;
         private static OptionSection optionSection;
         private static System.Configuration.Configuration config;
+        private static readonly string settingsSectionName = "codebuilder/settingsSection";
+        private static readonly string typeMappingSectionName = "codebuilder/typeMappingSection";
+        private static readonly string dataSourceSectionName = "codebuilder/dataSourceSection";
+        private static readonly string templateSectionName = "codebuilder/templateSection";
+        private static readonly string optionSectionName = "codebuilder/optionSection";
 
         #region Class Constructor
 
@@ -131,7 +136,7 @@ namespace CodeBuilder.Configuration
                 if (string.IsNullOrEmpty(templatePath) ||
                     templatePath.Trim().Length == 0)
                 {
-                    templatePath = Path.Combine(AppCurrentDirectory, "GenerationCodes");
+                    templatePath = Path.Combine(AppCurrentDirectory, "Codes");
                 }
 
                 if (!Directory.Exists(templatePath)) Directory.CreateDirectory(templatePath);
@@ -216,92 +221,33 @@ namespace CodeBuilder.Configuration
 
         public static void RefreshSettings()
         {
-            try
-            {
-                settingsSection = GetConfigSection<SettingsSection>("codebuilder/settingsSection");
-            }
-            catch (Exception ex)
-            {
-                throw new ConfigurationErrorsException("Load 'settings' configSection failure", ex);
-            }
+            ConfigurationManager.RefreshSection(settingsSectionName);
+            settingsSection = GetConfigSection<SettingsSection>(settingsSectionName);
         }
 
         public static void RefreshTypeMapping()
         {
-            try
-            {
-                typeMappingSection = GetConfigSection<TypeMappingSection>("codebuilder/typeMappingSection");
-            }
-            catch (Exception ex)
-            {
-                throw new ConfigurationErrorsException("Load 'typeMapping' configSection failure", ex);
-            }
+            ConfigurationManager.RefreshSection(typeMappingSectionName);
+            typeMappingSection = GetConfigSection<TypeMappingSection>(typeMappingSectionName);
         }
 
         public static void RefreshDataSources()
         {
-            try
-            {
-                dataSourceSection = GetConfigSection<DataSourceSection>("codebuilder/dataSourceSection");
-            }
-            catch (Exception ex)
-            {
-                throw new ConfigurationErrorsException("Load 'dataSources' configSection failure", ex);
-            }
+            ConfigurationManager.RefreshSection(dataSourceSectionName);
+            dataSourceSection = GetConfigSection<DataSourceSection>(dataSourceSectionName);
         }
 
         public static void RefreshTemplates()
         {
-            try
-            {
-                templateSection = GetConfigSection<TemplateSection>("codebuilder/templateSection");
-            }
-            catch (Exception ex)
-            {
-                throw new ConfigurationErrorsException("Load 'templates' configSection failure", ex);
-            }
+            ConfigurationManager.RefreshSection(templateSectionName);
+            templateSection = GetConfigSection<TemplateSection>(templateSectionName);
         }
 
         public static void RefreshOptions()
         {
-            try
-            {
-                optionSection = GetConfigSection<OptionSection>("codebuilder/optionSection");
-            }
-            catch (Exception ex)
-            {
-                throw new ConfigurationErrorsException("Load 'typeMapping' configSection failure", ex);
-            }
+            ConfigurationManager.RefreshSection(optionSectionName);
+            optionSection = GetConfigSection<OptionSection>(optionSectionName);
         }
-
-        #endregion
-
-        #region Private Methods
-
-        private static void LoadAll()
-        {
-            try
-            {
-                config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                settingsSection = GetConfigSection<SettingsSection>("codebuilder/settingsSection");
-                typeMappingSection = GetConfigSection<TypeMappingSection>("codebuilder/typeMappingSection");
-                dataSourceSection = GetConfigSection<DataSourceSection>("codebuilder/dataSourceSection");
-                templateSection = GetConfigSection<TemplateSection>("codebuilder/templateSection");
-                optionSection = GetConfigSection<OptionSection>("codebuilder/optionSection");
-            }
-            catch (Exception ex)
-            {
-                throw new ConfigurationErrorsException("Load configuration failure", ex);
-            }
-        }
-
-        private static T GetConfigSection<T>(string name) where T:ConfigurationSection
-        {
-            ConfigurationManager.RefreshSection(name);
-            return (T)config.GetSection(name);
-        }
-
-        #endregion
 
         public static void Save()
         {
@@ -315,5 +261,34 @@ namespace CodeBuilder.Configuration
                 throw new ConfigurationErrorsException("Save configuration failure", ex);
             }
         }
+
+        #endregion
+
+        #region Private Methods
+
+        private static void LoadAll()
+        {
+            try
+            {
+                config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                typeMappingSection = GetConfigSection<TypeMappingSection>(typeMappingSectionName);
+                settingsSection = GetConfigSection<SettingsSection>(settingsSectionName);
+                optionSection = GetConfigSection<OptionSection>(optionSectionName);
+                dataSourceSection = GetConfigSection<DataSourceSection>(dataSourceSectionName);
+                templateSection = GetConfigSection<TemplateSection>(templateSectionName);
+                optionSection = GetConfigSection<OptionSection>(optionSectionName);
+            }
+            catch (Exception ex)
+            {
+                throw new ConfigurationErrorsException("Load configuration failure", ex);
+            }
+        }
+
+        private static T GetConfigSection<T>(string name) where T:ConfigurationSection
+        {
+            return (T)config.GetSection(name);
+        }
+
+        #endregion
     }
 }

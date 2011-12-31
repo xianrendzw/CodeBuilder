@@ -36,19 +36,17 @@ namespace CodeBuilder.WinForm.UI
             return rootNode;
         }
 
-        private static Model Export(IExporter exporter,string connectionString, TreeNode rootNode)
+        private static void Export(IExporter exporter,string connectionString, TreeNode rootNode)
         {
             Model model = exporter.Export(connectionString);
-            Export(model, rootNode);
+            AddBranchToTree(model, rootNode);
             ModelManager.Add(rootNode.Index.ToString(), model);
-
-            return model;
         }
 
-        private static void Export(Model model, TreeNode parentNode)
+        private static void AddBranchToTree(Model model, TreeNode parentNode)
         {
-            ExportObjects(model.Tables, parentNode);
-            ExportObjects(model.Views, parentNode);
+            AddBranchToTree(model.Tables, parentNode);
+            AddBranchToTree(model.Views, parentNode);
         }
 
         public static void CheckedTreeNode(TreeNode tn)
@@ -87,7 +85,7 @@ namespace CodeBuilder.WinForm.UI
             }
         }
 
-        private static void ExportObjects<T>(Dictionary<string, T> objects, TreeNode parentNode) where T : BaseTable
+        private static void AddBranchToTree<T>(Dictionary<string, T> objects, TreeNode parentNode) where T : BaseTable
         {
             if (objects == null ||
                 objects.Count == 0) return;

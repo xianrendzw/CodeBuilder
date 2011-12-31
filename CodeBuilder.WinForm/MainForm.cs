@@ -212,6 +212,7 @@ namespace CodeBuilder.WinForm
 
         private void clearCtxMenuItem_Click(object sender, EventArgs e)
         {
+            ModelManager.Clear();
             this.treeView.Nodes.Clear();
             this.clearCtxMenuItem.Enabled = false;
         }
@@ -389,7 +390,6 @@ namespace CodeBuilder.WinForm
         }
 
         #endregion	
-
-        
+ 
     }
 }
