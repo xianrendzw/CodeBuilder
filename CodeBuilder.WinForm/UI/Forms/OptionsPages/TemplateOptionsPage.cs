@@ -41,6 +41,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             try
             {
                 this.SaveChanged();
+                this.listBoxItems.Clear();
                 ConfigManager.Save();
                 ConfigManager.RefreshTemplates();
             }
@@ -117,15 +118,18 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
             if (this.listBoxItems.ContainsKey(name.ToLower()))
             {
+                string srcPath = this.listBoxItems[name.ToLower()].Path;
                 this.listBoxItems[name.ToLower()].Name = name;
                 this.listBoxItems[name.ToLower()].Language = language;
                 this.listBoxItems[name.ToLower()].Engine = engine;
                 this.listBoxItems[name.ToLower()].Path = path;
                 this.listBoxItems[name.ToLower()].Status = TemplateItemStatus.Edit;
+                if (!srcPath.Equals(path, StringComparison.CurrentCultureIgnoreCase)) 
+                    this.listBoxItems[name.ToLower()].Status = TemplateItemStatus.PathChanged;
                 return;
             }
 
-            this.listBoxItems.Add(name.ToLower(), new TemplateItem(name, language, engine, TemplateItemStatus.New));
+            this.listBoxItems.Add(name.ToLower(), new TemplateItem(name, language, engine, path, TemplateItemStatus.New));
             this.templateListbox.Items.Add(name);
         }
 
@@ -166,7 +170,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
                 this.templateListbox.Items.Add(template.Name);
                 string name = template.Name.Trim().ToLower();
                 if (!listBoxItems.ContainsKey(name))
-                    listBoxItems.Add(name, new TemplateItem(template.Name, template.Language, template.Engine));
+                    listBoxItems.Add(name, new TemplateItem(template.Name, template.Language, template.Engine, template.Path));
             }
         }
 
@@ -189,9 +193,14 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
                 if (item.Value.Status == TemplateItemStatus.Deleted)
                     ConfigManager.TemplateSection.Templates.Remove(item.Value.Name);
 
-                string templateFileName = this.CopyTemplateFile(item.Value.Name, item.Value.Language, item.Value.Engine, item.Value.Path);
-                if (string.IsNullOrEmpty(templateFileName)) continue;
+                if (item.Value.Status == TemplateItemStatus.New ||
+                    item.Value.Status == TemplateItemStatus.PathChanged)
+                {
+                    string languageAlais = ConfigManager.SettingsSection.Languages[item.Value.Language].Alias;
+                    item.Value.Path = this.CopyTemplateFile(item.Value.Name, languageAlais, item.Value.Engine, item.Value.Path);
+                }
 
+                if (string.IsNullOrEmpty(item.Value.Path)) continue;
                 if (item.Value.Status == TemplateItemStatus.New)
                 {
                     TemplateElement element = new TemplateElement();
@@ -223,8 +232,15 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
             try
             {
-                destFileName = Path.Combine(ConfigManager.TemplatePath, language, engine, templateName.Trim().ToLower());
-                File.Copy(srcFileName, destFileName, true);
+                if (File.Exists(srcFileName))
+                {
+                    string path = Path.Combine(ConfigManager.TemplatePath, language, engine);
+                    if (!Directory.Exists(path))
+                        Directory.CreateDirectory(path);
+
+                    destFileName = Path.Combine(path, templateName.Trim().ToLower() + ".tpl");
+                    File.Copy(srcFileName, destFileName, true);
+                }
             }
             catch (Exception ex)
             {
@@ -241,14 +257,13 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
         {
             public TemplateItem() { }
 
-            public TemplateItem(string name, string language, string engine)
-                : this(name, language, engine,TemplateItemStatus.None)
+            public TemplateItem(string name, string language, string engine, string path)
+                : this(name, language, engine, path, TemplateItemStatus.None)
             {
             }
 
-            public TemplateItem(string name, string language, string engine, 
-                TemplateItemStatus status)
-                : this(name, language, engine, string.Empty, string.Empty, string.Empty, status)
+            public TemplateItem(string name, string language, string engine, string path, TemplateItemStatus status)
+                : this(name, language, engine, path, "", "", status)
             {
             }
 
@@ -279,6 +294,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             Edit,
             New,
             Deleted,
+            PathChanged
         }
     }
 }

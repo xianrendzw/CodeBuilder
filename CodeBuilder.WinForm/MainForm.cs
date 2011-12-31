@@ -275,7 +275,7 @@ namespace CodeBuilder.WinForm
                 for(int i =1;i<11;i++){
                     this.genProgressBar.Value = i * 10;
                     this.currentGenFileNameLbl.Text = i.ToString();
-                    System.Threading.Thread.Sleep(1000);
+                    System.Threading.Thread.Sleep(100);
                 }
             }
             catch (Exception ex)
@@ -355,7 +355,6 @@ namespace CodeBuilder.WinForm
         private void ChangeTemplateListBox(string language, string engine)
         {
             this.templateListBox.Items.Clear();
-            language = ConfigManager.SettingsSection.Languages[language].Alias;
             foreach (TemplateElement template in ConfigManager.TemplateSection.Templates)
             {
                 if(template.Language.Equals(language,StringComparison.CurrentCultureIgnoreCase) &&

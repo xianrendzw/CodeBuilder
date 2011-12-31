@@ -40,6 +40,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             try
             {
                 this.SaveChanged();
+                this.listBoxItems.Clear();
                 ConfigManager.Save();
                 ConfigManager.RefreshDataSources();
             }

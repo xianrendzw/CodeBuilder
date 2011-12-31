@@ -23,10 +23,10 @@
     <database name="Oracle9i" exporter="Oracle"/>
   </databases>
   <templateEngines>
-    <templateEngine name="NVelocity" ext="nv" adapter="" />
-    <templateEngine name="Razor" ext="rz" adapter="" />
-    <templateEngine name="Vici" ext="vic" adapter="" />
-    <templateEngine name="Ader" ext="adr" adapter="" />
+    <templateEngine name="NVelocity" ext="nv" adapter="CodeBuilder.TemplateEngine.NVelocityAdapter,CodeBuilder.Framework" />
+    <templateEngine name="Razor" ext="rz" adapter="CodeBuilder.TemplateEngine.RazorEngineAdapter,CodeBuilder.Framework" />
+    <templateEngine name="Vici" ext="vic" adapter="CodeBuilder.TemplateEngine.ViciEngineAdapter,CodeBuilder.Framework" />
+    <templateEngine name="Ader" ext="adr" adapter="CodeBuilder.TemplateEngine.AderEngineAdapter,CodeBuilder.Framework" />
   </templateEngines>
   <appSettings>
     <add key="typeMapper" value="CodeBuilder.TypeMapping.DefaultTypeMapper,CodeBuilder.Framework" />
