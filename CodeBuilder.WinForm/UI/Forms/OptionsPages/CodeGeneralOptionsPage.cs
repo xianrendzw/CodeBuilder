@@ -45,14 +45,14 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
                 if(!Directory.Exists(templatePath)) Directory.CreateDirectory(templatePath);
                 if(!Directory.Exists(ouputPath)) Directory.CreateDirectory(ouputPath);
 
-                ConfigManager.OptionSection.Options["CodeGeneration.General.TemplatePath"].Value = string.Empty;
-                ConfigManager.OptionSection.Options["CodeGeneration.General.OutputPath"].Value = string.Empty;
-                ConfigManager.Save();
+                ConfigManager.OptionSection.Options["CodeGeneration.General.TemplatePath"].Value = templatePath;
+                ConfigManager.OptionSection.Options["CodeGeneration.General.OutputPath"].Value = ouputPath;
                 ConfigManager.RefreshOptions();
+                ConfigManager.Save();
             }
             catch (Exception ex)
             {
-                logger.Error("Save Options.CodeGeneration.General", ex);
+                throw new ApplicationException("Save Options.CodeGeneration.General Failure", ex);
             }
         }
 

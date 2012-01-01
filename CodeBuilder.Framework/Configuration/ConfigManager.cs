@@ -15,11 +15,6 @@ namespace CodeBuilder.Configuration
 
     public class ConfigManager
     {
-        private static SettingsSection settingsSection;
-        private static TypeMappingSection typeMappingSection;
-        private static DataSourceSection dataSourceSection;
-        private static TemplateSection templateSection;
-        private static OptionSection optionSection;
         private static System.Configuration.Configuration config;
         private static readonly string settingsSectionName = "codebuilder/settingsSection";
         private static readonly string typeMappingSectionName = "codebuilder/typeMappingSection";
@@ -31,7 +26,7 @@ namespace CodeBuilder.Configuration
 
         static ConfigManager()
         {
-            LoadAll();
+            LoadConfiguration();
         }
 
         #endregion
@@ -40,27 +35,27 @@ namespace CodeBuilder.Configuration
 
         public static SettingsSection SettingsSection
         {
-            get { return settingsSection; }
+            get { return GetConfigSection<SettingsSection>(settingsSectionName); }
         }
 
         public static TypeMappingSection TypeMappingSection
         {
-            get { return typeMappingSection; }
+            get { return GetConfigSection<TypeMappingSection>(typeMappingSectionName); }
         }
 
         public static DataSourceSection DataSourceSection
         {
-            get { return dataSourceSection; }
+            get { return GetConfigSection<DataSourceSection>(dataSourceSectionName); }
         }
 
         public static TemplateSection TemplateSection
         {
-            get { return templateSection; }
+            get { return GetConfigSection<TemplateSection>(templateSectionName); ; }
         }
 
         public static OptionSection OptionSection
         {
-            get { return optionSection; }
+            get { return GetConfigSection<OptionSection>(optionSectionName); ; }
         }
 
         private static string applicationDataDirectory;
@@ -84,39 +79,11 @@ namespace CodeBuilder.Configuration
             get { return Environment.CurrentDirectory; }
         }
 
-        private static string libDirectory;
-        public static string LibDirectory
-        {
-            get
-            {
-                if (libDirectory == null)
-                {
-                    libDirectory = AssemblyHelper.GetDirectoryName(Assembly.GetExecutingAssembly());
-                }
-                return libDirectory;
-            }
-        }
-
-        private static string binDirectory;
-        public static string BinDirectory
-        {
-            get
-            {
-                if (binDirectory == null)
-                {
-                    binDirectory = LibDirectory;
-                    if (Path.GetFileName(binDirectory).ToLower() == "Lib")
-                        binDirectory = Path.GetDirectoryName(binDirectory);
-                }
-                return binDirectory;
-            }
-        }
-
         public static string TemplatePath
         {
             get
             {
-                string templatePath = optionSection.Options["CodeGeneration.General.TemplatePath"].Value;
+                string templatePath = OptionSection.Options["CodeGeneration.General.TemplatePath"].Value;
                 if (string.IsNullOrEmpty(templatePath) ||
                     templatePath.Trim().Length == 0)
                 {
@@ -132,7 +99,7 @@ namespace CodeBuilder.Configuration
         {
             get
             {
-                string templatePath = optionSection.Options["CodeGeneration.General.OutputPath"].Value;
+                string templatePath = OptionSection.Options["CodeGeneration.General.OutputPath"].Value;
                 if (string.IsNullOrEmpty(templatePath) ||
                     templatePath.Trim().Length == 0)
                 {
@@ -154,25 +121,10 @@ namespace CodeBuilder.Configuration
             get
             {
                 string helpUrl = SettingsSection.AppSettings["helpUrl"].Value;
-                if (helpUrl != null)
-                {
-                    return helpUrl;
-                }
+                if (helpUrl != null) return helpUrl;
 
                 helpUrl = "http://www.dengzhiwei.com/category/codebuilder";
-                string dir = Path.GetDirectoryName(BinDirectory);
-                if (dir == null)
-                {
-                    return helpUrl;
-                }
-
-                dir = Path.GetDirectoryName(dir);
-                if (dir == null)
-                {
-                    return helpUrl;
-                }
-
-                string localPath = Path.Combine(dir, @"doc/index.html");
+                string localPath = Path.Combine(AppCurrentDirectory, @"doc/index.html");
                 if (File.Exists(localPath))
                 {
                     UriBuilder uri = new UriBuilder();
@@ -190,10 +142,8 @@ namespace CodeBuilder.Configuration
             get
             {
                 string feedbackUrl = SettingsSection.AppSettings["feedbackUrl"].Value;
-                if (feedbackUrl != null)
-                {
-                    return feedbackUrl;
-                }
+                if (feedbackUrl != null) return feedbackUrl;
+
                 return feedbackUrl = "http://www.dengzhiwei.com/category/codebuilder-feedback";
             }
         }
@@ -203,10 +153,8 @@ namespace CodeBuilder.Configuration
             get
             {
                 string onlineTemplateUrl = SettingsSection.AppSettings["onlineTemplateUrl"].Value;
-                if (onlineTemplateUrl != null)
-                {
-                    return onlineTemplateUrl;
-                }
+                if (onlineTemplateUrl != null) return onlineTemplateUrl;
+
                 return onlineTemplateUrl = "http://www.dengzhiwei.com/category/codebuilder-templates";
             }
         }
@@ -214,39 +162,29 @@ namespace CodeBuilder.Configuration
 
         #region Public Methods
 
-        public static void RefreshAll()
-        {
-            LoadAll();
-        }
-
         public static void RefreshSettings()
         {
             ConfigurationManager.RefreshSection(settingsSectionName);
-            settingsSection = GetConfigSection<SettingsSection>(settingsSectionName);
         }
 
         public static void RefreshTypeMapping()
         {
             ConfigurationManager.RefreshSection(typeMappingSectionName);
-            typeMappingSection = GetConfigSection<TypeMappingSection>(typeMappingSectionName);
         }
 
         public static void RefreshDataSources()
         {
             ConfigurationManager.RefreshSection(dataSourceSectionName);
-            dataSourceSection = GetConfigSection<DataSourceSection>(dataSourceSectionName);
         }
 
         public static void RefreshTemplates()
         {
             ConfigurationManager.RefreshSection(templateSectionName);
-            templateSection = GetConfigSection<TemplateSection>(templateSectionName);
         }
 
         public static void RefreshOptions()
         {
             ConfigurationManager.RefreshSection(optionSectionName);
-            optionSection = GetConfigSection<OptionSection>(optionSectionName);
         }
 
         public static void Save()
@@ -266,17 +204,11 @@ namespace CodeBuilder.Configuration
 
         #region Private Methods
 
-        private static void LoadAll()
+        private static void LoadConfiguration()
         {
             try
             {
                 config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                typeMappingSection = GetConfigSection<TypeMappingSection>(typeMappingSectionName);
-                settingsSection = GetConfigSection<SettingsSection>(settingsSectionName);
-                optionSection = GetConfigSection<OptionSection>(optionSectionName);
-                dataSourceSection = GetConfigSection<DataSourceSection>(dataSourceSectionName);
-                templateSection = GetConfigSection<TemplateSection>(templateSectionName);
-                optionSection = GetConfigSection<OptionSection>(optionSectionName);
             }
             catch (Exception ex)
             {
@@ -286,7 +218,14 @@ namespace CodeBuilder.Configuration
 
         private static T GetConfigSection<T>(string name) where T:ConfigurationSection
         {
-            return (T)config.GetSection(name);
+            try
+            {
+                return (T)config.GetSection(name);
+            }
+            catch (Exception ex)
+            {
+                throw new ConfigurationErrorsException(string.Format("ConfigSection {0} load failure", name), ex);
+            }
         }
 
         #endregion

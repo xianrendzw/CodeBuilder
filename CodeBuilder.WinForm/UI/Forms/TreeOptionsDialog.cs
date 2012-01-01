@@ -19,6 +19,18 @@ namespace CodeBuilder.WinForm.UI
             InitializeComponent();
         }
 
+        public static void Display(Form owner, string initialPageName, params BaseOptionsPage[] pages)
+        {
+            initialPage = initialPageName;
+            using (TreeOptionsDialog dialog = new TreeOptionsDialog())
+            {
+                owner.Site.Container.Add(dialog);
+                dialog.Font = owner.Font;
+                dialog.OptionsPages.AddRange(pages);
+                dialog.ShowDialog();
+            }
+        }
+
         #region TreeView Event Handlers
 
         private void optionTreeView_AfterSelect(object sender, System.Windows.Forms.TreeViewEventArgs e)
@@ -48,22 +60,13 @@ namespace CodeBuilder.WinForm.UI
 
         #endregion
 
-        public static void Display(Form owner, string initialPageName, params BaseOptionsPage[] pages)
-        {
-            initialPage = initialPageName;
-            using (TreeOptionsDialog dialog = new TreeOptionsDialog())
-            {
-                owner.Site.Container.Add(dialog);
-                dialog.Font = owner.Font;
-                dialog.OptionsPages.AddRange(pages);
-                dialog.ShowDialog();
-            }
-        }
-
         private void TreeOptionsDialog_Load(object sender, System.EventArgs e)
         {
             foreach (BaseOptionsPage page in OptionsPages)
                 AddBranchToTree(optionTreeView.Nodes, page.Key);
+
+            if (optionTreeView.VisibleCount >= optionTreeView.GetNodeCount(true))
+                optionTreeView.ExpandAll();
 
             SelectInitialPage();
             optionTreeView.Select();
@@ -138,8 +141,7 @@ namespace CodeBuilder.WinForm.UI
         private TreeNode FindOrAddNode(TreeNodeCollection nodes, string name)
         {
             foreach (TreeNode node in nodes)
-                if (node.Text == name)
-                    return node;
+                if (node.Text == name) return node;
 
             TreeNode newNode = new TreeNode(name, 0, 0);
             nodes.Add(newNode);

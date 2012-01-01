@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <dataSourceSection>
   <dataSources>
+    <clear/>
     <dataSource name="test1" connectionString="e:\test1.pdm" exporter="PowerDesigner12" />
     <dataSource name="test2" connectionString="e:\test2.pdm" exporter="PowerDesigner12" />
     <dataSource name="test3" connectionString="e:\test3.pdm" exporter="PowerDesigner12" />

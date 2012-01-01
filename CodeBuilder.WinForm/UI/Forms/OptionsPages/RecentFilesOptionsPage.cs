@@ -41,12 +41,12 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             {
                 ConfigManager.OptionSection.Options["Environment.RecentFiles.MaxFiles"].Value = this.recentFilesCountTextBox.Text;
                 ConfigManager.OptionSection.Options["Environment.RecentFiles.IsCheckFileExist"].Value = this.checkFilesExistCheckBox.Checked.ToString();
-                ConfigManager.Save();
                 ConfigManager.RefreshOptions();
+                ConfigManager.Save(); 
             }
             catch (Exception ex)
             {
-                logger.Error("Save Environment.RecentFiles.MaxFiles", ex);
+                throw new ApplicationException("Save Environment.RecentFiles Failure", ex);
             }
         }
     }

@@ -19,13 +19,13 @@ namespace CodeBuilder.WinForm
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            AppContainer container = new AppContainer();
-            MainForm form = new MainForm();
-            container.Add(form);
-
             try
             {
                 InitializeTraceLevel();
+
+                AppContainer container = new AppContainer();
+                MainForm form = new MainForm();
+                container.Add(form);
 
                 logger.Info("Starting CodeBuilder");
                 Application.Run(form);

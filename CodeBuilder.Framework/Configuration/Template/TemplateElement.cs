@@ -29,11 +29,11 @@ namespace CodeBuilder.Configuration
             set { base["engine"] = value; }
         }
 
-        [ConfigurationProperty("path", IsRequired = true)]
-        public string Path
+        [ConfigurationProperty("fileName", IsRequired = true)]
+        public string FileName
         {
-            get { return base["path"].ToString(); }
-            set { base["path"] = value; }
+            get { return base["fileName"].ToString(); }
+            set { base["fileName"] = value; }
         }
 
         [ConfigurationProperty("url", IsRequired = true)]

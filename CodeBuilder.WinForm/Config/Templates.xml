@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <templateSection>
   <templates>
-    <template name="template1" language="C#" engine="NVelocity" url="" desc="" path="e:\test\template1.nv" />
-    <template name="template2" language="C#" engine="NVelocity" url="" desc="" path="e:\test\template2.nv" />
+    <clear/>
+    <template name="template1" language="C#" engine="NVelocity" url="" desc="" fileName="e:\test\template1.nv" />
+    <template name="template2" language="C#" engine="NVelocity" url="" desc="" fileName="e:\test\template2.nv" />
   </templates>
 </templateSection>

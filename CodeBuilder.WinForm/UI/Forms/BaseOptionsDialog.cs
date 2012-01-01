@@ -10,9 +10,12 @@ using System.Windows.Forms;
 namespace CodeBuilder.WinForm.UI
 {
     using Configuration;
+    using Util;
 
     public partial class BaseOptionsDialog : Form
     {
+        private static Logger logger = InternalTrace.GetLogger(typeof(BaseOptionsDialog));
+
         public BaseOptionsDialog()
         {
             InitializeComponent();
@@ -35,7 +38,15 @@ namespace CodeBuilder.WinForm.UI
         {
             foreach (BaseOptionsPage page in optionsPages)
             {
-                if (page.IsLoaded) page.ApplySettings();
+                try
+                {
+                    if (page.IsLoaded) page.ApplySettings();
+                }
+                catch (Exception ex)
+                {
+                    logger.Error(ex.Message, ex);
+                    MessageBoxHelper.DisplayFailure(ex.Message);
+                }
             }
         }
 

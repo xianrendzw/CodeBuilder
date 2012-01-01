@@ -35,12 +35,12 @@
             this.languageCombox = new System.Windows.Forms.ComboBox();
             this.removeBtn = new System.Windows.Forms.Button();
             this.newsaveBtn = new System.Windows.Forms.Button();
-            this.filePathTextbox = new System.Windows.Forms.TextBox();
+            this.fileNameTextbox = new System.Windows.Forms.TextBox();
             this.nameTxtbox = new System.Windows.Forms.TextBox();
             this.languageLbl = new System.Windows.Forms.Label();
             this.engineLbl = new System.Windows.Forms.Label();
             this.nameLbl = new System.Windows.Forms.Label();
-            this.filePathLbl = new System.Windows.Forms.Label();
+            this.fileNameLbl = new System.Windows.Forms.Label();
             this.editBtn = new System.Windows.Forms.Button();
             this.openFileDialogBtn = new System.Windows.Forms.Button();
             this.noteTextLbl = new System.Windows.Forms.Label();
@@ -112,12 +112,12 @@
             this.newsaveBtn.UseVisualStyleBackColor = true;
             this.newsaveBtn.Click += new System.EventHandler(this.newsaveBtn_Click);
             // 
-            // filePathTextbox
+            // fileNameTextbox
             // 
-            this.filePathTextbox.Location = new System.Drawing.Point(256, 135);
-            this.filePathTextbox.Name = "filePathTextbox";
-            this.filePathTextbox.Size = new System.Drawing.Size(164, 20);
-            this.filePathTextbox.TabIndex = 37;
+            this.fileNameTextbox.Location = new System.Drawing.Point(256, 135);
+            this.fileNameTextbox.Name = "fileNameTextbox";
+            this.fileNameTextbox.Size = new System.Drawing.Size(164, 20);
+            this.fileNameTextbox.TabIndex = 37;
             // 
             // nameTxtbox
             // 
@@ -151,13 +151,13 @@
             this.nameLbl.TabIndex = 41;
             this.nameLbl.Text = "Name:";
             // 
-            // filePathLbl
+            // fileNameLbl
             // 
-            this.filePathLbl.Location = new System.Drawing.Point(190, 135);
-            this.filePathLbl.Name = "filePathLbl";
-            this.filePathLbl.Size = new System.Drawing.Size(60, 13);
-            this.filePathLbl.TabIndex = 42;
-            this.filePathLbl.Text = "File Path:";
+            this.fileNameLbl.Location = new System.Drawing.Point(190, 135);
+            this.fileNameLbl.Name = "fileNameLbl";
+            this.fileNameLbl.Size = new System.Drawing.Size(60, 13);
+            this.fileNameLbl.TabIndex = 42;
+            this.fileNameLbl.Text = "File:";
             // 
             // editBtn
             // 
@@ -219,12 +219,12 @@
             this.Controls.Add(this.noteLbl);
             this.Controls.Add(this.openFileDialogBtn);
             this.Controls.Add(this.editBtn);
-            this.Controls.Add(this.filePathLbl);
+            this.Controls.Add(this.fileNameLbl);
             this.Controls.Add(this.nameLbl);
             this.Controls.Add(this.engineLbl);
             this.Controls.Add(this.languageLbl);
             this.Controls.Add(this.nameTxtbox);
-            this.Controls.Add(this.filePathTextbox);
+            this.Controls.Add(this.fileNameTextbox);
             this.Controls.Add(this.newsaveBtn);
             this.Controls.Add(this.removeBtn);
             this.Controls.Add(this.languageCombox);
@@ -247,12 +247,12 @@
         private System.Windows.Forms.ComboBox languageCombox;
         private System.Windows.Forms.Button removeBtn;
         private System.Windows.Forms.Button newsaveBtn;
-        private System.Windows.Forms.TextBox filePathTextbox;
+        private System.Windows.Forms.TextBox fileNameTextbox;
         private System.Windows.Forms.TextBox nameTxtbox;
         private System.Windows.Forms.Label languageLbl;
         private System.Windows.Forms.Label engineLbl;
         private System.Windows.Forms.Label nameLbl;
-        private System.Windows.Forms.Label filePathLbl;
+        private System.Windows.Forms.Label fileNameLbl;
         private System.Windows.Forms.Button editBtn;
         private System.Windows.Forms.Button openFileDialogBtn;
         private System.Windows.Forms.Label noteTextLbl;

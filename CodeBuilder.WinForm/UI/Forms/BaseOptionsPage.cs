@@ -35,11 +35,7 @@ namespace CodeBuilder.WinForm.UI
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-
-            if (!DesignMode)
-            {
-                this.LoadSettings();
-            }
+            if (!DesignMode) this.LoadSettings();
         }
 
         #region Properties

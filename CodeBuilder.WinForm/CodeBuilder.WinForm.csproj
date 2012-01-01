@@ -191,12 +191,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CodeBuilder.Framework\CodeBuilder.Framework.csproj">
-      <Project>{1FDA5B2E-BD7D-4BB1-9579-C25130156A43}</Project>
-      <Name>CodeBuilder.Framework</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Resources\Images\cb.bmp" />
     <Content Include="Resources\Images\App.ico" />
     <Content Include="Resources\Images\folderClosed.gif" />
@@ -236,6 +230,13 @@
     <Folder Include="Templates\csharp\" />
     <Folder Include="Templates\java\" />
     <Folder Include="Templates\php\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeBuilder.Framework\CodeBuilder.Framework.csproj">
+      <Project>{1FDA5B2E-BD7D-4BB1-9579-C25130156A43}</Project>
+      <Name>CodeBuilder.Framework</Name>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

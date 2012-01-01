@@ -39,13 +39,12 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             try
             {
                 ConfigManager.OptionSection.Options["Options.InternalTraceLevel"].Value = traceLevelCombox.Text;
-                ConfigManager.Save();
                 ConfigManager.RefreshOptions();
+                ConfigManager.Save();
             }
             catch (Exception ex)
             {
-                logger.Error("Save Options.InternalTraceLevel", ex);
-                return;
+                throw new ApplicationException("Save Options.InternalTraceLevel Failure", ex);
             }
 
             InternalTraceLevel level = (InternalTraceLevel)Enum.Parse(InternalTraceLevel.Default.GetType(), traceLevelCombox.Text, true);

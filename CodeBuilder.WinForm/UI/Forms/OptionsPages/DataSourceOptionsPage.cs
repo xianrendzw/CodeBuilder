@@ -41,12 +41,12 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             {
                 this.SaveChanged();
                 this.listBoxItems.Clear();
-                ConfigManager.Save();
                 ConfigManager.RefreshDataSources();
+                ConfigManager.Save();  
             }
             catch (Exception ex)
             {
-                logger.Error("Save DataSource Items", ex);
+                throw new ApplicationException("Save DataSource Items Failure", ex);
             }
         }
 
@@ -95,7 +95,8 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
                 this.listBoxItems[name.ToLower()].Name = name;
                 this.listBoxItems[name.ToLower()].ConnectionString = connString;
                 this.listBoxItems[name.ToLower()].Exporter = exporter;
-                this.listBoxItems[name.ToLower()].Status = DataSourceItemStatus.Edit;
+                if (this.listBoxItems[name.ToLower()].Status != DataSourceItemStatus.New)
+                    this.listBoxItems[name.ToLower()].Status = DataSourceItemStatus.Edit;
                 return;
             }
 
@@ -148,7 +149,10 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             {
                 if (item.Value.Status == DataSourceItemStatus.None) continue;
                 if (item.Value.Status == DataSourceItemStatus.Deleted)
+                {
                     ConfigManager.DataSourceSection.DataSources.Remove(item.Value.Name);
+                    continue;
+                }
 
                 if (item.Value.Status == DataSourceItemStatus.New)
                 {
