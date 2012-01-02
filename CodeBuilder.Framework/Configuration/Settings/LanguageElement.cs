@@ -21,5 +21,12 @@ namespace CodeBuilder.Configuration
             get { return base["alias"].ToString(); }
             set { base["alias"] = value; }
         }
+
+        [ConfigurationProperty("ext", IsRequired = true)]
+        public String Extension
+        {
+            get { return base["ext"].ToString(); }
+            set { base["ext"] = value; }
+        }
     }
 }

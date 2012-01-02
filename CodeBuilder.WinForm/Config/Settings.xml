@@ -1,27 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <settingsSection>
   <languages>
-    <language name="C#" alias="csharp"/>
-    <language name="JAVA" alias="java"/>
-    <language name="Ruby" alias="ruby"/>
-    <language name="PHP" alias="php"/>
+    <language name="C#" alias="csharp" ext=".cs"/>
+    <language name="JAVA" alias="java" ext=".java"/>
+    <language name="Ruby" alias="ruby" ext=".rb"/>
+    <language name="PHP" alias="php" ext=".php"/>
   </languages>
   <exporters>
-    <exporter name="PowerDesinger12" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
-    <exporter name="MySQL5" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
-    <exporter name="SqlServer2000" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
-    <exporter name="SqlServer2005" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
-    <exporter name="SqlServer2008" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
-    <exporter name="Oracle" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
+    <exporter name="PowerDesigner12" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
+    <exporter name="MySQL5" type="CodeBuilder.DataSource.Exporter.MySql5Exporter,CodeBuilder.Framework"/>
+    <exporter name="SqlServer2000" type="CodeBuilder.DataSource.Exporter.SqlServer2000Exporter,CodeBuilder.Framework"/>
+    <exporter name="SqlServer2005" type="CodeBuilder.DataSource.Exporter.SqlServer2005Exporter,CodeBuilder.Framework"/>
+    <exporter name="SqlServer2008" type="CodeBuilder.DataSource.Exporter.SqlServer2008Exporter,CodeBuilder.Framework"/>
+    <exporter name="Oracle8i" type="CodeBuilder.DataSource.Exporter.Oracle8iExporter,CodeBuilder.Framework"/>
   </exporters>
   <databases>
     <database name="MySQL50" exporter="MySQL5"/>
     <database name="SqlServer2000" exporter="SqlServer2000"/>
     <database name="SqlServer2005" exporter="SqlServer2005"/>
     <database name="SqlServer2008" exporter="SqlServer2008"/>
-    <database name="Oracle8i" exporter="Oracle"/>
-    <database name="Oracle9i" exporter="Oracle"/>
+    <database name="Oracle8i" exporter="Oracle8i"/>
   </databases>
+  <pdmDatabases>
+    <pdmDatabase name="mysql50" database="MySQL5" />
+  </pdmDatabases>
   <templateEngines>
     <templateEngine name="NVelocity" ext="nv" adapter="CodeBuilder.TemplateEngine.NVelocityAdapter,CodeBuilder.Framework" />
     <templateEngine name="Razor" ext="rz" adapter="CodeBuilder.TemplateEngine.RazorEngineAdapter,CodeBuilder.Framework" />

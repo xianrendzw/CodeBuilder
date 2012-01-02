@@ -62,8 +62,9 @@ namespace CodeBuilder.WinForm
 
         private void fileSaveMenuItem_Click(object sender, EventArgs e)
         {
-            GenerationSettings settings = GetGenerationSettings();
+            if (!this.CheckParameters()) return;
 
+            GenerationSettings settings = GetGenerationSettings();
             string xmlFileName = this.currentGenerationSettingsFile;
             string cmdText = "Modified";
             if (string.IsNullOrEmpty(xmlFileName))
@@ -104,6 +105,7 @@ namespace CodeBuilder.WinForm
                 {
                     TreeNode rootNode = ExportModelHelper.ExportPDM(pdmFileName, this.treeView);
                     rootNode.ExpandAll();
+                    this.treeView.SelectedNode = rootNode;
                 }
                 catch (Exception ex)
                 {
@@ -133,6 +135,7 @@ namespace CodeBuilder.WinForm
             {
                 TreeNode rootNode = ExportModelHelper.Export(menuItem.Text, this.treeView);
                 rootNode.ExpandAll();
+                this.treeView.SelectedNode = rootNode;
             }
             catch (Exception ex)
             {
@@ -256,6 +259,12 @@ namespace CodeBuilder.WinForm
         {
             ExportModelHelper.CheckedTreeNode(e.Node);
         }
+
+        private void treeView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if (e.Node.Parent == null && e.Node != null)
+                this.databaseNameLbl.Text = e.Node.Tag.ToString();
+        }
         #endregion
 
         #region Generation Settings Handlers
@@ -266,25 +275,47 @@ namespace CodeBuilder.WinForm
         }
 
         private void generateBtn_Click(object sender, EventArgs e)
-        {
+        {   
+            if (!this.CheckParameters()) return;
+            var generationObjects = GenerationHelper.GetGenerationObjects(this.treeView);
+            int genObjectCount = generationObjects.Sum(x => x.Value.Count);
+            if (genObjectCount == 0)
+            {
+                MessageBoxHelper.DisplayInfo("You should checked a treenode");
+                return;
+            }
+
+            int fileCount = genObjectCount * this.templateListBox.SelectedItems.Count;
             this.generateBtn.Enabled = false;
             this.completedLbl.Visible = false;
+            this.totalFileCountLbl.Text = fileCount.ToString();
+            this.genProgressBar.Maximum = fileCount;
+
+            GenerationParameter parameter = new GenerationParameter(ModelManager.Clone(),
+                GenerationHelper.GetGenerationObjects(this.treeView),this.GetGenerationSettings());
 
             try
             {
-                for(int i =1;i<11;i++){
-                    this.genProgressBar.Value = i * 10;
-                    this.currentGenFileNameLbl.Text = i.ToString();
-                    System.Threading.Thread.Sleep(100);
-                }
+                this.codeGeneration.GenerateAsync(parameter, Guid.NewGuid().ToString());
             }
             catch (Exception ex)
             {
                 logger.Error("Generate", ex);
             }
+        }
 
+        private void codeGeneration_Completed(object sender, GenerationCompletedEventArgs args)
+        {
             this.generateBtn.Enabled = true;
             this.completedLbl.Visible = true;
+        }
+
+        private void codeGeneration_ProgressChanged(GenerationProgressChangedEventArgs args)
+        {
+            this.genProgressBar.Value = args.ProgressPercentage;
+            this.genFileCountLbl.Text = args.GeneratedCount.ToString();
+            this.errorFileCountLbl.Text = args.ErrorCount.ToString();
+            this.currentGenFileNameLbl.Text = args.CurrentFileName;
         }
 
         private void languageCombx_SelectedIndexChanged(object sender, EventArgs e)
@@ -346,7 +377,6 @@ namespace CodeBuilder.WinForm
             foreach (DataSourceElement dataSource in ConfigManager.DataSourceSection.DataSources)
             {
                 ToolStripMenuItem ds = new ToolStripMenuItem(dataSource.Name);
-                //ds.ToolTipText = dataSource.ConnectionString;
                 ds.Click += new EventHandler(fileExportDataSourceMenuItem_Click);
                 parent.DropDownItems.Add(ds);
             }
@@ -372,10 +402,13 @@ namespace CodeBuilder.WinForm
             this.tablePrefixTxtBox.Text = settings.TablePrefix;
             this.authorTxtBox.Text = settings.Author;
             this.versionTxtBox.Text = settings.Version;
-            this.templateListBox.SelectedItem = settings.Template;
             this.codeFileEncodingCombox.Text = settings.Encoding;
             this.isOmitTablePrefixChkbox.Checked = settings.IsOmitTablePrefix;
             this.isStandardizeNameChkbox.Checked = settings.IsStandardizeName;
+            foreach (string templateName in settings.TemplatesNames)
+            {
+                this.templateListBox.SelectedItems.Add(templateName);
+            }
         }
 
         private GenerationSettings GetGenerationSettings()
@@ -383,12 +416,31 @@ namespace CodeBuilder.WinForm
             GenerationSettings settings = new GenerationSettings(this.languageCombx.Text,
                 this.templateEngineCombox.Text, this.packageTxtBox.Text, this.tablePrefixTxtBox.Text,
                 this.authorTxtBox.Text, this.versionTxtBox.Text,
-                this.templateListBox.SelectedItem == null ? string.Empty : this.templateListBox.SelectedItem.ToString(),
+                this.templateListBox.SelectedItems.Cast<string>().ToArray(),
                 this.codeFileEncodingCombox.Text, this.isOmitTablePrefixChkbox.Checked, this.isStandardizeNameChkbox.Checked);
             return settings;
         }
 
+        public bool CheckParameters()
+        {
+            if (!GenerationHelper.IsValidPackageName(this.packageTxtBox.Text))
+            {
+                MessageBoxHelper.DisplayInfo("Package name is invalid,please input the english letters.");
+                this.packageTxtBox.Focus();
+                return false;
+            }
+
+            if (this.templateListBox.SelectedItems == null ||
+                this.templateListBox.SelectedItems.Count == 0)
+            {
+                MessageBoxHelper.DisplayInfo("You should select one template at least.");
+                this.templateListBox.Focus();
+                return false;
+            }
+
+            return true;
+        }
+
         #endregion	
- 
     }
 }

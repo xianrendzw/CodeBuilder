@@ -13,7 +13,10 @@ namespace CodeBuilder.DataSource.Exporter
 
         public override Model Export(string connectionString)
         {
-            return null;
+            Model model = new Model();
+            model.Database = "Oracle8i";
+
+            return model;
         }
 
         #endregion

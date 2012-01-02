@@ -16,7 +16,7 @@ namespace CodeBuilder.Configuration
         private string _author;
         private string _version;
         private string _templateEngine;
-        private string _template;
+        private string[] _templateNames;
         private string _encoding;
         private bool _isOmitTablePrefix;
         private bool _isStandardizeName;
@@ -30,7 +30,7 @@ namespace CodeBuilder.Configuration
         }
 
         public GenerationSettings(string language, string templateEngine, string package,
-            string tablePrefix, string author, string version, string template, string encoding,
+            string tablePrefix, string author, string version, string[] templateNames, string encoding,
             bool isOmitTablePrefix, bool isStandardizeName)
         {
             this._language = language;
@@ -39,7 +39,7 @@ namespace CodeBuilder.Configuration
             this._tablePrefix = tablePrefix;
             this._author = author;
             this._version = version;
-            this._template = template;
+            this._templateNames = templateNames;
             this._encoding = encoding;
             this._isOmitTablePrefix = isOmitTablePrefix;
             this._isStandardizeName = isStandardizeName;
@@ -87,11 +87,12 @@ namespace CodeBuilder.Configuration
             set { this._templateEngine = value; }
         }
 
-        [XmlElement("Template")]
-        public string Template
+        [XmlArray("TemplatesNames"), 
+        XmlArrayItem("TemplatesName")]
+        public string[] TemplatesNames
         {
-            get { return this._template; }
-            set { this._template = value; }
+            get { return this._templateNames; }
+            set { this._templateNames = value; }
         }
 
         [XmlElement("Encoding")]

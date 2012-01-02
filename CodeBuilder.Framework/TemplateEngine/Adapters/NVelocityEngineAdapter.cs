@@ -12,7 +12,7 @@ namespace CodeBuilder.TemplateEngine
 
         public void Run(TemplateData templateData)
         {
-            throw new NotImplementedException();
+            System.Threading.Thread.Sleep(10);
         }
     }
 }

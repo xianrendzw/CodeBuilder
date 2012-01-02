@@ -8,6 +8,7 @@ namespace CodeBuilder.PhysicalDataModel
     public class View : BaseTable
     {
         public View()
+            : this("", "", "")
         {
         }
 
@@ -19,6 +20,7 @@ namespace CodeBuilder.PhysicalDataModel
         public View(string id, string displayName, string name, string comment)
             : base(id, displayName, name, comment)
         {
+            this._mataTypeName = "view";
         }
     }
 }

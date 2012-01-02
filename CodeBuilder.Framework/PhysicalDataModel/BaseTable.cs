@@ -5,13 +5,14 @@ using System.Text;
 
 namespace CodeBuilder.PhysicalDataModel
 {
-    public abstract class BaseTable
+    public abstract class BaseTable : IMetaData
     {
         protected string _id;
         protected string _displayName;
         protected string _name;
         protected string _originalCode;
         protected string _comment;
+        protected string _mataTypeName;
         protected Columns _columns;
 
         protected BaseTable() { }
@@ -63,6 +64,11 @@ namespace CodeBuilder.PhysicalDataModel
         {
             get { return this._columns; }
             set { this._columns = value; }
+        }
+
+        public string MetaTypeName
+        {
+            get { return this._mataTypeName; }
         }
     }
 }

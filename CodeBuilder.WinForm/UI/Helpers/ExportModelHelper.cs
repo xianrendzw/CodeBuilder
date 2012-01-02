@@ -39,7 +39,10 @@ namespace CodeBuilder.WinForm.UI
         private static void Export(IExporter exporter,string connectionString, TreeNode rootNode)
         {
             Model model = exporter.Export(connectionString);
+
+            rootNode.Tag = model.Database;
             AddBranchToTree(model, rootNode);
+
             ModelManager.Add(rootNode.Index.ToString(), model);
         }
 
@@ -56,32 +59,6 @@ namespace CodeBuilder.WinForm.UI
                 if (childNode.Checked != tn.Checked)
                     childNode.Checked = tn.Checked;
                 CheckedTreeNode(childNode);
-            }
-        }
-
-        public static List<String> GetCheckedTags(TreeNodeCollection nodes)
-        {
-            List<string> tags = new List<string>();
-            foreach (TreeNode node in nodes)
-            {
-                if (node.Checked && node.Tag != null)
-                {
-                    tags.Add(node.Tag.ToString());
-                }
-                GetCheckedTags(node.Nodes, tags);
-            }
-            return tags;
-        }
-
-        private static void GetCheckedTags(TreeNodeCollection nodes, List<String> tags)
-        {
-            foreach (TreeNode node in nodes)
-            {
-                if (node.Checked && node.Tag != null)
-                {
-                    tags.Add(node.Tag.ToString());
-                }
-                GetCheckedTags(node.Nodes, tags);
             }
         }
 

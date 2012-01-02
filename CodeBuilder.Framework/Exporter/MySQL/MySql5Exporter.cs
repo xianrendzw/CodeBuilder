@@ -7,13 +7,16 @@ namespace CodeBuilder.DataSource.Exporter
 {
     using PhysicalDataModel;
 
-    public class MySqlExporter : BaseExporter, IExporter
+    public class MySql5Exporter : BaseExporter, IExporter
     {
         #region IExporter Members
 
         public override Model Export(string connectionString)
         {
-            return null;
+            Model model = new Model();
+            model.Database = "MySQL5";
+
+            return model;
         }
 
         #endregion

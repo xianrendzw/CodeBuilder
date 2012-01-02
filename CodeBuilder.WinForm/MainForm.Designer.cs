@@ -103,6 +103,7 @@
             this.saveSettingsBtn = new System.Windows.Forms.Button();
             this.generateBtn = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.codeGeneration = new CodeBuilder.WinForm.UI.CodeGeneration(this.components);
             this.mainMenuStrip.SuspendLayout();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
@@ -355,6 +356,7 @@
             this.treeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.treeView_AfterCheck);
             this.treeView.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeView_AfterCollapse);
             this.treeView.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeView_AfterExpand);
+            this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView_AfterSelect);
             // 
             // treeViewContextMenu
             // 
@@ -775,6 +777,11 @@
             this.generateBtn.UseVisualStyleBackColor = true;
             this.generateBtn.Click += new System.EventHandler(this.generateBtn_Click);
             // 
+            // codeGeneration
+            // 
+            this.codeGeneration.ProgressChanged += new CodeBuilder.WinForm.UI.GenerationProgressChangedEventHandler(this.codeGeneration_ProgressChanged);
+            this.codeGeneration.Completed += new CodeBuilder.WinForm.UI.GenerationCompletedEventHandler(this.codeGeneration_Completed);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -882,6 +889,7 @@
         private System.Windows.Forms.Label databaseLbl;
         private System.Windows.Forms.ToolStripMenuItem helpFeedbackMenuItem;
         private System.Windows.Forms.ListBox templateListBox;
+        private UI.CodeGeneration codeGeneration;
     }
 }
 

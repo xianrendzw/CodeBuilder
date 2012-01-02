@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Xml;
 using System.Text.RegularExpressions;
+using System.Xml;
 
 namespace CodeBuilder.DataSource.Exporter
 {
+    using Configuration;
+    using Exceptions;
     using PhysicalDataModel;
     using TypeMapping;
-    using Exceptions;
 
     public class PowerDesigner12Exporter : BaseExporter,IExporter
     {
@@ -110,13 +111,7 @@ namespace CodeBuilder.DataSource.Exporter
                 column.IsAutoIncremented = identity.Equals("1");
                 column.IsNullable = mandatory.Equals("1");
                 column.DefaultValue = defaultValue;
-
-                //string dataTypeName = Regex.Replace(column.DataType, "\\(.*?\\)", "");
-                //LanguageType langType = TypeMapperFactory.Creator().GetLanguageType(
-                //    this._config.Database,
-                //    this._config.Value, dataTypeName);
-                //column.LanguageType = langType.TypeName;
-                //column.LanguageDefaultValue = langType.DefaultValue;
+                column.DataType = Regex.Replace(column.DataType, "\\(.*?\\)", "");
                 columns.Add(id, column);
             }
 
@@ -168,11 +163,13 @@ namespace CodeBuilder.DataSource.Exporter
             XmlNodeList targetModelNodes = root.GetElementsByTagName("o:TargetModel");
             if (targetModelNodes == null ||
                 targetModelNodes.Count == 0)
-            {
-                throw new NotSetDatabaseException();
-            }
+                throw new NotFoundPdmDBMSException();
 
-            return targetModelNodes[0]["a:Code"].InnerText.Trim();
+            string dbmsName = targetModelNodes[0]["a:Code"].InnerText.Trim().ToLower();
+            if (ConfigManager.SettingsSection.PdmDatabases[dbmsName] == null)
+                throw new NotSupportDatabaseException();
+
+            return ConfigManager.SettingsSection.PdmDatabases[dbmsName].Database;
         }
 
         #endregion

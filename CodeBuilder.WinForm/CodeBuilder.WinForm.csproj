@@ -72,6 +72,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\Components\CodeGeneration.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Components\CodeGeneration.Designer.cs">
+      <DependentUpon>CodeGeneration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Components\GenerationCompletedEventHandler.cs" />
+    <Compile Include="UI\Components\GenerationParameter.cs" />
+    <Compile Include="UI\Components\GenerationProgressChangedEventHandler.cs" />
     <Compile Include="UI\Forms\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +119,7 @@
     <Compile Include="UI\Forms\OptionsPages\TemplateOptionsPage.Designer.cs">
       <DependentUpon>TemplateOptionsPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Helpers\GenerationHelper.cs" />
     <Compile Include="UI\ModelManager.cs" />
     <Compile Include="UI\OptionsDialog.cs" />
     <Compile Include="UI\AppContainer.cs" />

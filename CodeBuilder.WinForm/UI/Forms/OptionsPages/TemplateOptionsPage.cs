@@ -258,7 +258,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             catch (Exception ex)
             {
                 destFileName = string.Empty;
-                logger.Error(string.Format("Saved template file: {0} failure!", srcFileName), ex);
+                logger.Error(string.Format("Save template file: {0} failure!", srcFileName), ex);
             }
 
             return destFileName;

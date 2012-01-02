@@ -81,6 +81,8 @@
     <Compile Include="Configuration\Options\OptionSection.cs" />
     <Compile Include="Configuration\Settings\AppSettingsElement.cs" />
     <Compile Include="Configuration\Settings\AppSettingsElementCollection.cs" />
+    <Compile Include="Configuration\Settings\PdmDatabaseElement.cs" />
+    <Compile Include="Configuration\Settings\PdmDatabaseElementCollection.cs" />
     <Compile Include="Configuration\Settings\SettingsSection.cs" />
     <Compile Include="Configuration\Settings\TemplateEngineElement.cs" />
     <Compile Include="Configuration\Settings\TemplateEngineElementCollection.cs" />
@@ -98,11 +100,11 @@
     <Compile Include="Configuration\TypeMapping\TypeMappingElement.cs" />
     <Compile Include="Configuration\TypeMapping\TypeMappingElementCollection.cs" />
     <Compile Include="Configuration\TypeMapping\TypeMappingSection.cs" />
-    <Compile Include="Exceptions\ConfigSectionLockedException.cs" />
-    <Compile Include="Exceptions\NotSetDatabaseException.cs" />
+    <Compile Include="Exceptions\NotSupportDatabaseException.cs" />
+    <Compile Include="Exceptions\NotFoundPdmDBMSException.cs" />
     <Compile Include="Exporter\BaseExporter.cs" />
     <Compile Include="Exporter\IExporter.cs" />
-    <Compile Include="Exporter\MySQL\MySqlExporter.cs" />
+    <Compile Include="Exporter\MySQL\MySql5Exporter.cs" />
     <Compile Include="Exporter\Oracle\Oracle8iExporter.cs" />
     <Compile Include="Exporter\PowerDesigner\PowerDesigner12Exporter.cs" />
     <Compile Include="Exporter\SQLServer\SqlServer2000Exporter.cs" />
@@ -111,6 +113,7 @@
     <Compile Include="PhysicalDataModel\BaseTable.cs" />
     <Compile Include="PhysicalDataModel\Column.cs" />
     <Compile Include="PhysicalDataModel\Columns.cs" />
+    <Compile Include="PhysicalDataModel\IMetaData.cs" />
     <Compile Include="PhysicalDataModel\Model.cs" />
     <Compile Include="PhysicalDataModel\Table.cs" />
     <Compile Include="PhysicalDataModel\Tables.cs" />
@@ -123,6 +126,7 @@
     <Compile Include="TemplateEngine\Adapters\ViciEngineAdapter.cs" />
     <Compile Include="TemplateEngine\ITemplateEngine.cs" />
     <Compile Include="TemplateEngine\TemplateData.cs" />
+    <Compile Include="TemplateEngine\TemplateDataBuilder.cs" />
     <Compile Include="TypeMapping\DefaultTypeMapper.cs" />
     <Compile Include="TypeMapping\ITypeMapper.cs" />
     <Compile Include="TypeMapping\LanguageType.cs" />

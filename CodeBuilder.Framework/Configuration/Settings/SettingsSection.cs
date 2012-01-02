@@ -14,6 +14,12 @@ namespace CodeBuilder.Configuration
             get { return (DatabaseElementCollection)base["databases"]; }
         }
 
+        [ConfigurationProperty("pdmDatabases", IsRequired = true)]
+        public PdmDatabaseElementCollection PdmDatabases
+        {
+            get { return (PdmDatabaseElementCollection)base["pdmDatabases"]; }
+        }
+
         [ConfigurationProperty("exporters", IsRequired = true)]
         public ExporterElementCollection Exporters
         {

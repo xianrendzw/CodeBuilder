@@ -5,14 +5,14 @@ using System.Text;
 
 namespace CodeBuilder.Exceptions
 {
-    public class NotSetDatabaseException : Exception
+    public class NotFoundPdmDBMSException : Exception
     {
-        public NotSetDatabaseException()
+        public NotFoundPdmDBMSException()
             : this("The powerdesigner physical data model(pdm) not specify DBMS.")
         {
         }
 
-        public NotSetDatabaseException(string message)
+        public NotFoundPdmDBMSException(string message)
             : base(message)
         {
         }

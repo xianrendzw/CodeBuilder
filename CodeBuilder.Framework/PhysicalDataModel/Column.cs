@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CodeBuilder.PhysicalDataModel
 {
-    public class Column
+    public class Column : IMetaData
     {
         protected string _id;
         protected string _displayName;
@@ -14,7 +14,7 @@ namespace CodeBuilder.PhysicalDataModel
         protected string _comment;
         protected string _dataType;
         protected string _defaultValue;
-        protected string _languageType = "String";
+        protected string _languageType = string.Empty;
         protected string _languageDefaultValue = string.Empty;
         protected int _length;
         protected int _ordinal = -1;
@@ -108,13 +108,13 @@ namespace CodeBuilder.PhysicalDataModel
 
         public string LanguageType
         {
-            get { return this._languageType; }
+            get { return this._languageType ?? string.Empty; }
             set { this._languageType = value; }
         }
 
         public string LanguageDefaultValue
         {
-            get { return this._languageDefaultValue; }
+            get { return this._languageDefaultValue ?? string.Empty; }
             set { this._languageDefaultValue = value; }
         }
 
@@ -134,6 +134,11 @@ namespace CodeBuilder.PhysicalDataModel
         {
             get { return this._isComputed; }
             set { this._isComputed = value; }
+        }
+
+        public string MetaTypeName
+        {
+            get { return "column"; }
         }
     }
 }

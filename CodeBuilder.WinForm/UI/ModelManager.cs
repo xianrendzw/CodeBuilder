@@ -44,6 +44,11 @@ namespace CodeBuilder.WinForm.UI
             return string.Empty;
         }
 
+        public static Dictionary<string, Model> Clone()
+        {
+            return models.Select(x => x).ToDictionary(y => y.Key, z => z.Value);
+        }
+
         private ModelManager() { }
     }
 }

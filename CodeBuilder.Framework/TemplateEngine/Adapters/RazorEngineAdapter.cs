@@ -11,7 +11,7 @@ namespace CodeBuilder.TemplateEngine
 
         public void Run(TemplateData templateData)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

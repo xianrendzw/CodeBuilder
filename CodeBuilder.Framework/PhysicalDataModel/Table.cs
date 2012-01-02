@@ -10,17 +10,19 @@ namespace CodeBuilder.PhysicalDataModel
         protected Columns _primaryKeys;
 
         public Table()
+            : this("", "", "")
         {
         }
 
         public Table(string id, string displayName, string name)
-            : base(id, displayName, name, string.Empty)
+            : this(id, displayName, name, string.Empty)
         {
         }
 
         public Table(string id, string displayName, string name, string comment)
             : base(id, displayName, name, comment)
         {
+            this._mataTypeName = "table";
         }
 
         public Columns PrimaryKeys
