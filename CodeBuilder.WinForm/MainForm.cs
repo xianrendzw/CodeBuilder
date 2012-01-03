@@ -263,7 +263,10 @@ namespace CodeBuilder.WinForm
         private void treeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (e.Node.Parent == null && e.Node != null)
+            {
                 this.databaseNameLbl.Text = e.Node.Tag.ToString();
+                this.statusBarDatabase.Text = this.databaseNameLbl.Text;
+            }
         }
         #endregion
 
@@ -308,6 +311,7 @@ namespace CodeBuilder.WinForm
         {
             this.generateBtn.Enabled = true;
             this.completedLbl.Visible = true;
+            this.statusBarReady.Text = this.completedLbl.Text;
         }
 
         private void codeGeneration_ProgressChanged(GenerationProgressChangedEventArgs args)
@@ -316,6 +320,7 @@ namespace CodeBuilder.WinForm
             this.genFileCountLbl.Text = args.GeneratedCount.ToString();
             this.errorFileCountLbl.Text = args.ErrorCount.ToString();
             this.currentGenFileNameLbl.Text = args.CurrentFileName;
+            this.statusBarReady.Text = args.CurrentFileName;
         }
 
         private void languageCombx_SelectedIndexChanged(object sender, EventArgs e)

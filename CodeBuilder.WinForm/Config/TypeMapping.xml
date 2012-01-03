@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <typeMappingSection>
   <typeMappings>
-    <typeMapping name="sqlserver2005-csharp" database="sqlserver2005" language="csharp">
+    <typeMapping name="sqlserver2005-csharp" database="sqlserver2005" language="C#">
       <types>
+        <add name="default" langtype="String" default="" />
         <add name="nvarchar" langtype="String" default="" />
         <add name="bigint" langtype="Int64" default="" />
         <add name="binary" langtype="Byte[]" default="" />
@@ -33,6 +34,7 @@
     </typeMapping>
     <typeMapping name="sqlserver2005-java" database="sqlserver2005" language="java">
       <types>
+        <add name="default" langtype="String" default="" />
         <add name="nvarchar" langtype="String" default="" />
         <add name="bigint" langtype="Long" default="" />
         <add name="binary" langtype="Byte[]" default="" />
@@ -61,8 +63,9 @@
         <add name="varchar" langtype="String" default="" />
       </types>
     </typeMapping>
-    <typeMapping name="mysql50-csharp" database="mysql50" language="csharp">
+    <typeMapping name="mysql5-csharp" database="mysql5" language="C#">
       <types>
+        <add name="default" langtype="String" default="" />
         <add name="nvarchar" langtype="String" default="" />
         <add name="bigint" langtype="Int64" default="" />
         <add name="binary" langtype="Byte[]" default="" />
@@ -91,8 +94,9 @@
         <add name="varchar" langtype="String" default="" />
       </types>
     </typeMapping>
-    <typeMapping name="mysql50-java" database="mysql5" language="java">
+    <typeMapping name="mysql5-java" database="mysql5" language="java">
       <types>
+        <add name="default" langtype="String" default="" />
         <add name="nvarchar" langtype="String" default="" />
         <add name="bigint" langtype="Long" default="" />
         <add name="binary" langtype="Byte[]" default="" />

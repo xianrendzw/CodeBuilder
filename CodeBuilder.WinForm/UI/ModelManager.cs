@@ -44,6 +44,15 @@ namespace CodeBuilder.WinForm.UI
             return string.Empty;
         }
 
+        public static IMetaData GetModelObject(Model model, string objId)
+        {
+            if (model == null) return null;
+            if (model.Tables != null && model.Tables.ContainsKey(objId)) return model.Tables[objId];
+            if (model.Views != null && model.Views.ContainsKey(objId)) return model.Views[objId];
+
+            return null;
+        }
+
         public static Dictionary<string, Model> Clone()
         {
             return models.Select(x => x).ToDictionary(y => y.Key, z => z.Value);

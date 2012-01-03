@@ -7,6 +7,6 @@ namespace CodeBuilder.TemplateEngine
 {
     public interface ITemplateEngine
     {
-        void Run(TemplateData templateData);
+        bool Run(TemplateData templateData);
     }
 }

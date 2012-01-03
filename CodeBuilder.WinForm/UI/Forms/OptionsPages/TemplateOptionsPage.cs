@@ -178,8 +178,9 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             {
                 this.templateListbox.Items.Add(template.Name);
                 string name = template.Name.Trim().ToLower();
+                string fileName = Path.Combine(ConfigManager.TemplatePath, template.FileName);
                 if (!listBoxItems.ContainsKey(name))
-                    listBoxItems.Add(name, new TemplateItem(template.Name, template.Language, template.Engine, template.FileName));
+                    listBoxItems.Add(name, new TemplateItem(template.Name, template.Language, template.Engine, fileName));
             }
         }
 
@@ -210,6 +211,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
                 {
                     string languageAlais = ConfigManager.SettingsSection.Languages[item.Value.Language].Alias;
                     item.Value.FileName = this.CopyTemplateFile(item.Value.Name, languageAlais, item.Value.Engine, item.Value.FileName);
+                    item.Value.FileName = item.Value.FileName.Replace(ConfigManager.TemplatePath, "").TrimStart('\\');
                 }
 
                 if (string.IsNullOrEmpty(item.Value.FileName)) continue;

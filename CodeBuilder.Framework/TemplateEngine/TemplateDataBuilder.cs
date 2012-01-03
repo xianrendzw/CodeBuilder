@@ -9,6 +9,7 @@ namespace CodeBuilder.TemplateEngine
     using Configuration;
     using PhysicalDataModel;
     using TypeMapping;
+    using Util;
 
     public class TemplateDataBuilder
     {
@@ -53,7 +54,7 @@ namespace CodeBuilder.TemplateEngine
             return null;
         }
 
-        public static IMetaData GetModelObject(Model model, string objId)
+        private static IMetaData GetModelObject(Model model, string objId)
         {
             if (model == null) return null;
             if (model.Tables != null && model.Tables.ContainsKey(objId)) return model.Tables[objId];
@@ -66,7 +67,6 @@ namespace CodeBuilder.TemplateEngine
             string templateName, string database) where T : BaseTable, IMetaData
         {
             TemplateData templateData = new TemplateData();
-            templateData.Name = modelObject.Name;
             templateData.Database = database;
             templateData.TemplateName = templateName;
             templateData.Author = settings.Author;
@@ -78,29 +78,53 @@ namespace CodeBuilder.TemplateEngine
             templateData.Encoding = settings.Encoding;
             templateData.IsOmitTablePrefix = settings.IsOmitTablePrefix;
             templateData.IsStandardizeName = settings.IsStandardizeName;
-            templateData.TemplateFileName = ConfigManager.TemplateSection.Templates[templateName].FileName;
-            templateData.CodeFileName = Path.Combine(ConfigManager.GenerationCodeOuputPath,settings.Package,
-                ConfigManager.SettingsSection.Languages[settings.Language].Alias,
+            templateData.TemplateFileName = Path.Combine(ConfigManager.TemplatePath,
+                ConfigManager.TemplateSection.Templates[templateName].FileName);
+            templateData.Name = GetTemplateDataName(settings.IsOmitTablePrefix,
+                settings.IsStandardizeName, settings.TablePrefix, modelObject.Name);
+            templateData.CodeFileName = PathHelper.GetCodeFileName(ConfigManager.GenerationCodeOuputPath,
+                ConfigManager.SettingsSection.Languages[settings.Language].Alias, settings.Package, templateName,
                 string.Format("{0}{1}", templateData.Name, ConfigManager.SettingsSection.Languages[settings.Language].Extension));
-            templateData.ModelObject = modelObject;
+
+            modelObject.Name = templateData.Name;
+            templateData.ModelObject = GetStandardizedModelObject(modelObject, database, settings);
 
             return templateData;
-
-            //LanguageType langType = TypeMapperFactory.Creator().GetLanguageType(
-            //    this._config.Database,
-            //    this._config.Value, dataTypeName);
-            //column.LanguageType = langType.TypeName;
-            //column.LanguageDefaultValue = langType.DefaultValue;
         }
 
-        private static string StandardizeName(string name)
+        private static string GetTemplateDataName(bool isOmitPrefix, bool isStandardName, string prefix, string name)
         {
-            return string.Empty;
+            if (isOmitPrefix) name = name.TrimStart(prefix.ToCharArray());
+            if (isStandardName) name = name.StandardizeName();
+            return name;
         }
 
-        public static string OmitPrefix(string prefix)
+        private static T GetStandardizedModelObject<T>(T modelObject,string database,GenerationSettings settings)
+            where T : BaseTable, IMetaData
         {
-            return string.Empty;
+            bool isDynamicLanguage = ConfigManager.SettingsSection.Languages[settings.Language].IsDynamic;
+            bool isStandardizeName = settings.IsStandardizeName;
+            string languageAlias = ConfigManager.SettingsSection.Languages[settings.Language].Alias;
+
+            if (!isStandardizeName && isDynamicLanguage) return modelObject;
+
+            ITypeMapper typeMapper = null;
+            if (!isDynamicLanguage) typeMapper = TypeMapperFactory.Creator();
+
+            foreach (var column in modelObject.Columns.Values)
+            {
+                if (isStandardizeName) column.Name = column.Name.StandardizeName();
+                if (typeMapper != null)
+                {
+                    LanguageType langType = typeMapper.GetLanguageType(database, languageAlias, column.DataType);
+                    if (langType == null) continue;
+                    column.LanguageType = langType.TypeName;
+                    column.LanguageDefaultValue = langType.DefaultValue;
+                }
+            }
+
+            return modelObject;
         }
+
     }
 }

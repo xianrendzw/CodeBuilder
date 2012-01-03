@@ -199,6 +199,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Templates\csharp\NVelocity\LightFramework-DTO.vm" />
+    <None Include="Templates\java\NVelocity\LightFramework-DTO.vm" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\cb.bmp" />
@@ -237,8 +239,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Templates\csharp\" />
-    <Folder Include="Templates\java\" />
     <Folder Include="Templates\php\" />
   </ItemGroup>
   <ItemGroup>

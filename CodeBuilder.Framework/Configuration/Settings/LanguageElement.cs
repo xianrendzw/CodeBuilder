@@ -28,5 +28,12 @@ namespace CodeBuilder.Configuration
             get { return base["ext"].ToString(); }
             set { base["ext"] = value; }
         }
+
+        [ConfigurationProperty("isDynamic", IsRequired = true, DefaultValue = false)]
+        public Boolean IsDynamic
+        {
+            get { return (Boolean)base["isDynamic"]; }
+            set { base["isDynamic"] = value; }
+        }
     }
 }

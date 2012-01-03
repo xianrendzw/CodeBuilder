@@ -137,7 +137,9 @@
     <Compile Include="Util\Logging\InternalTrace.cs" />
     <Compile Include="Util\Logging\InternalTraceWriter.cs" />
     <Compile Include="Util\Logging\Logger.cs" />
+    <Compile Include="Util\PathHelper.cs" />
     <Compile Include="Util\SerializeHelper.cs" />
+    <Compile Include="Util\StringExtension.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

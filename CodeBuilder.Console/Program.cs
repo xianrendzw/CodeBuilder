@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Configuration;
+using System.Text.RegularExpressions;
+using System.IO;
 
 namespace CodeBuilder.CLI
 {
@@ -36,8 +38,19 @@ namespace CodeBuilder.CLI
             //ConfigManager.DataSourceSection.DataSources.Add(new DataSourceElement() { Name = "test5", ConnectionString = "test3", Exporter = "test4" });
             //ConfigManager.DataSourceSection.SectionInformation.ForceSave = true;
             //ConfigManager.Save();
+            //Console.WriteLine(String.Join("", Regex.Split("acs.-ddd_df fff", "[_\\-\\. ]").Select(FirstCharToUpper)));
+            Directory.CreateDirectory(Path.GetDirectoryName(@"e:\test\test\tets\test.txt"));
+            File.Create(@"e:\test\test\tets\test1.txt");
+
             Console.WriteLine("Ok");
             Console.Read();
+        }
+
+        private static string FirstCharToUpper(string str)
+        {
+            if (String.IsNullOrEmpty(str) || str.Length == 0)
+                return str;
+            return str[0].ToString().ToUpper() + str.Substring(1);
         }
     }
 }

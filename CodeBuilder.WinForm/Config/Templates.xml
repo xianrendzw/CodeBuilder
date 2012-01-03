@@ -2,7 +2,7 @@
 <templateSection>
   <templates>
     <clear/>
-    <template name="template1" language="C#" engine="NVelocity" url="" desc="" fileName="e:\test\template1.nv" />
-    <template name="template2" language="C#" engine="NVelocity" url="" desc="" fileName="e:\test\template2.nv" />
+    <template name="LightFramework-DTO-C#" language="C#" engine="NVelocity" url="" desc="" fileName="csharp\NVelocity\LightFramework-DTO.vm" />
+    <template name="LightFramework-DTO-JAVA" language="JAVA" engine="NVelocity" url="" desc="" fileName="java\NVelocity\LightFramework-DTO.vm" />
   </templates>
 </templateSection>

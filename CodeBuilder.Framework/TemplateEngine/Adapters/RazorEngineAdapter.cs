@@ -9,9 +9,9 @@ namespace CodeBuilder.TemplateEngine
     {
         public RazorEngineAdapter() { }
 
-        public void Run(TemplateData templateData)
+        public bool Run(TemplateData templateData)
         {
-            
+            return true;
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Threading;
@@ -80,7 +79,6 @@ namespace CodeBuilder.WinForm.UI
 
         private void GenerateWorker(GenerationParameter parameter, AsyncOperation asyncOp)
         {
-            Exception e = null;
             if (IsTaskCanceled(asyncOp.UserSuppliedState)) return;
 
             int genratedCount = 0;
@@ -92,35 +90,36 @@ namespace CodeBuilder.WinForm.UI
                 string adapterTypeName = ConfigManager.SettingsSection.TemplateEngines[parameter.Settings.TemplateEngine].Adapter;
                 ITemplateEngine engine = (ITemplateEngine)Activator.CreateInstance(Type.GetType(adapterTypeName));
 
-                foreach (string modelId in parameter.GenerationObjects.Keys)
+                foreach (string templateName in parameter.Settings.TemplatesNames)
                 {
-                    this.GenerateCode(parameter, modelId, engine, ref genratedCount, ref errorCount, ref progressCount, asyncOp);
+                    string codeFileNamePath = PathHelper.GetCodeFileNamePath(ConfigManager.GenerationCodeOuputPath,
+                          ConfigManager.SettingsSection.Languages[parameter.Settings.Language].Alias,
+                          parameter.Settings.Package, templateName);
+                    PathHelper.CreateCodeFileNamePath(codeFileNamePath);
+
+                    this.GenerateCode(parameter, templateName, engine, ref genratedCount, ref errorCount, ref progressCount, asyncOp);
                 }
             }
             catch (Exception ex)
             {
                 logger.Error("", ex);
-                e = ex;
             }
 
-            this.CompletionMethod(e, IsTaskCanceled(asyncOp.UserSuppliedState), asyncOp);
+            this.CompletionMethod(null, IsTaskCanceled(asyncOp.UserSuppliedState), asyncOp);
         }
 
-        private void GenerateCode(GenerationParameter parameter, string modelId, ITemplateEngine engine,
+        private void GenerateCode(GenerationParameter parameter, string templateName, ITemplateEngine engine,
             ref int genratedCount, ref int errorCount, ref int progressCount, AsyncOperation asyncOp)
         {
-            foreach (string objId in parameter.GenerationObjects[modelId])
+            foreach (string modelId in parameter.GenerationObjects.Keys)
             {
-                IMetaData modelObject = TemplateDataBuilder.GetModelObject(parameter.Models[modelId], objId);
-                if (modelObject == null) continue;
-
-                foreach (string templateName in parameter.Settings.TemplatesNames)
+                foreach (string objId in parameter.GenerationObjects[modelId])
                 {
+                    IMetaData modelObject = ModelManager.GetModelObject(parameter.Models[modelId], objId);
                     TemplateData templateData = TemplateDataBuilder.Build(modelObject, parameter.Settings,
-                        templateName, parameter.Models[modelId].Database);
-                    if (templateData == null) errorCount++; else genratedCount++;
+                            templateName, parameter.Models[modelId].Database);
 
-                    engine.Run(templateData);
+                    if (!engine.Run(templateData)) errorCount++; else genratedCount++;
 
                     var args = new GenerationProgressChangedEventArgs(genratedCount,
                             errorCount, templateData.CodeFileName, ++progressCount, asyncOp.UserSuppliedState);
