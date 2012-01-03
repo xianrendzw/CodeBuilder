@@ -66,7 +66,7 @@ namespace CodeBuilder.PhysicalDataModel
 
         public string OriginalName
         {
-            get { return this._originalName; }
+            get { return this._originalName ?? string.Empty; }
             set { this._originalName = value; }
         }
 

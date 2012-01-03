@@ -199,8 +199,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Templates\csharp\NVelocity\LightFramework-DTO.vm" />
-    <None Include="Templates\java\NVelocity\LightFramework-DTO.vm" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\cb.bmp" />
@@ -239,7 +237,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Templates\php\" />
+    <Templates Include="Templates\**\*.*" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodeBuilder.Framework\CodeBuilder.Framework.csproj">
@@ -262,5 +260,6 @@
   -->
   <Target Name="BeforeBuild">
     <Copy SourceFiles="@(ConfigFile)" DestinationFolder="$(OutputPath)\Config" />
+    <Copy SourceFiles="@(Templates)" DestinationFiles="@(Templates->'$(OutputPath)\Templates\%(RecursiveDir)%(Filename)%(Extension)')" />
   </Target>
 </Project>

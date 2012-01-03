@@ -10,7 +10,7 @@ namespace CodeBuilder.PhysicalDataModel
         protected string _id;
         protected string _displayName;
         protected string _name;
-        protected string _originalCode;
+        protected string _originalName;
         protected string _comment;
         protected string _mataTypeName;
         protected Columns _columns;
@@ -50,8 +50,8 @@ namespace CodeBuilder.PhysicalDataModel
 
         public string OriginalName
         {
-            get { return this._originalCode; }
-            set { this._originalCode = value; }
+            get { return this._originalName ?? string.Empty; }
+            set { this._originalName = value; }
         }
 
         public string Comment
@@ -60,15 +60,15 @@ namespace CodeBuilder.PhysicalDataModel
             set { this._comment = value; }
         }
 
+        public string MetaTypeName
+        {
+            get { return this._mataTypeName; }
+        }
+
         public Columns Columns
         {
             get { return this._columns; }
             set { this._columns = value; }
-        }
-
-        public string MetaTypeName
-        {
-            get { return this._mataTypeName; }
         }
     }
 }

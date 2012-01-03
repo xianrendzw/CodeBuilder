@@ -13,7 +13,17 @@ namespace $tdo.Package.$tdo.ModelObject.Name
     /// $tdo.ModelObject.Comment
     /// </summary>
     [Serializable]
-    public class $tdo.ModelObject.Name#DTO : BaseDTO
+    public class ${tdo.ModelObject.Name}DTO : BaseDTO
     {
+		public static string ENTITYNAME = "$tdo.ModelObject.OriginalName";
+
+		#foreach($column in $tdo.ModelObject.Columns.Values)
+
+		/// <summary>
+        /// $column.DisplayName
+        /// </summary>
+        public static readonly $column.LanguageType C_${column.Name} = "$column.OriginalName";
+
+		#end
     }
 }

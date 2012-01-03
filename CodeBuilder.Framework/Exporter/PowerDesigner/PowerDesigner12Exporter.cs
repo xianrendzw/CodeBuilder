@@ -57,6 +57,7 @@ namespace CodeBuilder.DataSource.Exporter
                 string comment = tableNode["a:Comment"] != null ? tableNode["a:Comment"].InnerText : string.Empty;
 
                 Table table = new Table(id, name, code, comment);
+                table.OriginalName = code;
                 table.Columns = this.GetColumns(tableNode);
                 table.PrimaryKeys = this.GetPrimaryKeys(tableNode, table.Columns);
                 tables.Add(id, table);
@@ -79,6 +80,7 @@ namespace CodeBuilder.DataSource.Exporter
                 string comment = viewNode["a:Comment"] != null ? viewNode["a:Comment"].InnerText : string.Empty;
 
                 View view = new View(id, name, code, comment);
+                view.OriginalName = code;
                 view.Columns = this.GetColumns(viewNode);
                 views.Add(id, view);
             }
@@ -112,6 +114,7 @@ namespace CodeBuilder.DataSource.Exporter
                 column.IsNullable = mandatory.Equals("1");
                 column.DefaultValue = defaultValue;
                 column.DataType = Regex.Replace(column.DataType, "\\(.*?\\)", "");
+                column.OriginalName = code;
                 columns.Add(id, column);
             }
 
