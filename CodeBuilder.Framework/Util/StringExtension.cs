@@ -13,11 +13,20 @@ namespace CodeBuilder.Util
             return string.Join("", words.Select(FirstCharToUpper));
         }
 
-        private static string FirstCharToUpper(string str)
+        public static string FirstCharToLower(this string str)
         {
             if (String.IsNullOrEmpty(str) || str.Length == 0)
                 return str;
-            return str[0].ToString().ToUpper() + str.Substring(1);
+            if (str.Length == 1) return str.ToLower();
+            return str.Substring(0,1).ToLower() + str.Substring(1);
+        }
+
+        public static string FirstCharToUpper(string str)
+        {
+            if (String.IsNullOrEmpty(str) || str.Length == 0)
+                return str;
+            if (str.Length == 1) return str.ToUpper();
+            return str.Substring(0, 1).ToUpper() + str.Substring(1);
         }
     }
 }

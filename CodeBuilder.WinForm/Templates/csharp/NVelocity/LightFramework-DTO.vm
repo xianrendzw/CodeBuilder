@@ -17,6 +17,8 @@ namespace $tdo.Package.$tdo.ModelObject.Name
     {
 		public static string ENTITYNAME = "$tdo.ModelObject.OriginalName";
 
+		#region Const Members
+
 		#foreach($column in $tdo.ModelObject.Columns.Values)
 
 		/// <summary>
@@ -25,5 +27,55 @@ namespace $tdo.Package.$tdo.ModelObject.Name
         public static readonly $column.LanguageType C_${column.Name} = "$column.OriginalName";
 
 		#end
+
+		#endregion
+
+		#region Field Members
+
+		#foreach($column in $tdo.ModelObject.Columns.Values)
+
+			#set($colName = $column.Name)
+			#if($column.Name.Length == 1) 
+				#set($colName = $colName.ToLower())
+			#elseif($column.Name.Length > 1)
+				#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
+			#end
+
+		private $column.LanguageType _$colName;
+
+		#end
+
+		#endregion
+
+		#region Property Members
+
+		#foreach($column in $tdo.ModelObject.Columns.Values)
+
+			#set($colName = $column.Name)
+			#if($column.Name.Length == 1) 
+				#set($colName = $colName.ToLower())
+			#elseif($column.Name.Length > 1)
+				#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
+			#end
+
+		/// <summary>
+        /// 获取或设置$column.DisplayName
+        /// </summary>
+        [Column(Name = "${column.OriginalName}" #if($column.IsAutoIncremented),IsIdentity = true #end)]
+        public virtual ${column.LanguageType} ${column.Name}
+        {
+            get
+            {
+                return this._$colName;
+            }
+            set
+            {
+                this._$colName = value;
+            }
+        }
+
+		#end
+
+		#endregion
     }
 }

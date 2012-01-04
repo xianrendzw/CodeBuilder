@@ -29,7 +29,7 @@ namespace CodeBuilder.WinForm
 
                 logger.Info("Starting CodeBuilder");
                 Application.Run(form);
-                logger.Info("CodeBuilder Exit");
+                logger.Info("CodeBuilder Exit"); 
             }
             catch (Exception ex)
             {
