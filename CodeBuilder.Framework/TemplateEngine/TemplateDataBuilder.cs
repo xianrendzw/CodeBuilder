@@ -82,9 +82,13 @@ namespace CodeBuilder.TemplateEngine
                 ConfigManager.TemplateSection.Templates[templateName].FileName);
             templateData.Name = GetTemplateDataName(settings.IsOmitTablePrefix,
                 settings.IsStandardizeName, settings.TablePrefix, modelObject.Name);
-            templateData.CodeFileName = PathHelper.GetCodeFileName(ConfigManager.GenerationCodeOuputPath,
-                ConfigManager.SettingsSection.Languages[settings.Language].Alias, settings.Package, templateName,
-                string.Format("{0}{1}", templateData.Name, ConfigManager.SettingsSection.Languages[settings.Language].Extension));
+            templateData.CodeFileName = string.Format("{0}{1}", PathHelper.GetCodeFileName(
+                ConfigManager.GenerationCodeOuputPath,
+                ConfigManager.SettingsSection.Languages[settings.Language].Alias,
+                settings.Package, templateName, templateData.Name,
+                ConfigManager.TemplateSection.Templates[templateName].Prefix,
+                ConfigManager.TemplateSection.Templates[templateName].Suffix),
+                ConfigManager.SettingsSection.Languages[settings.Language].Extension);
 
             modelObject.Name = templateData.Name;
             templateData.ModelObject = GetStandardizedModelObject(modelObject, database, settings);

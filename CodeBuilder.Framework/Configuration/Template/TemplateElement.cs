@@ -43,6 +43,20 @@ namespace CodeBuilder.Configuration
             set { base["fileName"] = value; }
         }
 
+        [ConfigurationProperty("prefix", IsRequired = true)]
+        public string Prefix
+        {
+            get { return base["prefix"].ToString(); }
+            set { base["prefix"] = value; }
+        }
+
+        [ConfigurationProperty("suffix", IsRequired = true)]
+        public string Suffix
+        {
+            get { return base["suffix"].ToString(); }
+            set { base["suffix"] = value; }
+        }
+
         [ConfigurationProperty("url", IsRequired = true)]
         public string Url
         {

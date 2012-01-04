@@ -19,9 +19,10 @@ namespace CodeBuilder.Util
         }
 
         public static string GetCodeFileName(string outputPath, string languageAlias,
-            string packageName, string templateName, string fileName)
+            string packageName, string templateName,string prefix,string suffix,string fileName)
         {
-            return Path.Combine(GetCodeFileNamePath(outputPath, languageAlias, packageName, templateName), fileName);
+            string fullFileName = string.Format("{0}{1}{2}", prefix, fileName, suffix);
+            return Path.Combine(GetCodeFileNamePath(outputPath, languageAlias, packageName, templateName), fullFileName);
         }
     }
 }
