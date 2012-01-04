@@ -26,7 +26,7 @@ namespace CodeBuilder.TemplateEngine
 
                     foreach (string templateName in settings.TemplatesNames)
                     {
-                        TemplateData templateData = Build(modelObject, settings,  templateName, models[genObject.Key].Database);
+                        TemplateData templateData = Build(modelObject, settings, templateName, models[genObject.Key].Database, genObject.Key);
                         if (templateData != null) templateDatas.Add(templateData);
                     }
                 }
@@ -35,20 +35,20 @@ namespace CodeBuilder.TemplateEngine
             return templateDatas;
         }
 
-        public static TemplateData Build<T>(T modelObject, GenerationSettings settings, string templateName, string database)
+        public static TemplateData Build<T>(T modelObject, GenerationSettings settings, string templateName, string database,string modelId)
         {
             if (settings == null) return null;
 
             if (modelObject is Table)
             {
                 Table table = modelObject as Table;
-                return CreateTemplateData(table, settings, templateName, database);
+                return CreateTemplateData(table, settings, templateName, database, modelId);
             }
 
             if (modelObject is View)
             {
                 Table view = modelObject as Table;
-                return CreateTemplateData(view, settings, templateName, database);
+                return CreateTemplateData(view, settings, templateName, database, modelId);
             }
 
             return null;
@@ -64,7 +64,7 @@ namespace CodeBuilder.TemplateEngine
         }
 
         private static TemplateData CreateTemplateData<T>(T modelObject, GenerationSettings settings,
-            string templateName, string database) where T : BaseTable, IMetaData
+            string templateName, string database, string modelId) where T : BaseTable, IMetaData
         {
             TemplateData templateData = new TemplateData();
             templateData.Database = database;
@@ -78,29 +78,32 @@ namespace CodeBuilder.TemplateEngine
             templateData.Encoding = settings.Encoding;
             templateData.IsOmitTablePrefix = settings.IsOmitTablePrefix;
             templateData.IsStandardizeName = settings.IsStandardizeName;
+            templateData.Prefix = ConfigManager.TemplateSection.Templates[templateName].Prefix;
+            templateData.Suffix = ConfigManager.TemplateSection.Templates[templateName].Suffix;
+
             templateData.TemplateFileName = Path.Combine(ConfigManager.TemplatePath,
                 ConfigManager.TemplateSection.Templates[templateName].FileName);
             templateData.Name = GetTemplateDataName(settings.IsOmitTablePrefix,
-                settings.IsStandardizeName, settings.TablePrefix, modelObject.Name);
-            templateData.CodeFileName = string.Format("{0}{1}", PathHelper.GetCodeFileName(
-                ConfigManager.GenerationCodeOuputPath,
+                settings.IsStandardizeName, settings.TablePrefix, templateName, modelObject.Name);
+            templateData.CodeFileName = string.Format("{0}{1}", PathHelper.GetCodeFileName(ConfigManager.GenerationCodeOuputPath,
                 ConfigManager.SettingsSection.Languages[settings.Language].Alias,
-                settings.Package, templateName, templateData.Name,
-                ConfigManager.TemplateSection.Templates[templateName].Prefix,
-                ConfigManager.TemplateSection.Templates[templateName].Suffix),
+                ConfigManager.SettingsSection.TemplateEngines[settings.TemplateEngine].Name,
+                ConfigManager.TemplateSection.Templates[templateName].DisplayName, settings.Package, templateData.Name, modelId),
                 ConfigManager.SettingsSection.Languages[settings.Language].Extension);
-
-            modelObject.Name = templateData.Name;
             templateData.ModelObject = GetStandardizedModelObject(modelObject, database, settings);
 
             return templateData;
         }
 
-        private static string GetTemplateDataName(bool isOmitPrefix, bool isStandardName, string prefix, string name)
+        private static string GetTemplateDataName(bool isOmitPrefix, bool isStandardName, string tablePrefix, 
+            string templateName, string name)
         {
-            if (isOmitPrefix) name = name.TrimStart(prefix.ToCharArray());
+            if (isOmitPrefix) name = name.TrimStart(tablePrefix.ToCharArray());
             if (isStandardName) name = name.StandardizeName();
-            return name;
+
+            string prefix = ConfigManager.TemplateSection.Templates[templateName].Prefix;
+            string suffix = ConfigManager.TemplateSection.Templates[templateName].Suffix;
+            return string.Format("{0}{1}{2}", prefix, name, suffix);
         }
 
         private static T GetStandardizedModelObject<T>(T modelObject,string database,GenerationSettings settings)
@@ -129,6 +132,5 @@ namespace CodeBuilder.TemplateEngine
 
             return modelObject;
         }
-
     }
 }

@@ -92,11 +92,6 @@ namespace CodeBuilder.WinForm.UI
 
                 foreach (string templateName in parameter.Settings.TemplatesNames)
                 {
-                    string codeFileNamePath = PathHelper.GetCodeFileNamePath(ConfigManager.GenerationCodeOuputPath,
-                          ConfigManager.SettingsSection.Languages[parameter.Settings.Language].Alias,
-                          parameter.Settings.Package, templateName);
-                    PathHelper.CreateCodeFileNamePath(codeFileNamePath);
-
                     this.GenerateCode(parameter, templateName, engine, ref genratedCount, ref errorCount, ref progressCount, asyncOp);
                 }
             }
@@ -113,11 +108,17 @@ namespace CodeBuilder.WinForm.UI
         {
             foreach (string modelId in parameter.GenerationObjects.Keys)
             {
+                string codeFileNamePath = PathHelper.GetCodeFileNamePath(ConfigManager.GenerationCodeOuputPath,
+                    ConfigManager.SettingsSection.Languages[parameter.Settings.Language].Alias,
+                    ConfigManager.SettingsSection.TemplateEngines[parameter.Settings.TemplateEngine].Name,
+                    ConfigManager.TemplateSection.Templates[templateName].DisplayName, parameter.Settings.Package, modelId);
+                PathHelper.CreateCodeFileNamePath(codeFileNamePath);
+
                 foreach (string objId in parameter.GenerationObjects[modelId])
                 {
                     IMetaData modelObject = ModelManager.GetModelObject(parameter.Models[modelId], objId);
                     TemplateData templateData = TemplateDataBuilder.Build(modelObject, parameter.Settings,
-                            templateName, parameter.Models[modelId].Database);
+                            templateName, parameter.Models[modelId].Database, modelId);
 
                     if (!engine.Run(templateData)) errorCount++; else genratedCount++;
 

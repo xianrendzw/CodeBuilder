@@ -13,7 +13,7 @@ namespace $tdo.Package.$tdo.ModelObject.Name
     /// $tdo.ModelObject.Comment
     /// </summary>
     [Serializable]
-    public class ${tdo.ModelObject.Name}DTO : BaseDTO
+    public class ${tdo.Name} : BaseDTO
     {
 		public static string ENTITYNAME = "$tdo.ModelObject.OriginalName";
 

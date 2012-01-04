@@ -20,6 +20,8 @@ namespace CodeBuilder.TemplateEngine
         private string _version;
         private string _templateEngine;
         private string _templateName;
+        private string _prefix;
+        private string _suffix;
         private string _encoding;
         private string _templateFileName;
         private string _codeFileName;
@@ -30,8 +32,8 @@ namespace CodeBuilder.TemplateEngine
         public TemplateData() { }
 
         public TemplateData(string name,string language, string database,string templateEngine, string package,
-            string tablePrefix, string author, string version, string templateName, string encoding,string templateFileName,
-            string codeFileName,bool isOmitTablePrefix, bool isStandardizeName,object modelObject)
+            string tablePrefix, string author, string version, string templateName,string prefix,string suffix,
+            string encoding,string templateFileName,string codeFileName,bool isOmitTablePrefix, bool isStandardizeName,object modelObject)
         {
             this._name = name;
             this._language = language;
@@ -42,6 +44,8 @@ namespace CodeBuilder.TemplateEngine
             this._author = author;
             this._version = version;
             this._templateName = templateName;
+            this._prefix = prefix;
+            this._suffix = suffix;
             this._encoding = encoding;
             this._templateFileName = templateFileName;
             this._codeFileName = codeFileName;
@@ -102,6 +106,18 @@ namespace CodeBuilder.TemplateEngine
         {
             get { return this._templateName; }
             set { this._templateName = value; }
+        }
+
+        public string Prefix
+        {
+            get { return this._prefix ?? string.Empty ; }
+            set { this._prefix = value; }
+        }
+
+        public string Suffix
+        {
+            get { return this._suffix ?? string.Empty; }
+            set { this._suffix = value; }
         }
 
         public string Encoding

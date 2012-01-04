@@ -13,16 +13,16 @@ namespace CodeBuilder.Util
             if (!Directory.Exists(path)) Directory.CreateDirectory(path);
         }
 
-        public static string GetCodeFileNamePath(string outputPath, string languageAlias, string packageName, string templateName)
+        public static string GetCodeFileNamePath(string outputPath, string languageAlias, string engineName, 
+            string templateName, string packageName, string modelId)
         {
-            return Path.Combine(outputPath, templateName, languageAlias, packageName);
+            return Path.Combine(outputPath, modelId, languageAlias, engineName, templateName, packageName);
         }
 
-        public static string GetCodeFileName(string outputPath, string languageAlias,
-            string packageName, string templateName,string prefix,string suffix,string fileName)
+        public static string GetCodeFileName(string outputPath, string languageAlias, string engineName, 
+            string templateName, string packageName, string fileName, string modelId)
         {
-            string fullFileName = string.Format("{0}{1}{2}", prefix, fileName, suffix);
-            return Path.Combine(GetCodeFileNamePath(outputPath, languageAlias, packageName, templateName), fullFileName);
+            return Path.Combine(GetCodeFileNamePath(outputPath, languageAlias, engineName, templateName, packageName, modelId), fileName);
         }
     }
 }
