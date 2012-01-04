@@ -111,8 +111,8 @@ namespace CodeBuilder.TemplateEngine
         private static T GetStandardizedModelObject<T>(T modelObject,string database,GenerationSettings settings)
             where T : BaseTable, IMetaData
         {
-            bool isDynamicLanguage = ConfigManager.SettingsSection.Languages[settings.Language].IsDynamic;
             bool isStandardizeName = settings.IsStandardizeName;
+            bool isDynamicLanguage = ConfigManager.SettingsSection.Languages[settings.Language].IsDynamic;
             string languageAlias = ConfigManager.SettingsSection.Languages[settings.Language].Alias;
 
             if (!isStandardizeName && isDynamicLanguage) return modelObject;
