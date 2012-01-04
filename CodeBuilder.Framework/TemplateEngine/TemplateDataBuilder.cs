@@ -26,7 +26,8 @@ namespace CodeBuilder.TemplateEngine
 
                     foreach (string templateName in settings.TemplatesNames)
                     {
-                        TemplateData templateData = Build(modelObject, settings, templateName, models[genObject.Key].Database, genObject.Key);
+                        TemplateData templateData = Build(modelObject, settings, templateName, 
+                            models[genObject.Key].Database, genObject.Key);
                         if (templateData != null) templateDatas.Add(templateData);
                     }
                 }
@@ -35,7 +36,8 @@ namespace CodeBuilder.TemplateEngine
             return templateDatas;
         }
 
-        public static TemplateData Build<T>(T modelObject, GenerationSettings settings, string templateName, string database,string modelId)
+        public static TemplateData Build<T>(T modelObject, GenerationSettings settings, 
+            string templateName, string database,string modelId)
         {
             if (settings == null) return null;
 
