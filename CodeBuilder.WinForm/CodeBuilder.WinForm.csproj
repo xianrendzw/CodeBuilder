@@ -262,4 +262,6 @@
     <Copy SourceFiles="@(ConfigFile)" DestinationFolder="$(OutputPath)\Config" />
     <Copy SourceFiles="@(Templates)" DestinationFiles="@(Templates->'$(OutputPath)\Templates\%(RecursiveDir)%(Filename)%(Extension)')" />
   </Target>
+  <Target Name="AfterBuild">
+  </Target>
 </Project>

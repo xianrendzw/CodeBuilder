@@ -50,8 +50,7 @@ Global
 		{1FDA5B2E-BD7D-4BB1-9579-C25130156A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FDA5B2E-BD7D-4BB1-9579-C25130156A43}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{1FDA5B2E-BD7D-4BB1-9579-C25130156A43}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{1FDA5B2E-BD7D-4BB1-9579-C25130156A43}.Debug|x86.ActiveCfg = Debug|x86
-		{1FDA5B2E-BD7D-4BB1-9579-C25130156A43}.Debug|x86.Build.0 = Debug|x86
+		{1FDA5B2E-BD7D-4BB1-9579-C25130156A43}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{1FDA5B2E-BD7D-4BB1-9579-C25130156A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FDA5B2E-BD7D-4BB1-9579-C25130156A43}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1FDA5B2E-BD7D-4BB1-9579-C25130156A43}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
@@ -61,13 +60,11 @@ Global
 		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Debug|x86.ActiveCfg = Debug|x86
-		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Debug|x86.Build.0 = Debug|x86
+		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Release|Mixed Platforms.Build.0 = Release|x86
-		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Release|x86.ActiveCfg = Release|x86
-		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Release|x86.Build.0 = Release|x86
+		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B699B723-2FA2-4318-8C3B-653034E6EABF}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

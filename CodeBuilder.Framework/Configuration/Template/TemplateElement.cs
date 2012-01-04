@@ -15,6 +15,13 @@ namespace CodeBuilder.Configuration
             set { base["name"] = value; }
         }
 
+        [ConfigurationProperty("displayName", IsRequired = true)]
+        public String DisplayName
+        {
+            get { return base["displayName"].ToString(); }
+            set { base["displayName"] = value; }
+        }
+
         [ConfigurationProperty("language", IsRequired = true)]
         public string Language
         {
