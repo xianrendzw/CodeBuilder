@@ -294,8 +294,10 @@ namespace CodeBuilder.WinForm
             this.totalFileCountLbl.Text = fileCount.ToString();
             this.genProgressBar.Maximum = fileCount;
 
-            GenerationParameter parameter = new GenerationParameter(ModelManager.Clone(),
-                GenerationHelper.GetGenerationObjects(this.treeView),this.GetGenerationSettings());
+            GenerationParameter parameter = new GenerationParameter(
+                ModelManager.Clone(),
+                GenerationHelper.GetGenerationObjects(this.treeView),
+                this.GetGenerationSettings());
 
             try
             {
@@ -395,7 +397,8 @@ namespace CodeBuilder.WinForm
                 if (template.Language.Equals(language, StringComparison.CurrentCultureIgnoreCase) &&
                     template.Engine.Equals(engine, StringComparison.CurrentCultureIgnoreCase))
                 {
-                    this.templateListBox.Items.Add(template);
+
+                    this.templateListBox.Items.Add(new TemplateListBoxItem(template.Name, template.DisplayName));
                     this.templateListBox.DisplayMember = "DisplayName";
                 }
             }
@@ -413,9 +416,15 @@ namespace CodeBuilder.WinForm
             this.codeFileEncodingCombox.Text = settings.Encoding;
             this.isOmitTablePrefixChkbox.Checked = settings.IsOmitTablePrefix;
             this.isStandardizeNameChkbox.Checked = settings.IsStandardizeName;
+
+            this.templateListBox.Items.Clear();
             foreach (string templateName in settings.TemplatesNames)
             {
-                this.templateListBox.SelectedItems.Add(templateName);
+                TemplateElement template = ConfigManager.TemplateSection.Templates[templateName];
+                TemplateListBoxItem item = new TemplateListBoxItem(template.Name, template.DisplayName);
+                this.templateListBox.Items.Add(item);
+                this.templateListBox.SelectedItems.Add(item);
+                this.templateListBox.DisplayMember = "DisplayName";
             }
         }
 
@@ -424,7 +433,7 @@ namespace CodeBuilder.WinForm
             GenerationSettings settings = new GenerationSettings(this.languageCombx.Text,
                 this.templateEngineCombox.Text, this.packageTxtBox.Text, this.tablePrefixTxtBox.Text,
                 this.authorTxtBox.Text, this.versionTxtBox.Text,
-                this.templateListBox.SelectedItems.Cast<string>().ToArray(),
+                this.templateListBox.SelectedItems.Cast<TemplateListBoxItem>().Select(x=>x.Name).ToArray(),
                 this.codeFileEncodingCombox.Text, this.isOmitTablePrefixChkbox.Checked, this.isStandardizeNameChkbox.Checked);
             return settings;
         }
@@ -450,5 +459,21 @@ namespace CodeBuilder.WinForm
         }
 
         #endregion	
+
+        #region TemplateListBox Item Inner Class
+
+        private class TemplateListBoxItem
+        {
+            public TemplateListBoxItem(string name,string displayName)
+            {
+                this.Name = name;
+                this.DisplayName = displayName;
+            }
+
+            public string Name { get; set; }
+            public string DisplayName { get; set; }
+        }
+
+        #endregion
     }
 }
