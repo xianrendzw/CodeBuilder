@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 
@@ -10,7 +7,6 @@ namespace CodeBuilder.DataSource.Exporter
     using Configuration;
     using Exceptions;
     using PhysicalDataModel;
-    using TypeMapping;
     using Util;
 
     public class PowerDesigner12Exporter : BaseExporter,IExporter
