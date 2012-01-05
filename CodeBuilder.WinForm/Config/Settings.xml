@@ -25,10 +25,10 @@
     <pdmDatabase name="mysql50" database="MySQL5" />
   </pdmDatabases>
   <templateEngines>
-    <templateEngine name="NVelocity" ext="vm" adapter="CodeBuilder.TemplateEngine.NVelocityAdapter,CodeBuilder.Framework" />
-    <templateEngine name="Razor" ext="rz" adapter="CodeBuilder.TemplateEngine.RazorEngineAdapter,CodeBuilder.Framework" />
-    <templateEngine name="Vici" ext="vic" adapter="CodeBuilder.TemplateEngine.ViciEngineAdapter,CodeBuilder.Framework" />
-    <templateEngine name="Ader" ext="adr" adapter="CodeBuilder.TemplateEngine.AderEngineAdapter,CodeBuilder.Framework" />
+    <templateEngine name="NVelocity" ext=".nv" adapter="CodeBuilder.TemplateEngine.NVelocityAdapter,CodeBuilder.Framework" />
+    <templateEngine name="Razor" ext=".raz" adapter="CodeBuilder.TemplateEngine.RazorEngineAdapter,CodeBuilder.Framework" />
+    <templateEngine name="Vici" ext=".vic" adapter="CodeBuilder.TemplateEngine.ViciEngineAdapter,CodeBuilder.Framework" />
+    <templateEngine name="Ader" ext=".adr" adapter="CodeBuilder.TemplateEngine.AderEngineAdapter,CodeBuilder.Framework" />
   </templateEngines>
   <appSettings>
     <add key="typeMapper" value="CodeBuilder.TypeMapping.DefaultTypeMapper,CodeBuilder.Framework" />

@@ -36,7 +36,7 @@
             this.removeBtn = new System.Windows.Forms.Button();
             this.newsaveBtn = new System.Windows.Forms.Button();
             this.fileNameTextbox = new System.Windows.Forms.TextBox();
-            this.nameTxtbox = new System.Windows.Forms.TextBox();
+            this.displayNameTxtbox = new System.Windows.Forms.TextBox();
             this.languageLbl = new System.Windows.Forms.Label();
             this.engineLbl = new System.Windows.Forms.Label();
             this.nameLbl = new System.Windows.Forms.Label();
@@ -47,6 +47,10 @@
             this.noteLbl = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.getItFromOnlineBtn = new System.Windows.Forms.Button();
+            this.prefixTxtBox = new System.Windows.Forms.TextBox();
+            this.prefixLbl = new System.Windows.Forms.Label();
+            this.suffixLbl = new System.Windows.Forms.Label();
+            this.suffixTxtBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // templatesLbl
@@ -70,129 +74,129 @@
             // templateListbox
             // 
             this.templateListbox.FormattingEnabled = true;
-            this.templateListbox.Location = new System.Drawing.Point(12, 30);
+            this.templateListbox.Location = new System.Drawing.Point(10, 30);
             this.templateListbox.Name = "templateListbox";
             this.templateListbox.Size = new System.Drawing.Size(160, 303);
-            this.templateListbox.TabIndex = 32;
+            this.templateListbox.TabIndex = 1;
             this.templateListbox.SelectedIndexChanged += new System.EventHandler(this.templateListbox_SelectedIndexChanged);
             // 
             // engineCombox
             // 
             this.engineCombox.FormattingEnabled = true;
-            this.engineCombox.Location = new System.Drawing.Point(256, 65);
+            this.engineCombox.Location = new System.Drawing.Point(262, 60);
             this.engineCombox.Name = "engineCombox";
             this.engineCombox.Size = new System.Drawing.Size(121, 21);
-            this.engineCombox.TabIndex = 33;
+            this.engineCombox.TabIndex = 5;
             // 
             // languageCombox
             // 
             this.languageCombox.FormattingEnabled = true;
-            this.languageCombox.Location = new System.Drawing.Point(256, 30);
+            this.languageCombox.Location = new System.Drawing.Point(262, 30);
             this.languageCombox.Name = "languageCombox";
             this.languageCombox.Size = new System.Drawing.Size(121, 21);
-            this.languageCombox.TabIndex = 34;
+            this.languageCombox.TabIndex = 3;
             // 
             // removeBtn
             // 
-            this.removeBtn.Location = new System.Drawing.Point(285, 170);
+            this.removeBtn.Location = new System.Drawing.Point(291, 210);
             this.removeBtn.Name = "removeBtn";
             this.removeBtn.Size = new System.Drawing.Size(64, 23);
-            this.removeBtn.TabIndex = 35;
+            this.removeBtn.TabIndex = 16;
             this.removeBtn.Text = "Remove";
             this.removeBtn.UseVisualStyleBackColor = true;
             this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
             // 
             // newsaveBtn
             // 
-            this.newsaveBtn.Location = new System.Drawing.Point(355, 170);
+            this.newsaveBtn.Location = new System.Drawing.Point(361, 210);
             this.newsaveBtn.Name = "newsaveBtn";
             this.newsaveBtn.Size = new System.Drawing.Size(93, 23);
-            this.newsaveBtn.TabIndex = 36;
+            this.newsaveBtn.TabIndex = 17;
             this.newsaveBtn.Text = "New/Save";
             this.newsaveBtn.UseVisualStyleBackColor = true;
             this.newsaveBtn.Click += new System.EventHandler(this.newsaveBtn_Click);
             // 
             // fileNameTextbox
             // 
-            this.fileNameTextbox.Location = new System.Drawing.Point(256, 135);
+            this.fileNameTextbox.Location = new System.Drawing.Point(262, 120);
             this.fileNameTextbox.Name = "fileNameTextbox";
             this.fileNameTextbox.Size = new System.Drawing.Size(164, 20);
-            this.fileNameTextbox.TabIndex = 37;
+            this.fileNameTextbox.TabIndex = 9;
             // 
-            // nameTxtbox
+            // displayNameTxtbox
             // 
-            this.nameTxtbox.Location = new System.Drawing.Point(256, 100);
-            this.nameTxtbox.MaxLength = 200;
-            this.nameTxtbox.Name = "nameTxtbox";
-            this.nameTxtbox.Size = new System.Drawing.Size(121, 20);
-            this.nameTxtbox.TabIndex = 38;
+            this.displayNameTxtbox.Location = new System.Drawing.Point(262, 90);
+            this.displayNameTxtbox.MaxLength = 200;
+            this.displayNameTxtbox.Name = "displayNameTxtbox";
+            this.displayNameTxtbox.Size = new System.Drawing.Size(121, 20);
+            this.displayNameTxtbox.TabIndex = 7;
             // 
             // languageLbl
             // 
-            this.languageLbl.Location = new System.Drawing.Point(190, 30);
+            this.languageLbl.Location = new System.Drawing.Point(178, 30);
             this.languageLbl.Name = "languageLbl";
-            this.languageLbl.Size = new System.Drawing.Size(60, 13);
-            this.languageLbl.TabIndex = 39;
+            this.languageLbl.Size = new System.Drawing.Size(80, 13);
+            this.languageLbl.TabIndex = 2;
             this.languageLbl.Text = "Language:";
             // 
             // engineLbl
             // 
-            this.engineLbl.Location = new System.Drawing.Point(190, 65);
+            this.engineLbl.Location = new System.Drawing.Point(178, 60);
             this.engineLbl.Name = "engineLbl";
-            this.engineLbl.Size = new System.Drawing.Size(60, 13);
-            this.engineLbl.TabIndex = 40;
+            this.engineLbl.Size = new System.Drawing.Size(80, 13);
+            this.engineLbl.TabIndex = 4;
             this.engineLbl.Text = "Engine:";
             // 
             // nameLbl
             // 
-            this.nameLbl.Location = new System.Drawing.Point(190, 100);
+            this.nameLbl.Location = new System.Drawing.Point(178, 90);
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(60, 13);
-            this.nameLbl.TabIndex = 41;
-            this.nameLbl.Text = "Name:";
+            this.nameLbl.Size = new System.Drawing.Size(80, 13);
+            this.nameLbl.TabIndex = 6;
+            this.nameLbl.Text = "DisplayName:";
             // 
             // fileNameLbl
             // 
-            this.fileNameLbl.Location = new System.Drawing.Point(190, 135);
+            this.fileNameLbl.Location = new System.Drawing.Point(178, 120);
             this.fileNameLbl.Name = "fileNameLbl";
-            this.fileNameLbl.Size = new System.Drawing.Size(60, 13);
-            this.fileNameLbl.TabIndex = 42;
+            this.fileNameLbl.Size = new System.Drawing.Size(80, 13);
+            this.fileNameLbl.TabIndex = 8;
             this.fileNameLbl.Text = "File:";
             // 
             // editBtn
             // 
-            this.editBtn.Location = new System.Drawing.Point(222, 170);
+            this.editBtn.Location = new System.Drawing.Point(228, 210);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(57, 23);
-            this.editBtn.TabIndex = 43;
+            this.editBtn.TabIndex = 15;
             this.editBtn.Text = "Edit";
             this.editBtn.UseVisualStyleBackColor = true;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // openFileDialogBtn
             // 
-            this.openFileDialogBtn.Location = new System.Drawing.Point(424, 133);
+            this.openFileDialogBtn.Location = new System.Drawing.Point(430, 118);
             this.openFileDialogBtn.Name = "openFileDialogBtn";
             this.openFileDialogBtn.Size = new System.Drawing.Size(24, 23);
-            this.openFileDialogBtn.TabIndex = 44;
+            this.openFileDialogBtn.TabIndex = 10;
             this.openFileDialogBtn.Text = "...";
             this.openFileDialogBtn.UseVisualStyleBackColor = true;
             this.openFileDialogBtn.Click += new System.EventHandler(this.openFileDialogBtn_Click);
             // 
             // noteTextLbl
             // 
-            this.noteTextLbl.Location = new System.Drawing.Point(246, 242);
+            this.noteTextLbl.Location = new System.Drawing.Point(246, 276);
             this.noteTextLbl.Name = "noteTextLbl";
-            this.noteTextLbl.Size = new System.Drawing.Size(202, 91);
-            this.noteTextLbl.TabIndex = 46;
+            this.noteTextLbl.Size = new System.Drawing.Size(210, 60);
+            this.noteTextLbl.TabIndex = 20;
             // 
             // noteLbl
             // 
             this.noteLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noteLbl.Location = new System.Drawing.Point(190, 241);
+            this.noteLbl.Location = new System.Drawing.Point(190, 275);
             this.noteLbl.Name = "noteLbl";
             this.noteLbl.Size = new System.Drawing.Size(50, 18);
-            this.noteLbl.TabIndex = 45;
+            this.noteLbl.TabIndex = 19;
             this.noteLbl.Text = "Note:";
             // 
             // openFileDialog
@@ -202,18 +206,54 @@
             // 
             // getItFromOnlineBtn
             // 
-            this.getItFromOnlineBtn.Location = new System.Drawing.Point(222, 204);
+            this.getItFromOnlineBtn.Location = new System.Drawing.Point(228, 244);
             this.getItFromOnlineBtn.Name = "getItFromOnlineBtn";
             this.getItFromOnlineBtn.Size = new System.Drawing.Size(226, 23);
-            this.getItFromOnlineBtn.TabIndex = 47;
+            this.getItFromOnlineBtn.TabIndex = 18;
             this.getItFromOnlineBtn.Text = "Get it from online";
             this.getItFromOnlineBtn.UseVisualStyleBackColor = true;
             this.getItFromOnlineBtn.Click += new System.EventHandler(this.getItFromOnlineBtn_Click);
+            // 
+            // prefixTxtBox
+            // 
+            this.prefixTxtBox.Location = new System.Drawing.Point(262, 150);
+            this.prefixTxtBox.MaxLength = 200;
+            this.prefixTxtBox.Name = "prefixTxtBox";
+            this.prefixTxtBox.Size = new System.Drawing.Size(121, 20);
+            this.prefixTxtBox.TabIndex = 12;
+            // 
+            // prefixLbl
+            // 
+            this.prefixLbl.Location = new System.Drawing.Point(178, 150);
+            this.prefixLbl.Name = "prefixLbl";
+            this.prefixLbl.Size = new System.Drawing.Size(80, 13);
+            this.prefixLbl.TabIndex = 11;
+            this.prefixLbl.Text = "Prefix:";
+            // 
+            // suffixLbl
+            // 
+            this.suffixLbl.Location = new System.Drawing.Point(178, 180);
+            this.suffixLbl.Name = "suffixLbl";
+            this.suffixLbl.Size = new System.Drawing.Size(80, 13);
+            this.suffixLbl.TabIndex = 13;
+            this.suffixLbl.Text = "Suffix:";
+            // 
+            // suffixTxtBox
+            // 
+            this.suffixTxtBox.Location = new System.Drawing.Point(262, 180);
+            this.suffixTxtBox.MaxLength = 200;
+            this.suffixTxtBox.Name = "suffixTxtBox";
+            this.suffixTxtBox.Size = new System.Drawing.Size(121, 20);
+            this.suffixTxtBox.TabIndex = 14;
             // 
             // TemplateOptionsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.suffixLbl);
+            this.Controls.Add(this.suffixTxtBox);
+            this.Controls.Add(this.prefixLbl);
+            this.Controls.Add(this.prefixTxtBox);
             this.Controls.Add(this.getItFromOnlineBtn);
             this.Controls.Add(this.noteTextLbl);
             this.Controls.Add(this.noteLbl);
@@ -223,7 +263,7 @@
             this.Controls.Add(this.nameLbl);
             this.Controls.Add(this.engineLbl);
             this.Controls.Add(this.languageLbl);
-            this.Controls.Add(this.nameTxtbox);
+            this.Controls.Add(this.displayNameTxtbox);
             this.Controls.Add(this.fileNameTextbox);
             this.Controls.Add(this.newsaveBtn);
             this.Controls.Add(this.removeBtn);
@@ -248,7 +288,7 @@
         private System.Windows.Forms.Button removeBtn;
         private System.Windows.Forms.Button newsaveBtn;
         private System.Windows.Forms.TextBox fileNameTextbox;
-        private System.Windows.Forms.TextBox nameTxtbox;
+        private System.Windows.Forms.TextBox displayNameTxtbox;
         private System.Windows.Forms.Label languageLbl;
         private System.Windows.Forms.Label engineLbl;
         private System.Windows.Forms.Label nameLbl;
@@ -259,5 +299,9 @@
         private System.Windows.Forms.Label noteLbl;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button getItFromOnlineBtn;
+        private System.Windows.Forms.TextBox prefixTxtBox;
+        private System.Windows.Forms.Label prefixLbl;
+        private System.Windows.Forms.Label suffixLbl;
+        private System.Windows.Forms.TextBox suffixTxtBox;
     }
 }

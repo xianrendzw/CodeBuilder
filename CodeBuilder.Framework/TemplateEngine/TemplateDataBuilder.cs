@@ -82,30 +82,30 @@ namespace CodeBuilder.TemplateEngine
             templateData.IsStandardizeName = settings.IsStandardizeName;
             templateData.Prefix = ConfigManager.TemplateSection.Templates[templateName].Prefix;
             templateData.Suffix = ConfigManager.TemplateSection.Templates[templateName].Suffix;
+            templateData.Name = GetTemplateDataName(settings.IsOmitTablePrefix,
+               settings.IsStandardizeName, settings.TablePrefix, modelObject.Name);
 
             templateData.TemplateFileName = Path.Combine(ConfigManager.TemplatePath,
                 ConfigManager.TemplateSection.Templates[templateName].FileName);
-            templateData.Name = GetTemplateDataName(settings.IsOmitTablePrefix,
-                settings.IsStandardizeName, settings.TablePrefix, templateName, modelObject.Name);
+            string fileName = string.Format("{0}{1}{2}", templateData.Prefix, templateData.Name, templateData.Suffix);
             templateData.CodeFileName = string.Format("{0}{1}", PathHelper.GetCodeFileName(ConfigManager.GenerationCodeOuputPath,
                 ConfigManager.SettingsSection.Languages[settings.Language].Alias,
                 ConfigManager.SettingsSection.TemplateEngines[settings.TemplateEngine].Name,
-                ConfigManager.TemplateSection.Templates[templateName].DisplayName, settings.Package, templateData.Name, modelId),
+                ConfigManager.TemplateSection.Templates[templateName].DisplayName, settings.Package, modelId, fileName),
                 ConfigManager.SettingsSection.Languages[settings.Language].Extension);
+
+            modelObject.Name = templateData.Name;
             templateData.ModelObject = GetStandardizedModelObject(modelObject, database, settings);
 
             return templateData;
         }
 
-        private static string GetTemplateDataName(bool isOmitPrefix, bool isStandardName, string tablePrefix, 
-            string templateName, string name)
+        private static string GetTemplateDataName(bool isOmitPrefix, bool isStandardName, string tablePrefix, string name)
         {
             if (isOmitPrefix) name = name.TrimStart(tablePrefix.ToCharArray());
             if (isStandardName) name = name.StandardizeName();
 
-            string prefix = ConfigManager.TemplateSection.Templates[templateName].Prefix;
-            string suffix = ConfigManager.TemplateSection.Templates[templateName].Suffix;
-            return string.Format("{0}{1}{2}", prefix, name, suffix);
+            return name;
         }
 
         private static T GetStandardizedModelObject<T>(T modelObject,string database,GenerationSettings settings)
@@ -128,7 +128,7 @@ namespace CodeBuilder.TemplateEngine
                     LanguageType langType = typeMapper.GetLanguageType(database, languageAlias, column.DataType);
                     if (langType == null) continue;
                     column.LanguageType = langType.TypeName;
-                    column.LanguageDefaultValue = langType.DefaultValue;
+                    column.LanguageDefaultValue = string.IsNullOrEmpty(column.DefaultValue) ? langType.DefaultValue : column.DefaultValue;
                 }
             }
 

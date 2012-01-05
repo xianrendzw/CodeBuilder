@@ -11,7 +11,7 @@ namespace CodeBuilder.Configuration
         [ConfigurationProperty("name", IsRequired = true)]
         public String Name
         {
-            get { return base["name"].ToString(); }
+            get { return base["name"].ToString().ToLower(); }
             set { base["name"] = value; }
         }
 

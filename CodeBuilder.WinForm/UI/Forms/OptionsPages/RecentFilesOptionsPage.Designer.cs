@@ -42,7 +42,7 @@
             this.checkFilesExistCheckBox.Location = new System.Drawing.Point(27, 72);
             this.checkFilesExistCheckBox.Name = "checkFilesExistCheckBox";
             this.checkFilesExistCheckBox.Size = new System.Drawing.Size(185, 17);
-            this.checkFilesExistCheckBox.TabIndex = 41;
+            this.checkFilesExistCheckBox.TabIndex = 4;
             this.checkFilesExistCheckBox.Text = "Check that files exist before listing";
             this.checkFilesExistCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -51,7 +51,7 @@
             this.filesInMenuLbl.Location = new System.Drawing.Point(147, 33);
             this.filesInMenuLbl.Name = "filesInMenuLbl";
             this.filesInMenuLbl.Size = new System.Drawing.Size(96, 24);
-            this.filesInMenuLbl.TabIndex = 39;
+            this.filesInMenuLbl.TabIndex = 3;
             this.filesInMenuLbl.Text = "files in menu";
             // 
             // recentFilesCountTextBox
@@ -60,7 +60,7 @@
             this.recentFilesCountTextBox.MaxLength = 50;
             this.recentFilesCountTextBox.Name = "recentFilesCountTextBox";
             this.recentFilesCountTextBox.Size = new System.Drawing.Size(40, 20);
-            this.recentFilesCountTextBox.TabIndex = 38;
+            this.recentFilesCountTextBox.TabIndex = 2;
             this.recentFilesCountTextBox.Text = "3";
             // 
             // listLbl
@@ -68,7 +68,7 @@
             this.listLbl.Location = new System.Drawing.Point(27, 33);
             this.listLbl.Name = "listLbl";
             this.listLbl.Size = new System.Drawing.Size(55, 16);
-            this.listLbl.TabIndex = 37;
+            this.listLbl.TabIndex = 1;
             this.listLbl.Text = "List";
             // 
             // topGbox

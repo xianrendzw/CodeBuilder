@@ -20,7 +20,7 @@ namespace CodeBuilder.Util
         }
 
         public static string GetCodeFileName(string outputPath, string languageAlias, string engineName, 
-            string templateName, string packageName, string fileName, string modelId)
+            string templateName, string packageName, string modelId, string fileName)
         {
             return Path.Combine(GetCodeFileNamePath(outputPath, languageAlias, engineName, templateName, packageName, modelId), fileName);
         }

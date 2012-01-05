@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using System.Reflection;
 using NVelocity;
 using NVelocity.App;
 using NVelocity.Context;
-using NVelocity.Runtime; 
+using NVelocity.Runtime;
+using NVelocity.Util.Introspection;
 
 namespace CodeBuilder.TemplateEngine
 {
@@ -17,7 +19,8 @@ namespace CodeBuilder.TemplateEngine
         private static Logger logger = InternalTrace.GetLogger(typeof(NVelocityAdapter));
         private VelocityEngine velocityEngine;
 
-        public NVelocityAdapter() {
+        public NVelocityAdapter()
+        {
             velocityEngine = new VelocityEngine();
         }
 
@@ -44,6 +47,63 @@ namespace CodeBuilder.TemplateEngine
                 logger.Error(String.Format("NVelocityAdapter:{0}", templateData.CodeFileName), ex);
                 return false;
             }
+        }
+    }
+
+    public class NVelocityDuck : IDuck
+    {
+        private readonly object _instance;
+        private readonly Type _instanceType;
+        private readonly Type[] _extensionTypes;
+        private Introspector _introspector;
+
+        public NVelocityDuck(object instance)
+        {
+            if (instance == null)
+                throw new ArgumentNullException("instance");
+
+            _extensionTypes = new Type[] { typeof(StringExtension) };
+            _instance = instance;
+            _instanceType = _instance.GetType();
+        }
+
+        public Introspector Introspector
+        {
+            get
+            {
+                if (_introspector == null)
+                    _introspector = RuntimeSingleton.Introspector;
+                return _introspector;
+            }
+            set { _introspector = value; }
+        }
+
+        public object GetInvoke(string propName)
+        {
+            return null;
+        }
+
+        public void SetInvoke(string propName, object value)
+        {
+        }
+
+        public object Invoke(string method, params object[] args)
+        {
+            if (string.IsNullOrEmpty(method)) return null;
+
+            MethodInfo methodInfo = Introspector.GetMethod(_instanceType, method, args);
+            if (methodInfo != null) { return methodInfo.Invoke(_instance, args); }
+
+            object[] extensionArgs = new object[args.Length + 1];
+            extensionArgs[0] = _instance; 
+            Array.Copy(args, 0, extensionArgs, 1, args.Length);
+            foreach (Type extensionType in _extensionTypes)
+            {
+                methodInfo = Introspector.GetMethod(extensionType, method, extensionArgs);
+                if (methodInfo != null) { return methodInfo.Invoke(null, extensionArgs); }
+            }
+
+            return null;
         }
     }
 }

@@ -66,7 +66,7 @@
             this.noteTextLbl.Location = new System.Drawing.Point(246, 191);
             this.noteTextLbl.Name = "noteTextLbl";
             this.noteTextLbl.Size = new System.Drawing.Size(207, 142);
-            this.noteTextLbl.TabIndex = 62;
+            this.noteTextLbl.TabIndex = 11;
             // 
             // noteLbl
             // 
@@ -74,7 +74,7 @@
             this.noteLbl.Location = new System.Drawing.Point(190, 191);
             this.noteLbl.Name = "noteLbl";
             this.noteLbl.Size = new System.Drawing.Size(50, 18);
-            this.noteLbl.TabIndex = 61;
+            this.noteLbl.TabIndex = 10;
             this.noteLbl.Text = "Note:";
             // 
             // connstrLbl
@@ -82,7 +82,7 @@
             this.connstrLbl.Location = new System.Drawing.Point(190, 65);
             this.connstrLbl.Name = "connstrLbl";
             this.connstrLbl.Size = new System.Drawing.Size(80, 13);
-            this.connstrLbl.TabIndex = 58;
+            this.connstrLbl.TabIndex = 4;
             this.connstrLbl.Text = "ConnectString:";
             // 
             // nameLbl
@@ -90,7 +90,7 @@
             this.nameLbl.Location = new System.Drawing.Point(190, 30);
             this.nameLbl.Name = "nameLbl";
             this.nameLbl.Size = new System.Drawing.Size(60, 13);
-            this.nameLbl.TabIndex = 57;
+            this.nameLbl.TabIndex = 2;
             this.nameLbl.Text = "Name:";
             // 
             // exporterLbl
@@ -98,7 +98,7 @@
             this.exporterLbl.Location = new System.Drawing.Point(190, 100);
             this.exporterLbl.Name = "exporterLbl";
             this.exporterLbl.Size = new System.Drawing.Size(60, 13);
-            this.exporterLbl.TabIndex = 56;
+            this.exporterLbl.TabIndex = 6;
             this.exporterLbl.Text = "Exporter:";
             // 
             // nameTxtbox
@@ -107,7 +107,7 @@
             this.nameTxtbox.MaxLength = 200;
             this.nameTxtbox.Name = "nameTxtbox";
             this.nameTxtbox.Size = new System.Drawing.Size(179, 20);
-            this.nameTxtbox.TabIndex = 54;
+            this.nameTxtbox.TabIndex = 3;
             // 
             // connstrTxtbox
             // 
@@ -115,14 +115,14 @@
             this.connstrTxtbox.MaxLength = 500;
             this.connstrTxtbox.Name = "connstrTxtbox";
             this.connstrTxtbox.Size = new System.Drawing.Size(179, 20);
-            this.connstrTxtbox.TabIndex = 53;
+            this.connstrTxtbox.TabIndex = 5;
             // 
             // newsaveBtn
             // 
             this.newsaveBtn.Location = new System.Drawing.Point(349, 141);
             this.newsaveBtn.Name = "newsaveBtn";
             this.newsaveBtn.Size = new System.Drawing.Size(104, 23);
-            this.newsaveBtn.TabIndex = 52;
+            this.newsaveBtn.TabIndex = 9;
             this.newsaveBtn.Text = "New/Save";
             this.newsaveBtn.UseVisualStyleBackColor = true;
             this.newsaveBtn.Click += new System.EventHandler(this.newsaveBtn_Click);
@@ -132,7 +132,7 @@
             this.removeBtn.Location = new System.Drawing.Point(279, 141);
             this.removeBtn.Name = "removeBtn";
             this.removeBtn.Size = new System.Drawing.Size(64, 23);
-            this.removeBtn.TabIndex = 51;
+            this.removeBtn.TabIndex = 8;
             this.removeBtn.Text = "Remove";
             this.removeBtn.UseVisualStyleBackColor = true;
             this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
@@ -143,15 +143,15 @@
             this.exporterCombox.Location = new System.Drawing.Point(274, 100);
             this.exporterCombox.Name = "exporterCombox";
             this.exporterCombox.Size = new System.Drawing.Size(121, 21);
-            this.exporterCombox.TabIndex = 49;
+            this.exporterCombox.TabIndex = 7;
             // 
             // datasourceListbox
             // 
             this.datasourceListbox.FormattingEnabled = true;
-            this.datasourceListbox.Location = new System.Drawing.Point(12, 30);
+            this.datasourceListbox.Location = new System.Drawing.Point(10, 30);
             this.datasourceListbox.Name = "datasourceListbox";
             this.datasourceListbox.Size = new System.Drawing.Size(160, 303);
-            this.datasourceListbox.TabIndex = 48;
+            this.datasourceListbox.TabIndex = 1;
             this.datasourceListbox.SelectedIndexChanged += new System.EventHandler(this.datasourceListbox_SelectedIndexChanged);
             // 
             // DataSourceOptionsPage

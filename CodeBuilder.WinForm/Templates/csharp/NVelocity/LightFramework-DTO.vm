@@ -5,7 +5,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace $tdo.Package.$tdo.ModelObject.Name
+namespace ${tdo.Package}.DTO
 {
     using LightFramework.Data;
 
@@ -13,7 +13,7 @@ namespace $tdo.Package.$tdo.ModelObject.Name
     /// $tdo.ModelObject.Comment
     /// </summary>
     [Serializable]
-    public class ${tdo.Name} : BaseDTO
+    public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix}: BaseDTO
     {
 		public static string ENTITYNAME = "$tdo.ModelObject.OriginalName";
 
@@ -41,7 +41,14 @@ namespace $tdo.Package.$tdo.ModelObject.Name
 				#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
 			#end
 
-		private $column.LanguageType _$colName;
+			#set($defaultValue = $column.LanguageDefaultValue)
+			#if($column.Name.Length == 1) 
+				#set($colName = $colName.ToLower())
+			#elseif($column.Name.Length > 1)
+				#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
+			#end
+
+		private $column.LanguageType _$colName $defaultValue;
 
 		#end
 
@@ -64,14 +71,8 @@ namespace $tdo.Package.$tdo.ModelObject.Name
         [Column(Name = "${column.OriginalName}" #if($column.IsAutoIncremented),IsIdentity = true #end)]
         public virtual ${column.LanguageType} ${column.Name}
         {
-            get
-            {
-                return this._$colName;
-            }
-            set
-            {
-                this._$colName = value;
-            }
+            get{return this._$colName;}
+            set{this._$colName = value;}
         }
 
 		#end

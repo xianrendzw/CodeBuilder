@@ -43,7 +43,7 @@
             this.noteTextLbl.Location = new System.Drawing.Point(102, 130);
             this.noteTextLbl.Name = "noteTextLbl";
             this.noteTextLbl.Size = new System.Drawing.Size(329, 40);
-            this.noteTextLbl.TabIndex = 29;
+            this.noteTextLbl.TabIndex = 6;
             this.noteTextLbl.Text = "Changes in the Trace Level will affect the current session. After changing the le" +
     "vel, you should not shut down and restart the Gui.";
             // 
@@ -54,7 +54,7 @@
             this.noteLbl.Location = new System.Drawing.Point(47, 130);
             this.noteLbl.Name = "noteLbl";
             this.noteLbl.Size = new System.Drawing.Size(38, 13);
-            this.noteLbl.TabIndex = 28;
+            this.noteLbl.TabIndex = 5;
             this.noteLbl.Text = "Note:";
             // 
             // logDirectoryLabel
@@ -62,7 +62,7 @@
             this.logDirectoryLabel.Location = new System.Drawing.Point(105, 87);
             this.logDirectoryLabel.Name = "logDirectoryLabel";
             this.logDirectoryLabel.Size = new System.Drawing.Size(300, 13);
-            this.logDirectoryLabel.TabIndex = 27;
+            this.logDirectoryLabel.TabIndex = 4;
             // 
             // logDirectoryLbl
             // 
@@ -70,7 +70,7 @@
             this.logDirectoryLbl.Location = new System.Drawing.Point(19, 87);
             this.logDirectoryLbl.Name = "logDirectoryLbl";
             this.logDirectoryLbl.Size = new System.Drawing.Size(75, 13);
-            this.logDirectoryLbl.TabIndex = 26;
+            this.logDirectoryLbl.TabIndex = 3;
             this.logDirectoryLbl.Text = "Log Directory:";
             // 
             // traceLevelCombox
@@ -87,14 +87,14 @@
             this.traceLevelCombox.Location = new System.Drawing.Point(105, 43);
             this.traceLevelCombox.Name = "traceLevelCombox";
             this.traceLevelCombox.Size = new System.Drawing.Size(62, 21);
-            this.traceLevelCombox.TabIndex = 25;
+            this.traceLevelCombox.TabIndex = 2;
             // 
             // tracLevelLbl
             // 
             this.tracLevelLbl.Location = new System.Drawing.Point(19, 46);
             this.tracLevelLbl.Name = "tracLevelLbl";
             this.tracLevelLbl.Size = new System.Drawing.Size(75, 13);
-            this.tracLevelLbl.TabIndex = 24;
+            this.tracLevelLbl.TabIndex = 1;
             this.tracLevelLbl.Text = "Trace Level:";
             // 
             // internalTraceLbl

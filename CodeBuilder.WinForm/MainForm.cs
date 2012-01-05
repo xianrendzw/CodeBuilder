@@ -392,9 +392,12 @@ namespace CodeBuilder.WinForm
             this.templateListBox.Items.Clear();
             foreach (TemplateElement template in ConfigManager.TemplateSection.Templates)
             {
-                if(template.Language.Equals(language,StringComparison.CurrentCultureIgnoreCase) &&
+                if (template.Language.Equals(language, StringComparison.CurrentCultureIgnoreCase) &&
                     template.Engine.Equals(engine, StringComparison.CurrentCultureIgnoreCase))
-                this.templateListBox.Items.Add(template.Name);
+                {
+                    this.templateListBox.Items.Add(template);
+                    this.templateListBox.DisplayMember = "DisplayName";
+                }
             }
         }
 

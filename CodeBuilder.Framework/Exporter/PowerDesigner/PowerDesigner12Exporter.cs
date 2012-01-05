@@ -11,6 +11,7 @@ namespace CodeBuilder.DataSource.Exporter
     using Exceptions;
     using PhysicalDataModel;
     using TypeMapping;
+    using Util;
 
     public class PowerDesigner12Exporter : BaseExporter,IExporter
     {
@@ -112,7 +113,7 @@ namespace CodeBuilder.DataSource.Exporter
                 column.Length = Int32.Parse(length);
                 column.IsAutoIncremented = identity.Equals("1");
                 column.IsNullable = mandatory.Equals("1");
-                column.DefaultValue = defaultValue;
+                column.DefaultValue = defaultValue.ToEmpty();
                 column.DataType = Regex.Replace(column.DataType, "\\(.*?\\)", "");
                 column.OriginalName = code;
                 columns.Add(id, column);

@@ -2,9 +2,9 @@
 <templateSection>
   <templates>
     <clear/>
-    <template name="LightFramework-DTO-C#" displayName="LightFramework-DTO" language="C#" engine="NVelocity" 
+    <template name="LightFramework-DTO.cs.nv" displayName="LightFramework-DTO" language="C#" engine="NVelocity" 
               fileName="csharp\NVelocity\LightFramework-DTO.vm" prefix="" suffix="DTO" url="" desc="" />
-    <template name="LightFramework-DTO-JAVA" displayName="LightFramework-DTO" language="JAVA" engine="NVelocity" 
+    <template name="LightFramework-DTO.java.nv" displayName="LightFramework-DTO" language="JAVA" engine="NVelocity" 
               fileName="java\NVelocity\LightFramework-DTO.vm" prefix="" suffix="Entity" url="" desc="" />
   </templates>
 </templateSection>

@@ -106,46 +106,55 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
         {
             string language = this.languageCombox.Text.Trim();
             string engine = this.engineCombox.Text.Trim();
-            string name = this.nameTxtbox.Text.Trim();
             string fileName = this.fileNameTextbox.Text.Trim();
+            string displayName = this.displayNameTxtbox.Text.Trim();
+            string prefix = this.prefixTxtBox.Text.Trim();
+            string suffix = this.suffixTxtBox.Text.Trim();
 
-            if (name.Trim().Length == 0 ||
-                fileName.Trim().Length == 0)
+            if (displayName.Length == 0 || fileName.Length == 0)
             {
-                MessageBoxHelper.Display("Name or FileName cann't set empty");
-                return;
+                MessageBoxHelper.Display("DisplayName or FileName cann't set empty"); return;
             }
 
             if (!File.Exists(fileName))
             {
-                MessageBoxHelper.Display("Template file not found");
-                return;
+                MessageBoxHelper.Display("Template file not found"); return;
             }
 
-            if (this.listBoxItems.ContainsKey(name.ToLower()))
+            try
             {
-                string srcPath = this.listBoxItems[name.ToLower()].FileName;
-                this.listBoxItems[name.ToLower()].Name = name;
-                this.listBoxItems[name.ToLower()].Language = language;
-                this.listBoxItems[name.ToLower()].Engine = engine;
-                this.listBoxItems[name.ToLower()].FileName = fileName;
-                if (this.listBoxItems[name.ToLower()].Status != TemplateItemStatus.New)
+                string name = this.GetTemplateUniqueName(language, engine, displayName);
+                if (this.listBoxItems.ContainsKey(name))
                 {
-                    this.listBoxItems[name.ToLower()].Status = TemplateItemStatus.Edit;
-                    if (!srcPath.Equals(fileName, StringComparison.CurrentCultureIgnoreCase))
-                        this.listBoxItems[name.ToLower()].Status = TemplateItemStatus.PathChanged;
-                }
-                return;
-            }
+                    this.listBoxItems[name].Name = name;
+                    this.listBoxItems[name].Language = language;
+                    this.listBoxItems[name].Engine = engine;
+                    this.listBoxItems[name].FileName = fileName;
+                    this.listBoxItems[name].DisplayName = displayName;
+                    this.listBoxItems[name].Prefix = prefix;
+                    this.listBoxItems[name].Suffix = suffix;
+                    if (this.listBoxItems[name].Status != TemplateItemStatus.New)
+                        this.listBoxItems[name].Status = TemplateItemStatus.Edit;
 
-            this.listBoxItems.Add(name.ToLower(), new TemplateItem(name, language, engine, fileName, TemplateItemStatus.New));
-            this.templateListbox.Items.Add(name);
+                    return;
+                }
+
+                this.listBoxItems.Add(name, new TemplateItem(name, language,
+                    engine, fileName, displayName, prefix, suffix, TemplateItemStatus.New));
+                this.templateListbox.Items.Add(name);
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Save/New Template File", ex);
+                MessageBoxHelper.DisplayFailure("Save/New template file failure!");
+            }
         }
 
         private void getItFromOnlineBtn_Click(object sender, EventArgs e)
         {
 
         }
+
         #endregion
 
         #region Helper methods for modifying the UI display
@@ -176,23 +185,30 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
             foreach (TemplateElement template in ConfigManager.TemplateSection.Templates)
             {
-                this.templateListbox.Items.Add(template.Name);
-                string name = template.Name.Trim().ToLower();
+                string name = template.Name.Trim();
                 string fileName = Path.Combine(ConfigManager.TemplatePath, template.FileName);
                 if (!listBoxItems.ContainsKey(name))
-                    listBoxItems.Add(name, new TemplateItem(template.Name, template.Language, template.Engine, fileName));
+                {
+                    this.templateListbox.Items.Add(name);
+                    listBoxItems.Add(name, new TemplateItem(template.Name, template.Language,
+                        template.Engine, fileName, template.DisplayName, template.Prefix, template.Suffix));
+                }
             }
         }
 
         private void SelectedListBoxItem(string selectedItem)
         {
-            string name = selectedItem.Trim().ToLower();
+            if (selectedItem == null) return;
+
+            string name = selectedItem.ToString();
             if (!listBoxItems.ContainsKey(name)) return;
 
             this.languageCombox.Text = listBoxItems[name].Language;
             this.engineCombox.Text = listBoxItems[name].Engine;
-            this.nameTxtbox.Text = listBoxItems[name].Name;
+            this.displayNameTxtbox.Text = listBoxItems[name].DisplayName;
             this.fileNameTextbox.Text = listBoxItems[name].FileName;
+            this.prefixTxtBox.Text = listBoxItems[name].Prefix;
+            this.suffixTxtBox.Text = listBoxItems[name].Suffix;
         }
 
         private void SaveChanged()
@@ -206,42 +222,59 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
                     continue;
                 }
 
-                if (item.Value.Status == TemplateItemStatus.New ||
-                    item.Value.Status == TemplateItemStatus.PathChanged)
-                {
-                    string languageAlais = ConfigManager.SettingsSection.Languages[item.Value.Language].Alias;
-                    item.Value.FileName = this.CopyTemplateFile(item.Value.Name, languageAlais, item.Value.Engine, item.Value.FileName);
-                    item.Value.FileName = item.Value.FileName.Replace(ConfigManager.TemplatePath, "").TrimStart('\\');
-                }
-
+                item.Value.FileName = this.GetTemplateReleatedFileName(item.Value);
                 if (string.IsNullOrEmpty(item.Value.FileName)) continue;
+
                 if (item.Value.Status == TemplateItemStatus.New)
                 {
-                    TemplateElement element = new TemplateElement();
-                    element.Name = item.Value.Name;
-                    element.Language = item.Value.Language;
-                    element.Engine = item.Value.Engine;
-                    element.FileName = item.Value.FileName;
-                    element.Url = item.Value.Url;
-                    element.Description = item.Value.Description;
-                    ConfigManager.TemplateSection.Templates.Add(element);
+                    this.AddTemplate(item.Value);
                     continue;
                 }
-                if (item.Value.Status == TemplateItemStatus.Edit || 
-                    item.Value.Status == TemplateItemStatus.PathChanged)
+
+                if (item.Value.Status == TemplateItemStatus.Edit)
                 {
-                    ConfigManager.TemplateSection.Templates[item.Value.Name].Name = item.Value.Name;
-                    ConfigManager.TemplateSection.Templates[item.Value.Name].Language = item.Value.Language;
-                    ConfigManager.TemplateSection.Templates[item.Value.Name].Engine = item.Value.Engine;
-                    ConfigManager.TemplateSection.Templates[item.Value.Name].FileName = item.Value.FileName;
-                    ConfigManager.TemplateSection.Templates[item.Value.Name].Url = item.Value.Url;
-                    ConfigManager.TemplateSection.Templates[item.Value.Name].Description = item.Value.Description;
+                    this.EditTemplate(item.Value);
                     continue;
                 }
             }
         }
 
-        private string CopyTemplateFile(string templateName,string language,string engine, string srcFileName)
+        private void AddTemplate(TemplateItem item)
+        {
+            TemplateElement element = new TemplateElement();
+            element.Name = item.Name;
+            element.Language = item.Language;
+            element.Engine = item.Engine;
+            element.FileName = item.FileName;
+            element.DisplayName = item.DisplayName;
+            element.Prefix = item.Prefix;
+            element.Suffix = item.Suffix;
+            element.Url = item.Url;
+            element.Description = item.Description;
+            ConfigManager.TemplateSection.Templates.Add(element);
+        }
+
+        private void EditTemplate(TemplateItem item)
+        {
+            ConfigManager.TemplateSection.Templates[item.Name].Name = item.Name;
+            ConfigManager.TemplateSection.Templates[item.Name].Language = item.Language;
+            ConfigManager.TemplateSection.Templates[item.Name].Engine = item.Engine;
+            ConfigManager.TemplateSection.Templates[item.Name].FileName = item.FileName;
+            ConfigManager.TemplateSection.Templates[item.Name].DisplayName = item.DisplayName;
+            ConfigManager.TemplateSection.Templates[item.Name].Prefix = item.Prefix;
+            ConfigManager.TemplateSection.Templates[item.Name].Suffix = item.Suffix;
+            ConfigManager.TemplateSection.Templates[item.Name].Url = item.Url;
+            ConfigManager.TemplateSection.Templates[item.Name].Description = item.Description;
+        }
+
+        private string GetTemplateReleatedFileName(TemplateItem item)
+        {
+            string languageAlais = ConfigManager.SettingsSection.Languages[item.Language].Alias;
+            string fileName = this.CopyTemplateFile(item.DisplayName.ToLower(), languageAlais, item.Engine, item.FileName);
+            return fileName.Replace(ConfigManager.TemplatePath, "").TrimStart('\\', '/');
+        }
+
+        private string CopyTemplateFile(string displayName, string language, string engine, string srcFileName)
         {
             string destFileName = string.Empty;
 
@@ -250,10 +283,13 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
                 if (File.Exists(srcFileName))
                 {
                     string path = Path.Combine(ConfigManager.TemplatePath, language, engine);
-                    if (!Directory.Exists(path))
-                        Directory.CreateDirectory(path);
+                    string enginext = ConfigManager.SettingsSection.TemplateEngines[engine].Extension;
+                    destFileName = Path.Combine(path, displayName + enginext);
 
-                    destFileName = Path.Combine(path, templateName.Trim().ToLower() + ".tpl");
+                    if (destFileName.Equals(srcFileName,
+                        StringComparison.CurrentCultureIgnoreCase)) return srcFileName;
+
+                    if (!Directory.Exists(path)) Directory.CreateDirectory(path);
                     File.Copy(srcFileName, destFileName, true);
                 }
             }
@@ -266,29 +302,42 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             return destFileName;
         }
 
+        private string GetTemplateUniqueName(string language, string engineName, string displayName)
+        {
+            string langext = ConfigManager.SettingsSection.Languages[language].Extension;
+            string enginext = ConfigManager.SettingsSection.TemplateEngines[engineName].Extension;
+            return string.Format("{0}{1}{2}", displayName, langext, enginext).ToLower();
+        }
+
+
         #endregion	
 
         private class TemplateItem
         {
             public TemplateItem() { }
 
-            public TemplateItem(string name, string language, string engine, string fileName)
-                : this(name, language, engine, fileName, TemplateItemStatus.None)
-            {
-            }
-
-            public TemplateItem(string name, string language, string engine, string fileName, TemplateItemStatus status)
-                : this(name, language, engine, fileName, "", "", status)
+            public TemplateItem(string name,string language, string engine, 
+                string fileName,string displayName,string prefix,string suffix)
+                : this(name, language, engine, fileName, displayName,prefix,suffix,TemplateItemStatus.None)
             {
             }
 
             public TemplateItem(string name, string language, string engine,
-                string fileName, string url, string desc, TemplateItemStatus status)
+                string fileName, string displayName, string prefix, string suffix, TemplateItemStatus status)
+                : this(name, language, engine, fileName, displayName, prefix, suffix, "", "", status)
+            {
+            }
+
+            public TemplateItem(string name, string language, string engine,
+                string fileName, string displayName, string prefix, string suffix, string url, string desc, TemplateItemStatus status)
             {
                 this.Name = name;
                 this.Language = language;
                 this.Engine = engine;
                 this.FileName = fileName;
+                this.DisplayName = displayName;
+                this.Prefix = prefix;
+                this.Suffix = suffix;
                 this.Url = url;
                 this.Description = desc;
                 this.Status = status;
@@ -298,6 +347,9 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             public string Language { get; set; }
             public string Engine { get; set; }
             public string FileName { get; set; }
+            public string DisplayName { get; set; }
+            public string Prefix { get; set; }
+            public string Suffix { get; set; }
             public string Url { get; set; }
             public string Description { get; set; }
             public TemplateItemStatus Status { get; set; }
@@ -308,8 +360,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             None,
             Edit,
             New,
-            Deleted,
-            PathChanged
+            Deleted
         }
     }
 }
