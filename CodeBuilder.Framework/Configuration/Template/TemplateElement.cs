@@ -70,5 +70,12 @@ namespace CodeBuilder.Configuration
             get { return base["desc"].ToString(); }
             set { base["desc"] = value; }
         }
+
+        [ConfigurationProperty("parser", IsRequired = false)]
+        public string Parser
+        {
+            get { return base["parser"].ToString(); }
+            set { base["parser"] = value; }
+        }
     }
 }

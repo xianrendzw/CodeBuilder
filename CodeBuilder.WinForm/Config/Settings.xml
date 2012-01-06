@@ -25,7 +25,7 @@
     <pdmDatabase name="mysql50" database="MySQL5" />
   </pdmDatabases>
   <templateEngines>
-    <templateEngine name="NVelocity" ext=".nv" adapter="CodeBuilder.TemplateEngine.NVelocityAdapter,CodeBuilder.Framework" />
+    <templateEngine name="NVelocity" ext=".nv" adapter="CodeBuilder.TemplateEngine.NVelocityEngineAdapter,CodeBuilder.Framework" />
     <templateEngine name="Razor" ext=".raz" adapter="CodeBuilder.TemplateEngine.RazorEngineAdapter,CodeBuilder.Framework" />
     <templateEngine name="Vici" ext=".vic" adapter="CodeBuilder.TemplateEngine.ViciEngineAdapter,CodeBuilder.Framework" />
     <templateEngine name="Ader" ext=".adr" adapter="CodeBuilder.TemplateEngine.AderEngineAdapter,CodeBuilder.Framework" />

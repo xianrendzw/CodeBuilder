@@ -199,6 +199,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Templates\csharp\Ader\LightFramework-DTO.adr" />
+    <None Include="Templates\csharp\Vici\LightFramework-DTO.vic" />
+    <None Include="Templates\csharp\Razor\LightFramework-DTO.raz" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\cb.bmp" />

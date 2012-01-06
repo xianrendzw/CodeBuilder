@@ -43,10 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Ader">
-      <HintPath>..\lib\TemplateEngines\AderV2\Ader.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="mysql.data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\ADO.NET\mysql\v4\mysql.data.dll</HintPath>
@@ -64,6 +60,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\TemplateEngines\Razor2.1\System.Web.Razor.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="TemplateEngine">
+      <HintPath>..\lib\TemplateEngines\AderV2\TemplateEngine.dll</HintPath>
     </Reference>
     <Reference Include="Vici.Core">
       <HintPath>..\lib\TemplateEngines\Vici.Engine.1.0.0\Vici.Core.dll</HintPath>

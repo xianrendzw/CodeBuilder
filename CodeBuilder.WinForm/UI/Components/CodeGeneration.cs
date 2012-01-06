@@ -88,11 +88,11 @@ namespace CodeBuilder.WinForm.UI
             try
             {
                 string adapterTypeName = ConfigManager.SettingsSection.TemplateEngines[parameter.Settings.TemplateEngine].Adapter;
-                ITemplateEngine engine = (ITemplateEngine)Activator.CreateInstance(Type.GetType(adapterTypeName));
+                ITemplateEngine templateEngine = (ITemplateEngine)Activator.CreateInstance(Type.GetType(adapterTypeName));
 
                 foreach (string templateName in parameter.Settings.TemplatesNames)
                 {
-                    this.GenerateCode(parameter, templateName, engine, ref genratedCount, ref errorCount, ref progressCount, asyncOp);
+                    this.GenerateCode(parameter, templateEngine, templateName, ref genratedCount, ref errorCount, ref progressCount, asyncOp);
                 }
             }
             catch (Exception ex)
@@ -103,7 +103,7 @@ namespace CodeBuilder.WinForm.UI
             this.CompletionMethod(null, IsTaskCanceled(asyncOp.UserSuppliedState), asyncOp);
         }
 
-        private void GenerateCode(GenerationParameter parameter, string templateName, ITemplateEngine engine,
+        private void GenerateCode(GenerationParameter parameter, ITemplateEngine templateEngine, string templateName,
             ref int genratedCount, ref int errorCount, ref int progressCount, AsyncOperation asyncOp)
         {
             foreach (string modelId in parameter.GenerationObjects.Keys)
@@ -120,7 +120,7 @@ namespace CodeBuilder.WinForm.UI
                     TemplateData templateData = TemplateDataBuilder.Build(modelObject, parameter.Settings,
                             templateName, parameter.Models[modelId].Database, modelId);
 
-                    if (!engine.Run(templateData)) errorCount++; else genratedCount++;
+                    if (!templateEngine.Run(templateData)) errorCount++; else genratedCount++;
 
                     var args = new GenerationProgressChangedEventArgs(genratedCount,
                             errorCount, templateData.CodeFileName, ++progressCount, asyncOp.UserSuppliedState);

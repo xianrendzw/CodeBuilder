@@ -224,7 +224,7 @@ namespace CodeBuilder.Configuration
             }
             catch (Exception ex)
             {
-                throw new ConfigurationErrorsException(string.Format("ConfigSection {0} load failure", name), ex);
+                throw new ConfigurationErrorsException(string.Format("ConfigurationSection {0} load failure", name), ex);
             }
         }
 

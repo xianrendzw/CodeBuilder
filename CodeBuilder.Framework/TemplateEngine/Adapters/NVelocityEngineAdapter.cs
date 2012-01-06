@@ -11,12 +11,12 @@ namespace CodeBuilder.TemplateEngine
 {
     using Util;
 
-    public class NVelocityAdapter : ITemplateEngine
+    public class NVelocityEngineAdapter : ITemplateEngine
     {
-        private static Logger logger = InternalTrace.GetLogger(typeof(NVelocityAdapter));
+        private static Logger logger = InternalTrace.GetLogger(typeof(NVelocityEngineAdapter));
         private VelocityEngine velocityEngine;
 
-        public NVelocityAdapter()
+        public NVelocityEngineAdapter()
         {
             velocityEngine = new VelocityEngine();
         }

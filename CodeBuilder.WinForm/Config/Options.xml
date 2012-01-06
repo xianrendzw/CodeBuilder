@@ -5,6 +5,6 @@
     <option name="Environment.RecentFiles.IsCheckFileExist" value="false" />
     <option name="CodeGeneration.General.OutputPath" value="" />
     <option name="CodeGeneration.General.TemplatePath" value="" />
-    <option name="Options.InternalTraceLevel" value="Off" />
+    <option name="Options.InternalTraceLevel" value="Info" />
   </options>
 </optionSection>
