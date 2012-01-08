@@ -284,7 +284,7 @@ namespace CodeBuilder.WinForm
             int genObjectCount = generationObjects.Sum(x => x.Value.Count);
             if (genObjectCount == 0)
             {
-                MessageBoxHelper.DisplayInfo("You should checked a treenode");
+                MessageBoxHelper.DisplayInfo("You should checked a tables or views treenode");
                 return;
             }
 

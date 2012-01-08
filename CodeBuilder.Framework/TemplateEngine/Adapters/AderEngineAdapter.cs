@@ -19,9 +19,12 @@ namespace CodeBuilder.TemplateEngine
             {
                 TemplateManager mngr = TemplateManager.FromFile(templateData.TemplateFileName);
                 mngr.SetValue("tdo", templateData);
-                StreamWriter writer = new StreamWriter(templateData.CodeFileName, false, Encoding.GetEncoding(templateData.Encoding));
-                mngr.Process(writer);
-                writer.Close();
+
+                using (StreamWriter StreamWriter = new StreamWriter(templateData.CodeFileName,
+                    false, Encoding.GetEncoding(templateData.Encoding)))
+                {
+                    mngr.Process(StreamWriter);
+                }
                 return true;
             }
             catch (Exception ex)

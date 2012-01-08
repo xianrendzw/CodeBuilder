@@ -22,10 +22,10 @@ namespace CodeBuilder.TemplateEngine
                 IParserContext data = new CSharpContext();
                 data.Set<TemplateData>("tdo", templateData);
 
-                using (var writer = new StreamWriter(templateData.CodeFileName, 
+                using (StreamWriter streamWriter = new StreamWriter(templateData.CodeFileName, 
                     false, Encoding.GetEncoding(templateData.Encoding)))
                 {
-                    writer.Write(template.RenderFile(templateData.TemplateFileName, data));
+                    streamWriter.Write(template.RenderFile(templateData.TemplateFileName, data));
                 }
                 return true;
             }

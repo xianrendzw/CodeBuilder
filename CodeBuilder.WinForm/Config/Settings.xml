@@ -15,11 +15,11 @@
     <exporter name="Oracle8i" type="CodeBuilder.DataSource.Exporter.Oracle8iExporter,CodeBuilder.Framework"/>
   </exporters>
   <databases>
-    <database name="MySQL50" exporter="MySQL5"/>
-    <database name="SqlServer2000" exporter="SqlServer2000"/>
-    <database name="SqlServer2005" exporter="SqlServer2005"/>
-    <database name="SqlServer2008" exporter="SqlServer2008"/>
-    <database name="Oracle8i" exporter="Oracle8i"/>
+    <database name="MySQL5" typeMapping="mysql5"/>
+    <database name="SqlServer2000" typeMapping="sqlserver2000" />
+    <database name="SqlServer2005" typeMapping="sqlserver2005"/>
+    <database name="SqlServer2008" typeMapping="sqlserver2008"/>
+    <database name="Oracle8i" typeMapping="sqlserver2008" />
   </databases>
   <pdmDatabases>
     <pdmDatabase name="mysql50" database="MySQL5" />

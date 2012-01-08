@@ -20,10 +20,10 @@ namespace CodeBuilder.TemplateEngine
         {
             try
             {
-                using (StreamWriter writer = new StreamWriter(templateData.CodeFileName, 
+                using (StreamWriter streamWriter = new StreamWriter(templateData.CodeFileName,
                     false, Encoding.GetEncoding(templateData.Encoding)))
                 {
-                    writer.Write(Razor.Parse(File.ReadAllText(templateData.TemplateFileName), templateData));
+                    streamWriter.Write(Razor.Parse(File.ReadAllText(templateData.TemplateFileName), templateData));
                 }
                 return true;
             }

@@ -117,13 +117,14 @@ namespace CodeBuilder.TemplateEngine
 
             ITypeMapper typeMapper = null;
             if (!isDynamicLanguage) typeMapper = TypeMapperFactory.Creator();
+            string typeMappingDatabase = ConfigManager.SettingsSection.Databases[database].TypeMapping;
 
             foreach (var column in modelObject.Columns.Values)
             {
                 if (isStandardizeName) column.Name = column.Name.StandardizeName();
                 if (typeMapper != null)
                 {
-                    LanguageType langType = typeMapper.GetLanguageType(database, languageAlias, column.DataType);
+                    LanguageType langType = typeMapper.GetLanguageType(typeMappingDatabase, languageAlias, column.DataType);
                     if (langType == null) continue;
                     column.LanguageType = langType.TypeName;
                     column.LanguageDefaultValue = string.IsNullOrEmpty(column.DefaultValue) ? langType.DefaultValue : column.DefaultValue;

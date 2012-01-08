@@ -34,9 +34,11 @@ namespace CodeBuilder.TemplateEngine
                 velocityEngine.Init();
 
                 Template template = velocityEngine.GetTemplate(templateFile);
-                StreamWriter writer = new StreamWriter(templateData.CodeFileName, false, Encoding.GetEncoding(templateData.Encoding));
-                template.Merge(context, writer);
-                writer.Close();
+                using (StreamWriter StreamWriter = new StreamWriter(templateData.CodeFileName,
+                    false, Encoding.GetEncoding(templateData.Encoding)))
+                {
+                    template.Merge(context, StreamWriter);
+                }
                 return true;
             }
             catch (Exception ex)

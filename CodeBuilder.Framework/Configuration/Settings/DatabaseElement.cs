@@ -15,11 +15,11 @@ namespace CodeBuilder.Configuration
             set { base["name"] = value; }
         }
 
-        [ConfigurationProperty("exporter", IsRequired = true)]
-        public String Exporter
+        [ConfigurationProperty("typeMapping", IsRequired = true)]
+        public String TypeMapping
         {
-            get { return base["exporter"].ToString(); }
-            set { base["exporter"] = value; }
+            get { return base["typeMapping"].ToString(); }
+            set { base["typeMapping"] = value; }
         }
     }
 }
