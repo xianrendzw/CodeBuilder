@@ -94,45 +94,40 @@ namespace CodeBuilder.DataSource.Exporter
 
         private Columns GetColumns(string tableOrViewName, string originalDatabase, string connectionString)
         {
-            Columns columns = new Columns(50);
-
             StringBuilder sqlBuilder = new StringBuilder();
             sqlBuilder.Append("SELECT TABLE_SCHEMA,TABLE_NAME,COLUMN_NAME,DATA_TYPE,COLUMN_KEY,COLUMN_DEFAULT, ");
             sqlBuilder.Append("IS_NULLABLE,CHARACTER_MAXIMUM_LENGTH,EXTRA,COLUMN_COMMENT ");
             sqlBuilder.Append("FROM COLUMNS ");
-            sqlBuilder.AppendFormat("WHERE TABLE_SCHEMA = '{0}' AND TABLE_NAME ='{1}' AND CHARACTER_LENGTH(COLUMN_KEY)>0 ", originalDatabase, tableOrViewName);
+            sqlBuilder.AppendFormat("WHERE TABLE_SCHEMA = '{0}' AND TABLE_NAME ='{1}' ", originalDatabase, tableOrViewName);
 
-            return this.GetColumns(connectionString, columns, sqlBuilder.ToString());
+            return this.GetColumns(connectionString, sqlBuilder.ToString());
         }
 
         private Columns GetKeys(string tableName, string originalDatabase, string connectionString)
         {
-            Columns columns = new Columns(50);
-
             StringBuilder sqlBuilder = new StringBuilder();
             sqlBuilder.Append("SELECT TABLE_SCHEMA,TABLE_NAME,COLUMN_NAME,DATA_TYPE,COLUMN_KEY,COLUMN_DEFAULT, ");
             sqlBuilder.Append("IS_NULLABLE,CHARACTER_MAXIMUM_LENGTH,EXTRA,COLUMN_COMMENT ");
             sqlBuilder.Append("FROM COLUMNS ");
-            sqlBuilder.AppendFormat("WHERE TABLE_SCHEMA = '{0}' AND TABLE_NAME ='{1}' ", originalDatabase, tableName);
+            sqlBuilder.AppendFormat("WHERE TABLE_SCHEMA = '{0}' AND TABLE_NAME ='{1}' AND CHARACTER_LENGTH(COLUMN_KEY)>0 ", originalDatabase, tableName);
 
-            return GetColumns(connectionString, columns, sqlBuilder.ToString());
+            return GetColumns(connectionString, sqlBuilder.ToString());
         }
 
         private Columns GetPrimaryKeys(string tableName, string originalDatabase, string connectionString)
         {
-            Columns columns = new Columns(50);
-
             StringBuilder sqlBuilder = new StringBuilder();
             sqlBuilder.Append("SELECT TABLE_SCHEMA,TABLE_NAME,COLUMN_NAME,DATA_TYPE,COLUMN_KEY,COLUMN_DEFAULT, ");
             sqlBuilder.Append("IS_NULLABLE,CHARACTER_MAXIMUM_LENGTH,EXTRA,COLUMN_COMMENT ");
             sqlBuilder.Append("FROM COLUMNS ");
             sqlBuilder.AppendFormat("WHERE TABLE_SCHEMA = '{0}' AND TABLE_NAME ='{1}' AND COLUMN_KEY='PRI'", originalDatabase, tableName);
 
-            return this.GetColumns(connectionString, columns, sqlBuilder.ToString());
+            return this.GetColumns(connectionString, sqlBuilder.ToString());
         }
 
-        private Columns GetColumns(string connectionString, Columns columns, string sqlCmd)
+        private Columns GetColumns(string connectionString, string sqlCmd)
         {
+            Columns columns = new Columns(50);
             MySqlDataReader dr = MySqlHelper.ExecuteReader(connectionString, sqlCmd.ToString());
             while (dr.Read())
             {
