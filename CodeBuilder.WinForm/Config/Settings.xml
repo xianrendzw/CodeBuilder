@@ -23,6 +23,9 @@
   </databases>
   <pdmDatabases>
     <pdmDatabase name="mysql50" database="MySQL5" />
+    <pdmDatabase name="mssqlsrv2000" database="SqlServer2000" />
+    <pdmDatabase name="mssqlsrv2005" database="SqlServer2005" />
+    <pdmDatabase name="mssqlsrv2008" database="SqlServer2008" />
   </pdmDatabases>
   <templateEngines>
     <templateEngine name="NVelocity" ext=".nv" adapter="CodeBuilder.TemplateEngine.NVelocityEngineAdapter,CodeBuilder.Framework" />

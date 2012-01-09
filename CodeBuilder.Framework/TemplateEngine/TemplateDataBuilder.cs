@@ -47,7 +47,7 @@ namespace CodeBuilder.TemplateEngine
 
             if (modelObject is View)
             {
-                Table view = modelObject as Table;
+                View view = modelObject as View;
                 return CreateTemplateData(view, settings, templateName, database, modelId);
             }
 

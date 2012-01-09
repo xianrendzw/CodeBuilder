@@ -120,10 +120,11 @@ namespace CodeBuilder.WinForm.UI
                     TemplateData templateData = TemplateDataBuilder.Build(modelObject, parameter.Settings,
                             templateName, parameter.Models[modelId].Database, modelId);
 
-                    if (!templateEngine.Run(templateData)) errorCount++; else genratedCount++;
+                    if (templateData == null || !templateEngine.Run(templateData)) errorCount++; else genratedCount++;
+                    string currentCodeFileName = templateData == null ? string.Empty : templateData.CodeFileName;
 
                     var args = new GenerationProgressChangedEventArgs(genratedCount,
-                            errorCount, templateData.CodeFileName, ++progressCount, asyncOp.UserSuppliedState);
+                            errorCount, currentCodeFileName, ++progressCount, asyncOp.UserSuppliedState);
                     asyncOp.Post(this.onProgressReportDelegate, args);
                 }
             }
