@@ -218,6 +218,8 @@ namespace CodeBuilder.WinForm
             ModelManager.Clear();
             this.treeView.Nodes.Clear();
             this.clearCtxMenuItem.Enabled = false;
+            this.statusBarDatabase.Text = string.Empty;
+            this.statusBarReady.Text = "Ready";
         }
         #endregion
 
