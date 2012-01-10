@@ -1,4 +1,4 @@
-﻿CodeBuilder is a lightweight base Database Physical Data Model's C#/java/ruby code generation tool.support microsoft .net framework 2.0,3.0,4.0 or mono.net runtime enviroments
+﻿CodeBuilder is a lightweight base Database Physical Data Model's C#/java/ruby code generation tool.support microsoft .net framework 4.0 or mono.net2.10 runtime enviroments
 
 1.Features
 

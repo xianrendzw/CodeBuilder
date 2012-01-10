@@ -8,7 +8,7 @@ namespace CodeBuilder.Configuration
 {
     public sealed class TypeElement : ConfigurationElement
     {
-        [ConfigurationProperty("name", IsRequired = true)]
+        [ConfigurationProperty("name", IsRequired = true, IsKey = true)]
         public String Name
         {
             get { return base["name"].ToString(); }

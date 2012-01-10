@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Data;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 
 namespace CodeBuilder.DataSource.Exporter
 {
-    using Configuration;
-    using Exceptions;
     using PhysicalDataModel;
     using Util;
 
@@ -23,7 +17,7 @@ namespace CodeBuilder.DataSource.Exporter
                 throw new ArgumentNullException("connectionString", "Argument is null");
 
             MySqlConnectionStringBuilder connBuilder = new MySqlConnectionStringBuilder(connectionString);
-            string originalDatabase = connBuilder.Database;
+            string originalDbName = connBuilder.Database;
             connBuilder.Database = "information_schema";
 
             Model model = new Model();
@@ -31,8 +25,8 @@ namespace CodeBuilder.DataSource.Exporter
 
             try
             {
-                model.Tables = this.GetTables(originalDatabase,connBuilder.ConnectionString);
-                model.Views = this.GetViews(originalDatabase,connBuilder.ConnectionString);
+                model.Tables = this.GetTables(originalDbName,connBuilder.ConnectionString);
+                model.Views = this.GetViews(originalDbName,connBuilder.ConnectionString);
                 return model;
             }
             catch (Exception ex)
@@ -45,11 +39,11 @@ namespace CodeBuilder.DataSource.Exporter
 
         #region Private Members
 
-        private Tables GetTables(string originalDatabase,string connectionString)
+        private Tables GetTables(string originalDbName,string connectionString)
         {
             Tables tables = new Tables(10);
 
-            string sqlCmd = string.Format("SELECT TABLE_NAME, TABLE_COMMENT FROM TABLES WHERE TABLE_SCHEMA = '{0}'", originalDatabase);
+            string sqlCmd = string.Format("SELECT TABLE_NAME, TABLE_COMMENT FROM TABLES WHERE TABLE_SCHEMA = '{0}'", originalDbName);
             MySqlDataReader dr = MySqlHelper.ExecuteReader(connectionString, sqlCmd);
             while (dr.Read())
             {
@@ -60,8 +54,8 @@ namespace CodeBuilder.DataSource.Exporter
 
                 Table table = new Table(id, name, code, comment);
                 table.OriginalName = code;
-                table.Columns = this.GetColumns(name, originalDatabase, connectionString);
-                table.PrimaryKeys = this.GetPrimaryKeys(name, originalDatabase, connectionString);
+                table.Columns = this.GetColumns(name, originalDbName, connectionString);
+                table.PrimaryKeys = this.GetPrimaryKeys(name, originalDbName, connectionString);
                 tables.Add(id, table);
             }
             dr.Close();
@@ -69,11 +63,11 @@ namespace CodeBuilder.DataSource.Exporter
             return tables;
         }
 
-        private Views GetViews(string originalDatabase, string connectionString)
+        private Views GetViews(string originalDbName, string connectionString)
         {
             Views views = new Views(10);
 
-            string sqlCmd = string.Format("SELECT TABLE_NAME FROM VIEWS WHERE TABLE_SCHEMA = '{0}'", originalDatabase);
+            string sqlCmd = string.Format("SELECT TABLE_NAME FROM VIEWS WHERE TABLE_SCHEMA = '{0}'", originalDbName);
             MySqlDataReader dr = MySqlHelper.ExecuteReader(connectionString, sqlCmd);
             while (dr.Read())
             {
@@ -84,7 +78,7 @@ namespace CodeBuilder.DataSource.Exporter
 
                 View view = new View(id, name, code, comment);
                 view.OriginalName = code;
-                view.Columns = this.GetColumns(name, originalDatabase, connectionString);
+                view.Columns = this.GetColumns(name, originalDbName, connectionString);
                 views.Add(id, view);
             }
             dr.Close();
@@ -92,35 +86,35 @@ namespace CodeBuilder.DataSource.Exporter
             return views;
         }
 
-        private Columns GetColumns(string tableOrViewName, string originalDatabase, string connectionString)
+        private Columns GetColumns(string tableOrViewName, string originalDbName, string connectionString)
         {
             StringBuilder sqlBuilder = new StringBuilder();
             sqlBuilder.Append("SELECT TABLE_SCHEMA,TABLE_NAME,COLUMN_NAME,DATA_TYPE,COLUMN_KEY,COLUMN_DEFAULT, ");
             sqlBuilder.Append("IS_NULLABLE,CHARACTER_MAXIMUM_LENGTH,EXTRA,COLUMN_COMMENT ");
             sqlBuilder.Append("FROM COLUMNS ");
-            sqlBuilder.AppendFormat("WHERE TABLE_SCHEMA = '{0}' AND TABLE_NAME ='{1}' ", originalDatabase, tableOrViewName);
+            sqlBuilder.AppendFormat("WHERE TABLE_SCHEMA = '{0}' AND TABLE_NAME ='{1}' ", originalDbName, tableOrViewName);
 
             return this.GetColumns(connectionString, sqlBuilder.ToString());
         }
 
-        private Columns GetKeys(string tableName, string originalDatabase, string connectionString)
+        private Columns GetKeys(string tableName, string originalDbName, string connectionString)
         {
             StringBuilder sqlBuilder = new StringBuilder();
             sqlBuilder.Append("SELECT TABLE_SCHEMA,TABLE_NAME,COLUMN_NAME,DATA_TYPE,COLUMN_KEY,COLUMN_DEFAULT, ");
             sqlBuilder.Append("IS_NULLABLE,CHARACTER_MAXIMUM_LENGTH,EXTRA,COLUMN_COMMENT ");
             sqlBuilder.Append("FROM COLUMNS ");
-            sqlBuilder.AppendFormat("WHERE TABLE_SCHEMA = '{0}' AND TABLE_NAME ='{1}' AND CHARACTER_LENGTH(COLUMN_KEY)>0 ", originalDatabase, tableName);
+            sqlBuilder.AppendFormat("WHERE TABLE_SCHEMA = '{0}' AND TABLE_NAME ='{1}' AND CHARACTER_LENGTH(COLUMN_KEY)>0 ", originalDbName, tableName);
 
             return GetColumns(connectionString, sqlBuilder.ToString());
         }
 
-        private Columns GetPrimaryKeys(string tableName, string originalDatabase, string connectionString)
+        private Columns GetPrimaryKeys(string tableName, string originalDbName, string connectionString)
         {
             StringBuilder sqlBuilder = new StringBuilder();
             sqlBuilder.Append("SELECT TABLE_SCHEMA,TABLE_NAME,COLUMN_NAME,DATA_TYPE,COLUMN_KEY,COLUMN_DEFAULT, ");
             sqlBuilder.Append("IS_NULLABLE,CHARACTER_MAXIMUM_LENGTH,EXTRA,COLUMN_COMMENT ");
             sqlBuilder.Append("FROM COLUMNS ");
-            sqlBuilder.AppendFormat("WHERE TABLE_SCHEMA = '{0}' AND TABLE_NAME ='{1}' AND COLUMN_KEY='PRI'", originalDatabase, tableName);
+            sqlBuilder.AppendFormat("WHERE TABLE_SCHEMA = '{0}' AND TABLE_NAME ='{1}' AND COLUMN_KEY='PRI'", originalDbName, tableName);
 
             return this.GetColumns(connectionString, sqlBuilder.ToString());
         }

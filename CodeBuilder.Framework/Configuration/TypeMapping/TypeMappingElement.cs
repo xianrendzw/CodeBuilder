@@ -8,7 +8,15 @@ namespace CodeBuilder.Configuration
 {
     public sealed class TypeMappingElement : ConfigurationElement
     {
-        [ConfigurationProperty("name", IsRequired = true)]
+        private static ConfigurationProperty _property;
+        private static ConfigurationPropertyCollection _properties;
+
+        public TypeMappingElement()
+        {
+            EnsureStaticPropertyBag();
+        }
+
+        [ConfigurationProperty("name", IsRequired = true,IsKey=true)]
         public String Name
         {
             get { return base["name"].ToString(); }
@@ -29,15 +37,26 @@ namespace CodeBuilder.Configuration
             set { base["language"] = value; }
         }
 
-        [ConfigurationProperty("types", IsRequired = true)]
+        [ConfigurationProperty("", IsRequired = true, IsDefaultCollection = true)]
         public TypeElementCollection Types
         {
-            get { return (TypeElementCollection)base["types"]; }
+            get { return (TypeElementCollection)base[_property]; }
         }
 
         protected override void PostDeserialize()
         {
             base.PostDeserialize();
+        }
+
+        private static ConfigurationPropertyCollection EnsureStaticPropertyBag()
+        {
+            if (_properties == null)
+            {
+                _property = new ConfigurationProperty(null, typeof(TypeElementCollection), null, ConfigurationPropertyOptions.IsDefaultCollection);
+                _properties = new ConfigurationPropertyCollection();
+                _properties.Add(_property);
+            }
+            return _properties;
         }
     }
 }
