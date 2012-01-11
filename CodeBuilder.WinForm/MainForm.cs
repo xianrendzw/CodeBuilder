@@ -351,7 +351,7 @@ namespace CodeBuilder.WinForm
             try
             {
                 string folder = Path.GetDirectoryName(this.currentGenFileNameLbl.Text);
-                System.Diagnostics.Process.Start(folder);
+                System.Diagnostics.Process.Start("explorer.exe", folder);
             }
             catch (Exception ex)
             {
