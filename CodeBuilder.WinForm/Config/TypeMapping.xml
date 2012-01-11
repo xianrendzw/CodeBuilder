@@ -117,5 +117,55 @@
       <add name="varbinary" langtype="Byte[]" default="" />
       <add name="varchar" langtype="String" default="" />
     </typeMapping>
+    <typeMapping name="oracle-csharp" database="oracle" language="C#">
+      <add name="default" langtype="String" default="" />
+      <add name="bfile" langtype="Byte[]" default="" />
+      <add name="blob" langtype="Byte[]" default="" />
+      <add name="char" langtype="String" default="" />
+      <add name="clob" langtype="String" default="" />
+      <add name="date" langtype="DateTime" default="" />
+      <add name="float" langtype="Decimal" default="" />
+      <add name="integer" langtype="Decimal" default="" />
+      <add name="interval year to month" langtype="Int32" default="" />
+      <add name="interval year to second" langtype="TimeSpan" default="" />
+      <add name="long" langtype="String" default="" />
+      <add name="long raw" langtype="Byte[]" default="" />
+      <add name="nchar" langtype="String" default="" />
+      <add name="nclob" langtype="String" default="" />
+      <add name="number" langtype="Decimal" default="" />
+      <add name="nvarchar2" langtype="String" default="" />
+      <add name="raw" langtype="Byte[]" default="" />
+      <add name="rowid" langtype="String" default="" />
+      <add name="timestamp" langtype="DateTime" default="" />
+      <add name="timestamp with local time zone" langtype="DateTime" default="" />
+      <add name="timestamp with time zone" langtype="DateTime" default="" />
+      <add name="unsigned integer" langtype="Decimal" default="" />
+      <add name="varchar2" langtype="String" default="" />
+    </typeMapping>
+    <typeMapping name="oracle-java" database="oracle" language="java">
+      <add name="default" langtype="String" default="" />
+      <add name="bfile" langtype="Byte[]" default="" />
+      <add name="blob" langtype="Byte[]" default="" />
+      <add name="char" langtype="String" default="" />
+      <add name="clob" langtype="String" default="" />
+      <add name="date" langtype="Date" default="" />
+      <add name="float" langtype="Double" default="" />
+      <add name="integer" langtype="Double" default="" />
+      <add name="interval year to month" langtype="Integer" default="" />
+      <add name="interval year to second" langtype="Date" default="" />
+      <add name="long" langtype="String" default="" />
+      <add name="long raw" langtype="Byte[]" default="" />
+      <add name="nchar" langtype="String" default="" />
+      <add name="nclob" langtype="String" default="" />
+      <add name="number" langtype="Double" default="" />
+      <add name="nvarchar2" langtype="String" default="" />
+      <add name="raw" langtype="Byte[]" default="" />
+      <add name="rowid" langtype="String" default="" />
+      <add name="timestamp" langtype="Date" default="" />
+      <add name="timestamp with local time zone" langtype="Date" default="" />
+      <add name="timestamp with time zone" langtype="Date" default="" />
+      <add name="unsigned integer" langtype="Double" default="" />
+      <add name="varchar2" langtype="String" default="" />
+    </typeMapping>
   </typeMappings>
 </typeMappingSection>

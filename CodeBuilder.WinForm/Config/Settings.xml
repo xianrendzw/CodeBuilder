@@ -19,13 +19,20 @@
     <database name="SqlServer2000" typeMapping="sqlserver2000" />
     <database name="SqlServer2005" typeMapping="sqlserver2005"/>
     <database name="SqlServer2008" typeMapping="sqlserver2008"/>
-    <database name="Oracle8i" typeMapping="sqlserver2008" />
+    <database name="Oracle8i" typeMapping="oracle" />
+    <database name="Oracle9i" typeMapping="oracle" />
+    <database name="Oracle10g" typeMapping="oracle" />
+    <database name="Oracle11g" typeMapping="oracle" />
   </databases>
   <pdmDatabases>
     <pdmDatabase name="mysql50" database="MySQL5" />
     <pdmDatabase name="mssqlsrv2000" database="SqlServer2000" />
     <pdmDatabase name="mssqlsrv2005" database="SqlServer2005" />
     <pdmDatabase name="mssqlsrv2008" database="SqlServer2008" />
+    <pdmDatabase name="oracle8i" database="Oracle8i" />
+    <pdmDatabase name="oracle9i" database="Oracle9i" />
+    <pdmDatabase name="oracle10g" database="Oracle10g" />
+    <pdmDatabase name="oracle11g" database="Oracle11g" />
   </pdmDatabases>
   <templateEngines>
     <templateEngine name="NVelocity" ext=".nv" adapter="CodeBuilder.TemplateEngine.NVelocityEngineAdapter,CodeBuilder.Framework" />

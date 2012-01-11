@@ -103,6 +103,7 @@
             this.saveSettingsBtn = new System.Windows.Forms.Button();
             this.generateBtn = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.codeGeneration = new CodeBuilder.WinForm.UI.CodeGeneration(this.components);
             this.mainMenuStrip.SuspendLayout();
             this.mainStatusStrip.SuspendLayout();
@@ -482,10 +483,12 @@
             // 
             // currentGenFileNameLbl
             // 
+            this.currentGenFileNameLbl.Cursor = System.Windows.Forms.Cursors.Default;
             this.currentGenFileNameLbl.Location = new System.Drawing.Point(129, 85);
             this.currentGenFileNameLbl.Name = "currentGenFileNameLbl";
             this.currentGenFileNameLbl.Size = new System.Drawing.Size(398, 37);
             this.currentGenFileNameLbl.TabIndex = 2;
+            this.currentGenFileNameLbl.Click += new System.EventHandler(this.currentGenFileNameLbl_Click);
             // 
             // currentGenFileLbl
             // 
@@ -890,6 +893,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpFeedbackMenuItem;
         private System.Windows.Forms.ListBox templateListBox;
         private UI.CodeGeneration codeGeneration;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
 

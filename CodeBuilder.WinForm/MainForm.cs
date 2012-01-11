@@ -316,6 +316,7 @@ namespace CodeBuilder.WinForm
             this.generateBtn.Enabled = true;
             this.completedLbl.Visible = true;
             this.statusBarReady.Text = this.completedLbl.Text;
+            this.SetGenFileNameLabel();
         }
 
         private void codeGeneration_ProgressChanged(GenerationProgressChangedEventArgs args)
@@ -341,6 +342,22 @@ namespace CodeBuilder.WinForm
         private void templateEngineCombox_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.ChangeTemplateListBox(this.languageCombx.Text, this.templateEngineCombox.Text);
+        }
+
+        private void currentGenFileNameLbl_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.currentGenFileNameLbl.Text)) return;
+
+            try
+            {
+                string folder = Path.GetDirectoryName(this.currentGenFileNameLbl.Text);
+                System.Diagnostics.Process.Start(folder);
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Open Code Generation Folder", ex);
+                MessageBoxHelper.DisplayInfo("Open Code Generation Folder Failure!");
+            }
         }
 
         #endregion
@@ -378,6 +395,15 @@ namespace CodeBuilder.WinForm
             this.statusBarDatabase.Text = this.databaseNameLbl.Text;
             this.statusBarEncoding.Text = this.codeFileEncodingCombox.Text;
             this.statusBarLanguage.Text = this.languageCombx.Text;
+        }
+
+        private void SetGenFileNameLabel()
+        {
+            if (!string.IsNullOrEmpty(this.currentGenFileNameLbl.Text))
+            {
+                this.currentGenFileNameLbl.Cursor = System.Windows.Forms.Cursors.Hand;
+                this.toolTip.SetToolTip(this.currentGenFileNameLbl, "Open Code Generation Folder");
+            }
         }
 
         private void AddDataSourceMenuItems(ToolStripMenuItem parent)
