@@ -1,0 +1,182 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+</head>
+<body style="" lang="EN-US" link="black" vlink="purple">
+<div class="Section1">
+<h1>Oracle Data Provider for&nbsp; .NET<br>
+</h1>
+<div class="MsoNormal" style="text-align: center;" align="center">
+<hr align="center" size="1" width="100%"></div>
+<p>
+<big style="font-weight: bold;"><big><big>Installation Guide
+and Release Notes</big></big></big></p>
+<p><b><span style="font-size: 13pt;">Release 11.2.0.3.0 Production<br>
+</span></b></p>
+<h4>May 2011<br>
+</h4>
+<h4>Copyright (c) Oracle Corporation 2011</h4>
+<p>This document provides information that supplements the Oracle Data Provider for .NET
+(ODP.NET) Production documentation.</p>
+    <p class="MsoNormal">&nbsp;
+</p>
+</ol>
+<big style="font-weight: bold;"></big>
+<h2><a name="Documentation"></a>INSTALLATION AND SETUP NOTES</h2>
+    <ol>
+        <li>&nbsp;Product Dependencies
+            <br />
+            <br />
+            ODP.NET requires Oracle Client 11.2.0.3.0 or Oracle Instant Client 11.2.0.3.0. 
+            When installing a new ODP.NET 11.2.0.3.0 instance, Oracle Universal Installer 
+            (OUI) will automatically install Oracle Instant Client 11.2.0.3.0.<br /><br /></li>
+        <li><b>&nbsp;</b>Policy DLLs
+            <br />
+            <br />
+            Note that the installation of ODP.NET will place ODP.NET policy DLLS into the 
+            GAC so that existing applications can start using the newly installed ODP.NET 
+            version immediately. However, if this is not desired, be sure to remove the 
+            policy DLLs from the GAC.<br /><br /> </li>
+        <li>&nbsp;Registry Settings
+            <br />
+            <br />
+            ODP.NET&#39;s registry settings are located under HKLM\Software\Oracle\ODP.NET\<version>. 
+            Each version of ODP.NET uses its own set of settings under the version key. When 
+            a new version of ODP.NET is installed, a new version key is created with a set 
+            of default settings. The new key will not inherit any default or non-default 
+            settings from the previous version of ODP.NET. Thus, reconfiguration is 
+            necessary after the installation if default setting are not to be used.<br /><br /></li>
+        <li>Home Selector
+            <br />
+            <br />
+            When the home selector is used to activate a specific Oracle Home, ODP.NET in 
+            that Oracle Home will be reconfigured. However, policy DLLs for the newer 
+            version of ODP.NET will not be removed from the GAC. Therefore, for the 
+            application to use the version of ODP.NET that is installed in the selected 
+            Oracle Home, some policy DLLs may need to be removed from the GAC or need to be 
+            disabled via configuration files.<br>
+            <span style="font-family: &quot;times new roman&quot;;">
+            <span
+ style="font-weight: bold; text-decoration: underline;"></span>
+            <br></span></li>
+    </ol>
+    <h2><a name="Known_Issues"></a>BUG FIXES IN ODAC 11.2.0.3.0</h2>
+    <p>The ODP.NET binaries in this ODAC 11.2.0.3.0 release are different from those 
+        shipped in the RDBMS 11.2.0.3.0 release. This release includes the following bug 
+        fixes in addition to those fixes in ODP.NET that was shipped with the RDBMS 
+        11.2.0.3.0 release: </p>
+    <ol>
+        <li>LINQ/ESQL QUERY RETURNS RESULT WITH INCORRECT ROW ORDERING [Bug 10375435]
+        <br /><br /></li>
+        <li>ORA-00932 IS ENCOUNTERED WHEN EXECUTING STRING.EQUAL() WITH EMPTY STRING [Bug 
+            10357727]<br /><br /> </li>
+        <li>CONTEXT.REFRESH() CAUSES INVALIDCASTEXCEPTION WHEN USING GUIDS AS PRIMARY KEY 
+            [Bug 13420516]<br /><br /> </li>
+        <li>ORA-00932 ENCOUNTERED WHEN USE ENDSWITH FUNCTION ON CLOB/NCLOB COLUMN [Bug 
+            13357509] <br /><br /></li>
+        <li>USING CUSTOM MAPPING CAUSES COMPILATION ERRORS [Bug 12597906] </li>
+    </ol>
+    <p>
+        NOTE: The same bug 
+            fixes listed above will be included in the ODP.NET binaries that are shipped 
+            with RDBMS 11.2.0.3.0 PATCH 1.</p>
+    <p>
+        <span style="font-family: &quot;times new roman&quot;;">
+        <span
+ style="font-weight: bold;">
+    </p>
+    <h2>ENTITY FRAMEWORK RELATED TIPS, LIMITATIONS AND KNOWN ISSUES</h2>
+    </span>
+    <ol>
+        <li>Overloaded stored procedures are not supported. Thus, the Entity Data Model 
+            (EDM) Wizard will only show one of the overloaded stored procedures.<br /><br /> </li>
+        <li>Stored procedure name with a &quot;.&quot; in its name is not supported. Thus, 
+            stored proc with &quot;.&quot; will not be visible in the EDM Wizard.<br /><br /> </li>
+        <li>Interval Day to Second and Interval Year to Month column values cannot be 
+            compared to literals in a WHERE clause of a LINQ to Entities or an Entity SQL 
+            query.<br /><br /> </li>
+        <li>LINQ to Entities and Entity SQL (ESQL) queries that require the usage of SQL 
+            APPLY in the generated queries will cause SQL syntax error(s) if the Oracle 
+            Database being used does not support APPLY. In such cases, the inner exception 
+            message will indicate that APPLY is not supported by the database.<br /><br /> </li>
+        <li>ODP.NET does not currently support wildcards that accept character ranges for 
+            the LIKE operator in Entity SQL (i.e. [] and [^]). [Bug 11683837]<br /><br /> </li>
+        <li>If a stored procedure or function is mapped to a &quot;collection of none&quot; in 
+            Function Import, then the .NET stub method, which returns an int, will always 
+            return 0. <br /><br /></li>
+        <li>ODP.NET 11.2.0.3 does not support Code First nor the DbContext APIs.<br /><br /> </li>
+        <li>Executing LINQ or ESQL query against tables with one or more column names 
+            that are close to or equal to the maximum length of identifiers (30 bytes) may 
+            encounter &quot;ORA-00972: identifier is too long&quot; error, due to the usage of alias 
+            identifier(s) in the generated SQL that exceed the limit.<br /><br /> </li>
+        <li>An &quot;ORA-00932: inconsistent datatypes: expected - got NCLOB&quot; error will be 
+            encountered when trying to bind a string that is equal to or greater than 2,000 
+            characters in length to an XMLType column or parameter. [Bug 12630958]<br /><br /> </li>
+        <li>An &quot;ORA-00932 : inconsistent datatypes&quot; error can be encountered if a string of 
+            2,000 or more characters, or a byte array with 4,000 bytes or more in length, is 
+            bound in a WHERE clause of a LINQ/ESQL query. The same error can be encountered 
+            if an entity property that maps to a BLOB, CLOB, NCLOB, LONG, LONG RAW, XMLTYPE 
+            column is used in a WHERE clause of a LINQ/ESQL query.<br /><br /> </li>
+        <li>The provider manifest token is required to be two most-significant digits 
+            of an Oracle database version number. For example, &quot;11.2&quot; would be the provider 
+            manifest token for the Oracle 11gR2 database. The valid provider manifest token 
+            will be properly generated in the model if ODP.NET 11.2.0.3.0 or higher is used.<br /><br />
+        </li>
+        <li>An &quot;Arithmetic operation resulted in an overflow&quot; exception can be 
+            encountered when fetching numeric values that have more precision than what the 
+            .NET type can support. In such cases, the LINQ or ESQL query can &quot;cast&quot; the the 
+            value to a particular .NET or EDM type to limit the precision and avoid the 
+            exception. This approach can be useful if the LINQ/ESQL query has 
+            computed/calculated columns which will store up to 38 precision in Oracle, which 
+            cannot be represented as .NET decimal unless the value is casted. <br /><br /></li>
+        <li>Oracle Database treats NULLs and empty strings the same. When executing string 
+            related operations on NULLS or empty strings, the result will be NULL. When 
+            comparing strings with NULLs, use the equals operator (i.e. &quot;x == NULL&quot;) in the 
+            LINQ query, which will in turn use the &quot;IS NULL&quot; condition in the generated SQL 
+            that will appropriately detect NULL-ness.<br /><br /></li>
+        <li>When using Model First (&quot;Generate Database from Model...&quot; in Visual Studio), an 
+            error will be encountered when generating a SQL if string Entity property which 
+            has Fixed Length set to true, Unicode set to false, and Max Length set to Max or 
+            (None). To work around this problem, use 2,000 for the Max Length.<br /><br /></li>
+        <li>If an exception message of &quot;The store provider factory type 
+            &#39;Oracle.DataAccess.Client.OracleClientFactory&#39; does not implement the 
+            IServiceProvider interface.&quot; is encountered when executing an Entity Framework 
+            application with ODP.NET, the machine.config requires and entry for ODP.NET 
+            under the <DbProviderFactories> section. To resolve this issue by adding an 
+            entry in the machine.config, reinstall ODAC. To avoid other issues, install it 
+            into a new Oracle home.<br />
+            <br />
+            <span
+ style="font-weight: bold;"></li>
+    </ol>
+    <h2>TIPS, LIMITATIONS AND KNOWN ISSUES</h2>
+    </span>
+    <ol>
+        <li><span>If SenderId is specified in OracleAQMessage object while enqueuing, the 
+            sender id of dequeued message will have &quot;@ODP.NE&quot; appended in the end. [Bug 
+            7315542]<br /><br /></span></li>
+        <li>An &quot;ORA-00942: table or view does not exist&quot; error may be thrown from Dequeue or 
+            DequeueArray method invocations when OracleAQDequeueOptions.DeliveryMode is 
+            specified as OracleAQMessageDeliveryMode.Buffered and 
+            OracleAQDequeueOptions.Correlation is specified and there are no messages 
+            available in the queue. [Bug 7343633]<br /><br /></li>
+        <li>If the Oracle Database version is 10.1 or earlier, 
+            OracleAQMessageAvailableEventArgs.QueueName is not double quoted in regular 
+            (i.e. non-group) notifications. [Bug 8253957]<br /><br /></li>
+        <li>Application may not receive group notifications if GroupingInterval property on 
+            the OracleNotificationRequest object is set to 0. [Bug 7373765]<br /><br /></li>
+        <li>Against 9.2 database, a message remains in WAITING state if the Delay property 
+            of OracleAQMessage was set to a non-zero value while enqueuing the message. [Bug 
+            8828674]<br /><br /></li>
+        <li>OracleConnection object&#39;s OpenWithNewPassword() method invocation will result in 
+            an ORA-1017 error with pre-11.2.0.3.0 database versions. [Bug 12876992]<br /><br /></li>
+        <li>When installing .NET related products for Windows x64 onto an ORACLE_HOME or 
+            ORACLE_BASE on a mapped drive, a System.IO.FileLoadException exception may be 
+            thrown by OraProvCfg.exe during installation. To work around this issue, install 
+            .NET Framework 2.0 SP2 or later on the system where OUI install is being 
+            executed. [Bug 10225338]</span></li>
+    </ol>
+    </div>
+</body>
+</html>

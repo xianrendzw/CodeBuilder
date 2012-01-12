@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\ADO.NET\oracle\4\Oracle.DataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -105,7 +109,9 @@
     <Compile Include="Exporter\IExporter.cs" />
     <Compile Include="Exporter\MySQL\MySql5Exporter.cs" />
     <Compile Include="Exporter\Oracle\Oracle8iExporter.cs" />
+    <Compile Include="Exporter\Oracle\OracleHelper.cs" />
     <Compile Include="Exporter\PowerDesigner\PowerDesigner12Exporter.cs" />
+    <Compile Include="Exporter\SQLServer\SqlHelper.cs" />
     <Compile Include="Exporter\SQLServer\SqlServer2000Exporter.cs" />
     <Compile Include="Exporter\SQLServer\SqlServer2005Exporter.cs" />
     <Compile Include="Exporter\SQLServer\SqlServer2008Exporter.cs" />

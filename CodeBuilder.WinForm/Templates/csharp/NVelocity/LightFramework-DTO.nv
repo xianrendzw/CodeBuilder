@@ -20,12 +20,10 @@ namespace ${tdo.Package}.DTO
 		#region Const Members
 
 		#foreach($column in $tdo.ModelObject.Columns.Values)
-
 		/// <summary>
-        /// $column.DisplayName
+        /// 列名$column.OriginalName $column.Comment 
         /// </summary>
-        public static readonly $column.LanguageType C_${column.Name} = "$column.OriginalName";
-
+        public static readonly String C_${column.Name} = "$column.OriginalName";
 		#end
 
 		#endregion
@@ -33,7 +31,6 @@ namespace ${tdo.Package}.DTO
 		#region Field Members
 
 		#foreach($column in $tdo.ModelObject.Columns.Values)
-
 			#set($colName = $column.Name)
 			#if($column.Name.Length == 1) 
 				#set($colName = $colName.ToLower())
@@ -47,9 +44,7 @@ namespace ${tdo.Package}.DTO
 			#elseif($column.Name.Length > 1)
 				#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
 			#end
-
-		private $column.LanguageType _$colName $defaultValue;
-
+			private $column.LanguageType _$colName;
 		#end
 
 		#endregion
@@ -57,16 +52,14 @@ namespace ${tdo.Package}.DTO
 		#region Property Members
 
 		#foreach($column in $tdo.ModelObject.Columns.Values)
-
 			#set($colName = $column.Name)
 			#if($column.Name.Length == 1) 
 				#set($colName = $colName.ToLower())
 			#elseif($column.Name.Length > 1)
 				#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
 			#end
-
 		/// <summary>
-        /// 获取或设置$column.DisplayName
+        /// 获取或设置$column.Comment
         /// </summary>
         [Column(Name = "${column.OriginalName}" #if($column.IsAutoIncremented),IsIdentity = true #end)]
         public virtual ${column.LanguageType} ${column.Name}
@@ -74,7 +67,6 @@ namespace ${tdo.Package}.DTO
             get{return this._$colName;}
             set{this._$colName = value;}
         }
-
 		#end
 
 		#endregion

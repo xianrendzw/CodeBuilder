@@ -49,12 +49,12 @@ namespace CodeBuilder.DataSource.Exporter
             foreach (XmlNode tableNode in tableNodes)
             {
                 string id = tableNode.Attributes["Id"].InnerText;
-                string name = tableNode["a:Name"].InnerText;
-                string code = tableNode["a:Code"].InnerText;
+                string displayName = tableNode["a:Name"].InnerText;
+                string name = tableNode["a:Code"].InnerText;
                 string comment = tableNode["a:Comment"] != null ? tableNode["a:Comment"].InnerText : string.Empty;
 
-                Table table = new Table(id, name, code, comment);
-                table.OriginalName = code;
+                Table table = new Table(id, displayName, name, comment);
+                table.OriginalName = name;
                 table.Columns = this.GetColumns(tableNode);
                 table.PrimaryKeys = this.GetPrimaryKeys(tableNode, table.Columns);
                 tables.Add(id, table);
@@ -72,12 +72,12 @@ namespace CodeBuilder.DataSource.Exporter
             foreach (XmlNode viewNode in viewNodes)
             {
                 string id = viewNode.Attributes["Id"].InnerText;
-                string name = viewNode["a:Name"].InnerText;
-                string code = viewNode["a:Code"].InnerText;
+                string displayName = viewNode["a:Name"].InnerText;
+                string name = viewNode["a:Code"].InnerText;
                 string comment = viewNode["a:Comment"] != null ? viewNode["a:Comment"].InnerText : string.Empty;
 
-                View view = new View(id, name, code, comment);
-                view.OriginalName = code;
+                View view = new View(id, displayName, name, comment);
+                view.OriginalName = name;
                 view.Columns = this.GetColumns(viewNode);
                 views.Add(id, view);
             }
@@ -96,8 +96,8 @@ namespace CodeBuilder.DataSource.Exporter
             foreach (XmlNode columnNode in columnNodes)
             {
                 string id = columnNode.Attributes["Id"].InnerText;
-                string name = columnNode["a:Name"].InnerText;
-                string code = columnNode["a:Code"].InnerText;
+                string displayName = columnNode["a:Name"].InnerText;
+                string name = columnNode["a:Code"].InnerText;
                 string comment = columnNode["a:Comment"] != null ? columnNode["a:Comment"].InnerText : string.Empty;
                 string dataType = columnNode["a:DataType"] != null ? columnNode["a:DataType"].InnerText : string.Empty;
                 string length = columnNode["a:Length"] != null ? columnNode["a:Length"].InnerText : "0";
@@ -105,13 +105,13 @@ namespace CodeBuilder.DataSource.Exporter
                 string mandatory = columnNode["a:Mandatory"] != null ? columnNode["a:Mandatory"].InnerText : string.Empty;
                 string defaultValue = columnNode["a:DefaultValue"] != null ? columnNode["a:DefaultValue"].InnerText : string.Empty;
 
-                Column column = new Column(id, name, code, dataType, comment);
+                Column column = new Column(id, displayName, name, dataType, comment);
                 column.Length = Int32.Parse(length);
                 column.IsAutoIncremented = identity.Equals("1");
                 column.IsNullable = mandatory.Equals("1");
                 column.DefaultValue = defaultValue.ToEmpty();
                 column.DataType = Regex.Replace(column.DataType, "\\(.*?\\)", "");
-                column.OriginalName = code;
+                column.OriginalName = name;
                 columns.Add(id, column);
             }
 

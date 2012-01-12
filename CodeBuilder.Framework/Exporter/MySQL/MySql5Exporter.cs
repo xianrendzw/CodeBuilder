@@ -48,14 +48,14 @@ namespace CodeBuilder.DataSource.Exporter
             while (dr.Read())
             {
                 string id = dr.GetString(0);
+                string displayName = dr.GetString(0);
                 string name = dr.GetString(0);
-                string code = dr.GetString(0);
                 string comment = dr.IsDBNull(1) ? string.Empty : dr.GetString(1);
 
-                Table table = new Table(id, name, code, comment);
-                table.OriginalName = code;
-                table.Columns = this.GetColumns(name, originalDbName, connectionString);
-                table.PrimaryKeys = this.GetPrimaryKeys(name, originalDbName, connectionString);
+                Table table = new Table(id, displayName, name, comment);
+                table.OriginalName = name;
+                table.Columns = this.GetColumns(displayName, originalDbName, connectionString);
+                table.PrimaryKeys = this.GetPrimaryKeys(displayName, originalDbName, connectionString);
                 tables.Add(id, table);
             }
             dr.Close();
@@ -72,13 +72,13 @@ namespace CodeBuilder.DataSource.Exporter
             while (dr.Read())
             {
                 string id = dr.GetString(0);
+                string displayName = dr.GetString(0);
                 string name = dr.GetString(0);
-                string code = dr.GetString(0);
                 string comment = string.Empty;
 
-                View view = new View(id, name, code, comment);
-                view.OriginalName = code;
-                view.Columns = this.GetColumns(name, originalDbName, connectionString);
+                View view = new View(id, displayName, name, comment);
+                view.OriginalName = name;
+                view.Columns = this.GetColumns(displayName, originalDbName, connectionString);
                 views.Add(id, view);
             }
             dr.Close();
@@ -122,12 +122,12 @@ namespace CodeBuilder.DataSource.Exporter
         private Columns GetColumns(string connectionString, string sqlCmd)
         {
             Columns columns = new Columns(50);
-            MySqlDataReader dr = MySqlHelper.ExecuteReader(connectionString, sqlCmd.ToString());
+            MySqlDataReader dr = MySqlHelper.ExecuteReader(connectionString, sqlCmd);
             while (dr.Read())
             {
                 string id = dr.IsDBNull(2) ? string.Empty : dr.GetString(2);
+                string displayName = dr.IsDBNull(2) ? string.Empty : dr.GetString(2);
                 string name = dr.IsDBNull(2) ? string.Empty : dr.GetString(2);
-                string code = dr.IsDBNull(2) ? string.Empty : dr.GetString(2);
                 string dataType = dr.IsDBNull(3) ? string.Empty : dr.GetString(3);
                 string key = dr.IsDBNull(4) ? string.Empty : dr.GetString(4);
                 string defaultValue = dr.IsDBNull(5) ? string.Empty : dr.GetString(5);
@@ -136,13 +136,13 @@ namespace CodeBuilder.DataSource.Exporter
                 string identity = dr.IsDBNull(8) ? string.Empty : dr.GetString(8);
                 string comment = dr.IsDBNull(9) ? string.Empty : dr.GetString(9);
 
-                Column column = new Column(id, name, code, dataType, comment);
+                Column column = new Column(id, displayName, name, dataType, comment);
                 column.Length = ConvertHelper.GetInt32(length);
                 column.IsAutoIncremented = identity.Equals("auto_increment");
                 column.IsNullable = isNullable.Equals("YES");
                 column.DefaultValue = defaultValue.ToEmpty();
                 column.DataType = dataType;
-                column.OriginalName = code;
+                column.OriginalName = name;
                 columns.Add(id, column);
             }
             dr.Close();
