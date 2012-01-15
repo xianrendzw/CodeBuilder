@@ -52,9 +52,6 @@ namespace CodeBuilder.WinForm.UI
 
         public static Dictionary<string, Model> Clone()
         {
-            var orgd = models.Select(x => x).ToDictionary(y => y.Key, z => z.Value);
-            System.Console.WriteLine(orgd.GetHashCode() == models.GetHashCode());
-            System.Console.WriteLine(orgd["0"].Tables.GetHashCode() == models["0"].Tables.GetHashCode());
             return models.Select(x => x).ToDictionary(y => y.Key, z => z.Value);
         }
 
