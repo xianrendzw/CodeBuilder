@@ -483,6 +483,8 @@
             // 
             // currentGenFileNameLbl
             // 
+            this.currentGenFileNameLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.currentGenFileNameLbl.Cursor = System.Windows.Forms.Cursors.Default;
             this.currentGenFileNameLbl.Location = new System.Drawing.Point(129, 85);
             this.currentGenFileNameLbl.Name = "currentGenFileNameLbl";

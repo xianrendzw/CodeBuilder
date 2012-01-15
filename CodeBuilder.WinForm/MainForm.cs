@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace CodeBuilder.WinForm
 {
     using Configuration;
+    using Properties;
     using UI;
     using Util;
 
@@ -36,7 +37,7 @@ namespace CodeBuilder.WinForm
         #region File
         private void fileOpenMenuItem_Click(object sender, EventArgs e)
         {
-            this.openFileDialog.Title = "Open Generation Settings File";
+            this.openFileDialog.Title = Resources.String1;//"Open Generation Settings File";
             this.openFileDialog.Filter = "Generation Settings (*.xml)|*.xml";
             if (this.openFileDialog.ShowDialog() == DialogResult.OK)
             {
