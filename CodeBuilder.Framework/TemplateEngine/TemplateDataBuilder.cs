@@ -81,7 +81,7 @@ namespace CodeBuilder.TemplateEngine
             templateData.Prefix = ConfigManager.TemplateSection.Templates[templateName].Prefix;
             templateData.Suffix = ConfigManager.TemplateSection.Templates[templateName].Suffix;
             templateData.Name = GetTemplateDataName(settings.IsOmitTablePrefix,
-               settings.IsStandardizeName, settings.TablePrefix, modelObject.Name);
+               settings.IsStandardizeName, settings.TablePrefix, modelObject.OriginalName);
 
             templateData.TemplateFileName = Path.Combine(ConfigManager.TemplatePath,
                 ConfigManager.TemplateSection.Templates[templateName].FileName);
@@ -121,7 +121,7 @@ namespace CodeBuilder.TemplateEngine
 
             foreach (var column in modelObject.Columns.Values)
             {
-                if (isStandardizeName) column.Name = column.Name.StandardizeName();
+                if (isStandardizeName) column.Name = column.OriginalName.StandardizeName();
                 if (typeMapper != null)
                 {
                     LanguageType langType = typeMapper.GetLanguageType(typeMappingDatabase, languageAlias, column.DataType);
