@@ -29,7 +29,7 @@ public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix} {
 	#end
 
 	#foreach($column in $tdo.ModelObject.Columns.Values)
-
+			#set($colName = $column.Name.ToLower())
 			#set($colMethodName = $column.Name)
 			#if($column.Name.Length == 1) 
 				#set($colMethodName = $colMethodName.ToUpper())
