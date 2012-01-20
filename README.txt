@@ -1,8 +1,5 @@
 ﻿CodeBuilder is a lightweight base Database Physical Data Model's C#/java/ruby code generation tool.support microsoft .net framework 4.0 or mono.net2.10 runtime enviroments
 
-I am Taven!
-
-
 1.Features
 
   a.support from Powerdesinger 12+ PDM file import to Data Model
