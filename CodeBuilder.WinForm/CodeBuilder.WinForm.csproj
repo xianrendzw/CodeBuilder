@@ -203,7 +203,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Templates\java\JPA\LightFramework-VO.jpa" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\cb.bmp" />
@@ -247,6 +246,7 @@
     <Templates Include="Templates\csharp\Razor\LightFramework-DTO.raz" />
     <Templates Include="Templates\csharp\Vici\LightFramework-DTO.vic" />
     <Templates Include="Templates\java\NVelocity\LightFramework-DTO.nv" />
+	<Templates Include="Templates\java\JPA\LightFramework-VO.jpa" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodeBuilder.Framework\CodeBuilder.Framework.csproj">
