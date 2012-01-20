@@ -1,0 +1,56 @@
+﻿package ${tdo.Package}.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.CascadeType;
+import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.FetchType;
+
+/**
+ * $tdo.ModelObject.Comment
+ * @author $tdo.Author
+ */
+@Entity
+@Table(name = "$tdo.ModelObject.OriginalName")
+public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix} {
+
+	#foreach($column in $tdo.ModelObject.Columns.Values)
+		#set($colName = $column.Name.ToLower())
+
+		/**
+		 * $column.Comment
+		 */
+		@Column(name = "$column.OriginalName" #if($column.IsAutoIncremented),isIgnored = true #end)
+		private $column.LanguageType $colName;
+	#end
+
+	#foreach($column in $tdo.ModelObject.Columns.Values)
+			#set($colName = $column.Name.ToLower())
+			#set($colMethodName = $column.Name)
+			#if($column.Name.Length == 1) 
+				#set($colMethodName = $colMethodName.ToUpper())
+			#elseif($column.Name.Length > 1)
+				#set($colMethodName = "$colMethodName.Substring(0,1).ToUpper()$colMethodName.Substring(1).ToLower()")
+			#end
+
+		/**
+		 * 获取 $column.Comment
+		 * @return $column.Comment
+		 */
+		public ${column.LanguageType} get${colMethodName}() {
+			return this.$colName;
+		}
+		/**
+		 * 设置 $column.Comment
+		 * @param $colName
+		 */
+		public void set${colMethodName}(${column.LanguageType} $colName) {
+			this.$colName = $colName;
+		}
+	#end
+
+}
