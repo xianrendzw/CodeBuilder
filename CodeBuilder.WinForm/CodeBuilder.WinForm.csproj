@@ -29,7 +29,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <SourceAnalysisOverrideSettingsFile>C:\Users\TomDeng\AppData\Roaming\ICSharpCode/SharpDevelop4\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
     <NoStdLib>False</NoStdLib>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
@@ -241,12 +240,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Templates Include="Templates\csharp\Ader\LightFramework-DTO.adr" />
-    <Templates Include="Templates\csharp\NVelocity\LightFramework-DTO.nv" />
-    <Templates Include="Templates\csharp\Razor\LightFramework-DTO.raz" />
-    <Templates Include="Templates\csharp\Vici\LightFramework-DTO.vic" />
-    <Templates Include="Templates\java\NVelocity\LightFramework-DTO.nv" />
-	<Templates Include="Templates\java\JPA\LightFramework-VO.jpa" />
+    <Templates Include="Templates\**\*.*" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodeBuilder.Framework\CodeBuilder.Framework.csproj">
@@ -255,7 +249,6 @@
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

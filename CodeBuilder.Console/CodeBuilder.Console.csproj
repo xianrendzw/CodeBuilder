@@ -69,10 +69,14 @@
   </ItemGroup>
   <ItemGroup>
     <ConfigFile Include="Config\DataSources.xml" />
-    <ConfigFile Include="Config\Options.xml" />
+    <ConfigFile Include="Config\Options.xml">
+      <SubType>Designer</SubType>
+    </ConfigFile>
     <ConfigFile Include="Config\Templates.xml" />
     <ConfigFile Include="Config\Settings.xml" />
-    <ConfigFile Include="Config\TypeMapping.xml" />
+    <ConfigFile Include="Config\TypeMapping.xml">
+      <SubType>Designer</SubType>
+    </ConfigFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

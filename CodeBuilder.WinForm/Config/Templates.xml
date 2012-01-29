@@ -12,7 +12,7 @@
                   fileName="csharp\Vici\LightFramework-DTO.vic" prefix="" suffix="DTO" url="" desc="" />
         <template name="LightFramework-DTO.java.nv" displayName="LightFramework-DTO" language="JAVA" engine="NVelocity"
                   fileName="java\NVelocity\LightFramework-DTO.nv" prefix="" suffix="Entity" url="" desc="" />
-        <template name="LightFramework-JPA-VO.java.jpa" displayName="LightFramework-JPA-VO" language="JAVA" engine="NVelocity"
-                  fileName="java\JPA\LightFramework-VO.jpa" prefix="" suffix="VO" url="" desc="" />
+        <template name="JPA-VO.java.nv" displayName="JPA-VO" language="JAVA" engine="NVelocity"
+                  fileName="java\NVelocity\JPA-VO.nv" prefix="" suffix="VO" url="" desc="" />
     </templates>
 </templateSection>
