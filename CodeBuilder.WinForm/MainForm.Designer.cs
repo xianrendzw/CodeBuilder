@@ -125,7 +125,7 @@
             this.helpMenu});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
-            this.mainMenuStrip.Size = new System.Drawing.Size(752, 25);
+            this.mainMenuStrip.Size = new System.Drawing.Size(752, 24);
             this.mainMenuStrip.TabIndex = 1;
             this.mainMenuStrip.Text = "menuStrip";
             // 
@@ -140,51 +140,51 @@
             this.fileSeparator1MenuItem,
             this.fileExitMenuItem});
             this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(39, 21);
+            this.fileMenu.Size = new System.Drawing.Size(35, 20);
             this.fileMenu.Text = "&File";
             // 
             // fileExportPdmMenuItem
             // 
             this.fileExportPdmMenuItem.Name = "fileExportPdmMenuItem";
-            this.fileExportPdmMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.fileExportPdmMenuItem.Size = new System.Drawing.Size(241, 22);
             this.fileExportPdmMenuItem.Text = "Export &PowerDesigner PDM Files...";
             this.fileExportPdmMenuItem.Click += new System.EventHandler(this.fileExportPdmMenuItem_Click);
             // 
             // fileExportDataSourceMenuItem
             // 
             this.fileExportDataSourceMenuItem.Name = "fileExportDataSourceMenuItem";
-            this.fileExportDataSourceMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.fileExportDataSourceMenuItem.Size = new System.Drawing.Size(241, 22);
             this.fileExportDataSourceMenuItem.Text = "&Export From DataSource";
             this.fileExportDataSourceMenuItem.MouseHover += new System.EventHandler(this.fileExportDataSourceMenuItem_MouseHover);
             // 
             // fileSeparator2MenuItem
             // 
             this.fileSeparator2MenuItem.Name = "fileSeparator2MenuItem";
-            this.fileSeparator2MenuItem.Size = new System.Drawing.Size(273, 6);
+            this.fileSeparator2MenuItem.Size = new System.Drawing.Size(238, 6);
             // 
             // fileOpenMenuItem
             // 
             this.fileOpenMenuItem.Name = "fileOpenMenuItem";
-            this.fileOpenMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.fileOpenMenuItem.Size = new System.Drawing.Size(241, 22);
             this.fileOpenMenuItem.Text = "&Open Generation Settings File";
             this.fileOpenMenuItem.Click += new System.EventHandler(this.fileOpenMenuItem_Click);
             // 
             // fileSaveMenuItem
             // 
             this.fileSaveMenuItem.Name = "fileSaveMenuItem";
-            this.fileSaveMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.fileSaveMenuItem.Size = new System.Drawing.Size(241, 22);
             this.fileSaveMenuItem.Text = "&Save Generation Setting...";
             this.fileSaveMenuItem.Click += new System.EventHandler(this.fileSaveMenuItem_Click);
             // 
             // fileSeparator1MenuItem
             // 
             this.fileSeparator1MenuItem.Name = "fileSeparator1MenuItem";
-            this.fileSeparator1MenuItem.Size = new System.Drawing.Size(273, 6);
+            this.fileSeparator1MenuItem.Size = new System.Drawing.Size(238, 6);
             // 
             // fileExitMenuItem
             // 
             this.fileExitMenuItem.Name = "fileExitMenuItem";
-            this.fileExitMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.fileExitMenuItem.Size = new System.Drawing.Size(241, 22);
             this.fileExitMenuItem.Text = "&Exit";
             this.fileExitMenuItem.Click += new System.EventHandler(this.fileExitMenuItem_Click);
             // 
@@ -196,32 +196,32 @@
             this.toolsSeparator1MenuItem,
             this.toolsOptionsMenuItem});
             this.toolsMenu.Name = "toolsMenu";
-            this.toolsMenu.Size = new System.Drawing.Size(52, 21);
+            this.toolsMenu.Size = new System.Drawing.Size(44, 20);
             this.toolsMenu.Text = "&Tools";
             // 
             // toolsDSConfigMenuItem
             // 
             this.toolsDSConfigMenuItem.Name = "toolsDSConfigMenuItem";
-            this.toolsDSConfigMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.toolsDSConfigMenuItem.Size = new System.Drawing.Size(210, 22);
             this.toolsDSConfigMenuItem.Text = "&DataSource Configuration...";
             this.toolsDSConfigMenuItem.Click += new System.EventHandler(this.toolsDSConfigMenuItem_Click);
             // 
             // toolsTemplatesMenuItem
             // 
             this.toolsTemplatesMenuItem.Name = "toolsTemplatesMenuItem";
-            this.toolsTemplatesMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.toolsTemplatesMenuItem.Size = new System.Drawing.Size(210, 22);
             this.toolsTemplatesMenuItem.Text = "&Templates...";
             this.toolsTemplatesMenuItem.Click += new System.EventHandler(this.toolsTemplatesMenuItem_Click);
             // 
             // toolsSeparator1MenuItem
             // 
             this.toolsSeparator1MenuItem.Name = "toolsSeparator1MenuItem";
-            this.toolsSeparator1MenuItem.Size = new System.Drawing.Size(232, 6);
+            this.toolsSeparator1MenuItem.Size = new System.Drawing.Size(207, 6);
             // 
             // toolsOptionsMenuItem
             // 
             this.toolsOptionsMenuItem.Name = "toolsOptionsMenuItem";
-            this.toolsOptionsMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.toolsOptionsMenuItem.Size = new System.Drawing.Size(210, 22);
             this.toolsOptionsMenuItem.Text = "&Options...";
             this.toolsOptionsMenuItem.Click += new System.EventHandler(this.toolsOptionsMenuItem_Click);
             // 
@@ -233,7 +233,7 @@
             this.helpSeparator1MenuItem,
             this.helpAboutMenuItem});
             this.helpMenu.Name = "helpMenu";
-            this.helpMenu.Size = new System.Drawing.Size(47, 21);
+            this.helpMenu.Size = new System.Drawing.Size(40, 20);
             this.helpMenu.Text = "&Help";
             this.helpMenu.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
@@ -241,26 +241,26 @@
             // 
             this.helpF1MenuItem.Name = "helpF1MenuItem";
             this.helpF1MenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.helpF1MenuItem.Size = new System.Drawing.Size(209, 22);
+            this.helpF1MenuItem.Size = new System.Drawing.Size(186, 22);
             this.helpF1MenuItem.Text = "CodeBuilder Help...";
             this.helpF1MenuItem.Click += new System.EventHandler(this.helpF1MenuItem_Click);
             // 
             // helpFeedbackMenuItem
             // 
             this.helpFeedbackMenuItem.Name = "helpFeedbackMenuItem";
-            this.helpFeedbackMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.helpFeedbackMenuItem.Size = new System.Drawing.Size(186, 22);
             this.helpFeedbackMenuItem.Text = "Customer Feedback...";
             this.helpFeedbackMenuItem.Click += new System.EventHandler(this.helpFeedbackMenuItem_Click);
             // 
             // helpSeparator1MenuItem
             // 
             this.helpSeparator1MenuItem.Name = "helpSeparator1MenuItem";
-            this.helpSeparator1MenuItem.Size = new System.Drawing.Size(206, 6);
+            this.helpSeparator1MenuItem.Size = new System.Drawing.Size(183, 6);
             // 
             // helpAboutMenuItem
             // 
             this.helpAboutMenuItem.Name = "helpAboutMenuItem";
-            this.helpAboutMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.helpAboutMenuItem.Size = new System.Drawing.Size(186, 22);
             this.helpAboutMenuItem.Text = "About CodeBuilder...";
             this.helpAboutMenuItem.Click += new System.EventHandler(this.helpAboutMenuItem_Click);
             // 
@@ -271,7 +271,7 @@
             this.statusBarDatabase,
             this.statusBarLanguage,
             this.statusBarEncoding});
-            this.mainStatusStrip.Location = new System.Drawing.Point(0, 405);
+            this.mainStatusStrip.Location = new System.Drawing.Point(0, 442);
             this.mainStatusStrip.Name = "mainStatusStrip";
             this.mainStatusStrip.Size = new System.Drawing.Size(752, 22);
             this.mainStatusStrip.TabIndex = 1;
@@ -279,9 +279,9 @@
             // statusBarReady
             // 
             this.statusBarReady.AutoSize = false;
-            this.statusBarReady.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.statusBarReady.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.statusBarReady.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.statusBarReady.Name = "statusBarReady";
             this.statusBarReady.Size = new System.Drawing.Size(437, 19);
@@ -292,9 +292,9 @@
             // statusBarDatabase
             // 
             this.statusBarDatabase.AutoSize = false;
-            this.statusBarDatabase.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.statusBarDatabase.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.statusBarDatabase.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.statusBarDatabase.Name = "statusBarDatabase";
             this.statusBarDatabase.Size = new System.Drawing.Size(120, 19);
@@ -302,9 +302,9 @@
             // statusBarLanguage
             // 
             this.statusBarLanguage.AutoSize = false;
-            this.statusBarLanguage.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.statusBarLanguage.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.statusBarLanguage.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.statusBarLanguage.Name = "statusBarLanguage";
             this.statusBarLanguage.Size = new System.Drawing.Size(100, 19);
@@ -312,9 +312,9 @@
             // statusBarEncoding
             // 
             this.statusBarEncoding.AutoSize = false;
-            this.statusBarEncoding.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.statusBarEncoding.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.statusBarEncoding.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.statusBarEncoding.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.statusBarEncoding.Name = "statusBarEncoding";
@@ -323,7 +323,7 @@
             // splitContainer
             // 
             this.splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer.Location = new System.Drawing.Point(0, 25);
+            this.splitContainer.Location = new System.Drawing.Point(0, 24);
             this.splitContainer.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer.Name = "splitContainer";
             // 
@@ -338,7 +338,7 @@
             this.splitContainer.Panel2.Controls.Add(this.resultGbx);
             this.splitContainer.Panel2.Controls.Add(this.genItemsGbx);
             this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(1);
-            this.splitContainer.Size = new System.Drawing.Size(752, 380);
+            this.splitContainer.Size = new System.Drawing.Size(752, 418);
             this.splitContainer.SplitterDistance = 208;
             this.splitContainer.TabIndex = 2;
             // 
@@ -352,7 +352,7 @@
             this.treeView.Location = new System.Drawing.Point(3, 3);
             this.treeView.Name = "treeView";
             this.treeView.SelectedImageIndex = 0;
-            this.treeView.Size = new System.Drawing.Size(202, 374);
+            this.treeView.Size = new System.Drawing.Size(202, 412);
             this.treeView.TabIndex = 2;
             this.treeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.treeView_AfterCheck);
             this.treeView.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeView_AfterCollapse);
@@ -406,9 +406,9 @@
             // 
             // resultGbx
             // 
-            this.resultGbx.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.resultGbx.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.resultGbx.Controls.Add(this.errorFileCountLbl);
             this.resultGbx.Controls.Add(this.errorFilesLbl);
             this.resultGbx.Controls.Add(this.genFileCountLbl);
@@ -419,100 +419,100 @@
             this.resultGbx.Controls.Add(this.currentGenFileNameLbl);
             this.resultGbx.Controls.Add(this.currentGenFileLbl);
             this.resultGbx.Controls.Add(this.genProgressBar);
-            this.resultGbx.Location = new System.Drawing.Point(1, 254);
+            this.resultGbx.Location = new System.Drawing.Point(1, 275);
             this.resultGbx.Name = "resultGbx";
-            this.resultGbx.Size = new System.Drawing.Size(538, 123);
+            this.resultGbx.Size = new System.Drawing.Size(538, 139);
             this.resultGbx.TabIndex = 0;
             this.resultGbx.TabStop = false;
             this.resultGbx.Text = "Results";
             // 
             // errorFileCountLbl
             // 
-            this.errorFileCountLbl.Location = new System.Drawing.Point(399, 55);
+            this.errorFileCountLbl.Location = new System.Drawing.Point(399, 60);
             this.errorFileCountLbl.Name = "errorFileCountLbl";
-            this.errorFileCountLbl.Size = new System.Drawing.Size(50, 12);
+            this.errorFileCountLbl.Size = new System.Drawing.Size(50, 13);
             this.errorFileCountLbl.TabIndex = 9;
             // 
             // errorFilesLbl
             // 
-            this.errorFilesLbl.Location = new System.Drawing.Point(329, 55);
+            this.errorFilesLbl.Location = new System.Drawing.Point(329, 60);
             this.errorFilesLbl.Name = "errorFilesLbl";
-            this.errorFilesLbl.Size = new System.Drawing.Size(60, 12);
+            this.errorFilesLbl.Size = new System.Drawing.Size(60, 13);
             this.errorFilesLbl.TabIndex = 8;
             this.errorFilesLbl.Text = "Error files:";
             // 
             // genFileCountLbl
             // 
-            this.genFileCountLbl.Location = new System.Drawing.Point(260, 55);
+            this.genFileCountLbl.Location = new System.Drawing.Point(260, 60);
             this.genFileCountLbl.Name = "genFileCountLbl";
-            this.genFileCountLbl.Size = new System.Drawing.Size(50, 12);
+            this.genFileCountLbl.Size = new System.Drawing.Size(50, 13);
             this.genFileCountLbl.TabIndex = 7;
             // 
             // genFilesLbl
             // 
-            this.genFilesLbl.Location = new System.Drawing.Point(161, 55);
+            this.genFilesLbl.Location = new System.Drawing.Point(161, 60);
             this.genFilesLbl.Name = "genFilesLbl";
-            this.genFilesLbl.Size = new System.Drawing.Size(90, 12);
+            this.genFilesLbl.Size = new System.Drawing.Size(90, 13);
             this.genFilesLbl.TabIndex = 6;
             this.genFilesLbl.Text = "Generated files:";
             // 
             // completedLbl
             // 
             this.completedLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.completedLbl.Location = new System.Drawing.Point(469, 55);
+            this.completedLbl.Location = new System.Drawing.Point(469, 60);
             this.completedLbl.Name = "completedLbl";
-            this.completedLbl.Size = new System.Drawing.Size(60, 12);
+            this.completedLbl.Size = new System.Drawing.Size(60, 13);
             this.completedLbl.TabIndex = 5;
             this.completedLbl.Text = "Completed!";
             this.completedLbl.Visible = false;
             // 
             // totalFileCountLbl
             // 
-            this.totalFileCountLbl.Location = new System.Drawing.Point(98, 55);
+            this.totalFileCountLbl.Location = new System.Drawing.Point(98, 60);
             this.totalFileCountLbl.Name = "totalFileCountLbl";
-            this.totalFileCountLbl.Size = new System.Drawing.Size(50, 12);
+            this.totalFileCountLbl.Size = new System.Drawing.Size(50, 13);
             this.totalFileCountLbl.TabIndex = 4;
             // 
             // totalFilesLbl
             // 
-            this.totalFilesLbl.Location = new System.Drawing.Point(10, 55);
+            this.totalFilesLbl.Location = new System.Drawing.Point(10, 60);
             this.totalFilesLbl.Name = "totalFilesLbl";
-            this.totalFilesLbl.Size = new System.Drawing.Size(80, 12);
+            this.totalFilesLbl.Size = new System.Drawing.Size(80, 13);
             this.totalFilesLbl.TabIndex = 3;
             this.totalFilesLbl.Text = "Total files:";
             // 
             // currentGenFileNameLbl
             // 
-            this.currentGenFileNameLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.currentGenFileNameLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.currentGenFileNameLbl.Cursor = System.Windows.Forms.Cursors.Default;
-            this.currentGenFileNameLbl.Location = new System.Drawing.Point(129, 78);
+            this.currentGenFileNameLbl.Location = new System.Drawing.Point(129, 85);
             this.currentGenFileNameLbl.Name = "currentGenFileNameLbl";
-            this.currentGenFileNameLbl.Size = new System.Drawing.Size(398, 34);
+            this.currentGenFileNameLbl.Size = new System.Drawing.Size(398, 37);
             this.currentGenFileNameLbl.TabIndex = 2;
             this.currentGenFileNameLbl.Click += new System.EventHandler(this.currentGenFileNameLbl_Click);
             // 
             // currentGenFileLbl
             // 
-            this.currentGenFileLbl.Location = new System.Drawing.Point(10, 78);
+            this.currentGenFileLbl.Location = new System.Drawing.Point(10, 85);
             this.currentGenFileLbl.Name = "currentGenFileLbl";
-            this.currentGenFileLbl.Size = new System.Drawing.Size(113, 12);
+            this.currentGenFileLbl.Size = new System.Drawing.Size(113, 13);
             this.currentGenFileLbl.TabIndex = 1;
             this.currentGenFileLbl.Text = "Current generating file:";
             // 
             // genProgressBar
             // 
-            this.genProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.genProgressBar.Location = new System.Drawing.Point(10, 24);
+            this.genProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.genProgressBar.Location = new System.Drawing.Point(10, 26);
             this.genProgressBar.Name = "genProgressBar";
-            this.genProgressBar.Size = new System.Drawing.Size(519, 21);
+            this.genProgressBar.Size = new System.Drawing.Size(519, 23);
             this.genProgressBar.TabIndex = 0;
             // 
             // genItemsGbx
             // 
-            this.genItemsGbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.genItemsGbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.genItemsGbx.ContextMenuStrip = this.genSettingsCtxMenuStrip;
             this.genItemsGbx.Controls.Add(this.templateListBox);
             this.genItemsGbx.Controls.Add(this.databaseNameLbl);
@@ -538,7 +538,7 @@
             this.genItemsGbx.Controls.Add(this.generateBtn);
             this.genItemsGbx.Location = new System.Drawing.Point(1, 3);
             this.genItemsGbx.Name = "genItemsGbx";
-            this.genItemsGbx.Size = new System.Drawing.Size(538, 247);
+            this.genItemsGbx.Size = new System.Drawing.Size(538, 268);
             this.genItemsGbx.TabIndex = 3;
             this.genItemsGbx.TabStop = false;
             this.genItemsGbx.Text = "Generation Settings";
@@ -581,28 +581,27 @@
             // 
             // templateListBox
             // 
-            this.templateListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.templateListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.templateListBox.FormattingEnabled = true;
-            this.templateListBox.ItemHeight = 12;
-            this.templateListBox.Location = new System.Drawing.Point(357, 113);
+            this.templateListBox.Location = new System.Drawing.Point(357, 122);
             this.templateListBox.Name = "templateListBox";
             this.templateListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.templateListBox.Size = new System.Drawing.Size(150, 88);
+            this.templateListBox.Size = new System.Drawing.Size(150, 95);
             this.templateListBox.TabIndex = 19;
             // 
             // databaseNameLbl
             // 
-            this.databaseNameLbl.Location = new System.Drawing.Point(86, 24);
+            this.databaseNameLbl.Location = new System.Drawing.Point(86, 26);
             this.databaseNameLbl.Name = "databaseNameLbl";
-            this.databaseNameLbl.Size = new System.Drawing.Size(150, 12);
+            this.databaseNameLbl.Size = new System.Drawing.Size(150, 13);
             this.databaseNameLbl.TabIndex = 5;
             // 
             // databaseLbl
             // 
-            this.databaseLbl.Location = new System.Drawing.Point(10, 24);
+            this.databaseLbl.Location = new System.Drawing.Point(10, 26);
             this.databaseLbl.Name = "databaseLbl";
-            this.databaseLbl.Size = new System.Drawing.Size(70, 12);
+            this.databaseLbl.Size = new System.Drawing.Size(70, 13);
             this.databaseLbl.TabIndex = 4;
             this.databaseLbl.Text = "Database:";
             // 
@@ -610,34 +609,34 @@
             // 
             this.templateEngineCombox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.templateEngineCombox.FormattingEnabled = true;
-            this.templateEngineCombox.Location = new System.Drawing.Point(120, 113);
+            this.templateEngineCombox.Location = new System.Drawing.Point(120, 122);
             this.templateEngineCombox.Name = "templateEngineCombox";
-            this.templateEngineCombox.Size = new System.Drawing.Size(116, 20);
+            this.templateEngineCombox.Size = new System.Drawing.Size(116, 21);
             this.templateEngineCombox.TabIndex = 17;
             this.templateEngineCombox.SelectedIndexChanged += new System.EventHandler(this.templateEngineCombox_SelectedIndexChanged);
             // 
             // templateEngineLbl
             // 
-            this.templateEngineLbl.Location = new System.Drawing.Point(10, 121);
+            this.templateEngineLbl.Location = new System.Drawing.Point(10, 131);
             this.templateEngineLbl.Name = "templateEngineLbl";
-            this.templateEngineLbl.Size = new System.Drawing.Size(104, 12);
+            this.templateEngineLbl.Size = new System.Drawing.Size(104, 13);
             this.templateEngineLbl.TabIndex = 16;
             this.templateEngineLbl.Text = "Template Engine:";
             // 
             // isStandardizeNameChkbox
             // 
-            this.isStandardizeNameChkbox.Location = new System.Drawing.Point(10, 216);
+            this.isStandardizeNameChkbox.Location = new System.Drawing.Point(10, 234);
             this.isStandardizeNameChkbox.Name = "isStandardizeNameChkbox";
-            this.isStandardizeNameChkbox.Size = new System.Drawing.Size(210, 16);
+            this.isStandardizeNameChkbox.Size = new System.Drawing.Size(210, 17);
             this.isStandardizeNameChkbox.TabIndex = 23;
             this.isStandardizeNameChkbox.Text = "Is Standardize Table And Field Name";
             this.isStandardizeNameChkbox.UseVisualStyleBackColor = true;
             // 
             // isOmitTablePrefixChkbox
             // 
-            this.isOmitTablePrefixChkbox.Location = new System.Drawing.Point(10, 185);
+            this.isOmitTablePrefixChkbox.Location = new System.Drawing.Point(10, 200);
             this.isOmitTablePrefixChkbox.Name = "isOmitTablePrefixChkbox";
-            this.isOmitTablePrefixChkbox.Size = new System.Drawing.Size(130, 16);
+            this.isOmitTablePrefixChkbox.Size = new System.Drawing.Size(130, 17);
             this.isOmitTablePrefixChkbox.TabIndex = 22;
             this.isOmitTablePrefixChkbox.Text = "Is Omit Table Prefix";
             this.isOmitTablePrefixChkbox.UseVisualStyleBackColor = true;
@@ -646,100 +645,100 @@
             // 
             this.codeFileEncodingCombox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.codeFileEncodingCombox.FormattingEnabled = true;
-            this.codeFileEncodingCombox.Location = new System.Drawing.Point(120, 146);
+            this.codeFileEncodingCombox.Location = new System.Drawing.Point(120, 158);
             this.codeFileEncodingCombox.Name = "codeFileEncodingCombox";
-            this.codeFileEncodingCombox.Size = new System.Drawing.Size(116, 20);
+            this.codeFileEncodingCombox.Size = new System.Drawing.Size(116, 21);
             this.codeFileEncodingCombox.TabIndex = 21;
             this.codeFileEncodingCombox.SelectedIndexChanged += new System.EventHandler(this.codeFileEncodingCombox_SelectedIndexChanged);
             // 
             // codeFileEncodingLbl
             // 
-            this.codeFileEncodingLbl.Location = new System.Drawing.Point(10, 153);
+            this.codeFileEncodingLbl.Location = new System.Drawing.Point(10, 166);
             this.codeFileEncodingLbl.Name = "codeFileEncodingLbl";
-            this.codeFileEncodingLbl.Size = new System.Drawing.Size(110, 12);
+            this.codeFileEncodingLbl.Size = new System.Drawing.Size(110, 13);
             this.codeFileEncodingLbl.TabIndex = 20;
             this.codeFileEncodingLbl.Text = "Encoding:";
             // 
             // languageCombx
             // 
-            this.languageCombx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.languageCombx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.languageCombx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.languageCombx.FormattingEnabled = true;
-            this.languageCombx.Location = new System.Drawing.Point(357, 18);
+            this.languageCombx.Location = new System.Drawing.Point(357, 20);
             this.languageCombx.Name = "languageCombx";
-            this.languageCombx.Size = new System.Drawing.Size(150, 20);
+            this.languageCombx.Size = new System.Drawing.Size(150, 21);
             this.languageCombx.TabIndex = 7;
             this.languageCombx.SelectedIndexChanged += new System.EventHandler(this.languageCombx_SelectedIndexChanged);
             // 
             // languageLbl
             // 
-            this.languageLbl.Location = new System.Drawing.Point(270, 24);
+            this.languageLbl.Location = new System.Drawing.Point(270, 26);
             this.languageLbl.Name = "languageLbl";
-            this.languageLbl.Size = new System.Drawing.Size(70, 12);
+            this.languageLbl.Size = new System.Drawing.Size(70, 13);
             this.languageLbl.TabIndex = 6;
             this.languageLbl.Text = "Language:";
             // 
             // templateLbl
             // 
-            this.templateLbl.Location = new System.Drawing.Point(270, 121);
+            this.templateLbl.Location = new System.Drawing.Point(270, 131);
             this.templateLbl.Name = "templateLbl";
-            this.templateLbl.Size = new System.Drawing.Size(70, 12);
+            this.templateLbl.Size = new System.Drawing.Size(70, 13);
             this.templateLbl.TabIndex = 18;
             this.templateLbl.Text = "Template:";
             // 
             // versionTxtBox
             // 
-            this.versionTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.versionTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.versionTxtBox.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.versionTxtBox.Location = new System.Drawing.Point(357, 82);
+            this.versionTxtBox.Location = new System.Drawing.Point(357, 89);
             this.versionTxtBox.MaxLength = 100;
             this.versionTxtBox.Name = "versionTxtBox";
-            this.versionTxtBox.Size = new System.Drawing.Size(150, 21);
+            this.versionTxtBox.Size = new System.Drawing.Size(150, 20);
             this.versionTxtBox.TabIndex = 15;
             // 
             // versionLbl
             // 
-            this.versionLbl.Location = new System.Drawing.Point(270, 89);
+            this.versionLbl.Location = new System.Drawing.Point(270, 96);
             this.versionLbl.Name = "versionLbl";
-            this.versionLbl.Size = new System.Drawing.Size(70, 12);
+            this.versionLbl.Size = new System.Drawing.Size(70, 13);
             this.versionLbl.TabIndex = 14;
             this.versionLbl.Text = "Version:";
             // 
             // authorTxtBox
             // 
             this.authorTxtBox.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.authorTxtBox.Location = new System.Drawing.Point(86, 82);
+            this.authorTxtBox.Location = new System.Drawing.Point(86, 89);
             this.authorTxtBox.MaxLength = 100;
             this.authorTxtBox.Name = "authorTxtBox";
-            this.authorTxtBox.Size = new System.Drawing.Size(150, 21);
+            this.authorTxtBox.Size = new System.Drawing.Size(150, 20);
             this.authorTxtBox.TabIndex = 13;
             // 
             // authorLbl
             // 
-            this.authorLbl.Location = new System.Drawing.Point(10, 89);
+            this.authorLbl.Location = new System.Drawing.Point(10, 96);
             this.authorLbl.Name = "authorLbl";
-            this.authorLbl.Size = new System.Drawing.Size(70, 12);
+            this.authorLbl.Size = new System.Drawing.Size(70, 13);
             this.authorLbl.TabIndex = 12;
             this.authorLbl.Text = "Author:";
             // 
             // tablePrefixTxtBox
             // 
-            this.tablePrefixTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tablePrefixTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tablePrefixTxtBox.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tablePrefixTxtBox.Location = new System.Drawing.Point(357, 51);
+            this.tablePrefixTxtBox.Location = new System.Drawing.Point(357, 55);
             this.tablePrefixTxtBox.MaxLength = 50;
             this.tablePrefixTxtBox.Name = "tablePrefixTxtBox";
-            this.tablePrefixTxtBox.Size = new System.Drawing.Size(150, 21);
+            this.tablePrefixTxtBox.Size = new System.Drawing.Size(150, 20);
             this.tablePrefixTxtBox.TabIndex = 11;
             // 
             // tablePrefixLbl
             // 
-            this.tablePrefixLbl.Location = new System.Drawing.Point(270, 57);
+            this.tablePrefixLbl.Location = new System.Drawing.Point(270, 62);
             this.tablePrefixLbl.Name = "tablePrefixLbl";
-            this.tablePrefixLbl.Size = new System.Drawing.Size(70, 12);
+            this.tablePrefixLbl.Size = new System.Drawing.Size(70, 13);
             this.tablePrefixLbl.TabIndex = 10;
             this.tablePrefixLbl.Text = "Table Prefix:";
             // 
@@ -747,7 +746,7 @@
             // 
             this.packageTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.packageTxtBox.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.packageTxtBox.Location = new System.Drawing.Point(86, 50);
+            this.packageTxtBox.Location = new System.Drawing.Point(86, 54);
             this.packageTxtBox.MaxLength = 200;
             this.packageTxtBox.Name = "packageTxtBox";
             this.packageTxtBox.Size = new System.Drawing.Size(150, 20);
@@ -755,18 +754,18 @@
             // 
             // packageLabel
             // 
-            this.packageLabel.Location = new System.Drawing.Point(10, 56);
+            this.packageLabel.Location = new System.Drawing.Point(10, 61);
             this.packageLabel.Name = "packageLabel";
-            this.packageLabel.Size = new System.Drawing.Size(70, 12);
+            this.packageLabel.Size = new System.Drawing.Size(70, 13);
             this.packageLabel.TabIndex = 8;
             this.packageLabel.Text = "Package:";
             // 
             // saveSettingsBtn
             // 
             this.saveSettingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveSettingsBtn.Location = new System.Drawing.Point(353, 216);
+            this.saveSettingsBtn.Location = new System.Drawing.Point(353, 234);
             this.saveSettingsBtn.Name = "saveSettingsBtn";
-            this.saveSettingsBtn.Size = new System.Drawing.Size(94, 21);
+            this.saveSettingsBtn.Size = new System.Drawing.Size(94, 23);
             this.saveSettingsBtn.TabIndex = 24;
             this.saveSettingsBtn.Text = "Save Settings";
             this.saveSettingsBtn.UseVisualStyleBackColor = true;
@@ -775,9 +774,9 @@
             // generateBtn
             // 
             this.generateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.generateBtn.Location = new System.Drawing.Point(454, 216);
+            this.generateBtn.Location = new System.Drawing.Point(454, 234);
             this.generateBtn.Name = "generateBtn";
-            this.generateBtn.Size = new System.Drawing.Size(75, 21);
+            this.generateBtn.Size = new System.Drawing.Size(75, 23);
             this.generateBtn.TabIndex = 25;
             this.generateBtn.Text = "Generate";
             this.generateBtn.UseVisualStyleBackColor = true;
@@ -790,15 +789,15 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 427);
+            this.ClientSize = new System.Drawing.Size(752, 464);
             this.Controls.Add(this.splitContainer);
             this.Controls.Add(this.mainStatusStrip);
             this.Controls.Add(this.mainMenuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenuStrip;
-            this.MinimumSize = new System.Drawing.Size(760, 455);
+            this.MinimumSize = new System.Drawing.Size(760, 491);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CodeBuilder";
