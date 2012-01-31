@@ -152,6 +152,14 @@
     </Compile>
     <Compile Include="UI\Helpers\ExportModelHelper.cs" />
     <Compile Include="UI\Helpers\MessageBoxHelper.cs" />
+    <EmbeddedResource Include="MainForm.zh-CN.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.zh-CN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,16 +176,37 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Forms\AboutBox.zh-CN.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseOptionsDialog.zh-CN.resx">
+      <DependentUpon>BaseOptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseOptionsPage.zh-CN.resx">
+      <DependentUpon>BaseOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\CodeGeneralOptionsPage.zh-CN.resx">
+      <DependentUpon>CodeGeneralOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\OptionsPages\DataSourceOptionsPage.resx">
       <DependentUpon>DataSourceOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\OptionsPages\CodeGeneralOptionsPage.resx">
       <DependentUpon>CodeGeneralOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\DataSourceOptionsPage.zh-CN.resx">
+      <DependentUpon>DataSourceOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\OptionsPages\RecentFilesOptionsPage.resx">
       <DependentUpon>RecentFilesOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\RecentFilesOptionsPage.zh-CN.resx">
+      <DependentUpon>RecentFilesOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\OptionsPages\TemplateOptionsPage.resx">
+      <DependentUpon>TemplateOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\TemplateOptionsPage.zh-CN.resx">
       <DependentUpon>TemplateOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\OptionsPages\TraceOptionsPage.resx">
@@ -189,7 +218,13 @@
     <EmbeddedResource Include="UI\Forms\BaseOptionsPage.resx">
       <DependentUpon>BaseOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\TraceOptionsPage.zh-CN.resx">
+      <DependentUpon>TraceOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\TreeOptionsDialog.resx">
+      <DependentUpon>TreeOptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\TreeOptionsDialog.zh-CN.resx">
       <DependentUpon>TreeOptionsDialog.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TemplateOptionsPage));
             this.templatesLbl = new System.Windows.Forms.Label();
             this.topGbx = new System.Windows.Forms.GroupBox();
             this.templateListbox = new System.Windows.Forms.ListBox();
@@ -55,200 +56,136 @@
             // 
             // templatesLbl
             // 
-            this.templatesLbl.Location = new System.Drawing.Point(9, 5);
+            resources.ApplyResources(this.templatesLbl, "templatesLbl");
             this.templatesLbl.Name = "templatesLbl";
-            this.templatesLbl.Size = new System.Drawing.Size(60, 16);
-            this.templatesLbl.TabIndex = 31;
-            this.templatesLbl.Text = "Templates";
             // 
             // topGbx
             // 
-            this.topGbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.topGbx.Location = new System.Drawing.Point(80, 5);
+            resources.ApplyResources(this.topGbx, "topGbx");
             this.topGbx.Name = "topGbx";
-            this.topGbx.Size = new System.Drawing.Size(370, 8);
-            this.topGbx.TabIndex = 30;
             this.topGbx.TabStop = false;
             // 
             // templateListbox
             // 
             this.templateListbox.FormattingEnabled = true;
-            this.templateListbox.Location = new System.Drawing.Point(10, 30);
+            resources.ApplyResources(this.templateListbox, "templateListbox");
             this.templateListbox.Name = "templateListbox";
-            this.templateListbox.Size = new System.Drawing.Size(160, 303);
-            this.templateListbox.TabIndex = 1;
             this.templateListbox.SelectedIndexChanged += new System.EventHandler(this.templateListbox_SelectedIndexChanged);
             // 
             // engineCombox
             // 
             this.engineCombox.FormattingEnabled = true;
-            this.engineCombox.Location = new System.Drawing.Point(262, 60);
+            resources.ApplyResources(this.engineCombox, "engineCombox");
             this.engineCombox.Name = "engineCombox";
-            this.engineCombox.Size = new System.Drawing.Size(121, 21);
-            this.engineCombox.TabIndex = 5;
             // 
             // languageCombox
             // 
             this.languageCombox.FormattingEnabled = true;
-            this.languageCombox.Location = new System.Drawing.Point(262, 30);
+            resources.ApplyResources(this.languageCombox, "languageCombox");
             this.languageCombox.Name = "languageCombox";
-            this.languageCombox.Size = new System.Drawing.Size(121, 21);
-            this.languageCombox.TabIndex = 3;
             // 
             // removeBtn
             // 
-            this.removeBtn.Location = new System.Drawing.Point(291, 210);
+            resources.ApplyResources(this.removeBtn, "removeBtn");
             this.removeBtn.Name = "removeBtn";
-            this.removeBtn.Size = new System.Drawing.Size(64, 23);
-            this.removeBtn.TabIndex = 16;
-            this.removeBtn.Text = "Remove";
             this.removeBtn.UseVisualStyleBackColor = true;
             this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
             // 
             // newsaveBtn
             // 
-            this.newsaveBtn.Location = new System.Drawing.Point(361, 210);
+            resources.ApplyResources(this.newsaveBtn, "newsaveBtn");
             this.newsaveBtn.Name = "newsaveBtn";
-            this.newsaveBtn.Size = new System.Drawing.Size(93, 23);
-            this.newsaveBtn.TabIndex = 17;
-            this.newsaveBtn.Text = "New/Save";
             this.newsaveBtn.UseVisualStyleBackColor = true;
             this.newsaveBtn.Click += new System.EventHandler(this.newsaveBtn_Click);
             // 
             // fileNameTextbox
             // 
-            this.fileNameTextbox.Location = new System.Drawing.Point(262, 120);
+            resources.ApplyResources(this.fileNameTextbox, "fileNameTextbox");
             this.fileNameTextbox.Name = "fileNameTextbox";
-            this.fileNameTextbox.Size = new System.Drawing.Size(164, 20);
-            this.fileNameTextbox.TabIndex = 9;
             // 
             // displayNameTxtbox
             // 
-            this.displayNameTxtbox.Location = new System.Drawing.Point(262, 90);
-            this.displayNameTxtbox.MaxLength = 200;
+            resources.ApplyResources(this.displayNameTxtbox, "displayNameTxtbox");
             this.displayNameTxtbox.Name = "displayNameTxtbox";
-            this.displayNameTxtbox.Size = new System.Drawing.Size(121, 20);
-            this.displayNameTxtbox.TabIndex = 7;
             // 
             // languageLbl
             // 
-            this.languageLbl.Location = new System.Drawing.Point(178, 30);
+            resources.ApplyResources(this.languageLbl, "languageLbl");
             this.languageLbl.Name = "languageLbl";
-            this.languageLbl.Size = new System.Drawing.Size(80, 13);
-            this.languageLbl.TabIndex = 2;
-            this.languageLbl.Text = "Language:";
             // 
             // engineLbl
             // 
-            this.engineLbl.Location = new System.Drawing.Point(178, 60);
+            resources.ApplyResources(this.engineLbl, "engineLbl");
             this.engineLbl.Name = "engineLbl";
-            this.engineLbl.Size = new System.Drawing.Size(80, 13);
-            this.engineLbl.TabIndex = 4;
-            this.engineLbl.Text = "Engine:";
             // 
             // nameLbl
             // 
-            this.nameLbl.Location = new System.Drawing.Point(178, 90);
+            resources.ApplyResources(this.nameLbl, "nameLbl");
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(80, 13);
-            this.nameLbl.TabIndex = 6;
-            this.nameLbl.Text = "DisplayName:";
             // 
             // fileNameLbl
             // 
-            this.fileNameLbl.Location = new System.Drawing.Point(178, 120);
+            resources.ApplyResources(this.fileNameLbl, "fileNameLbl");
             this.fileNameLbl.Name = "fileNameLbl";
-            this.fileNameLbl.Size = new System.Drawing.Size(80, 13);
-            this.fileNameLbl.TabIndex = 8;
-            this.fileNameLbl.Text = "File:";
             // 
             // editBtn
             // 
-            this.editBtn.Location = new System.Drawing.Point(228, 210);
+            resources.ApplyResources(this.editBtn, "editBtn");
             this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(57, 23);
-            this.editBtn.TabIndex = 15;
-            this.editBtn.Text = "Edit";
             this.editBtn.UseVisualStyleBackColor = true;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // openFileDialogBtn
             // 
-            this.openFileDialogBtn.Location = new System.Drawing.Point(430, 118);
+            resources.ApplyResources(this.openFileDialogBtn, "openFileDialogBtn");
             this.openFileDialogBtn.Name = "openFileDialogBtn";
-            this.openFileDialogBtn.Size = new System.Drawing.Size(24, 23);
-            this.openFileDialogBtn.TabIndex = 10;
-            this.openFileDialogBtn.Text = "...";
             this.openFileDialogBtn.UseVisualStyleBackColor = true;
             this.openFileDialogBtn.Click += new System.EventHandler(this.openFileDialogBtn_Click);
             // 
             // noteTextLbl
             // 
-            this.noteTextLbl.Location = new System.Drawing.Point(246, 276);
+            resources.ApplyResources(this.noteTextLbl, "noteTextLbl");
             this.noteTextLbl.Name = "noteTextLbl";
-            this.noteTextLbl.Size = new System.Drawing.Size(210, 60);
-            this.noteTextLbl.TabIndex = 20;
             // 
             // noteLbl
             // 
-            this.noteLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noteLbl.Location = new System.Drawing.Point(190, 275);
+            resources.ApplyResources(this.noteLbl, "noteLbl");
             this.noteLbl.Name = "noteLbl";
-            this.noteLbl.Size = new System.Drawing.Size(50, 18);
-            this.noteLbl.TabIndex = 19;
-            this.noteLbl.Text = "Note:";
             // 
             // openFileDialog
             // 
-            this.openFileDialog.Filter = "Template Text File (*.txt)|*.txt";
-            this.openFileDialog.Title = "Select Template Text File";
+            resources.ApplyResources(this.openFileDialog, "openFileDialog");
             // 
             // getItFromOnlineBtn
             // 
-            this.getItFromOnlineBtn.Location = new System.Drawing.Point(228, 244);
+            resources.ApplyResources(this.getItFromOnlineBtn, "getItFromOnlineBtn");
             this.getItFromOnlineBtn.Name = "getItFromOnlineBtn";
-            this.getItFromOnlineBtn.Size = new System.Drawing.Size(226, 23);
-            this.getItFromOnlineBtn.TabIndex = 18;
-            this.getItFromOnlineBtn.Text = "Get it from online";
             this.getItFromOnlineBtn.UseVisualStyleBackColor = true;
             this.getItFromOnlineBtn.Click += new System.EventHandler(this.getItFromOnlineBtn_Click);
             // 
             // prefixTxtBox
             // 
-            this.prefixTxtBox.Location = new System.Drawing.Point(262, 150);
-            this.prefixTxtBox.MaxLength = 200;
+            resources.ApplyResources(this.prefixTxtBox, "prefixTxtBox");
             this.prefixTxtBox.Name = "prefixTxtBox";
-            this.prefixTxtBox.Size = new System.Drawing.Size(121, 20);
-            this.prefixTxtBox.TabIndex = 12;
             // 
             // prefixLbl
             // 
-            this.prefixLbl.Location = new System.Drawing.Point(178, 150);
+            resources.ApplyResources(this.prefixLbl, "prefixLbl");
             this.prefixLbl.Name = "prefixLbl";
-            this.prefixLbl.Size = new System.Drawing.Size(80, 13);
-            this.prefixLbl.TabIndex = 11;
-            this.prefixLbl.Text = "Prefix:";
             // 
             // suffixLbl
             // 
-            this.suffixLbl.Location = new System.Drawing.Point(178, 180);
+            resources.ApplyResources(this.suffixLbl, "suffixLbl");
             this.suffixLbl.Name = "suffixLbl";
-            this.suffixLbl.Size = new System.Drawing.Size(80, 13);
-            this.suffixLbl.TabIndex = 13;
-            this.suffixLbl.Text = "Suffix:";
             // 
             // suffixTxtBox
             // 
-            this.suffixTxtBox.Location = new System.Drawing.Point(262, 180);
-            this.suffixTxtBox.MaxLength = 200;
+            resources.ApplyResources(this.suffixTxtBox, "suffixTxtBox");
             this.suffixTxtBox.Name = "suffixTxtBox";
-            this.suffixTxtBox.Size = new System.Drawing.Size(121, 20);
-            this.suffixTxtBox.TabIndex = 14;
             // 
             // TemplateOptionsPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.suffixLbl);
             this.Controls.Add(this.suffixTxtBox);

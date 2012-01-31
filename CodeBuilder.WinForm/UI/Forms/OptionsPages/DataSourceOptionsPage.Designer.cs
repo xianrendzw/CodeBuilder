@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataSourceOptionsPage));
             this.datasourceLbl = new System.Windows.Forms.Label();
             this.topGbx = new System.Windows.Forms.GroupBox();
             this.noteTextLbl = new System.Windows.Forms.Label();
@@ -45,118 +46,80 @@
             // 
             // datasourceLbl
             // 
-            this.datasourceLbl.Location = new System.Drawing.Point(9, 5);
+            resources.ApplyResources(this.datasourceLbl, "datasourceLbl");
             this.datasourceLbl.Name = "datasourceLbl";
-            this.datasourceLbl.Size = new System.Drawing.Size(80, 16);
-            this.datasourceLbl.TabIndex = 39;
-            this.datasourceLbl.Text = "DataSources";
             // 
             // topGbx
             // 
-            this.topGbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.topGbx.Location = new System.Drawing.Point(90, 5);
+            resources.ApplyResources(this.topGbx, "topGbx");
             this.topGbx.Name = "topGbx";
-            this.topGbx.Size = new System.Drawing.Size(360, 8);
-            this.topGbx.TabIndex = 38;
             this.topGbx.TabStop = false;
             // 
             // noteTextLbl
             // 
-            this.noteTextLbl.Location = new System.Drawing.Point(246, 191);
+            resources.ApplyResources(this.noteTextLbl, "noteTextLbl");
             this.noteTextLbl.Name = "noteTextLbl";
-            this.noteTextLbl.Size = new System.Drawing.Size(207, 142);
-            this.noteTextLbl.TabIndex = 11;
             // 
             // noteLbl
             // 
-            this.noteLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noteLbl.Location = new System.Drawing.Point(190, 191);
+            resources.ApplyResources(this.noteLbl, "noteLbl");
             this.noteLbl.Name = "noteLbl";
-            this.noteLbl.Size = new System.Drawing.Size(50, 18);
-            this.noteLbl.TabIndex = 10;
-            this.noteLbl.Text = "Note:";
             // 
             // connstrLbl
             // 
-            this.connstrLbl.Location = new System.Drawing.Point(190, 65);
+            resources.ApplyResources(this.connstrLbl, "connstrLbl");
             this.connstrLbl.Name = "connstrLbl";
-            this.connstrLbl.Size = new System.Drawing.Size(80, 13);
-            this.connstrLbl.TabIndex = 4;
-            this.connstrLbl.Text = "ConnectString:";
             // 
             // nameLbl
             // 
-            this.nameLbl.Location = new System.Drawing.Point(190, 30);
+            resources.ApplyResources(this.nameLbl, "nameLbl");
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(60, 13);
-            this.nameLbl.TabIndex = 2;
-            this.nameLbl.Text = "Name:";
             // 
             // exporterLbl
             // 
-            this.exporterLbl.Location = new System.Drawing.Point(190, 100);
+            resources.ApplyResources(this.exporterLbl, "exporterLbl");
             this.exporterLbl.Name = "exporterLbl";
-            this.exporterLbl.Size = new System.Drawing.Size(60, 13);
-            this.exporterLbl.TabIndex = 6;
-            this.exporterLbl.Text = "Exporter:";
             // 
             // nameTxtbox
             // 
-            this.nameTxtbox.Location = new System.Drawing.Point(274, 30);
-            this.nameTxtbox.MaxLength = 200;
+            resources.ApplyResources(this.nameTxtbox, "nameTxtbox");
             this.nameTxtbox.Name = "nameTxtbox";
-            this.nameTxtbox.Size = new System.Drawing.Size(179, 20);
-            this.nameTxtbox.TabIndex = 3;
             // 
             // connstrTxtbox
             // 
-            this.connstrTxtbox.Location = new System.Drawing.Point(274, 65);
-            this.connstrTxtbox.MaxLength = 500;
+            resources.ApplyResources(this.connstrTxtbox, "connstrTxtbox");
             this.connstrTxtbox.Name = "connstrTxtbox";
-            this.connstrTxtbox.Size = new System.Drawing.Size(179, 20);
-            this.connstrTxtbox.TabIndex = 5;
             // 
             // newsaveBtn
             // 
-            this.newsaveBtn.Location = new System.Drawing.Point(349, 141);
+            resources.ApplyResources(this.newsaveBtn, "newsaveBtn");
             this.newsaveBtn.Name = "newsaveBtn";
-            this.newsaveBtn.Size = new System.Drawing.Size(104, 23);
-            this.newsaveBtn.TabIndex = 9;
-            this.newsaveBtn.Text = "New/Save";
             this.newsaveBtn.UseVisualStyleBackColor = true;
             this.newsaveBtn.Click += new System.EventHandler(this.newsaveBtn_Click);
             // 
             // removeBtn
             // 
-            this.removeBtn.Location = new System.Drawing.Point(279, 141);
+            resources.ApplyResources(this.removeBtn, "removeBtn");
             this.removeBtn.Name = "removeBtn";
-            this.removeBtn.Size = new System.Drawing.Size(64, 23);
-            this.removeBtn.TabIndex = 8;
-            this.removeBtn.Text = "Remove";
             this.removeBtn.UseVisualStyleBackColor = true;
             this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
             // 
             // exporterCombox
             // 
             this.exporterCombox.FormattingEnabled = true;
-            this.exporterCombox.Location = new System.Drawing.Point(274, 100);
+            resources.ApplyResources(this.exporterCombox, "exporterCombox");
             this.exporterCombox.Name = "exporterCombox";
-            this.exporterCombox.Size = new System.Drawing.Size(121, 21);
-            this.exporterCombox.TabIndex = 7;
             // 
             // datasourceListbox
             // 
             this.datasourceListbox.FormattingEnabled = true;
-            this.datasourceListbox.Location = new System.Drawing.Point(10, 30);
+            resources.ApplyResources(this.datasourceListbox, "datasourceListbox");
             this.datasourceListbox.Name = "datasourceListbox";
-            this.datasourceListbox.Size = new System.Drawing.Size(160, 303);
-            this.datasourceListbox.TabIndex = 1;
             this.datasourceListbox.SelectedIndexChanged += new System.EventHandler(this.datasourceListbox_SelectedIndexChanged);
             // 
             // DataSourceOptionsPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.noteTextLbl);
             this.Controls.Add(this.noteLbl);

@@ -1,0 +1,1038 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="treeViewContextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 4</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAEBAAAAEAGABoAwAAJgAAACAgAAABABgAqAwAAI4DAAAoAAAAEAAAACAAAAABABgAAAAAAAAD
+        AAAAAAAAAAAAAAAAAAAAAAAA////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////3O7/kY32kY32pZ32pdibpdiQpdiQ6u+/////////////
+        ////////////////9v//L0bzr4ny////+P//TLtmkMhRkNSQXLEt+PXC////////////////////////
+        3v//JBzw7sv4////////ZMiIvtRm6v//TLRU6uib////////////////////////9v//JD3y1a71////
+        ////gtSwTLEiTLEie7ci///u////////////////////////////eJr6eE/u///+////rujme7ci///u
+        Y8iLxdhv////////////////////////////7v//QUz0t5Lz////zfX/VLEtpdR3XL5ZvtRm////////
+        ////////////////////////7v//b3z3eGDwg432VXKcpdiPtdiQ///u////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAACgAAAAgAAAAQAAAAAEAGAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAD/////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////92u/8kHO0kHO0kHO0k
+        HO0kHO11Xe1MsU1MsSJMsSJMsSJMsSJMsSKrvyL//97/////////////////////////////////////
+        //////////////////////////9QmPwkHO0kHO3emPH////////////j//9Mv5pMsSJMsSJMsSJMsSJM
+        sSJMsSKNsSL//73////////////////////////////////////////////////////////e//8kSvck
+        HO29cu3///////////////////9MzL1MsSKrvyL//97///+r8v9MsU5MsSLj2U7/////////////////
+        //////////////////////////////////////+9//8kHPMkHO3emPH///////////////////9u2d5M
+        sSKNsSL//73////j//9Mv5pMsSLIzCL/////////////////////////////////////////////////
+        //////+9//8kHPMkHO3emPH///////////////////+N5v9MsSJusSL/8pr////I//9MsXVMsSLj2U7/
+        ///////////////////////////////////////////////////////e//8kSvckHO29cu3/////////
+        //////////+r8v9MsU5MsSJMsSJMsSJMsSJMsSLIzCL/////////////////////////////////////
+        //////////////////////////8kcvkkHO2bSu3///z////////////////I//9MsXVMsSJMsSJMsSJM
+        sSJMsSKNsSL//73///////////////////////////////////////////////////////////+b3f8k
+        HPEkHO3/u/P///////////////////9MzL1MsSLIzCL///////9MzL1MsSKrvyL//97/////////////
+        //////////////////////////////////////////////8kcvkkHO2bSu3///z///////////////9u
+        2d5MsSKNsSL//73///+r8v9MsU5usSL/8pr/////////////////////////////////////////////
+        //////////////+9//8kHPMkHO3emPH///////////////+N5v9MsSJusSL/8pr///+N5v9MsSJusSL/
+        8pr///////////////////////////////////////////////////////////////+b3f8kHPEkHO3e
+        mPH///////////+r8v9MsU5MsSJMsSJMsSJMsSJMsSKNsSL//73/////////////////////////////
+        //////////////////////////////////////+9//8kHPMkHO2bSu3///z////I//9MsXVMsSJMsSJM
+        sSJMsSKNsSL//73/////////////////////////////////////////////////////////////////
+        //////////////92u/8kHO0kHO0kHO0kHO0kHO2bSu3///z/////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
+  </data>
+  <data name="genSettingsCtxMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 4</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>CodeBuilder</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;authorLbl.Name" xml:space="preserve">
+    <value>authorLbl</value>
+  </data>
+  <data name="&gt;&gt;authorLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;authorLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;authorLbl.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;authorTxtBox.Name" xml:space="preserve">
+    <value>authorTxtBox</value>
+  </data>
+  <data name="&gt;&gt;authorTxtBox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;authorTxtBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;authorTxtBox.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;clearCtxMenuItem.Name" xml:space="preserve">
+    <value>clearCtxMenuItem</value>
+  </data>
+  <data name="&gt;&gt;clearCtxMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingCombox.Name" xml:space="preserve">
+    <value>codeFileEncodingCombox</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingCombox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingCombox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingCombox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingLbl.Name" xml:space="preserve">
+    <value>codeFileEncodingLbl</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingLbl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;codeGeneration.Name" xml:space="preserve">
+    <value>codeGeneration</value>
+  </data>
+  <data name="&gt;&gt;codeGeneration.Type" xml:space="preserve">
+    <value>CodeBuilder.WinForm.UI.CodeGeneration, CodeBuilder, Version=1.0.11.1210, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;completedLbl.Name" xml:space="preserve">
+    <value>completedLbl</value>
+  </data>
+  <data name="&gt;&gt;completedLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;completedLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;completedLbl.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;ctxSeparator2.Name" xml:space="preserve">
+    <value>ctxSeparator2</value>
+  </data>
+  <data name="&gt;&gt;ctxSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileLbl.Name" xml:space="preserve">
+    <value>currentGenFileLbl</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileLbl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileNameLbl.Name" xml:space="preserve">
+    <value>currentGenFileNameLbl</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileNameLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileNameLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileNameLbl.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;databaseLbl.Name" xml:space="preserve">
+    <value>databaseLbl</value>
+  </data>
+  <data name="&gt;&gt;databaseLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;databaseLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;databaseLbl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;databaseNameLbl.Name" xml:space="preserve">
+    <value>databaseNameLbl</value>
+  </data>
+  <data name="&gt;&gt;databaseNameLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;databaseNameLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;databaseNameLbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;errorFileCountLbl.Name" xml:space="preserve">
+    <value>errorFileCountLbl</value>
+  </data>
+  <data name="&gt;&gt;errorFileCountLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;errorFileCountLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorFileCountLbl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;errorFilesLbl.Name" xml:space="preserve">
+    <value>errorFilesLbl</value>
+  </data>
+  <data name="&gt;&gt;errorFilesLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;errorFilesLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorFilesLbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;exportDataSourceCtxMenuItem.Name" xml:space="preserve">
+    <value>exportDataSourceCtxMenuItem</value>
+  </data>
+  <data name="&gt;&gt;exportDataSourceCtxMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exportPDMCtxMenuItem.Name" xml:space="preserve">
+    <value>exportPDMCtxMenuItem</value>
+  </data>
+  <data name="&gt;&gt;exportPDMCtxMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileExitMenuItem.Name" xml:space="preserve">
+    <value>fileExitMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileExitMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileExportDataSourceMenuItem.Name" xml:space="preserve">
+    <value>fileExportDataSourceMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileExportDataSourceMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileExportPdmMenuItem.Name" xml:space="preserve">
+    <value>fileExportPdmMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileExportPdmMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileMenu.Name" xml:space="preserve">
+    <value>fileMenu</value>
+  </data>
+  <data name="&gt;&gt;fileMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileOpenMenuItem.Name" xml:space="preserve">
+    <value>fileOpenMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileOpenMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileSaveMenuItem.Name" xml:space="preserve">
+    <value>fileSaveMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileSaveMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileSeparator1MenuItem.Name" xml:space="preserve">
+    <value>fileSeparator1MenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileSeparator1MenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileSeparator2MenuItem.Name" xml:space="preserve">
+    <value>fileSeparator2MenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileSeparator2MenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;generateBtn.Name" xml:space="preserve">
+    <value>generateBtn</value>
+  </data>
+  <data name="&gt;&gt;generateBtn.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;generateBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;generateBtn.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;generateCtxMenuItem.Name" xml:space="preserve">
+    <value>generateCtxMenuItem</value>
+  </data>
+  <data name="&gt;&gt;generateCtxMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;genFileCountLbl.Name" xml:space="preserve">
+    <value>genFileCountLbl</value>
+  </data>
+  <data name="&gt;&gt;genFileCountLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;genFileCountLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;genFileCountLbl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;genFilesLbl.Name" xml:space="preserve">
+    <value>genFilesLbl</value>
+  </data>
+  <data name="&gt;&gt;genFilesLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;genFilesLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;genFilesLbl.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;genItemsGbx.Name" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;genItemsGbx.Parent" xml:space="preserve">
+    <value>splitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;genItemsGbx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;genItemsGbx.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;genProgressBar.Name" xml:space="preserve">
+    <value>genProgressBar</value>
+  </data>
+  <data name="&gt;&gt;genProgressBar.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;genProgressBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;genProgressBar.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;genSettingsCtxMenuStrip.Name" xml:space="preserve">
+    <value>genSettingsCtxMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;genSettingsCtxMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;genSettingsCtxSeparator1.Name" xml:space="preserve">
+    <value>genSettingsCtxSeparator1</value>
+  </data>
+  <data name="&gt;&gt;genSettingsCtxSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpAboutMenuItem.Name" xml:space="preserve">
+    <value>helpAboutMenuItem</value>
+  </data>
+  <data name="&gt;&gt;helpAboutMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpF1MenuItem.Name" xml:space="preserve">
+    <value>helpF1MenuItem</value>
+  </data>
+  <data name="&gt;&gt;helpF1MenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpFeedbackMenuItem.Name" xml:space="preserve">
+    <value>helpFeedbackMenuItem</value>
+  </data>
+  <data name="&gt;&gt;helpFeedbackMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpMenu.Name" xml:space="preserve">
+    <value>helpMenu</value>
+  </data>
+  <data name="&gt;&gt;helpMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpSeparator1MenuItem.Name" xml:space="preserve">
+    <value>helpSeparator1MenuItem</value>
+  </data>
+  <data name="&gt;&gt;helpSeparator1MenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;isOmitTablePrefixChkbox.Name" xml:space="preserve">
+    <value>isOmitTablePrefixChkbox</value>
+  </data>
+  <data name="&gt;&gt;isOmitTablePrefixChkbox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;isOmitTablePrefixChkbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;isOmitTablePrefixChkbox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;isStandardizeNameChkbox.Name" xml:space="preserve">
+    <value>isStandardizeNameChkbox</value>
+  </data>
+  <data name="&gt;&gt;isStandardizeNameChkbox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;isStandardizeNameChkbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;isStandardizeNameChkbox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;languageCombx.Name" xml:space="preserve">
+    <value>languageCombx</value>
+  </data>
+  <data name="&gt;&gt;languageCombx.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;languageCombx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;languageCombx.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;languageLbl.Name" xml:space="preserve">
+    <value>languageLbl</value>
+  </data>
+  <data name="&gt;&gt;languageLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;languageLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;languageLbl.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Name" xml:space="preserve">
+    <value>mainMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.Name" xml:space="preserve">
+    <value>mainStatusStrip</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog.Name" xml:space="preserve">
+    <value>openFileDialog</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openGenSettingsCtxMenuItem.Name" xml:space="preserve">
+    <value>openGenSettingsCtxMenuItem</value>
+  </data>
+  <data name="&gt;&gt;openGenSettingsCtxMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;packageLabel.Name" xml:space="preserve">
+    <value>packageLabel</value>
+  </data>
+  <data name="&gt;&gt;packageLabel.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;packageLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;packageLabel.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;packageTxtBox.Name" xml:space="preserve">
+    <value>packageTxtBox</value>
+  </data>
+  <data name="&gt;&gt;packageTxtBox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;packageTxtBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;packageTxtBox.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;resultGbx.Name" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;resultGbx.Parent" xml:space="preserve">
+    <value>splitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;resultGbx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;resultGbx.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog.Name" xml:space="preserve">
+    <value>saveFileDialog</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveGenSettingCtxMenuItem.Name" xml:space="preserve">
+    <value>saveGenSettingCtxMenuItem</value>
+  </data>
+  <data name="&gt;&gt;saveGenSettingCtxMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveSettingsBtn.Name" xml:space="preserve">
+    <value>saveSettingsBtn</value>
+  </data>
+  <data name="&gt;&gt;saveSettingsBtn.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;saveSettingsBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveSettingsBtn.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Name" xml:space="preserve">
+    <value>splitContainer</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel1.Name" xml:space="preserve">
+    <value>splitContainer.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel2.Name" xml:space="preserve">
+    <value>splitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;statusBarDatabase.Name" xml:space="preserve">
+    <value>statusBarDatabase</value>
+  </data>
+  <data name="&gt;&gt;statusBarDatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarEncoding.Name" xml:space="preserve">
+    <value>statusBarEncoding</value>
+  </data>
+  <data name="&gt;&gt;statusBarEncoding.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarLanguage.Name" xml:space="preserve">
+    <value>statusBarLanguage</value>
+  </data>
+  <data name="&gt;&gt;statusBarLanguage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarReady.Name" xml:space="preserve">
+    <value>statusBarReady</value>
+  </data>
+  <data name="&gt;&gt;statusBarReady.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixLbl.Name" xml:space="preserve">
+    <value>tablePrefixLbl</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixLbl.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixTxtBox.Name" xml:space="preserve">
+    <value>tablePrefixTxtBox</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixTxtBox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixTxtBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixTxtBox.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;templateEngineCombox.Name" xml:space="preserve">
+    <value>templateEngineCombox</value>
+  </data>
+  <data name="&gt;&gt;templateEngineCombox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;templateEngineCombox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;templateEngineCombox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;templateEngineLbl.Name" xml:space="preserve">
+    <value>templateEngineLbl</value>
+  </data>
+  <data name="&gt;&gt;templateEngineLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;templateEngineLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;templateEngineLbl.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;templateLbl.Name" xml:space="preserve">
+    <value>templateLbl</value>
+  </data>
+  <data name="&gt;&gt;templateLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;templateLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;templateLbl.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;templateListBox.Name" xml:space="preserve">
+    <value>templateListBox</value>
+  </data>
+  <data name="&gt;&gt;templateListBox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;templateListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;templateListBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;toolsDSConfigMenuItem.Name" xml:space="preserve">
+    <value>toolsDSConfigMenuItem</value>
+  </data>
+  <data name="&gt;&gt;toolsDSConfigMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolsMenu.Name" xml:space="preserve">
+    <value>toolsMenu</value>
+  </data>
+  <data name="&gt;&gt;toolsMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolsOptionsMenuItem.Name" xml:space="preserve">
+    <value>toolsOptionsMenuItem</value>
+  </data>
+  <data name="&gt;&gt;toolsOptionsMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolsSeparator1MenuItem.Name" xml:space="preserve">
+    <value>toolsSeparator1MenuItem</value>
+  </data>
+  <data name="&gt;&gt;toolsSeparator1MenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolsTemplatesMenuItem.Name" xml:space="preserve">
+    <value>toolsTemplatesMenuItem</value>
+  </data>
+  <data name="&gt;&gt;toolsTemplatesMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Name" xml:space="preserve">
+    <value>toolTip</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;totalFileCountLbl.Name" xml:space="preserve">
+    <value>totalFileCountLbl</value>
+  </data>
+  <data name="&gt;&gt;totalFileCountLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;totalFileCountLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;totalFileCountLbl.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;totalFilesLbl.Name" xml:space="preserve">
+    <value>totalFilesLbl</value>
+  </data>
+  <data name="&gt;&gt;totalFilesLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;totalFilesLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;totalFilesLbl.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;treeNodeImageList.Name" xml:space="preserve">
+    <value>treeNodeImageList</value>
+  </data>
+  <data name="&gt;&gt;treeNodeImageList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;treeView.Name" xml:space="preserve">
+    <value>treeView</value>
+  </data>
+  <data name="&gt;&gt;treeView.Parent" xml:space="preserve">
+    <value>splitContainer.Panel1</value>
+  </data>
+  <data name="&gt;&gt;treeView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;treeView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;treeViewContextMenu.Name" xml:space="preserve">
+    <value>treeViewContextMenu</value>
+  </data>
+  <data name="&gt;&gt;treeViewContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;versionLbl.Name" xml:space="preserve">
+    <value>versionLbl</value>
+  </data>
+  <data name="&gt;&gt;versionLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;versionLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;versionLbl.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;versionTxtBox.Name" xml:space="preserve">
+    <value>versionTxtBox</value>
+  </data>
+  <data name="&gt;&gt;versionTxtBox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;versionTxtBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;versionTxtBox.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="authorLbl.Text" xml:space="preserve">
+    <value>作者:</value>
+  </data>
+  <data name="clearCtxMenuItem.Text" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="codeFileEncodingLbl.Text" xml:space="preserve">
+    <value>编码:</value>
+  </data>
+  <data name="completedLbl.Text" xml:space="preserve">
+    <value>完成!</value>
+  </data>
+  <data name="currentGenFileLbl.Text" xml:space="preserve">
+    <value>当前正在生成的文件:</value>
+  </data>
+  <data name="databaseLbl.Text" xml:space="preserve">
+    <value>数据库:</value>
+  </data>
+  <data name="errorFilesLbl.Text" xml:space="preserve">
+    <value>错误文件数:</value>
+  </data>
+  <data name="exportDataSourceCtxMenuItem.Text" xml:space="preserve">
+    <value>(&amp;D)从数据源导出</value>
+  </data>
+  <data name="exportPDMCtxMenuItem.Text" xml:space="preserve">
+    <value>(&amp;P)从PowerDesigner PDM文件导出...</value>
+  </data>
+  <data name="fileExitMenuItem.Text" xml:space="preserve">
+    <value>(&amp;E)退出</value>
+  </data>
+  <data name="fileExportDataSourceMenuItem.Text" xml:space="preserve">
+    <value>(&amp;D)从数据源导出</value>
+  </data>
+  <data name="fileExportPdmMenuItem.Text" xml:space="preserve">
+    <value>Export &amp;PowerDesigner PDM Files...</value>
+  </data>
+  <data name="fileMenu.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="fileOpenMenuItem.Text" xml:space="preserve">
+    <value>&amp;Open Generation Settings File</value>
+  </data>
+  <data name="fileSaveMenuItem.Text" xml:space="preserve">
+    <value>&amp;Save Generation Setting...</value>
+  </data>
+  <data name="generateBtn.Text" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="generateCtxMenuItem.Text" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="genFilesLbl.Text" xml:space="preserve">
+    <value>Generated files:</value>
+  </data>
+  <data name="genItemsGbx.Text" xml:space="preserve">
+    <value>Generation Settings</value>
+  </data>
+  <data name="helpAboutMenuItem.Text" xml:space="preserve">
+    <value>About CodeBuilder...</value>
+  </data>
+  <data name="helpF1MenuItem.Text" xml:space="preserve">
+    <value>CodeBuilder Help...</value>
+  </data>
+  <data name="helpFeedbackMenuItem.Text" xml:space="preserve">
+    <value>Customer Feedback...</value>
+  </data>
+  <data name="helpMenu.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="isOmitTablePrefixChkbox.Text" xml:space="preserve">
+    <value>Is Omit Table Prefix</value>
+  </data>
+  <data name="isStandardizeNameChkbox.Text" xml:space="preserve">
+    <value>Is Standardize Table And Field Name</value>
+  </data>
+  <data name="languageLbl.Text" xml:space="preserve">
+    <value>Language:</value>
+  </data>
+  <data name="mainMenuStrip.Text" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="openGenSettingsCtxMenuItem.Text" xml:space="preserve">
+    <value>Open Generation Settings File...</value>
+  </data>
+  <data name="packageLabel.Text" xml:space="preserve">
+    <value>Package:</value>
+  </data>
+  <data name="resultGbx.Text" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="saveGenSettingCtxMenuItem.Text" xml:space="preserve">
+    <value>Save Generation Setting...</value>
+  </data>
+  <data name="saveSettingsBtn.Text" xml:space="preserve">
+    <value>Save Settings</value>
+  </data>
+  <data name="statusBarReady.Text" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="tablePrefixLbl.Text" xml:space="preserve">
+    <value>Table Prefix:</value>
+  </data>
+  <data name="templateEngineLbl.Text" xml:space="preserve">
+    <value>Template Engine:</value>
+  </data>
+  <data name="templateLbl.Text" xml:space="preserve">
+    <value>Template:</value>
+  </data>
+  <data name="toolsDSConfigMenuItem.Text" xml:space="preserve">
+    <value>&amp;DataSource Configuration...</value>
+  </data>
+  <data name="toolsMenu.Text" xml:space="preserve">
+    <value>&amp;Tools</value>
+  </data>
+  <data name="toolsOptionsMenuItem.Text" xml:space="preserve">
+    <value>&amp;Options...</value>
+  </data>
+  <data name="toolsTemplatesMenuItem.Text" xml:space="preserve">
+    <value>&amp;Templates...</value>
+  </data>
+  <data name="totalFilesLbl.Text" xml:space="preserve">
+    <value>Total files:</value>
+  </data>
+  <data name="versionLbl.Text" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+</root>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CodeGeneralOptionsPage));
             this.ouputPathTxtbox = new System.Windows.Forms.TextBox();
             this.ouputPathLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,97 +44,62 @@
             // 
             // ouputPathTxtbox
             // 
-            this.ouputPathTxtbox.Location = new System.Drawing.Point(105, 43);
+            resources.ApplyResources(this.ouputPathTxtbox, "ouputPathTxtbox");
             this.ouputPathTxtbox.Name = "ouputPathTxtbox";
-            this.ouputPathTxtbox.Size = new System.Drawing.Size(311, 20);
-            this.ouputPathTxtbox.TabIndex = 2;
             // 
             // ouputPathLbl
             // 
-            this.ouputPathLbl.Location = new System.Drawing.Point(19, 46);
+            resources.ApplyResources(this.ouputPathLbl, "ouputPathLbl");
             this.ouputPathLbl.Name = "ouputPathLbl";
-            this.ouputPathLbl.Size = new System.Drawing.Size(80, 13);
-            this.ouputPathLbl.TabIndex = 1;
-            this.ouputPathLbl.Text = "Output path:";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(102, 127);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(345, 76);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Generationed code files will be save to Output Path directory .\r\nCode template fi" +
-    "les will be write to/read from Template Path directory.";
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 127);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 40);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Note:";
             // 
             // generationLbl
             // 
-            this.generationLbl.Location = new System.Drawing.Point(9, 5);
+            resources.ApplyResources(this.generationLbl, "generationLbl");
             this.generationLbl.Name = "generationLbl";
-            this.generationLbl.Size = new System.Drawing.Size(60, 16);
-            this.generationLbl.TabIndex = 37;
-            this.generationLbl.Text = "General";
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Location = new System.Drawing.Point(80, 5);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(370, 8);
-            this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
             // 
             // ouputPathBtn
             // 
-            this.ouputPathBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ouputPathBtn.Location = new System.Drawing.Point(422, 40);
+            resources.ApplyResources(this.ouputPathBtn, "ouputPathBtn");
             this.ouputPathBtn.Name = "ouputPathBtn";
-            this.ouputPathBtn.Size = new System.Drawing.Size(25, 23);
-            this.ouputPathBtn.TabIndex = 3;
-            this.ouputPathBtn.Text = "...";
-            this.ouputPathBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ouputPathBtn.UseVisualStyleBackColor = true;
             this.ouputPathBtn.Click += new System.EventHandler(this.ouputPathBtn_Click);
             // 
             // templatePathBtn
             // 
-            this.templatePathBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.templatePathBtn.Location = new System.Drawing.Point(422, 79);
+            resources.ApplyResources(this.templatePathBtn, "templatePathBtn");
             this.templatePathBtn.Name = "templatePathBtn";
-            this.templatePathBtn.Size = new System.Drawing.Size(25, 23);
-            this.templatePathBtn.TabIndex = 6;
-            this.templatePathBtn.Text = "...";
-            this.templatePathBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.templatePathBtn.UseVisualStyleBackColor = true;
             this.templatePathBtn.Click += new System.EventHandler(this.templatePathBtn_Click);
             // 
             // templatePathTxtbox
             // 
-            this.templatePathTxtbox.Location = new System.Drawing.Point(105, 82);
+            resources.ApplyResources(this.templatePathTxtbox, "templatePathTxtbox");
             this.templatePathTxtbox.Name = "templatePathTxtbox";
-            this.templatePathTxtbox.Size = new System.Drawing.Size(311, 20);
-            this.templatePathTxtbox.TabIndex = 5;
             // 
             // templatePathLbl
             // 
-            this.templatePathLbl.Location = new System.Drawing.Point(19, 85);
+            resources.ApplyResources(this.templatePathLbl, "templatePathLbl");
             this.templatePathLbl.Name = "templatePathLbl";
-            this.templatePathLbl.Size = new System.Drawing.Size(80, 13);
-            this.templatePathLbl.TabIndex = 4;
-            this.templatePathLbl.Text = "Template path:";
             // 
             // CodeGeneralOptionsPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.templatePathBtn);
             this.Controls.Add(this.templatePathTxtbox);

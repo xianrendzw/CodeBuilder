@@ -117,30 +117,66 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="mainMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="mainMenuStrip.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="mainStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
-  <metadata name="mainStatusStrip.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>269, 17</value>
-  </metadata>
   <metadata name="splitContainer.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitContainer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="splitContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
   <metadata name="treeView.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="treeViewContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>557, 17</value>
   </metadata>
+  <data name="exportPDMCtxMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="exportPDMCtxMenuItem.Text" xml:space="preserve">
+    <value>Export PowerDesigner PDM Files...</value>
+  </data>
+  <data name="exportDataSourceCtxMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="exportDataSourceCtxMenuItem.Text" xml:space="preserve">
+    <value>Export From DataSource</value>
+  </data>
+  <data name="ctxSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 6</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="clearCtxMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="clearCtxMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="clearCtxMenuItem.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="treeViewContextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 76</value>
+  </data>
+  <data name="&gt;&gt;treeViewContextMenu.Name" xml:space="preserve">
+    <value>treeViewContextMenu</value>
+  </data>
+  <data name="&gt;&gt;treeViewContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="treeView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="treeView.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <metadata name="treeNodeImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>402, 17</value>
   </metadata>
@@ -149,7 +185,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB8
-        CQAAAk1TRnQBSQFMAgEBAwEAAdABAQHQAQEBEgEAARIBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CQAAAk1TRnQBSQFMAgEBAwEAAeABAQHgAQEBEgEAARIBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABSAMAARIDAAEBAQABCAUAARABBRgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -192,110 +228,1244 @@
         AQABHAUABP8B/gEAATwFAAT/Af4BAAF8BQAG/wH8BQAL
 </value>
   </data>
+  <data name="treeView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="treeView.SelectedImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="treeView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 412</value>
+  </data>
+  <data name="treeView.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;treeView.Name" xml:space="preserve">
+    <value>treeView</value>
+  </data>
+  <data name="&gt;&gt;treeView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;treeView.Parent" xml:space="preserve">
+    <value>splitContainer.Panel1</value>
+  </data>
+  <data name="&gt;&gt;treeView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainer.Panel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel1.Name" xml:space="preserve">
+    <value>splitContainer.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainer.Panel1MinSize" type="System.Int32, mscorlib">
+    <value>206</value>
+  </data>
   <metadata name="resultGbx.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="resultGbx.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <metadata name="errorFileCountLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="errorFileCountLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>399, 60</value>
+  </data>
+  <data name="errorFileCountLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="errorFileCountLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;errorFileCountLbl.Name" xml:space="preserve">
+    <value>errorFileCountLbl</value>
+  </data>
+  <data name="&gt;&gt;errorFileCountLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorFileCountLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;errorFileCountLbl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="errorFilesLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="errorFilesLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 60</value>
+  </data>
+  <data name="errorFilesLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="errorFilesLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="errorFilesLbl.Text" xml:space="preserve">
+    <value>Error files:</value>
+  </data>
+  <data name="&gt;&gt;errorFilesLbl.Name" xml:space="preserve">
+    <value>errorFilesLbl</value>
+  </data>
+  <data name="&gt;&gt;errorFilesLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorFilesLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;errorFilesLbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="genFileCountLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="genFileCountLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 60</value>
+  </data>
+  <data name="genFileCountLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="genFileCountLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;genFileCountLbl.Name" xml:space="preserve">
+    <value>genFileCountLbl</value>
+  </data>
+  <data name="&gt;&gt;genFileCountLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;genFileCountLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;genFileCountLbl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <metadata name="genFilesLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="genFilesLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>161, 60</value>
+  </data>
+  <data name="genFilesLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="genFilesLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="genFilesLbl.Text" xml:space="preserve">
+    <value>Generated files:</value>
+  </data>
+  <data name="&gt;&gt;genFilesLbl.Name" xml:space="preserve">
+    <value>genFilesLbl</value>
+  </data>
+  <data name="&gt;&gt;genFilesLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;genFilesLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;genFilesLbl.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <metadata name="completedLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="completedLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="completedLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>469, 60</value>
+  </data>
+  <data name="completedLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="completedLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="completedLbl.Text" xml:space="preserve">
+    <value>Completed!</value>
+  </data>
+  <data name="completedLbl.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;completedLbl.Name" xml:space="preserve">
+    <value>completedLbl</value>
+  </data>
+  <data name="&gt;&gt;completedLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;completedLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;completedLbl.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <metadata name="totalFileCountLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="totalFileCountLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 60</value>
+  </data>
+  <data name="totalFileCountLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="totalFileCountLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;totalFileCountLbl.Name" xml:space="preserve">
+    <value>totalFileCountLbl</value>
+  </data>
+  <data name="&gt;&gt;totalFileCountLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;totalFileCountLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;totalFileCountLbl.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <metadata name="totalFilesLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="totalFilesLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <data name="totalFilesLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 13</value>
+  </data>
+  <data name="totalFilesLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="totalFilesLbl.Text" xml:space="preserve">
+    <value>Total files:</value>
+  </data>
+  <data name="&gt;&gt;totalFilesLbl.Name" xml:space="preserve">
+    <value>totalFilesLbl</value>
+  </data>
+  <data name="&gt;&gt;totalFilesLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;totalFilesLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;totalFilesLbl.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <metadata name="currentGenFileNameLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="currentGenFileNameLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="currentGenFileNameLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 85</value>
+  </data>
+  <data name="currentGenFileNameLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 37</value>
+  </data>
+  <data name="currentGenFileNameLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileNameLbl.Name" xml:space="preserve">
+    <value>currentGenFileNameLbl</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileNameLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileNameLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileNameLbl.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <metadata name="currentGenFileLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="currentGenFileLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 85</value>
+  </data>
+  <data name="currentGenFileLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 13</value>
+  </data>
+  <data name="currentGenFileLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="currentGenFileLbl.Text" xml:space="preserve">
+    <value>Current generating file:</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileLbl.Name" xml:space="preserve">
+    <value>currentGenFileLbl</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileLbl.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;currentGenFileLbl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <metadata name="genProgressBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="genProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="genProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 26</value>
+  </data>
+  <data name="genProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>519, 23</value>
+  </data>
+  <data name="genProgressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;genProgressBar.Name" xml:space="preserve">
+    <value>genProgressBar</value>
+  </data>
+  <data name="&gt;&gt;genProgressBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;genProgressBar.Parent" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;genProgressBar.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="resultGbx.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 275</value>
+  </data>
+  <data name="resultGbx.Size" type="System.Drawing.Size, System.Drawing">
+    <value>538, 139</value>
+  </data>
+  <data name="resultGbx.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="resultGbx.Text" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="&gt;&gt;resultGbx.Name" xml:space="preserve">
+    <value>resultGbx</value>
+  </data>
+  <data name="&gt;&gt;resultGbx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;resultGbx.Parent" xml:space="preserve">
+    <value>splitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;resultGbx.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="genItemsGbx.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="genItemsGbx.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
   <metadata name="genSettingsCtxMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>730, 17</value>
   </metadata>
+  <data name="openGenSettingsCtxMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 22</value>
+  </data>
+  <data name="openGenSettingsCtxMenuItem.Text" xml:space="preserve">
+    <value>Open Generation Settings File...</value>
+  </data>
+  <data name="saveGenSettingCtxMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 22</value>
+  </data>
+  <data name="saveGenSettingCtxMenuItem.Text" xml:space="preserve">
+    <value>Save Generation Setting...</value>
+  </data>
+  <data name="genSettingsCtxSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 6</value>
+  </data>
+  <data name="generateCtxMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 22</value>
+  </data>
+  <data name="generateCtxMenuItem.Text" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="genSettingsCtxMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 76</value>
+  </data>
+  <data name="&gt;&gt;genSettingsCtxMenuStrip.Name" xml:space="preserve">
+    <value>genSettingsCtxMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;genSettingsCtxMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <metadata name="templateListBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="templateListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="templateListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 122</value>
+  </data>
+  <data name="templateListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 95</value>
+  </data>
+  <data name="templateListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;templateListBox.Name" xml:space="preserve">
+    <value>templateListBox</value>
+  </data>
+  <data name="&gt;&gt;templateListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;templateListBox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;templateListBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="databaseNameLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="databaseNameLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 26</value>
+  </data>
+  <data name="databaseNameLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 13</value>
+  </data>
+  <data name="databaseNameLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;databaseNameLbl.Name" xml:space="preserve">
+    <value>databaseNameLbl</value>
+  </data>
+  <data name="&gt;&gt;databaseNameLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;databaseNameLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;databaseNameLbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="databaseLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="databaseLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 26</value>
+  </data>
+  <data name="databaseLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="databaseLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="databaseLbl.Text" xml:space="preserve">
+    <value>Database:</value>
+  </data>
+  <data name="&gt;&gt;databaseLbl.Name" xml:space="preserve">
+    <value>databaseLbl</value>
+  </data>
+  <data name="&gt;&gt;databaseLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;databaseLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;databaseLbl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <metadata name="templateEngineCombox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="templateEngineCombox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 122</value>
+  </data>
+  <data name="templateEngineCombox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
+  </data>
+  <data name="templateEngineCombox.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;templateEngineCombox.Name" xml:space="preserve">
+    <value>templateEngineCombox</value>
+  </data>
+  <data name="&gt;&gt;templateEngineCombox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;templateEngineCombox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;templateEngineCombox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <metadata name="templateEngineLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="templateEngineLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 131</value>
+  </data>
+  <data name="templateEngineLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 13</value>
+  </data>
+  <data name="templateEngineLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="templateEngineLbl.Text" xml:space="preserve">
+    <value>Template Engine:</value>
+  </data>
+  <data name="&gt;&gt;templateEngineLbl.Name" xml:space="preserve">
+    <value>templateEngineLbl</value>
+  </data>
+  <data name="&gt;&gt;templateEngineLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;templateEngineLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;templateEngineLbl.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <metadata name="isStandardizeNameChkbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="isStandardizeNameChkbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 234</value>
+  </data>
+  <data name="isStandardizeNameChkbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 17</value>
+  </data>
+  <data name="isStandardizeNameChkbox.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="isStandardizeNameChkbox.Text" xml:space="preserve">
+    <value>Is Standardize Table And Field Name</value>
+  </data>
+  <data name="&gt;&gt;isStandardizeNameChkbox.Name" xml:space="preserve">
+    <value>isStandardizeNameChkbox</value>
+  </data>
+  <data name="&gt;&gt;isStandardizeNameChkbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;isStandardizeNameChkbox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;isStandardizeNameChkbox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <metadata name="isOmitTablePrefixChkbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="isOmitTablePrefixChkbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 200</value>
+  </data>
+  <data name="isOmitTablePrefixChkbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 17</value>
+  </data>
+  <data name="isOmitTablePrefixChkbox.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="isOmitTablePrefixChkbox.Text" xml:space="preserve">
+    <value>Is Omit Table Prefix</value>
+  </data>
+  <data name="&gt;&gt;isOmitTablePrefixChkbox.Name" xml:space="preserve">
+    <value>isOmitTablePrefixChkbox</value>
+  </data>
+  <data name="&gt;&gt;isOmitTablePrefixChkbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;isOmitTablePrefixChkbox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;isOmitTablePrefixChkbox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <metadata name="codeFileEncodingCombox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="codeFileEncodingCombox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 158</value>
+  </data>
+  <data name="codeFileEncodingCombox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
+  </data>
+  <data name="codeFileEncodingCombox.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingCombox.Name" xml:space="preserve">
+    <value>codeFileEncodingCombox</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingCombox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingCombox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingCombox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <metadata name="codeFileEncodingLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="codeFileEncodingLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 166</value>
+  </data>
+  <data name="codeFileEncodingLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 13</value>
+  </data>
+  <data name="codeFileEncodingLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="codeFileEncodingLbl.Text" xml:space="preserve">
+    <value>Encoding:</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingLbl.Name" xml:space="preserve">
+    <value>codeFileEncodingLbl</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;codeFileEncodingLbl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <metadata name="languageCombx.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="languageCombx.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="languageCombx.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 20</value>
+  </data>
+  <data name="languageCombx.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 21</value>
+  </data>
+  <data name="languageCombx.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;languageCombx.Name" xml:space="preserve">
+    <value>languageCombx</value>
+  </data>
+  <data name="&gt;&gt;languageCombx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;languageCombx.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;languageCombx.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
   <metadata name="languageLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="languageLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 26</value>
+  </data>
+  <data name="languageLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="languageLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="languageLbl.Text" xml:space="preserve">
+    <value>Language:</value>
+  </data>
+  <data name="&gt;&gt;languageLbl.Name" xml:space="preserve">
+    <value>languageLbl</value>
+  </data>
+  <data name="&gt;&gt;languageLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;languageLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;languageLbl.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
   <metadata name="templateLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="templateLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 131</value>
+  </data>
+  <data name="templateLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="templateLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="templateLbl.Text" xml:space="preserve">
+    <value>Template:</value>
+  </data>
+  <data name="&gt;&gt;templateLbl.Name" xml:space="preserve">
+    <value>templateLbl</value>
+  </data>
+  <data name="&gt;&gt;templateLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;templateLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;templateLbl.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
   <metadata name="versionTxtBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="versionTxtBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="versionTxtBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>On</value>
+  </data>
+  <data name="versionTxtBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 89</value>
+  </data>
+  <data name="versionTxtBox.MaxLength" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="versionTxtBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="versionTxtBox.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;versionTxtBox.Name" xml:space="preserve">
+    <value>versionTxtBox</value>
+  </data>
+  <data name="&gt;&gt;versionTxtBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;versionTxtBox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;versionTxtBox.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
   <metadata name="versionLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="versionLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 96</value>
+  </data>
+  <data name="versionLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="versionLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="versionLbl.Text" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="&gt;&gt;versionLbl.Name" xml:space="preserve">
+    <value>versionLbl</value>
+  </data>
+  <data name="&gt;&gt;versionLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;versionLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;versionLbl.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
   <metadata name="authorTxtBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="authorTxtBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>On</value>
+  </data>
+  <data name="authorTxtBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 89</value>
+  </data>
+  <data name="authorTxtBox.MaxLength" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="authorTxtBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="authorTxtBox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;authorTxtBox.Name" xml:space="preserve">
+    <value>authorTxtBox</value>
+  </data>
+  <data name="&gt;&gt;authorTxtBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;authorTxtBox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;authorTxtBox.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
   <metadata name="authorLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="authorLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 96</value>
+  </data>
+  <data name="authorLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="authorLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="authorLbl.Text" xml:space="preserve">
+    <value>Author:</value>
+  </data>
+  <data name="&gt;&gt;authorLbl.Name" xml:space="preserve">
+    <value>authorLbl</value>
+  </data>
+  <data name="&gt;&gt;authorLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;authorLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;authorLbl.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
   <metadata name="tablePrefixTxtBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="tablePrefixTxtBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="tablePrefixTxtBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>On</value>
+  </data>
+  <data name="tablePrefixTxtBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 55</value>
+  </data>
+  <data name="tablePrefixTxtBox.MaxLength" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="tablePrefixTxtBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="tablePrefixTxtBox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixTxtBox.Name" xml:space="preserve">
+    <value>tablePrefixTxtBox</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixTxtBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixTxtBox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixTxtBox.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
   <metadata name="tablePrefixLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="tablePrefixLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 62</value>
+  </data>
+  <data name="tablePrefixLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="tablePrefixLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="tablePrefixLbl.Text" xml:space="preserve">
+    <value>Table Prefix:</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixLbl.Name" xml:space="preserve">
+    <value>tablePrefixLbl</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixLbl.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;tablePrefixLbl.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
   <metadata name="packageTxtBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="packageTxtBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="packageTxtBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>On</value>
+  </data>
+  <data name="packageTxtBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 54</value>
+  </data>
+  <data name="packageTxtBox.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="packageTxtBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="packageTxtBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;packageTxtBox.Name" xml:space="preserve">
+    <value>packageTxtBox</value>
+  </data>
+  <data name="&gt;&gt;packageTxtBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;packageTxtBox.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;packageTxtBox.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
   <metadata name="packageLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="packageLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 61</value>
+  </data>
+  <data name="packageLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="packageLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="packageLabel.Text" xml:space="preserve">
+    <value>Package:</value>
+  </data>
+  <data name="&gt;&gt;packageLabel.Name" xml:space="preserve">
+    <value>packageLabel</value>
+  </data>
+  <data name="&gt;&gt;packageLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;packageLabel.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;packageLabel.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
   <metadata name="saveSettingsBtn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="saveSettingsBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="saveSettingsBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 234</value>
+  </data>
+  <data name="saveSettingsBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 23</value>
+  </data>
+  <data name="saveSettingsBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="saveSettingsBtn.Text" xml:space="preserve">
+    <value>Save Settings</value>
+  </data>
+  <data name="&gt;&gt;saveSettingsBtn.Name" xml:space="preserve">
+    <value>saveSettingsBtn</value>
+  </data>
+  <data name="&gt;&gt;saveSettingsBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveSettingsBtn.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;saveSettingsBtn.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
   <metadata name="generateBtn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <data name="generateBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="generateBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>454, 234</value>
+  </data>
+  <data name="generateBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="generateBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="generateBtn.Text" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="&gt;&gt;generateBtn.Name" xml:space="preserve">
+    <value>generateBtn</value>
+  </data>
+  <data name="&gt;&gt;generateBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;generateBtn.Parent" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;generateBtn.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="genItemsGbx.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 3</value>
+  </data>
+  <data name="genItemsGbx.Size" type="System.Drawing.Size, System.Drawing">
+    <value>538, 268</value>
+  </data>
+  <data name="genItemsGbx.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="genItemsGbx.Text" xml:space="preserve">
+    <value>Generation Settings</value>
+  </data>
+  <data name="&gt;&gt;genItemsGbx.Name" xml:space="preserve">
+    <value>genItemsGbx</value>
+  </data>
+  <data name="&gt;&gt;genItemsGbx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;genItemsGbx.Parent" xml:space="preserve">
+    <value>splitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;genItemsGbx.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer.Panel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel2.Name" xml:space="preserve">
+    <value>splitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>752, 418</value>
+  </data>
+  <data name="splitContainer.SplitterDistance" type="System.Int32, mscorlib">
+    <value>208</value>
+  </data>
+  <data name="splitContainer.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Name" xml:space="preserve">
+    <value>splitContainer</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;splitContainer.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="mainMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="mainMenuStrip.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="fileExportPdmMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="fileExportPdmMenuItem.Text" xml:space="preserve">
+    <value>Export &amp;PowerDesigner PDM Files...</value>
+  </data>
+  <data name="fileExportDataSourceMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="fileExportDataSourceMenuItem.Text" xml:space="preserve">
+    <value>Export From &amp;DataSource</value>
+  </data>
+  <data name="fileSeparator2MenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 6</value>
+  </data>
+  <data name="fileOpenMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="fileOpenMenuItem.Text" xml:space="preserve">
+    <value>&amp;Open Generation Settings File</value>
+  </data>
+  <data name="fileSaveMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="fileSaveMenuItem.Text" xml:space="preserve">
+    <value>&amp;Save Generation Setting...</value>
+  </data>
+  <data name="fileSeparator1MenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 6</value>
+  </data>
+  <data name="fileExitMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 22</value>
+  </data>
+  <data name="fileExitMenuItem.Text" xml:space="preserve">
+    <value>&amp;Exit</value>
+  </data>
+  <data name="fileMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 20</value>
+  </data>
+  <data name="fileMenu.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="toolsDSConfigMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 22</value>
+  </data>
+  <data name="toolsDSConfigMenuItem.Text" xml:space="preserve">
+    <value>&amp;DataSource Configuration...</value>
+  </data>
+  <data name="toolsTemplatesMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 22</value>
+  </data>
+  <data name="toolsTemplatesMenuItem.Text" xml:space="preserve">
+    <value>&amp;Templates...</value>
+  </data>
+  <data name="toolsSeparator1MenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 6</value>
+  </data>
+  <data name="toolsOptionsMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 22</value>
+  </data>
+  <data name="toolsOptionsMenuItem.Text" xml:space="preserve">
+    <value>&amp;Options...</value>
+  </data>
+  <data name="toolsMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="toolsMenu.Text" xml:space="preserve">
+    <value>&amp;Tools</value>
+  </data>
+  <data name="helpF1MenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F1</value>
+  </data>
+  <data name="helpF1MenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 22</value>
+  </data>
+  <data name="helpF1MenuItem.Text" xml:space="preserve">
+    <value>CodeBuilder Help...</value>
+  </data>
+  <data name="helpFeedbackMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 22</value>
+  </data>
+  <data name="helpFeedbackMenuItem.Text" xml:space="preserve">
+    <value>Customer Feedback...</value>
+  </data>
+  <data name="helpSeparator1MenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 6</value>
+  </data>
+  <data name="helpAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 22</value>
+  </data>
+  <data name="helpAboutMenuItem.Text" xml:space="preserve">
+    <value>About CodeBuilder...</value>
+  </data>
+  <data name="helpMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="helpMenu.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="mainMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="mainMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>752, 24</value>
+  </data>
+  <data name="mainMenuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="mainMenuStrip.Text" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Name" xml:space="preserve">
+    <value>mainMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="mainStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
+  <metadata name="mainStatusStrip.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="statusBarReady.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="statusBarReady.Size" type="System.Drawing.Size, System.Drawing">
+    <value>437, 19</value>
+  </data>
+  <data name="statusBarReady.Text" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="statusBarReady.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="statusBarDatabase.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="statusBarDatabase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 19</value>
+  </data>
+  <data name="statusBarLanguage.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="statusBarLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 19</value>
+  </data>
+  <data name="statusBarEncoding.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="statusBarEncoding.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="mainStatusStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 442</value>
+  </data>
+  <data name="mainStatusStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>752, 22</value>
+  </data>
+  <data name="mainStatusStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.Name" xml:space="preserve">
+    <value>mainStatusStrip</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>269, 17</value>
   </metadata>
   <metadata name="saveFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
@@ -306,10 +1476,18 @@
   <metadata name="codeGeneration.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>139, 56</value>
   </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>752, 464</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAIAEBAAAAEAGABoAwAAJgAAACAgAAABABgAqAwAAI4DAAAoAAAAEAAAACAAAAABABgAAAAAAAAD
@@ -383,5 +1561,230 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAA==
 </value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>760, 491</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>CodeBuilder</value>
+  </data>
+  <data name="&gt;&gt;exportPDMCtxMenuItem.Name" xml:space="preserve">
+    <value>exportPDMCtxMenuItem</value>
+  </data>
+  <data name="&gt;&gt;exportPDMCtxMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exportDataSourceCtxMenuItem.Name" xml:space="preserve">
+    <value>exportDataSourceCtxMenuItem</value>
+  </data>
+  <data name="&gt;&gt;exportDataSourceCtxMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ctxSeparator2.Name" xml:space="preserve">
+    <value>ctxSeparator2</value>
+  </data>
+  <data name="&gt;&gt;ctxSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clearCtxMenuItem.Name" xml:space="preserve">
+    <value>clearCtxMenuItem</value>
+  </data>
+  <data name="&gt;&gt;clearCtxMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;treeNodeImageList.Name" xml:space="preserve">
+    <value>treeNodeImageList</value>
+  </data>
+  <data name="&gt;&gt;treeNodeImageList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openGenSettingsCtxMenuItem.Name" xml:space="preserve">
+    <value>openGenSettingsCtxMenuItem</value>
+  </data>
+  <data name="&gt;&gt;openGenSettingsCtxMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveGenSettingCtxMenuItem.Name" xml:space="preserve">
+    <value>saveGenSettingCtxMenuItem</value>
+  </data>
+  <data name="&gt;&gt;saveGenSettingCtxMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;genSettingsCtxSeparator1.Name" xml:space="preserve">
+    <value>genSettingsCtxSeparator1</value>
+  </data>
+  <data name="&gt;&gt;genSettingsCtxSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;generateCtxMenuItem.Name" xml:space="preserve">
+    <value>generateCtxMenuItem</value>
+  </data>
+  <data name="&gt;&gt;generateCtxMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileMenu.Name" xml:space="preserve">
+    <value>fileMenu</value>
+  </data>
+  <data name="&gt;&gt;fileMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileExportPdmMenuItem.Name" xml:space="preserve">
+    <value>fileExportPdmMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileExportPdmMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileExportDataSourceMenuItem.Name" xml:space="preserve">
+    <value>fileExportDataSourceMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileExportDataSourceMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileSeparator2MenuItem.Name" xml:space="preserve">
+    <value>fileSeparator2MenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileSeparator2MenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileOpenMenuItem.Name" xml:space="preserve">
+    <value>fileOpenMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileOpenMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileSaveMenuItem.Name" xml:space="preserve">
+    <value>fileSaveMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileSaveMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileSeparator1MenuItem.Name" xml:space="preserve">
+    <value>fileSeparator1MenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileSeparator1MenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileExitMenuItem.Name" xml:space="preserve">
+    <value>fileExitMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileExitMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolsMenu.Name" xml:space="preserve">
+    <value>toolsMenu</value>
+  </data>
+  <data name="&gt;&gt;toolsMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolsDSConfigMenuItem.Name" xml:space="preserve">
+    <value>toolsDSConfigMenuItem</value>
+  </data>
+  <data name="&gt;&gt;toolsDSConfigMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolsTemplatesMenuItem.Name" xml:space="preserve">
+    <value>toolsTemplatesMenuItem</value>
+  </data>
+  <data name="&gt;&gt;toolsTemplatesMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolsSeparator1MenuItem.Name" xml:space="preserve">
+    <value>toolsSeparator1MenuItem</value>
+  </data>
+  <data name="&gt;&gt;toolsSeparator1MenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolsOptionsMenuItem.Name" xml:space="preserve">
+    <value>toolsOptionsMenuItem</value>
+  </data>
+  <data name="&gt;&gt;toolsOptionsMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpMenu.Name" xml:space="preserve">
+    <value>helpMenu</value>
+  </data>
+  <data name="&gt;&gt;helpMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpF1MenuItem.Name" xml:space="preserve">
+    <value>helpF1MenuItem</value>
+  </data>
+  <data name="&gt;&gt;helpF1MenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpFeedbackMenuItem.Name" xml:space="preserve">
+    <value>helpFeedbackMenuItem</value>
+  </data>
+  <data name="&gt;&gt;helpFeedbackMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpSeparator1MenuItem.Name" xml:space="preserve">
+    <value>helpSeparator1MenuItem</value>
+  </data>
+  <data name="&gt;&gt;helpSeparator1MenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpAboutMenuItem.Name" xml:space="preserve">
+    <value>helpAboutMenuItem</value>
+  </data>
+  <data name="&gt;&gt;helpAboutMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarReady.Name" xml:space="preserve">
+    <value>statusBarReady</value>
+  </data>
+  <data name="&gt;&gt;statusBarReady.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarDatabase.Name" xml:space="preserve">
+    <value>statusBarDatabase</value>
+  </data>
+  <data name="&gt;&gt;statusBarDatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarLanguage.Name" xml:space="preserve">
+    <value>statusBarLanguage</value>
+  </data>
+  <data name="&gt;&gt;statusBarLanguage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarEncoding.Name" xml:space="preserve">
+    <value>statusBarEncoding</value>
+  </data>
+  <data name="&gt;&gt;statusBarEncoding.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog.Name" xml:space="preserve">
+    <value>openFileDialog</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog.Name" xml:space="preserve">
+    <value>saveFileDialog</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Name" xml:space="preserve">
+    <value>toolTip</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;codeGeneration.Name" xml:space="preserve">
+    <value>codeGeneration</value>
+  </data>
+  <data name="&gt;&gt;codeGeneration.Type" xml:space="preserve">
+    <value>CodeBuilder.WinForm.UI.CodeGeneration, CodeBuilder, Version=1.0.11.1210, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

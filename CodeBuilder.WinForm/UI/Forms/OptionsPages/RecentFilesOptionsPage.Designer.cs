@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecentFilesOptionsPage));
             this.checkFilesExistCheckBox = new System.Windows.Forms.CheckBox();
             this.filesInMenuLbl = new System.Windows.Forms.Label();
             this.recentFilesCountTextBox = new System.Windows.Forms.TextBox();
@@ -38,60 +39,39 @@
             // 
             // checkFilesExistCheckBox
             // 
-            this.checkFilesExistCheckBox.AutoSize = true;
-            this.checkFilesExistCheckBox.Location = new System.Drawing.Point(27, 72);
+            resources.ApplyResources(this.checkFilesExistCheckBox, "checkFilesExistCheckBox");
             this.checkFilesExistCheckBox.Name = "checkFilesExistCheckBox";
-            this.checkFilesExistCheckBox.Size = new System.Drawing.Size(185, 17);
-            this.checkFilesExistCheckBox.TabIndex = 4;
-            this.checkFilesExistCheckBox.Text = "Check that files exist before listing";
             this.checkFilesExistCheckBox.UseVisualStyleBackColor = true;
             // 
             // filesInMenuLbl
             // 
-            this.filesInMenuLbl.Location = new System.Drawing.Point(147, 33);
+            resources.ApplyResources(this.filesInMenuLbl, "filesInMenuLbl");
             this.filesInMenuLbl.Name = "filesInMenuLbl";
-            this.filesInMenuLbl.Size = new System.Drawing.Size(96, 24);
-            this.filesInMenuLbl.TabIndex = 3;
-            this.filesInMenuLbl.Text = "files in menu";
             // 
             // recentFilesCountTextBox
             // 
-            this.recentFilesCountTextBox.Location = new System.Drawing.Point(91, 33);
-            this.recentFilesCountTextBox.MaxLength = 50;
+            resources.ApplyResources(this.recentFilesCountTextBox, "recentFilesCountTextBox");
             this.recentFilesCountTextBox.Name = "recentFilesCountTextBox";
-            this.recentFilesCountTextBox.Size = new System.Drawing.Size(40, 20);
-            this.recentFilesCountTextBox.TabIndex = 2;
-            this.recentFilesCountTextBox.Text = "3";
             // 
             // listLbl
             // 
-            this.listLbl.Location = new System.Drawing.Point(27, 33);
+            resources.ApplyResources(this.listLbl, "listLbl");
             this.listLbl.Name = "listLbl";
-            this.listLbl.Size = new System.Drawing.Size(55, 16);
-            this.listLbl.TabIndex = 1;
-            this.listLbl.Text = "List";
             // 
             // topGbox
             // 
-            this.topGbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.topGbox.Location = new System.Drawing.Point(80, 5);
+            resources.ApplyResources(this.topGbox, "topGbox");
             this.topGbox.Name = "topGbox";
-            this.topGbox.Size = new System.Drawing.Size(370, 8);
-            this.topGbox.TabIndex = 35;
             this.topGbox.TabStop = false;
             // 
             // recentFilesLbl
             // 
-            this.recentFilesLbl.Location = new System.Drawing.Point(9, 5);
+            resources.ApplyResources(this.recentFilesLbl, "recentFilesLbl");
             this.recentFilesLbl.Name = "recentFilesLbl";
-            this.recentFilesLbl.Size = new System.Drawing.Size(70, 16);
-            this.recentFilesLbl.TabIndex = 36;
-            this.recentFilesLbl.Text = "Recent Files";
             // 
             // RecentFilesOptionsPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.checkFilesExistCheckBox);
             this.Controls.Add(this.filesInMenuLbl);
