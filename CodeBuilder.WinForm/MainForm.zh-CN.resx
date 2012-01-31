@@ -931,108 +931,108 @@
     <value>错误文件数:</value>
   </data>
   <data name="exportDataSourceCtxMenuItem.Text" xml:space="preserve">
-    <value>(&amp;D)从数据源导出</value>
+    <value>从数据源导出(&amp;D)</value>
   </data>
   <data name="exportPDMCtxMenuItem.Text" xml:space="preserve">
-    <value>(&amp;P)从PowerDesigner PDM文件导出...</value>
+    <value>从PowerDesigner PDM文件导出(&amp;P)...</value>
   </data>
   <data name="fileExitMenuItem.Text" xml:space="preserve">
-    <value>(&amp;E)退出</value>
+    <value>退出(&amp;E)</value>
   </data>
   <data name="fileExportDataSourceMenuItem.Text" xml:space="preserve">
-    <value>(&amp;D)从数据源导出</value>
+    <value>从数据源导出(&amp;D)</value>
   </data>
   <data name="fileExportPdmMenuItem.Text" xml:space="preserve">
-    <value>Export &amp;PowerDesigner PDM Files...</value>
+    <value>从PowerDesigner PDM文件导出(&amp;P)...</value>
   </data>
   <data name="fileMenu.Text" xml:space="preserve">
-    <value>&amp;File</value>
+    <value>文件(&amp;F)</value>
   </data>
   <data name="fileOpenMenuItem.Text" xml:space="preserve">
-    <value>&amp;Open Generation Settings File</value>
+    <value>打开生成设置项文件(&amp;O)</value>
   </data>
   <data name="fileSaveMenuItem.Text" xml:space="preserve">
-    <value>&amp;Save Generation Setting...</value>
+    <value>保存生成设置项(&amp;S)...</value>
   </data>
   <data name="generateBtn.Text" xml:space="preserve">
-    <value>Generate</value>
+    <value>生成</value>
   </data>
   <data name="generateCtxMenuItem.Text" xml:space="preserve">
-    <value>Generate</value>
+    <value>生成</value>
   </data>
   <data name="genFilesLbl.Text" xml:space="preserve">
-    <value>Generated files:</value>
+    <value>已成文件数:</value>
   </data>
   <data name="genItemsGbx.Text" xml:space="preserve">
-    <value>Generation Settings</value>
+    <value>生成设置</value>
   </data>
   <data name="helpAboutMenuItem.Text" xml:space="preserve">
-    <value>About CodeBuilder...</value>
+    <value>关于 CodeBuilder...</value>
   </data>
   <data name="helpF1MenuItem.Text" xml:space="preserve">
-    <value>CodeBuilder Help...</value>
+    <value>CodeBuilder 帮助...</value>
   </data>
   <data name="helpFeedbackMenuItem.Text" xml:space="preserve">
-    <value>Customer Feedback...</value>
+    <value>客户反馈...</value>
   </data>
   <data name="helpMenu.Text" xml:space="preserve">
-    <value>&amp;Help</value>
+    <value>帮助(&amp;H)</value>
   </data>
   <data name="isOmitTablePrefixChkbox.Text" xml:space="preserve">
-    <value>Is Omit Table Prefix</value>
+    <value>是否忽略表前缀</value>
   </data>
   <data name="isStandardizeNameChkbox.Text" xml:space="preserve">
-    <value>Is Standardize Table And Field Name</value>
+    <value>是否标准化表与字段名</value>
   </data>
   <data name="languageLbl.Text" xml:space="preserve">
-    <value>Language:</value>
+    <value>语言:</value>
   </data>
   <data name="mainMenuStrip.Text" xml:space="preserve">
-    <value>menuStrip</value>
+    <value>菜单</value>
   </data>
   <data name="openGenSettingsCtxMenuItem.Text" xml:space="preserve">
-    <value>Open Generation Settings File...</value>
+    <value>打开生成设置项文件...</value>
   </data>
   <data name="packageLabel.Text" xml:space="preserve">
-    <value>Package:</value>
+    <value>包名:</value>
   </data>
   <data name="resultGbx.Text" xml:space="preserve">
-    <value>Results</value>
+    <value>结果</value>
   </data>
   <data name="saveGenSettingCtxMenuItem.Text" xml:space="preserve">
-    <value>Save Generation Setting...</value>
+    <value>保存生成设置项...</value>
   </data>
   <data name="saveSettingsBtn.Text" xml:space="preserve">
-    <value>Save Settings</value>
+    <value>保存设置</value>
   </data>
   <data name="statusBarReady.Text" xml:space="preserve">
-    <value>Ready</value>
+    <value>准备</value>
   </data>
   <data name="tablePrefixLbl.Text" xml:space="preserve">
-    <value>Table Prefix:</value>
+    <value>表前缀:</value>
   </data>
   <data name="templateEngineLbl.Text" xml:space="preserve">
-    <value>Template Engine:</value>
+    <value>模板引擎:</value>
   </data>
   <data name="templateLbl.Text" xml:space="preserve">
-    <value>Template:</value>
+    <value>模板:</value>
   </data>
   <data name="toolsDSConfigMenuItem.Text" xml:space="preserve">
-    <value>&amp;DataSource Configuration...</value>
+    <value>数据源配置(&amp;D)...</value>
   </data>
   <data name="toolsMenu.Text" xml:space="preserve">
-    <value>&amp;Tools</value>
+    <value>工具(&amp;T)</value>
   </data>
   <data name="toolsOptionsMenuItem.Text" xml:space="preserve">
-    <value>&amp;Options...</value>
+    <value>选项(&amp;O)...</value>
   </data>
   <data name="toolsTemplatesMenuItem.Text" xml:space="preserve">
-    <value>&amp;Templates...</value>
+    <value>模板(&amp;T)...</value>
   </data>
   <data name="totalFilesLbl.Text" xml:space="preserve">
-    <value>Total files:</value>
+    <value>总文件数:</value>
   </data>
   <data name="versionLbl.Text" xml:space="preserve">
-    <value>Version:</value>
+    <value>版本:</value>
   </data>
 </root>
