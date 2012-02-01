@@ -117,9 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="dotNetVersionLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dotNetVersionLabel.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="dotNetVersionLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>157, 264</value>
@@ -127,7 +128,6 @@
   <data name="dotNetVersionLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>284, 23</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dotNetVersionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
@@ -143,9 +143,9 @@
   <data name="&gt;&gt;dotNetVersionLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="clrTypeLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="clrTypeLabel.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="clrTypeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 264</value>
   </data>
@@ -156,7 +156,7 @@
     <value>24</value>
   </data>
   <data name="clrTypeLabel.Text" xml:space="preserve">
-    <value>CLR Version:</value>
+    <value>CLR 版本:</value>
   </data>
   <data name="&gt;&gt;clrTypeLabel.Name" xml:space="preserve">
     <value>clrTypeLabel</value>
@@ -170,9 +170,9 @@
   <data name="&gt;&gt;clrTypeLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="copyright.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="copyright.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="copyright.Location" type="System.Drawing.Point, System.Drawing">
     <value>157, 12</value>
   </data>
@@ -198,9 +198,9 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;copyright.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="label7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label7.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 12</value>
   </data>
@@ -211,7 +211,7 @@ All Rights Reserved.</value>
     <value>22</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>Copyright:</value>
+    <value>版权:</value>
   </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
@@ -225,9 +225,9 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label6.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>157, 192</value>
   </data>
@@ -252,9 +252,9 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="label5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label5.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 192</value>
   </data>
@@ -265,7 +265,7 @@ All Rights Reserved.</value>
     <value>20</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>Thanks to:</value>
+    <value>鸣谢:</value>
   </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
@@ -279,9 +279,9 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label4.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 104</value>
   </data>
@@ -292,7 +292,7 @@ All Rights Reserved.</value>
     <value>19</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Information:</value>
+    <value>参考说明:</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -306,9 +306,9 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="infoLinkLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="infoLinkLabel.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="infoLinkLabel.LinkArea" type="System.Windows.Forms.LinkArea, System.Windows.Forms">
     <value>0, 48</value>
@@ -338,9 +338,9 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;infoLinkLabel.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label3.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>157, 136</value>
   </data>
@@ -365,9 +365,9 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label2.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 136</value>
   </data>
@@ -378,7 +378,7 @@ All Rights Reserved.</value>
     <value>16</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Developers:</value>
+    <value>开发者:</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -392,9 +392,9 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="versionLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="versionLabel.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="versionLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>157, 232</value>
   </data>
@@ -419,9 +419,9 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;versionLabel.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label1.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 232</value>
   </data>
@@ -432,7 +432,7 @@ All Rights Reserved.</value>
     <value>14</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Version:</value>
+    <value>版本:</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -446,9 +446,9 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <metadata name="OkButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="OkButton.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="OkButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>361, 296</value>
   </data>
@@ -459,7 +459,7 @@ All Rights Reserved.</value>
     <value>13</value>
   </data>
   <data name="OkButton.Text" xml:space="preserve">
-    <value>OK</value>
+    <value>确定</value>
   </data>
   <data name="&gt;&gt;OkButton.Name" xml:space="preserve">
     <value>OkButton</value>
@@ -473,12 +473,12 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;OkButton.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -563,7 +563,7 @@ All Rights Reserved.</value>
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>About CodeBuilder</value>
+    <value>关于 CodeBuilder</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AboutBox</value>

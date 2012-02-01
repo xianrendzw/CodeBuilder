@@ -5,9 +5,10 @@ using System.Windows.Forms;
 
 namespace CodeBuilder.WinForm
 {
+    using Configuration;
+    using Properties;
     using UI;
     using Util;
-    using Configuration;
 
     static class Program
     {
@@ -31,13 +32,13 @@ namespace CodeBuilder.WinForm
                 MainForm form = new MainForm();
                 container.Add(form);
 
-                logger.Info("Starting CodeBuilder");
+                logger.Info(Resources.StartingCodeBuilder);
                 Application.Run(form);
-                logger.Info("CodeBuilder Exit"); 
+                logger.Info(Resources.CodeBuilderExit); 
             }
             catch (Exception ex)
             {
-                logger.Error("Startup", ex);
+                logger.Error(Resources.Startup, ex);
                 MessageBoxHelper.DisplayFailure(ex.Message);
             }
 

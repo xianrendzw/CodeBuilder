@@ -117,9 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="noteTextLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="noteTextLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="noteTextLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>102, 130</value>
@@ -127,12 +128,11 @@
   <data name="noteTextLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>329, 40</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="noteTextLbl.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="noteTextLbl.Text" xml:space="preserve">
-    <value>Changes in the Trace Level will affect the current session. After changing the level, you should not shut down and restart the Gui.</value>
+    <value>改变日志级别将立即影响当前应用程序上下文环境,程序不需要重启.</value>
   </data>
   <data name="&gt;&gt;noteTextLbl.Name" xml:space="preserve">
     <value>noteTextLbl</value>
@@ -146,9 +146,9 @@
   <data name="&gt;&gt;noteTextLbl.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="noteLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="noteLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="noteLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -165,7 +165,7 @@
     <value>5</value>
   </data>
   <data name="noteLbl.Text" xml:space="preserve">
-    <value>Note:</value>
+    <value>注意:</value>
   </data>
   <data name="&gt;&gt;noteLbl.Name" xml:space="preserve">
     <value>noteLbl</value>
@@ -179,9 +179,9 @@
   <data name="&gt;&gt;noteLbl.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="logDirectoryLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="logDirectoryLabel.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="logDirectoryLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 87</value>
   </data>
@@ -203,9 +203,9 @@
   <data name="&gt;&gt;logDirectoryLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="logDirectoryLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="logDirectoryLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="logDirectoryLbl.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
@@ -219,7 +219,7 @@
     <value>3</value>
   </data>
   <data name="logDirectoryLbl.Text" xml:space="preserve">
-    <value>Log Directory:</value>
+    <value>日志目录:</value>
   </data>
   <data name="&gt;&gt;logDirectoryLbl.Name" xml:space="preserve">
     <value>logDirectoryLbl</value>
@@ -233,9 +233,9 @@
   <data name="&gt;&gt;logDirectoryLbl.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="traceLevelCombox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="traceLevelCombox.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="traceLevelCombox.Items" xml:space="preserve">
     <value>Default</value>
   </data>
@@ -275,9 +275,9 @@
   <data name="&gt;&gt;traceLevelCombox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="tracLevelLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="tracLevelLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="tracLevelLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>19, 46</value>
   </data>
@@ -288,7 +288,7 @@
     <value>1</value>
   </data>
   <data name="tracLevelLbl.Text" xml:space="preserve">
-    <value>Trace Level:</value>
+    <value>日志级别:</value>
   </data>
   <data name="&gt;&gt;tracLevelLbl.Name" xml:space="preserve">
     <value>tracLevelLbl</value>
@@ -302,9 +302,9 @@
   <data name="&gt;&gt;tracLevelLbl.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="internalTraceLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="internalTraceLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="internalTraceLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 5</value>
   </data>
@@ -315,7 +315,7 @@
     <value>23</value>
   </data>
   <data name="internalTraceLbl.Text" xml:space="preserve">
-    <value>Internal Trace</value>
+    <value>日志</value>
   </data>
   <data name="&gt;&gt;internalTraceLbl.Name" xml:space="preserve">
     <value>internalTraceLbl</value>
@@ -329,9 +329,9 @@
   <data name="&gt;&gt;internalTraceLbl.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="topGbx.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="topGbx.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="topGbx.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -357,12 +357,12 @@
   <data name="&gt;&gt;topGbx.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>

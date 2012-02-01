@@ -922,7 +922,7 @@
     <value>完成!</value>
   </data>
   <data name="currentGenFileLbl.Text" xml:space="preserve">
-    <value>当前正在生成的文件:</value>
+    <value>当前生成文件:</value>
   </data>
   <data name="databaseLbl.Text" xml:space="preserve">
     <value>数据库:</value>
@@ -961,7 +961,7 @@
     <value>生成</value>
   </data>
   <data name="genFilesLbl.Text" xml:space="preserve">
-    <value>已成文件数:</value>
+    <value>已生成文件数:</value>
   </data>
   <data name="genItemsGbx.Text" xml:space="preserve">
     <value>生成设置</value>
@@ -982,7 +982,7 @@
     <value>是否忽略表前缀</value>
   </data>
   <data name="isStandardizeNameChkbox.Text" xml:space="preserve">
-    <value>是否标准化表与字段名</value>
+    <value>是否标准化表与字段的名称</value>
   </data>
   <data name="languageLbl.Text" xml:space="preserve">
     <value>语言:</value>

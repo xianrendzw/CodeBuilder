@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
 namespace CodeBuilder.WinForm.UI.OptionsPages
 {
-    using Util;
     using Configuration;
+    using Properties;
+    using Util;
 
     public partial class RecentFilesOptionsPage : BaseOptionsPage
     {
@@ -46,7 +47,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Save Environment.RecentFiles Failure", ex);
+                throw new ApplicationException(Resources.SaveEnvironmentRecentFilesFailure, ex);
             }
         }
     }

@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CodeGeneralOptionsPage));
             this.ouputPathTxtbox = new System.Windows.Forms.TextBox();
             this.ouputPathLbl = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.noteTextLabel = new System.Windows.Forms.Label();
+            this.noteLabel = new System.Windows.Forms.Label();
             this.generationLbl = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.topGbx = new System.Windows.Forms.GroupBox();
             this.ouputPathBtn = new System.Windows.Forms.Button();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.templatePathBtn = new System.Windows.Forms.Button();
@@ -52,26 +52,26 @@
             resources.ApplyResources(this.ouputPathLbl, "ouputPathLbl");
             this.ouputPathLbl.Name = "ouputPathLbl";
             // 
-            // label2
+            // noteTextLabel
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.noteTextLabel, "noteTextLabel");
+            this.noteTextLabel.Name = "noteTextLabel";
             // 
-            // label1
+            // noteLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.noteLabel, "noteLabel");
+            this.noteLabel.Name = "noteLabel";
             // 
             // generationLbl
             // 
             resources.ApplyResources(this.generationLbl, "generationLbl");
             this.generationLbl.Name = "generationLbl";
             // 
-            // groupBox3
+            // topGbx
             // 
-            resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.TabStop = false;
+            resources.ApplyResources(this.topGbx, "topGbx");
+            this.topGbx.Name = "topGbx";
+            this.topGbx.TabStop = false;
             // 
             // ouputPathBtn
             // 
@@ -107,10 +107,10 @@
             this.Controls.Add(this.ouputPathBtn);
             this.Controls.Add(this.ouputPathTxtbox);
             this.Controls.Add(this.ouputPathLbl);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.noteTextLabel);
+            this.Controls.Add(this.noteLabel);
             this.Controls.Add(this.generationLbl);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.topGbx);
             this.Name = "CodeGeneralOptionsPage";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -121,10 +121,10 @@
 
         private System.Windows.Forms.TextBox ouputPathTxtbox;
         private System.Windows.Forms.Label ouputPathLbl;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label noteTextLabel;
+        private System.Windows.Forms.Label noteLabel;
         private System.Windows.Forms.Label generationLbl;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox topGbx;
         private System.Windows.Forms.Button ouputPathBtn;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
         private System.Windows.Forms.Button templatePathBtn;

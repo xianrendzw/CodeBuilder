@@ -5,10 +5,12 @@ using System.Text;
 
 namespace CodeBuilder.Exceptions
 {
+    using Framework.Properties;
+
     public class NotSupportDatabaseException : Exception
     {
         public NotSupportDatabaseException()
-            : this("Sorry!CodeBuilder not support this database.")
+            : this(Resource.NotSupportDatabaseExceptionMessage)
         {
         }
 

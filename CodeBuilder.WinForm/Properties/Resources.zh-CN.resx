@@ -117,4 +117,139 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdvancedSettingsInternalTrace" xml:space="preserve">
+    <value>高级设置.日志</value>
+  </data>
+  <data name="CodeBuilderExit" xml:space="preserve">
+    <value>退出CodeBuilder</value>
+  </data>
+  <data name="CodeGenerationGeneral" xml:space="preserve">
+    <value>代码生成.常规</value>
+  </data>
+  <data name="DataSourceManagerDataSources" xml:space="preserve">
+    <value>数据源管理.数据源</value>
+  </data>
+  <data name="DisplayNameOrFileNameCanntSetEmpty" xml:space="preserve">
+    <value>显示名称或文件名不能为空</value>
+  </data>
+  <data name="EditTemplateFileFailure" xml:space="preserve">
+    <value>编辑模板文件失败</value>
+  </data>
+  <data name="EnvironmentRecentFiles" xml:space="preserve">
+    <value>环境.最近文件</value>
+  </data>
+  <data name="ExportDataSourceFailure" xml:space="preserve">
+    <value>导出数据源失败</value>
+  </data>
+  <data name="ExportDataSourceFormat" xml:space="preserve">
+    <value>导出数据源 {0}</value>
+  </data>
+  <data name="ExportFormat" xml:space="preserve">
+    <value>导出 {0}</value>
+  </data>
+  <data name="ExportPDMFileFailure" xml:space="preserve">
+    <value>导出PDM文件失败</value>
+  </data>
+  <data name="GenerateFailure" xml:space="preserve">
+    <value>生成失败</value>
+  </data>
+  <data name="GenerationSettingsFileExt" xml:space="preserve">
+    <value>生成设置文件 (*.xml)|*.xml</value>
+  </data>
+  <data name="InvalidGenerationSettingsFile" xml:space="preserve">
+    <value>无效的生成设置文件</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>已修改</value>
+  </data>
+  <data name="NameOrConnectionstringCanntSetEmpty" xml:space="preserve">
+    <value>名称或连接字符串不能为空</value>
+  </data>
+  <data name="OpenCodeGenerationFolder" xml:space="preserve">
+    <value>打开代码生成文件夹</value>
+  </data>
+  <data name="OpenCodeGenerationFolderFailure" xml:space="preserve">
+    <value>打开代码生成文件夹失败!</value>
+  </data>
+  <data name="OpenFormat" xml:space="preserve">
+    <value>打开 {0}</value>
+  </data>
+  <data name="OpenGenerationSettingsFile" xml:space="preserve">
+    <value>打开生成设置文件</value>
+  </data>
+  <data name="OpenPowerDesignerPDMFile" xml:space="preserve">
+    <value>打开 PowerDesigner PDM 文件</value>
+  </data>
+  <data name="PackageNameInvalid" xml:space="preserve">
+    <value>包名无效,请输入英文字符</value>
+  </data>
+  <data name="PhysicalDataModelFileExt" xml:space="preserve">
+    <value>Physical Data Model (*.pdm)|*.pdm</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>准备</value>
+  </data>
+  <data name="RemoveDatasourceItemFailure" xml:space="preserve">
+    <value>删除数据源项失败!</value>
+  </data>
+  <data name="RemoveTemplateItemFailure" xml:space="preserve">
+    <value>删除模板项失败!</value>
+  </data>
+  <data name="Saved" xml:space="preserve">
+    <value>已保存</value>
+  </data>
+  <data name="SaveDataSourceItemsFailure" xml:space="preserve">
+    <value>保存数据源设置失败</value>
+  </data>
+  <data name="SaveEnvironmentRecentFilesFailure" xml:space="preserve">
+    <value>保存 环境.最近文件 设置失败!</value>
+  </data>
+  <data name="SaveFormat" xml:space="preserve">
+    <value>保存 {0}...</value>
+  </data>
+  <data name="SaveGenerationSettingsFile" xml:space="preserve">
+    <value>保存生成设置项文件</value>
+  </data>
+  <data name="SaveOptionsCodeGenerationGeneralFailure" xml:space="preserve">
+    <value>保存 代码生成.常规 设置失败</value>
+  </data>
+  <data name="SaveOptionsInternalTraceLevelFailure" xml:space="preserve">
+    <value>保存 日志.日志级别 设置失败</value>
+  </data>
+  <data name="SaveOrNewTemplateFileFailure" xml:space="preserve">
+    <value>新增/保存模板文件失败</value>
+  </data>
+  <data name="SaveTemplateFileFailure" xml:space="preserve">
+    <value>保存模板文件: {0} 失败!</value>
+  </data>
+  <data name="SaveTemplateItemsFailure" xml:space="preserve">
+    <value>保存模板项失败!</value>
+  </data>
+  <data name="ShouldCheckedTreeNode" xml:space="preserve">
+    <value>您应该选择一个表或视图节点</value>
+  </data>
+  <data name="ShouldSelectOneTemplate" xml:space="preserve">
+    <value>您应该选择一个代码模板</value>
+  </data>
+  <data name="StartingCodeBuilder" xml:space="preserve">
+    <value>启动CodeBuilder</value>
+  </data>
+  <data name="Startup" xml:space="preserve">
+    <value>启动</value>
+  </data>
+  <data name="Tables" xml:space="preserve">
+    <value>表</value>
+  </data>
+  <data name="TaskId" xml:space="preserve">
+    <value>TaskId参数必须唯一</value>
+  </data>
+  <data name="TemplateFileNotFound" xml:space="preserve">
+    <value>模板文件未找到</value>
+  </data>
+  <data name="TemplateManagerTemplates" xml:space="preserve">
+    <value>模板管理.模板</value>
+  </data>
+  <data name="Views" xml:space="preserve">
+    <value>视图</value>
+  </data>
 </root>

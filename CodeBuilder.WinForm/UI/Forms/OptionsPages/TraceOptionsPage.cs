@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace CodeBuilder.WinForm.UI.OptionsPages
 {
+    using Properties;
     using Util;
     using Configuration;
 
@@ -44,7 +45,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Save Options.InternalTraceLevel Failure", ex);
+                throw new ApplicationException(Resources.SaveOptionsInternalTraceLevelFailure, ex);
             }
 
             InternalTraceLevel level = (InternalTraceLevel)Enum.Parse(InternalTraceLevel.Default.GetType(), traceLevelCombox.Text, true);

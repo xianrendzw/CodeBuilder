@@ -117,4 +117,139 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdvancedSettingsInternalTrace" xml:space="preserve">
+    <value>Advanced Settings.Internal Trace</value>
+  </data>
+  <data name="CodeBuilderExit" xml:space="preserve">
+    <value>CodeBuilder Exit</value>
+  </data>
+  <data name="CodeGenerationGeneral" xml:space="preserve">
+    <value>Code Generation.General</value>
+  </data>
+  <data name="DataSourceManagerDataSources" xml:space="preserve">
+    <value>DataSource Manager.DataSources</value>
+  </data>
+  <data name="DisplayNameOrFileNameCanntSetEmpty" xml:space="preserve">
+    <value>DisplayName or FileName cann't set empty</value>
+  </data>
+  <data name="EditTemplateFileFailure" xml:space="preserve">
+    <value>Edit template file failure!</value>
+  </data>
+  <data name="EnvironmentRecentFiles" xml:space="preserve">
+    <value>Environment.Recent Files</value>
+  </data>
+  <data name="ExportDataSourceFailure" xml:space="preserve">
+    <value>Export DataSource Failure</value>
+  </data>
+  <data name="ExportDataSourceFormat" xml:space="preserve">
+    <value>Export DataSource {0}</value>
+  </data>
+  <data name="ExportFormat" xml:space="preserve">
+    <value>Export {0}</value>
+  </data>
+  <data name="ExportPDMFileFailure" xml:space="preserve">
+    <value>Export PDM File Failure</value>
+  </data>
+  <data name="GenerateFailure" xml:space="preserve">
+    <value>Generate Failure</value>
+  </data>
+  <data name="GenerationSettingsFileExt" xml:space="preserve">
+    <value>Generation Settings (*.xml)|*.xml</value>
+  </data>
+  <data name="InvalidGenerationSettingsFile" xml:space="preserve">
+    <value>Invalid Generation Settings File</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Modified</value>
+  </data>
+  <data name="NameOrConnectionstringCanntSetEmpty" xml:space="preserve">
+    <value>Name or Connectionstring cann't set empty</value>
+  </data>
+  <data name="OpenCodeGenerationFolder" xml:space="preserve">
+    <value>Open Code Generation Folder</value>
+  </data>
+  <data name="OpenCodeGenerationFolderFailure" xml:space="preserve">
+    <value>Open Code Generation Folder Failure!</value>
+  </data>
+  <data name="OpenFormat" xml:space="preserve">
+    <value>Open {0}</value>
+  </data>
+  <data name="OpenGenerationSettingsFile" xml:space="preserve">
+    <value>Open Generation Settings File</value>
+  </data>
+  <data name="OpenPowerDesignerPDMFile" xml:space="preserve">
+    <value>Open PowerDesigner PDM File</value>
+  </data>
+  <data name="PackageNameInvalid" xml:space="preserve">
+    <value>Package name is invalid,please input the english letters.</value>
+  </data>
+  <data name="PhysicalDataModelFileExt" xml:space="preserve">
+    <value>Physical Data Model (*.pdm)|*.pdm</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="RemoveDatasourceItemFailure" xml:space="preserve">
+    <value>Remove datasource item failure!</value>
+  </data>
+  <data name="RemoveTemplateItemFailure" xml:space="preserve">
+    <value>Remove template item failure!</value>
+  </data>
+  <data name="Saved" xml:space="preserve">
+    <value>Saved</value>
+  </data>
+  <data name="SaveDataSourceItemsFailure" xml:space="preserve">
+    <value>Save DataSource Items Failure</value>
+  </data>
+  <data name="SaveEnvironmentRecentFilesFailure" xml:space="preserve">
+    <value>Save Environment.RecentFiles Failure!</value>
+  </data>
+  <data name="SaveFormat" xml:space="preserve">
+    <value>Save {0}...</value>
+  </data>
+  <data name="SaveGenerationSettingsFile" xml:space="preserve">
+    <value>Save Generation Settings File</value>
+  </data>
+  <data name="SaveOptionsCodeGenerationGeneralFailure" xml:space="preserve">
+    <value>Save Options.CodeGeneration.General Failure</value>
+  </data>
+  <data name="SaveOptionsInternalTraceLevelFailure" xml:space="preserve">
+    <value>Save Options.InternalTraceLevel Failure</value>
+  </data>
+  <data name="SaveOrNewTemplateFileFailure" xml:space="preserve">
+    <value>Save/New template file failure!</value>
+  </data>
+  <data name="SaveTemplateFileFailure" xml:space="preserve">
+    <value>Save template file: {0} failure!</value>
+  </data>
+  <data name="SaveTemplateItemsFailure" xml:space="preserve">
+    <value>Save Template Items Failure!</value>
+  </data>
+  <data name="ShouldCheckedTreeNode" xml:space="preserve">
+    <value>You should checked a tables or views treenode</value>
+  </data>
+  <data name="ShouldSelectOneTemplate" xml:space="preserve">
+    <value>You should select one template at least.</value>
+  </data>
+  <data name="StartingCodeBuilder" xml:space="preserve">
+    <value>Starting CodeBuilder</value>
+  </data>
+  <data name="Startup" xml:space="preserve">
+    <value>Startup</value>
+  </data>
+  <data name="Tables" xml:space="preserve">
+    <value>Tables</value>
+  </data>
+  <data name="TaskId" xml:space="preserve">
+    <value>Task ID parameter must be unique</value>
+  </data>
+  <data name="TemplateFileNotFound" xml:space="preserve">
+    <value>Template file not found</value>
+  </data>
+  <data name="TemplateManagerTemplates" xml:space="preserve">
+    <value>Template Manager.Templates</value>
+  </data>
+  <data name="Views" xml:space="preserve">
+    <value>Views</value>
+  </data>
 </root>

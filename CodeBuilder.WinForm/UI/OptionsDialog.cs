@@ -2,6 +2,7 @@
 
 namespace CodeBuilder.WinForm.UI
 {
+    using Properties;
     using OptionsPages;
 
     public class OptionsDialog
@@ -14,11 +15,11 @@ namespace CodeBuilder.WinForm.UI
         public static void Display(Form owner, string initialPage)
         {
             TreeOptionsDialog.Display(owner, initialPage,
-                new RecentFilesOptionsPage("Environment.Recent Files"),
-                new CodeGeneralOptionsPage("Code Generation.General"),
-                new DataSourceOptionsPage("DataSource Manager.DataSources"),
-                new TemplateOptionsPage("Template Manager.Templates"),
-                new TraceOptionsPage("Advanced Settings.Internal Trace"));
+                new RecentFilesOptionsPage(Resources.EnvironmentRecentFiles),
+                new CodeGeneralOptionsPage(Resources.CodeGenerationGeneral),
+                new DataSourceOptionsPage(Resources.DataSourceManagerDataSources),
+                new TemplateOptionsPage(Resources.TemplateManagerTemplates),
+                new TraceOptionsPage(Resources.AdvancedSettingsInternalTrace));
         }
     }
 }

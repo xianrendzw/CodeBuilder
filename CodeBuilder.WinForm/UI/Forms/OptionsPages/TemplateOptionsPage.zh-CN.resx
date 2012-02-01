@@ -117,9 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="templatesLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="templatesLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="templatesLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 5</value>
@@ -127,12 +128,11 @@
   <data name="templatesLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 16</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="templatesLbl.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
   <data name="templatesLbl.Text" xml:space="preserve">
-    <value>Templates</value>
+    <value>模板列表</value>
   </data>
   <data name="&gt;&gt;templatesLbl.Name" xml:space="preserve">
     <value>templatesLbl</value>
@@ -146,9 +146,9 @@
   <data name="&gt;&gt;templatesLbl.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <metadata name="topGbx.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="topGbx.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="topGbx.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -174,9 +174,9 @@
   <data name="&gt;&gt;topGbx.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
-  <metadata name="templateListbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="templateListbox.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="templateListbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 30</value>
   </data>
@@ -198,9 +198,9 @@
   <data name="&gt;&gt;templateListbox.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <metadata name="engineCombox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="engineCombox.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="engineCombox.Location" type="System.Drawing.Point, System.Drawing">
     <value>262, 60</value>
   </data>
@@ -222,9 +222,9 @@
   <data name="&gt;&gt;engineCombox.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <metadata name="languageCombox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="languageCombox.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="languageCombox.Location" type="System.Drawing.Point, System.Drawing">
     <value>262, 30</value>
   </data>
@@ -246,9 +246,9 @@
   <data name="&gt;&gt;languageCombox.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <metadata name="removeBtn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="removeBtn.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="removeBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>291, 210</value>
   </data>
@@ -259,7 +259,7 @@
     <value>16</value>
   </data>
   <data name="removeBtn.Text" xml:space="preserve">
-    <value>Remove</value>
+    <value>移除</value>
   </data>
   <data name="&gt;&gt;removeBtn.Name" xml:space="preserve">
     <value>removeBtn</value>
@@ -273,9 +273,9 @@
   <data name="&gt;&gt;removeBtn.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <metadata name="newsaveBtn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="newsaveBtn.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="newsaveBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>361, 210</value>
   </data>
@@ -286,7 +286,7 @@
     <value>17</value>
   </data>
   <data name="newsaveBtn.Text" xml:space="preserve">
-    <value>New/Save</value>
+    <value>新增/保存</value>
   </data>
   <data name="&gt;&gt;newsaveBtn.Name" xml:space="preserve">
     <value>newsaveBtn</value>
@@ -300,9 +300,9 @@
   <data name="&gt;&gt;newsaveBtn.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <metadata name="fileNameTextbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="fileNameTextbox.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="fileNameTextbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>262, 120</value>
   </data>
@@ -324,9 +324,9 @@
   <data name="&gt;&gt;fileNameTextbox.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <metadata name="displayNameTxtbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="displayNameTxtbox.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="displayNameTxtbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>262, 90</value>
   </data>
@@ -351,9 +351,9 @@
   <data name="&gt;&gt;displayNameTxtbox.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <metadata name="languageLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="languageLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="languageLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>178, 30</value>
   </data>
@@ -364,7 +364,7 @@
     <value>2</value>
   </data>
   <data name="languageLbl.Text" xml:space="preserve">
-    <value>Language:</value>
+    <value>语言:</value>
   </data>
   <data name="&gt;&gt;languageLbl.Name" xml:space="preserve">
     <value>languageLbl</value>
@@ -378,9 +378,9 @@
   <data name="&gt;&gt;languageLbl.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <metadata name="engineLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="engineLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="engineLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>178, 60</value>
   </data>
@@ -391,7 +391,7 @@
     <value>4</value>
   </data>
   <data name="engineLbl.Text" xml:space="preserve">
-    <value>Engine:</value>
+    <value>引擎:</value>
   </data>
   <data name="&gt;&gt;engineLbl.Name" xml:space="preserve">
     <value>engineLbl</value>
@@ -405,9 +405,9 @@
   <data name="&gt;&gt;engineLbl.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <metadata name="nameLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="nameLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="nameLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>178, 90</value>
   </data>
@@ -418,7 +418,7 @@
     <value>6</value>
   </data>
   <data name="nameLbl.Text" xml:space="preserve">
-    <value>DisplayName:</value>
+    <value>显示名称:</value>
   </data>
   <data name="&gt;&gt;nameLbl.Name" xml:space="preserve">
     <value>nameLbl</value>
@@ -432,9 +432,9 @@
   <data name="&gt;&gt;nameLbl.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <metadata name="fileNameLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="fileNameLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="fileNameLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>178, 120</value>
   </data>
@@ -445,7 +445,7 @@
     <value>8</value>
   </data>
   <data name="fileNameLbl.Text" xml:space="preserve">
-    <value>File:</value>
+    <value>文件:</value>
   </data>
   <data name="&gt;&gt;fileNameLbl.Name" xml:space="preserve">
     <value>fileNameLbl</value>
@@ -459,9 +459,9 @@
   <data name="&gt;&gt;fileNameLbl.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="editBtn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="editBtn.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="editBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>228, 210</value>
   </data>
@@ -472,7 +472,7 @@
     <value>15</value>
   </data>
   <data name="editBtn.Text" xml:space="preserve">
-    <value>Edit</value>
+    <value>编辑</value>
   </data>
   <data name="&gt;&gt;editBtn.Name" xml:space="preserve">
     <value>editBtn</value>
@@ -486,9 +486,9 @@
   <data name="&gt;&gt;editBtn.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <metadata name="openFileDialogBtn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="openFileDialogBtn.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="openFileDialogBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>430, 118</value>
   </data>
@@ -513,9 +513,9 @@
   <data name="&gt;&gt;openFileDialogBtn.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="noteTextLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="noteTextLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="noteTextLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>246, 276</value>
   </data>
@@ -537,9 +537,9 @@
   <data name="&gt;&gt;noteTextLbl.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="noteLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="noteLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="noteLbl.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
   </data>
@@ -553,7 +553,7 @@
     <value>19</value>
   </data>
   <data name="noteLbl.Text" xml:space="preserve">
-    <value>Note:</value>
+    <value>说明:</value>
   </data>
   <data name="&gt;&gt;noteLbl.Name" xml:space="preserve">
     <value>noteLbl</value>
@@ -567,18 +567,18 @@
   <data name="&gt;&gt;noteLbl.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
-  </metadata>
+  </data>
   <data name="openFileDialog.Filter" xml:space="preserve">
     <value>Template Text File (*.txt)|*.txt</value>
   </data>
   <data name="openFileDialog.Title" xml:space="preserve">
-    <value>Select Template Text File</value>
+    <value>选择模板文本文件</value>
   </data>
-  <metadata name="getItFromOnlineBtn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="getItFromOnlineBtn.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="getItFromOnlineBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>228, 244</value>
   </data>
@@ -589,7 +589,7 @@
     <value>18</value>
   </data>
   <data name="getItFromOnlineBtn.Text" xml:space="preserve">
-    <value>Get it from online</value>
+    <value>从网络获取模板</value>
   </data>
   <data name="&gt;&gt;getItFromOnlineBtn.Name" xml:space="preserve">
     <value>getItFromOnlineBtn</value>
@@ -603,9 +603,9 @@
   <data name="&gt;&gt;getItFromOnlineBtn.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="prefixTxtBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="prefixTxtBox.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="prefixTxtBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>262, 150</value>
   </data>
@@ -630,9 +630,9 @@
   <data name="&gt;&gt;prefixTxtBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="prefixLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="prefixLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="prefixLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>178, 150</value>
   </data>
@@ -643,7 +643,7 @@
     <value>11</value>
   </data>
   <data name="prefixLbl.Text" xml:space="preserve">
-    <value>Prefix:</value>
+    <value>前缀:</value>
   </data>
   <data name="&gt;&gt;prefixLbl.Name" xml:space="preserve">
     <value>prefixLbl</value>
@@ -657,9 +657,9 @@
   <data name="&gt;&gt;prefixLbl.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="suffixLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="suffixLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="suffixLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>178, 180</value>
   </data>
@@ -670,7 +670,7 @@
     <value>13</value>
   </data>
   <data name="suffixLbl.Text" xml:space="preserve">
-    <value>Suffix:</value>
+    <value>后缀:</value>
   </data>
   <data name="&gt;&gt;suffixLbl.Name" xml:space="preserve">
     <value>suffixLbl</value>
@@ -684,9 +684,9 @@
   <data name="&gt;&gt;suffixLbl.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="suffixTxtBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="suffixTxtBox.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="suffixTxtBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>262, 180</value>
   </data>
@@ -711,12 +711,12 @@
   <data name="&gt;&gt;suffixTxtBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>

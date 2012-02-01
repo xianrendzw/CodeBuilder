@@ -5,10 +5,12 @@ using System.Text;
 
 namespace CodeBuilder.Exceptions
 {
+    using Framework.Properties;
+
     public class NotFoundPdmDBMSException : Exception
     {
         public NotFoundPdmDBMSException()
-            : this("The powerdesigner physical data model(pdm) not specify DBMS.")
+            : this(Resource.NotFoundPdmDBMSExceptionMessage)
         {
         }
 

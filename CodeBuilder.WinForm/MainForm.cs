@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace CodeBuilder.WinForm
 {
     using Configuration;
+    using Properties;
     using UI;
     using Util;
 
@@ -36,8 +37,8 @@ namespace CodeBuilder.WinForm
         #region File
         private void fileOpenMenuItem_Click(object sender, EventArgs e)
         {
-            this.openFileDialog.Title = "Open Generation Settings File";
-            this.openFileDialog.Filter = "Generation Settings (*.xml)|*.xml";
+            this.openFileDialog.Title = Resources.OpenGenerationSettingsFile;
+            this.openFileDialog.Filter = Resources.GenerationSettingsFileExt;
             if (this.openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string xmlFileName = this.openFileDialog.FileName;
@@ -47,16 +48,16 @@ namespace CodeBuilder.WinForm
                 }
                 catch (Exception ex)
                 {
-                    logger.Error("Open Generation Settings File", ex);
-                    MessageBoxHelper.DisplayFailure("Invalid Generation Settings File");
+                    logger.Error(Resources.OpenGenerationSettingsFile, ex);
+                    MessageBoxHelper.DisplayFailure(Resources.InvalidGenerationSettingsFile);
                     return;
                 }
 
-                string menuItemText = string.Format("Save {0}...", Path.GetFileName(xmlFileName));
+                string menuItemText = string.Format(Resources.SaveFormat, Path.GetFileName(xmlFileName));
                 this.fileSaveMenuItem.Text = menuItemText;
                 this.saveGenSettingCtxMenuItem.Text = menuItemText;
                 this.currentGenerationSettingsFile = xmlFileName;
-                this.statusBarReady.Text = string.Format("Open {0}", xmlFileName);
+                this.statusBarReady.Text = string.Format(Resources.OpenFormat, xmlFileName);
             }
         }
 
@@ -66,11 +67,11 @@ namespace CodeBuilder.WinForm
 
             GenerationSettings settings = GetGenerationSettings();
             string xmlFileName = this.currentGenerationSettingsFile;
-            string cmdText = "Modified";
+            string cmdText = Resources.Modified;
             if (string.IsNullOrEmpty(xmlFileName))
             {
-                cmdText = "Saved";
-                this.saveFileDialog.Filter = "Generation Settings (*.xml)|*.xml";
+                cmdText = Resources.Saved;
+                this.saveFileDialog.Filter = Resources.GenerationSettingsFileExt;
                 this.saveFileDialog.DefaultExt = ".xml";
                 this.saveFileDialog.FileName = "New_GenerationSettings.xml";
                 if (this.saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -84,7 +85,7 @@ namespace CodeBuilder.WinForm
             }
             catch (Exception ex)
             {
-                logger.Error("Save Generation Settings File", ex);
+                logger.Error(Resources.SaveGenerationSettingsFile, ex);
                 MessageBoxHelper.DisplayFailure(ex.Message);
                 return;
             }
@@ -95,8 +96,8 @@ namespace CodeBuilder.WinForm
 
         private void fileExportPdmMenuItem_Click(object sender, EventArgs e)
         {
-            this.openFileDialog.Title = "Open PowerDesigner PDM File";
-            this.openFileDialog.Filter = "Physical Data Model (*.pdm)|*.pdm";
+            this.openFileDialog.Title = Resources.OpenPowerDesignerPDMFile;
+            this.openFileDialog.Filter = Resources.PhysicalDataModelFileExt;
             if (this.openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string pdmFileName = this.openFileDialog.FileName;
@@ -112,13 +113,13 @@ namespace CodeBuilder.WinForm
                     if (this.treeView.Nodes.Count > 0) 
                         this.treeView.Nodes[this.treeView.Nodes.Count - 1].Remove();
 
-                    logger.Error("Export PDM File", ex);
+                    logger.Error(Resources.ExportPDMFileFailure, ex);
                     MessageBoxHelper.Display(ex.Message);
                     return;
                 }
 
                 this.clearCtxMenuItem.Enabled = true;
-                this.statusBarReady.Text = string.Format("Export {0}", pdmFileName);
+                this.statusBarReady.Text = string.Format(Resources.ExportFormat, pdmFileName);
             }
         }
 
@@ -142,13 +143,13 @@ namespace CodeBuilder.WinForm
                 if (this.treeView.Nodes.Count > 0)
                     this.treeView.Nodes[this.treeView.Nodes.Count - 1].Remove();
 
-                logger.Error("Export DataSource", ex);
+                logger.Error(Resources.ExportDataSourceFailure, ex);
                 MessageBoxHelper.Display(ex.Message);
                 return;
             }
 
             this.clearCtxMenuItem.Enabled = true;
-            this.statusBarReady.Text = string.Format("Export DataSource {0}", menuItem.Text);
+            this.statusBarReady.Text = string.Format(Resources.ExportDataSourceFormat, menuItem.Text);
         }
 
         private void fileExitMenuItem_Click(object sender, EventArgs e)
@@ -167,12 +168,12 @@ namespace CodeBuilder.WinForm
 
         private void toolsDSConfigMenuItem_Click(object sender, EventArgs e)
         {
-            OptionsDialog.Display(this,"DataSource Manager.DataSources");
+            OptionsDialog.Display(this,Resources.DataSourceManagerDataSources);
         }
 
         private void toolsTemplatesMenuItem_Click(object sender, EventArgs e)
         {
-            OptionsDialog.Display(this, "Template Manager.Templates");
+            OptionsDialog.Display(this, Resources.TemplateManagerTemplates);
         }
         #endregion
 
@@ -219,7 +220,7 @@ namespace CodeBuilder.WinForm
             this.treeView.Nodes.Clear();
             this.clearCtxMenuItem.Enabled = false;
             this.statusBarDatabase.Text = string.Empty;
-            this.statusBarReady.Text = "Ready";
+            this.statusBarReady.Text = Resources.Ready;
         }
         #endregion
 
@@ -286,7 +287,7 @@ namespace CodeBuilder.WinForm
             int genObjectCount = generationObjects.Sum(x => x.Value.Count);
             if (genObjectCount == 0)
             {
-                MessageBoxHelper.DisplayInfo("You should checked a tables or views treenode");
+                MessageBoxHelper.DisplayInfo(Resources.ShouldCheckedTreeNode);
                 return;
             }
 
@@ -307,7 +308,7 @@ namespace CodeBuilder.WinForm
             }
             catch (Exception ex)
             {
-                logger.Error("Generate", ex);
+                logger.Error(Resources.GenerateFailure, ex);
             }
         }
 
@@ -355,8 +356,8 @@ namespace CodeBuilder.WinForm
             }
             catch (Exception ex)
             {
-                logger.Error("Open Code Generation Folder", ex);
-                MessageBoxHelper.DisplayInfo("Open Code Generation Folder Failure!");
+                logger.Error(Resources.OpenCodeGenerationFolderFailure, ex);
+                MessageBoxHelper.DisplayInfo(Resources.OpenCodeGenerationFolderFailure);
             }
         }
 
@@ -402,7 +403,7 @@ namespace CodeBuilder.WinForm
             if (!string.IsNullOrEmpty(this.currentGenFileNameLbl.Text))
             {
                 this.currentGenFileNameLbl.Cursor = System.Windows.Forms.Cursors.Hand;
-                this.toolTip.SetToolTip(this.currentGenFileNameLbl, "Open Code Generation Folder");
+                this.toolTip.SetToolTip(this.currentGenFileNameLbl, Resources.OpenCodeGenerationFolder);
             }
         }
 
@@ -470,7 +471,7 @@ namespace CodeBuilder.WinForm
         {
             if (!GenerationHelper.IsValidPackageName(this.packageTxtBox.Text))
             {
-                MessageBoxHelper.DisplayInfo("Package name is invalid,please input the english letters.");
+                MessageBoxHelper.DisplayInfo(Resources.PackageNameInvalid);
                 this.packageTxtBox.Focus();
                 return false;
             }
@@ -478,7 +479,7 @@ namespace CodeBuilder.WinForm
             if (this.templateListBox.SelectedItems == null ||
                 this.templateListBox.SelectedItems.Count == 0)
             {
-                MessageBoxHelper.DisplayInfo("You should select one template at least.");
+                MessageBoxHelper.DisplayInfo(Resources.ShouldSelectOneTemplate);
                 this.templateListBox.Focus();
                 return false;
             }

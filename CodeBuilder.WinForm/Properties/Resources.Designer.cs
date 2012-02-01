@@ -59,5 +59,410 @@ namespace CodeBuilder.WinForm.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Advanced Settings.Internal Trace.
+        /// </summary>
+        internal static string AdvancedSettingsInternalTrace {
+            get {
+                return ResourceManager.GetString("AdvancedSettingsInternalTrace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CodeBuilder Exit.
+        /// </summary>
+        internal static string CodeBuilderExit {
+            get {
+                return ResourceManager.GetString("CodeBuilderExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code Generation.General.
+        /// </summary>
+        internal static string CodeGenerationGeneral {
+            get {
+                return ResourceManager.GetString("CodeGenerationGeneral", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DataSource Manager.DataSources.
+        /// </summary>
+        internal static string DataSourceManagerDataSources {
+            get {
+                return ResourceManager.GetString("DataSourceManagerDataSources", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DisplayName or FileName cann&apos;t set empty.
+        /// </summary>
+        internal static string DisplayNameOrFileNameCanntSetEmpty {
+            get {
+                return ResourceManager.GetString("DisplayNameOrFileNameCanntSetEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit template file failure!.
+        /// </summary>
+        internal static string EditTemplateFileFailure {
+            get {
+                return ResourceManager.GetString("EditTemplateFileFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Environment.Recent Files.
+        /// </summary>
+        internal static string EnvironmentRecentFiles {
+            get {
+                return ResourceManager.GetString("EnvironmentRecentFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export DataSource Failure.
+        /// </summary>
+        internal static string ExportDataSourceFailure {
+            get {
+                return ResourceManager.GetString("ExportDataSourceFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export DataSource {0}.
+        /// </summary>
+        internal static string ExportDataSourceFormat {
+            get {
+                return ResourceManager.GetString("ExportDataSourceFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export {0}.
+        /// </summary>
+        internal static string ExportFormat {
+            get {
+                return ResourceManager.GetString("ExportFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export PDM File Failure.
+        /// </summary>
+        internal static string ExportPDMFileFailure {
+            get {
+                return ResourceManager.GetString("ExportPDMFileFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generate Failure.
+        /// </summary>
+        internal static string GenerateFailure {
+            get {
+                return ResourceManager.GetString("GenerateFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generation Settings (*.xml)|*.xml.
+        /// </summary>
+        internal static string GenerationSettingsFileExt {
+            get {
+                return ResourceManager.GetString("GenerationSettingsFileExt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Generation Settings File.
+        /// </summary>
+        internal static string InvalidGenerationSettingsFile {
+            get {
+                return ResourceManager.GetString("InvalidGenerationSettingsFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modified.
+        /// </summary>
+        internal static string Modified {
+            get {
+                return ResourceManager.GetString("Modified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name or Connectionstring cann&apos;t set empty.
+        /// </summary>
+        internal static string NameOrConnectionstringCanntSetEmpty {
+            get {
+                return ResourceManager.GetString("NameOrConnectionstringCanntSetEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Code Generation Folder.
+        /// </summary>
+        internal static string OpenCodeGenerationFolder {
+            get {
+                return ResourceManager.GetString("OpenCodeGenerationFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Code Generation Folder Failure!.
+        /// </summary>
+        internal static string OpenCodeGenerationFolderFailure {
+            get {
+                return ResourceManager.GetString("OpenCodeGenerationFolderFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open {0}.
+        /// </summary>
+        internal static string OpenFormat {
+            get {
+                return ResourceManager.GetString("OpenFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Generation Settings File.
+        /// </summary>
+        internal static string OpenGenerationSettingsFile {
+            get {
+                return ResourceManager.GetString("OpenGenerationSettingsFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open PowerDesigner PDM File.
+        /// </summary>
+        internal static string OpenPowerDesignerPDMFile {
+            get {
+                return ResourceManager.GetString("OpenPowerDesignerPDMFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Package name is invalid,please input the english letters..
+        /// </summary>
+        internal static string PackageNameInvalid {
+            get {
+                return ResourceManager.GetString("PackageNameInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Physical Data Model (*.pdm)|*.pdm.
+        /// </summary>
+        internal static string PhysicalDataModelFileExt {
+            get {
+                return ResourceManager.GetString("PhysicalDataModelFileExt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ready.
+        /// </summary>
+        internal static string Ready {
+            get {
+                return ResourceManager.GetString("Ready", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove datasource item failure!.
+        /// </summary>
+        internal static string RemoveDatasourceItemFailure {
+            get {
+                return ResourceManager.GetString("RemoveDatasourceItemFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove template item failure!.
+        /// </summary>
+        internal static string RemoveTemplateItemFailure {
+            get {
+                return ResourceManager.GetString("RemoveTemplateItemFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saved.
+        /// </summary>
+        internal static string Saved {
+            get {
+                return ResourceManager.GetString("Saved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save DataSource Items Failure.
+        /// </summary>
+        internal static string SaveDataSourceItemsFailure {
+            get {
+                return ResourceManager.GetString("SaveDataSourceItemsFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Environment.RecentFiles Failure!.
+        /// </summary>
+        internal static string SaveEnvironmentRecentFilesFailure {
+            get {
+                return ResourceManager.GetString("SaveEnvironmentRecentFilesFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save {0}....
+        /// </summary>
+        internal static string SaveFormat {
+            get {
+                return ResourceManager.GetString("SaveFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Generation Settings File.
+        /// </summary>
+        internal static string SaveGenerationSettingsFile {
+            get {
+                return ResourceManager.GetString("SaveGenerationSettingsFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Options.CodeGeneration.General Failure.
+        /// </summary>
+        internal static string SaveOptionsCodeGenerationGeneralFailure {
+            get {
+                return ResourceManager.GetString("SaveOptionsCodeGenerationGeneralFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Options.InternalTraceLevel Failure.
+        /// </summary>
+        internal static string SaveOptionsInternalTraceLevelFailure {
+            get {
+                return ResourceManager.GetString("SaveOptionsInternalTraceLevelFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save/New template file failure!.
+        /// </summary>
+        internal static string SaveOrNewTemplateFileFailure {
+            get {
+                return ResourceManager.GetString("SaveOrNewTemplateFileFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save template file: {0} failure!.
+        /// </summary>
+        internal static string SaveTemplateFileFailure {
+            get {
+                return ResourceManager.GetString("SaveTemplateFileFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Template Items Failure!.
+        /// </summary>
+        internal static string SaveTemplateItemsFailure {
+            get {
+                return ResourceManager.GetString("SaveTemplateItemsFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You should checked a tables or views treenode.
+        /// </summary>
+        internal static string ShouldCheckedTreeNode {
+            get {
+                return ResourceManager.GetString("ShouldCheckedTreeNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You should select one template at least..
+        /// </summary>
+        internal static string ShouldSelectOneTemplate {
+            get {
+                return ResourceManager.GetString("ShouldSelectOneTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting CodeBuilder.
+        /// </summary>
+        internal static string StartingCodeBuilder {
+            get {
+                return ResourceManager.GetString("StartingCodeBuilder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Startup.
+        /// </summary>
+        internal static string Startup {
+            get {
+                return ResourceManager.GetString("Startup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tables.
+        /// </summary>
+        internal static string Tables {
+            get {
+                return ResourceManager.GetString("Tables", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task ID parameter must be unique.
+        /// </summary>
+        internal static string TaskId {
+            get {
+                return ResourceManager.GetString("TaskId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Template file not found.
+        /// </summary>
+        internal static string TemplateFileNotFound {
+            get {
+                return ResourceManager.GetString("TemplateFileNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Template Manager.Templates.
+        /// </summary>
+        internal static string TemplateManagerTemplates {
+            get {
+                return ResourceManager.GetString("TemplateManagerTemplates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Views.
+        /// </summary>
+        internal static string Views {
+            get {
+                return ResourceManager.GetString("Views", resourceCulture);
+            }
+        }
     }
 }

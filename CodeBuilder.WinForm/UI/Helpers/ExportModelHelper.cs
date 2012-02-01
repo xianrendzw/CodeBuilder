@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 namespace CodeBuilder.WinForm.UI
 {
+    using Properties;
     using PhysicalDataModel;
     using DataSource.Exporter;
     using Configuration;
@@ -65,7 +66,7 @@ namespace CodeBuilder.WinForm.UI
             if (objects == null ||
                 objects.Count == 0) return;
 
-            string text = typeof(T).Name.Equals("Table") ? "Tables" : "Views";
+            string text = typeof(T).Name.Equals("Table") ? Resources.Tables : Resources.Views;
             TreeNode childNode = new TreeNode(text, 1, 1);
             foreach (BaseTable baseTable in objects.Values)
             {

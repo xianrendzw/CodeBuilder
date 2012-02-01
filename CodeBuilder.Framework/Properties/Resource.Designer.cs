@@ -59,5 +59,68 @@ namespace CodeBuilder.Framework.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ConfigurationSection {0} load failure.
+        /// </summary>
+        internal static string ConfigurationSectionLoadFailure {
+            get {
+                return ResourceManager.GetString("ConfigurationSectionLoadFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load configuration failure.
+        /// </summary>
+        internal static string LoadConfigurationFailure {
+            get {
+                return ResourceManager.GetString("LoadConfigurationFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not Found {0} {1} Data Type Item.
+        /// </summary>
+        internal static string NotFoundDataTypeItem {
+            get {
+                return ResourceManager.GetString("NotFoundDataTypeItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not Found {0} To {1} Data Type Mapping.
+        /// </summary>
+        internal static string NotFoundDataTypeMapping {
+            get {
+                return ResourceManager.GetString("NotFoundDataTypeMapping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The powerdesigner physical data model(pdm) not specify DBMS..
+        /// </summary>
+        internal static string NotFoundPdmDBMSExceptionMessage {
+            get {
+                return ResourceManager.GetString("NotFoundPdmDBMSExceptionMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sorry!CodeBuilder not support this database..
+        /// </summary>
+        internal static string NotSupportDatabaseExceptionMessage {
+            get {
+                return ResourceManager.GetString("NotSupportDatabaseExceptionMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save configuration failure.
+        /// </summary>
+        internal static string SaveConfigurationFailure {
+            get {
+                return ResourceManager.GetString("SaveConfigurationFailure", resourceCulture);
+            }
+        }
     }
 }

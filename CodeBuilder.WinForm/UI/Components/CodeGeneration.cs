@@ -5,10 +5,11 @@ using System.Threading;
 
 namespace CodeBuilder.WinForm.UI
 {
-    using Util;
-    using PhysicalDataModel;
     using Configuration;
+    using PhysicalDataModel;
+    using Properties;
     using TemplateEngine;
+    using Util;
 
     public partial class CodeGeneration : Component
     {
@@ -56,7 +57,7 @@ namespace CodeBuilder.WinForm.UI
             lock (userStateToLifetime.SyncRoot)
             {
                 if (userStateToLifetime.Contains(taskId)) 
-                    throw new ArgumentException("Task ID parameter must be unique", "taskId");
+                    throw new ArgumentException(Resources.TaskId, "taskId");
 
                 userStateToLifetime[taskId] = asyncOp;
             }

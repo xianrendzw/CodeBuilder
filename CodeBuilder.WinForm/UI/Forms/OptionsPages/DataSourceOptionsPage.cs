@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace CodeBuilder.WinForm.UI.OptionsPages
 {
+    using Properties;
     using Util;
     using Configuration;
 
@@ -46,7 +47,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Save DataSource Items Failure", ex);
+                throw new ApplicationException(Resources.SaveDataSourceItemsFailure, ex);
             }
         }
 
@@ -72,8 +73,8 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             }
             catch (Exception ex)
             {
-                logger.Error("Remove datasource item failure!", ex);
-                MessageBoxHelper.DisplayFailure("Remove datasource item failure!");
+                logger.Error(Resources.SaveDataSourceItemsFailure, ex);
+                MessageBoxHelper.DisplayFailure(Resources.SaveDataSourceItemsFailure);
             }
         }
 
@@ -86,7 +87,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             if (name.Trim().Length == 0 ||
                 connString.Trim().Length == 0)
             {
-                MessageBoxHelper.Display("name or connectionstring cann't set empty");
+                MessageBoxHelper.Display(Resources.NameOrConnectionstringCanntSetEmpty);
                 return;
             }
 

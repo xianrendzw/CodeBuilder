@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.IO;
 
 namespace CodeBuilder.WinForm.UI.OptionsPages
 {
-    using Util;
     using Configuration;
+    using Properties;
+    using Util;
 
     public partial class CodeGeneralOptionsPage : BaseOptionsPage
     {
@@ -52,7 +53,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Save Options.CodeGeneration.General Failure", ex);
+                throw new ApplicationException(Resources.SaveOptionsCodeGenerationGeneralFailure, ex);
             }
         }
 

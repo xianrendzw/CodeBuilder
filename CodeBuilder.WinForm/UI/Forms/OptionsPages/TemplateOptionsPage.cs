@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace CodeBuilder.WinForm.UI.OptionsPages
 {
+    using Properties;
     using Configuration;
     using Util;
 
@@ -47,7 +48,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Save Template Items Failure", ex);
+                throw new ApplicationException(Resources.SaveTemplateItemsFailure, ex);
             }
         }
 
@@ -77,8 +78,8 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             }
             catch (Exception ex)
             {
-                logger.Error("Edit Template File", ex);
-                MessageBoxHelper.DisplayFailure("Edit template file failure!");
+                logger.Error(Resources.EditTemplateFileFailure, ex);
+                MessageBoxHelper.DisplayFailure(Resources.EditTemplateFileFailure);
             }
         }
 
@@ -97,8 +98,8 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             }
             catch (Exception ex)
             {
-                logger.Error("Remove template item failure!", ex);
-                MessageBoxHelper.DisplayFailure("Remove template item failure!");
+                logger.Error(Resources.RemoveTemplateItemFailure, ex);
+                MessageBoxHelper.DisplayFailure(Resources.RemoveTemplateItemFailure);
             }
         }
 
@@ -113,12 +114,12 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
 
             if (displayName.Length == 0 || fileName.Length == 0)
             {
-                MessageBoxHelper.Display("DisplayName or FileName cann't set empty"); return;
+                MessageBoxHelper.Display(Resources.DisplayNameOrFileNameCanntSetEmpty); return;
             }
 
             if (!File.Exists(fileName))
             {
-                MessageBoxHelper.Display("Template file not found"); return;
+                MessageBoxHelper.Display(Resources.TemplateFileNotFound); return;
             }
 
             try
@@ -145,8 +146,8 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             }
             catch (Exception ex)
             {
-                logger.Error("Save/New Template File", ex);
-                MessageBoxHelper.DisplayFailure("Save/New template file failure!");
+                logger.Error(Resources.SaveOrNewTemplateFileFailure, ex);
+                MessageBoxHelper.DisplayFailure(Resources.SaveOrNewTemplateFileFailure);
             }
         }
 
@@ -296,7 +297,7 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             catch (Exception ex)
             {
                 destFileName = string.Empty;
-                logger.Error(string.Format("Save template file: {0} failure!", srcFileName), ex);
+                logger.Error(string.Format(Resources.SaveTemplateFileFailure, srcFileName), ex);
             }
 
             return destFileName;
