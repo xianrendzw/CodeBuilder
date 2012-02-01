@@ -158,7 +158,7 @@
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="noteTextLabel.Text" xml:space="preserve">
     <value>生成的代码文件将保存在输出目录下.
 模板从模板目录中读出或写入.</value>
   </data>
@@ -177,7 +177,7 @@
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="noteLabel.Text" xml:space="preserve">
     <value>说明:</value>
   </data>
   <data name="generationLbl.Locked" type="System.Boolean, mscorlib">
