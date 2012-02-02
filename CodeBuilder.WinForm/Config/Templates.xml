@@ -1,18 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <templateSection>
-    <templates>
-        <clear/>
-        <template name="LightFramework-DTO.cs.nv" displayName="LightFramework-DTO" language="C#" engine="NVelocity"
-                  fileName="csharp\NVelocity\LightFramework-DTO.nv" prefix="" suffix="DTO" url="" desc="" />
-        <template name="LightFramework-DTO.cs.adr" displayName="LightFramework-DTO" language="C#" engine="Ader"
-                  fileName="csharp\Ader\LightFramework-DTO.adr" prefix="" suffix="DTO" url="" desc="" />
-        <template name="LightFramework-DTO.cs.raz" displayName="LightFramework-DTO" language="C#" engine="Razor"
-                  fileName="csharp\Razor\LightFramework-DTO.raz" prefix="" suffix="DTO" url="" desc="" />
-        <template name="LightFramework-DTO.cs.vic" displayName="LightFramework-DTO" language="C#" engine="Vici"
-                  fileName="csharp\Vici\LightFramework-DTO.vic" prefix="" suffix="DTO" url="" desc="" />
-        <template name="LightFramework-DTO.java.nv" displayName="LightFramework-DTO" language="JAVA" engine="NVelocity"
-                  fileName="java\NVelocity\LightFramework-DTO.nv" prefix="" suffix="Entity" url="" desc="" />
-        <template name="JPA-VO.java.nv" displayName="JPA-VO" language="JAVA" engine="NVelocity"
-                  fileName="java\NVelocity\JPA-VO.nv" prefix="" suffix="VO" url="" desc="" />
-    </templates>
+  <templates>
+    <clear/>
+    <template name="LightFramework-DTO.cs.nv" displayName="LightFramework-DTO" language="C#" engine="NVelocity"
+              fileName="csharp\NVelocity\LightFramework-DTO.nv" prefix="" suffix="DTO" url="" desc="" />
+    <template name="LightFramework-MySqlDAL.cs.nv" displayName="LightFramework-DTO" language="C#" engine="NVelocity"
+                fileName="csharp\NVelocity\LightFramework-MySqlDAL.nv" prefix="" suffix="DTO" url="" desc="" />
+    <template name="LightFramework-SqlServerDAL.cs.nv" displayName="LightFramework-DTO" language="C#" engine="NVelocity"
+                fileName="csharp\NVelocity\LightFramework-SqlServerDAL.nv" prefix="" suffix="DTO" url="" desc="" />
+    <template name="LightFramework-Biz.cs.nv" displayName="LightFramework-DTO" language="C#" engine="NVelocity"
+               fileName="csharp\NVelocity\LightFramework-Biz.nv" prefix="" suffix="DTO" url="" desc="" />
+    <template name="LightFramework-DTO.cs.adr" displayName="LightFramework-DTO" language="C#" engine="Ader"
+              fileName="csharp\Ader\LightFramework-DTO.adr" prefix="" suffix="DTO" url="" desc="" />
+    <template name="LightFramework-DTO.cs.raz" displayName="LightFramework-DTO" language="C#" engine="Razor"
+              fileName="csharp\Razor\LightFramework-DTO.raz" prefix="" suffix="DTO" url="" desc="" />
+    <template name="LightFramework-DTO.cs.vic" displayName="LightFramework-DTO" language="C#" engine="Vici"
+              fileName="csharp\Vici\LightFramework-DTO.vic" prefix="" suffix="DTO" url="" desc="" />
+    <template name="LightFramework-DTO.java.nv" displayName="LightFramework-DTO" language="JAVA" engine="NVelocity"
+              fileName="java\NVelocity\LightFramework-DTO.nv" prefix="" suffix="Entity" url="" desc="" />
+    <template name="JPA-VO.java.nv" displayName="JPA-VO" language="JAVA" engine="NVelocity"
+              fileName="java\NVelocity\JPA-VO.nv" prefix="" suffix="VO" url="" desc="" />
+  </templates>
 </templateSection>
