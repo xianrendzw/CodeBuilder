@@ -4,12 +4,12 @@
     <clear/>
     <template name="LightFramework-DTO.cs.nv" displayName="LightFramework-DTO" language="C#" engine="NVelocity"
               fileName="csharp\NVelocity\LightFramework-DTO.nv" prefix="" suffix="DTO" url="" desc="" />
-    <template name="LightFramework-MySqlDAL.cs.nv" displayName="LightFramework-DTO" language="C#" engine="NVelocity"
-                fileName="csharp\NVelocity\LightFramework-MySqlDAL.nv" prefix="" suffix="DTO" url="" desc="" />
-    <template name="LightFramework-SqlServerDAL.cs.nv" displayName="LightFramework-DTO" language="C#" engine="NVelocity"
-                fileName="csharp\NVelocity\LightFramework-SqlServerDAL.nv" prefix="" suffix="DTO" url="" desc="" />
-    <template name="LightFramework-Biz.cs.nv" displayName="LightFramework-DTO" language="C#" engine="NVelocity"
-               fileName="csharp\NVelocity\LightFramework-Biz.nv" prefix="" suffix="DTO" url="" desc="" />
+    <template name="LightFramework-DAL.cs.nv" displayName="LightFramework-DAL" language="C#" engine="NVelocity"
+                fileName="csharp\NVelocity\LightFramework-DAL.nv" prefix="" suffix="" url="" desc="" />
+    <template name="LightFramework-Biz.cs.nv" displayName="LightFramework-Biz" language="C#" engine="NVelocity"
+               fileName="csharp\NVelocity\LightFramework-Biz.nv" prefix="" suffix="Biz" url="" desc="" />
+    <template name="LightFramework-View.cs.nv" displayName="LightFramework-View" language="C#" engine="NVelocity"
+              fileName="csharp\NVelocity\LightFramework-View.nv" prefix="" suffix="" url="" desc="" />
     <template name="LightFramework-DTO.cs.adr" displayName="LightFramework-DTO" language="C#" engine="Ader"
               fileName="csharp\Ader\LightFramework-DTO.adr" prefix="" suffix="DTO" url="" desc="" />
     <template name="LightFramework-DTO.cs.raz" displayName="LightFramework-DTO" language="C#" engine="Razor"

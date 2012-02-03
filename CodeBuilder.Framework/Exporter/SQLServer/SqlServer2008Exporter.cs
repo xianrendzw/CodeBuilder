@@ -55,7 +55,7 @@ namespace CodeBuilder.DataSource.Exporter
                 Table table = new Table(id, displayName, name, comment);
                 table.OriginalName = name;
                 table.Columns = this.GetColumns(objectId, connectionString);
-                table.PrimaryKeys = this.GetPrimaryKeys(objectId, connectionString);
+                table.PrimaryKeys = this.GetPrimaryKeys(objectId, connectionString, table.Columns);
                 tables.Add(id, table);
             }
             dr.Close();
@@ -106,9 +106,25 @@ namespace CodeBuilder.DataSource.Exporter
             return null;
         }
 
-        private Columns GetPrimaryKeys(int objectId, string connectionString)
+        private Columns GetPrimaryKeys(int objectId, string connectionString,Columns columns)
         {
-            return null;
+            StringBuilder sqlBuilder = new StringBuilder();
+            sqlBuilder.Append("select syscolumns.name from syscolumns,sysobjects,sysindexes,sysindexkeys ");
+            sqlBuilder.AppendFormat("where syscolumns.id ={0} ",objectId);
+            sqlBuilder.Append("and sysobjects.xtype = 'PK' and sysobjects.parent_obj = syscolumns.id ");
+            sqlBuilder.Append("and sysindexes.id = syscolumns.id and sysobjects.name = sysindexes.name and ");
+            sqlBuilder.Append("sysindexkeys.id = syscolumns.id and sysindexkeys.indid = sysindexes.indid and syscolumns.colid = sysindexkeys.colid");
+
+            Columns primaryKeys = new Columns(4);
+            SqlDataReader dr = SqlHelper.ExecuteReader(connectionString, CommandType.Text, sqlBuilder.ToString());
+            while (dr.Read())
+            {
+                string name = dr.IsDBNull(0) ? string.Empty : dr.GetString(0);
+                if (columns.ContainsKey(name)) primaryKeys.Add(name, columns[name]);
+            }
+            dr.Close();
+
+            return primaryKeys;
         }
 
         private Columns GetColumns(string connectionString, string sqlCmd)
