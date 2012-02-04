@@ -3,22 +3,22 @@
   <templates>
     <clear/>
     <template name="LightFramework-DTO.cs.nv" displayName="LightFramework-DTO" language="C#" engine="NVelocity"
-              fileName="csharp\NVelocity\LightFramework-DTO.nv" prefix="" suffix="DTO" url="" desc="" />
+              fileName="csharp\NVelocity\LightFramework-DTO.nv" prefix="" suffix="DTO" url="" desc="" category="" version="1.0" />
     <template name="LightFramework-DAL.cs.nv" displayName="LightFramework-DAL" language="C#" engine="NVelocity"
-                fileName="csharp\NVelocity\LightFramework-DAL.nv" prefix="" suffix="" url="" desc="" />
+                fileName="csharp\NVelocity\LightFramework-DAL.nv" prefix="" suffix="" url="" desc="" category="" version="1.0" />
     <template name="LightFramework-Biz.cs.nv" displayName="LightFramework-Biz" language="C#" engine="NVelocity"
-               fileName="csharp\NVelocity\LightFramework-Biz.nv" prefix="" suffix="Biz" url="" desc="" />
+               fileName="csharp\NVelocity\LightFramework-Biz.nv" prefix="" suffix="Biz" url="" desc="" category="" version="1.0" />
     <template name="LightFramework-View.cs.nv" displayName="LightFramework-View" language="C#" engine="NVelocity"
-              fileName="csharp\NVelocity\LightFramework-View.nv" prefix="" suffix="" url="" desc="" />
+              fileName="csharp\NVelocity\LightFramework-View.nv" prefix="" suffix="" url="" desc="" category="" version="1.0" />
     <template name="LightFramework-DTO.cs.adr" displayName="LightFramework-DTO" language="C#" engine="Ader"
-              fileName="csharp\Ader\LightFramework-DTO.adr" prefix="" suffix="DTO" url="" desc="" />
+              fileName="csharp\Ader\LightFramework-DTO.adr" prefix="" suffix="DTO" url="" desc="" category="" version="1.0" />
     <template name="LightFramework-DTO.cs.raz" displayName="LightFramework-DTO" language="C#" engine="Razor"
-              fileName="csharp\Razor\LightFramework-DTO.raz" prefix="" suffix="DTO" url="" desc="" />
+              fileName="csharp\Razor\LightFramework-DTO.raz" prefix="" suffix="DTO" url="" desc="" category="" version="1.0" />
     <template name="LightFramework-DTO.cs.vic" displayName="LightFramework-DTO" language="C#" engine="Vici"
-              fileName="csharp\Vici\LightFramework-DTO.vic" prefix="" suffix="DTO" url="" desc="" />
+              fileName="csharp\Vici\LightFramework-DTO.vic" prefix="" suffix="DTO" url="" desc="" category="" version="1.0" />
     <template name="LightFramework-DTO.java.nv" displayName="LightFramework-DTO" language="JAVA" engine="NVelocity"
-              fileName="java\NVelocity\LightFramework-DTO.nv" prefix="" suffix="Entity" url="" desc="" />
+              fileName="java\NVelocity\LightFramework-DTO.nv" prefix="" suffix="Entity" url="" desc="" category="" version="1.0" />
     <template name="JPA-VO.java.nv" displayName="JPA-VO" language="JAVA" engine="NVelocity"
-              fileName="java\NVelocity\JPA-VO.nv" prefix="" suffix="VO" url="" desc="" />
+              fileName="java\NVelocity\JPA-VO.nv" prefix="" suffix="VO" url="" desc="" category="" version="1.0" />
   </templates>
 </templateSection>

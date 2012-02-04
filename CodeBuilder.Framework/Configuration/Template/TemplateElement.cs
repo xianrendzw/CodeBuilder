@@ -71,6 +71,20 @@ namespace CodeBuilder.Configuration
             set { base["desc"] = value; }
         }
 
+        [ConfigurationProperty("category", IsRequired = true)]
+        public string Category
+        {
+            get { return base["category"].ToString(); }
+            set { base["category"] = value; }
+        }
+
+        [ConfigurationProperty("version", IsRequired = true)]
+        public string Version
+        {
+            get { return base["version"].ToString(); }
+            set { base["version"] = value; }
+        }
+
         [ConfigurationProperty("parser", IsRequired = false)]
         public string Parser
         {
