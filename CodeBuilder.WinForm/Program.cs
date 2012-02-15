@@ -17,10 +17,6 @@ namespace CodeBuilder.WinForm
         [STAThread]
         static void Main()
         {
-            System.Globalization.CultureInfo newCulture = new System.Globalization.CultureInfo("zh-CN");
-            System.Threading.Thread.CurrentThread.CurrentCulture = newCulture;
-            System.Threading.Thread.CurrentThread.CurrentUICulture = newCulture;
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
