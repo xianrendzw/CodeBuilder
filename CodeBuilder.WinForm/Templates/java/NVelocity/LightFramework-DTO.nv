@@ -18,7 +18,7 @@ public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix} extends AbstractEntity implem
     /**
      * 列名$column.OriginalName,$column.Comment
      */
-    public final static $column.LanguageType $column.Name = "$column.OriginalName";
+    public final static String $column.Name = "$column.OriginalName";
 	#end
 
 	#foreach($column in $tdo.ModelObject.Columns.Values)
