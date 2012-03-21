@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Xml;
 
@@ -56,7 +57,8 @@ namespace CodeBuilder.DataSource.Exporter
                 Table table = new Table(id, displayName, name, comment);
                 table.OriginalName = name;
                 table.Columns = this.GetColumns(tableNode);
-                table.PrimaryKeys = this.GetPrimaryKeys(tableNode, table.Columns);
+                table.Keys = this.GetKeys(tableNode, table.Columns);
+                table.PrimaryKeys = this.GetPrimaryKeys(tableNode, table.Keys);
                 tables.Add(id, table);
             }
 
@@ -118,29 +120,35 @@ namespace CodeBuilder.DataSource.Exporter
             return columns;
         }
 
-        private Columns GetKeys(XmlNode tableNode, Columns tableColumns)
+        private Dictionary<string, Columns> GetKeys(XmlNode tableNode, Columns tableColumns)
         {
             XmlNode keysNode = tableNode["c:Keys"];
             if (keysNode == null ||
                 keysNode.ChildNodes.Count == 0) return null;
 
-            XmlNode keyColumnsNode = keysNode.ChildNodes[0]["c:Key.Columns"];
-            if (keyColumnsNode == null || 
-                keyColumnsNode.ChildNodes.Count == 0) return null;
-
-            XmlNodeList keyColumnNodes = keyColumnsNode.ChildNodes;
-            Columns keys = new Columns(keyColumnNodes.Count);
-            foreach (XmlNode keyColumnNode in keyColumnNodes)
+            Dictionary<string, Columns> keys = new Dictionary<string, Columns>(keysNode.ChildNodes.Count);
+            foreach (XmlNode keyNode in keysNode.ChildNodes)
             {
-                string id = keyColumnNode.Attributes["Ref"].InnerText;
-                if (!tableColumns.ContainsKey(id)) continue;
-                keys.Add(id, tableColumns[id]);
+                string keyId = keyNode.Attributes["Id"].InnerText;
+                XmlNode keyColumnsNode = keyNode["c:Key.Columns"];
+                if (keyColumnsNode == null ||
+                    keyColumnsNode.ChildNodes.Count == 0) return null;
+
+                Columns keyColumns = new Columns(keyColumnsNode.ChildNodes.Count);
+                foreach (XmlNode keyColumnNode in keyColumnsNode.ChildNodes)
+                {
+                    string id = keyColumnNode.Attributes["Ref"].InnerText;
+                    if (tableColumns.ContainsKey(id))
+                        keyColumns.Add(id, tableColumns[id]);
+                }
+
+                keys.Add(keyId, keyColumns);
             }
 
             return keys;
         }
 
-        private Columns GetPrimaryKeys(XmlNode tableNode, Columns tableColumns)
+        private Columns GetPrimaryKeys(XmlNode tableNode, Dictionary<string, Columns> keys)
         {
             XmlNode xmlNode = tableNode["c:PrimaryKey"];
             if (xmlNode == null ||
@@ -151,8 +159,7 @@ namespace CodeBuilder.DataSource.Exporter
             foreach (XmlNode primaryKeyNode in primaryKeyNodes)
             {
                 string id = primaryKeyNode.Attributes["Ref"].InnerText;
-                if (!tableColumns.ContainsKey(id)) continue;
-                primaryKeys.Add(id,tableColumns[id]);
+                if (keys.ContainsKey(id)) primaryKeys = keys[id];
             }
 
             return primaryKeys;

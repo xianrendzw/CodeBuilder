@@ -7,6 +7,7 @@ namespace CodeBuilder.PhysicalDataModel
 {
     public class Table : BaseTable
     {
+        protected Dictionary<string, Columns> _keys;
         protected Columns _primaryKeys;
 
         public Table()
@@ -29,6 +30,12 @@ namespace CodeBuilder.PhysicalDataModel
         {
             get { return this._primaryKeys; }
             set { this._primaryKeys = value; }
+        }
+
+        public Dictionary<string, Columns> Keys
+        {
+            get { return this._keys; }
+            set { this._keys = value; }
         }
     }
 }
