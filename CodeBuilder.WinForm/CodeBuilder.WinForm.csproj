@@ -249,7 +249,9 @@
     <ConfigFile Include="Config\DataSources.xml" />
     <ConfigFile Include="Config\Options.xml" />
     <ConfigFile Include="Config\Templates.xml" />
-    <ConfigFile Include="Config\Settings.xml" />
+    <ConfigFile Include="Config\Settings.xml">
+      <SubType>Designer</SubType>
+    </ConfigFile>
     <ConfigFile Include="Config\TypeMapping.xml" />
   </ItemGroup>
   <ItemGroup>
