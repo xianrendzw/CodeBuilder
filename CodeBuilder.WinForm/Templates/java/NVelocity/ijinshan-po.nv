@@ -1,28 +1,18 @@
-﻿package ${tdo.Package}.entity;
+﻿package ${tdo.Package}.po;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.Date;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import com.ijinshan.report.core.util.CustomDateTimeSerializer;
+
 /**
- * $tdo.ModelObject.Comment
- * @author $tdo.Author
+ * $tdo.ModelObject.Comment持久类
  */
-public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix} extends AbstractEntity implements Serializable {
-	/** 
-     * 实体$tdo.ModelObject.OriginalName名称
-     */
-    public static String EntityName = "$tdo.ModelObject.OriginalName";
-
+public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix} implements Serializable {
+	private static final long serialVersionUID = 1L;
 	#foreach($column in $tdo.ModelObject.Columns.Values)
-
-    /**
-     * 列名$column.OriginalName,$column.Comment
-     */
-    public final static String $column.Name = "$column.OriginalName";
-	#end
-
-	#foreach($column in $tdo.ModelObject.Columns.Values)
-
 		#set($colName = $column.Name)
 		#if($column.Name.Length == 1) 
 			#set($colName = $colName.ToLower())
@@ -35,21 +25,27 @@ public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix} extends AbstractEntity implem
 	#end
 
 	#foreach($column in $tdo.ModelObject.Columns.Values)
-
 			#set($colName = $column.Name)
 			#if($column.Name.Length == 1) 
 				#set($colName = $colName.ToLower())
 			#elseif($column.Name.Length > 1)
 				#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
 			#end
-
 		/**
 		 * 获取$column.Comment
 		 * @return $column.Comment
 		 */
+		 #if($column.LanguageType == "Date") 
+		 @JsonSerialize(using = CustomDateTimeSerializer.class)
+		 #end
 		public ${column.LanguageType} get${column.Name}() {
+			#if($column.LanguageType == "Date") 
+			return this.createTime == null ? Calendar.getInstance().getTime() : this.createTime;
+			#else
 			return this.$colName;
+			#end
 		}
+
 		/**
 		 * 设置$column.Comment
 		 * @param $colName
