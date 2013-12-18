@@ -1,0 +1,61 @@
+﻿package ${tdo.Package}.entity;
+
+import java.io.Serializable;
+import java.util.Date;
+
+/**
+ * $tdo.ModelObject.Comment
+ * @author $tdo.Author
+ */
+public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix} extends AbstractEntity implements Serializable {
+	/** 
+     * 实体$tdo.ModelObject.OriginalName名称
+     */
+    public static String EntityName = "$tdo.ModelObject.OriginalName";
+
+	#foreach($column in $tdo.ModelObject.Columns.Values)
+
+    /**
+     * 列名$column.OriginalName,$column.Comment
+     */
+    public final static String $column.Name = "$column.OriginalName";
+	#end
+
+	#foreach($column in $tdo.ModelObject.Columns.Values)
+
+		#set($colName = $column.Name)
+		#if($column.Name.Length == 1) 
+			#set($colName = $colName.ToLower())
+		#elseif($column.Name.Length > 1)
+			#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
+		#end
+
+		@Column(name = "$column.OriginalName" #if($column.IsAutoIncremented),isIgnored = true #end)
+		private $column.LanguageType $colName;
+	#end
+
+	#foreach($column in $tdo.ModelObject.Columns.Values)
+
+			#set($colName = $column.Name)
+			#if($column.Name.Length == 1) 
+				#set($colName = $colName.ToLower())
+			#elseif($column.Name.Length > 1)
+				#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
+			#end
+
+		/**
+		 * 获取$column.Comment
+		 * @return $column.Comment
+		 */
+		public ${column.LanguageType} get${column.Name}() {
+			return this.$colName;
+		}
+		/**
+		 * 设置$column.Comment
+		 * @param $colName
+		 */
+		public void set${column.Name}(${column.LanguageType} $colName) {
+			this.$colName = $colName;
+		}
+	#end
+}

@@ -1,0 +1,138 @@
+﻿package ${tdo.Package}.dao.impl;
+
+import java.sql.Types;
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import ${tdo.Package}.dao.I${tdo.Name}Dao;
+import ${tdo.Package}.po.${tdo.Name}Po;
+import ${tdo.Package}.dao.BaseExtendJdbcMysqlDao;
+import ${tdo.Package}.dao.SqlExpression;
+import com.ijinshan.iframe.action.PageInfo;
+
+/**
+ * ${tdo.ModelObject.Comment}数据访问实现类
+ */
+@Repository
+public class ${tdo.Name}DaoImpl extends BaseExtendJdbcMysqlDao implements I${tdo.Name}Dao {
+	public ${tdo.Name}DaoImpl() {
+	}
+
+	@Resource
+	public void setJDBCTemplate(JdbcTemplate jdbcTemplate) {
+		this.setJdbcTemplate(jdbcTemplate);
+	}
+
+	@Override
+	public List<${tdo.Name}Po> selectAll() {
+		String sqlCmd = "select * from ${tdo.ModelObject.OriginalName} order by create_time desc";
+		return this.queryForList(sqlCmd, ${tdo.Name}Po.class);
+	}
+
+	@Override
+	public int count() {
+		String sqlCmd = "select count(*) from ${tdo.ModelObject.OriginalName}";
+		return this.queryForInt(sqlCmd);
+	}
+
+	@Override
+	public ${tdo.Name}Po selectById(int id) {
+		String sqlCmd = "select * from ${tdo.ModelObject.OriginalName} order by create_time asc";
+		return this.queryForObject(sqlCmd, ${tdo.Name}Po.class);
+	}
+
+	@Override
+	public List<${tdo.Name}Po> selectWithPage(PageInfo pageInfo) {
+		String sqlCmd = "select * from ${tdo.ModelObject.OriginalName} order by create_time desc";
+		return this.queryByPage(sqlCmd, pageInfo, ${tdo.Name}Po.class);
+	}
+
+	@Override
+	public int insert(${tdo.Name}Po po) {
+		SqlExpression sqlExpr = this.getInsertSqlExpression(po);
+		return this.update(sqlExpr.getCommandText(), sqlExpr.getParameters(), sqlExpr.getParamTypes());
+	}
+
+	@Override
+	public int insertWithId(${tdo.Name}Po po) {
+		SqlExpression sqlExpr = this.getInsertSqlExpression(${tdo.Name});
+		return this.insertWithId(sqlExpr.getCommandText(), sqlExpr.getParameters(), sqlExpr.getParamTypes());
+	}
+
+	@Override
+	public int update(${tdo.Name}Po po) {
+		StringBuilder sqlBuidler = new StringBuilder();
+		sqlBuidler.append("update ${tdo.ModelObject.OriginalName} ");
+		#set($index = 0)
+		#set($params = "")
+		#set($types = "")
+		#set($count = $tdo.ModelObject.Columns.Values.Count-1)
+		#foreach($column in $tdo.ModelObject.Columns.Values)
+			#if($index = $count)
+			sqlBuidler.append("set `${column.OriginalName}` = ?");
+			#set($params = "${params}po.get${column.Name}()")
+			#set($types = "${types}Types.${column.DataType.ToUpper()},")
+			#else
+			sqlBuidler.append("set `${column.OriginalName}` = ?,");
+			#set($params = "${params}po.get${column.Name}(),")
+			#set($types = "${types}Types.${column.DataType.ToUpper()},")
+			#end
+			#set($index = $index + 1)
+		#end
+		sqlBuidler.append("where id = ?");
+
+		Object[] parameters = new Object[] { ${params} };
+		int[] types = new int[] { ${types}};
+		String sqlCmd = sqlBuidler.toString();
+
+		return this.update(sqlCmd, parameters, types);
+	}
+
+	@Override
+	public int delete(int id) {
+		String sqlCmd = "delete from ${tdo.ModelObject.OriginalName} where id =" + id;
+		return this.update(sqlCmd);
+	}
+
+	@Override
+	public int delete(String ids) {
+		String sqlCmd = String.format("delete from ${tdo.ModelObject.OriginalName} where id in(%s)", ids);
+		return this.update(sqlCmd);
+	}
+
+	private SqlExpression getInsertSqlExpression(${tdo.Name}Po ${tdo.Name}) {
+		StringBuilder sqlBuidler = new StringBuilder();
+		sqlBuidler.append("insert into ${tdo.ModelObject.OriginalName} (");
+		#set($index = 0)
+		#set($params = "")
+		#set($types = "")
+		#set($symbols = "")
+		#set($count = $tdo.ModelObject.Columns.Values.Count-1)
+		#foreach($column in $tdo.ModelObject.Columns.Values)
+			#if($index = $count)
+			sqlBuidler.append("`${column.OriginalName}`");
+			#set($params = "${params}po.get${column.Name}()")
+			#set($types = "${types}Types.${column.DataType.ToUpper()},")
+			#set($symbols = "${symbols}?,")
+			#else
+			sqlBuidler.append("`${column.OriginalName}`,");
+			#set($params = "${params}po.get${column.Name}(),")
+			#set($types = "${types}Types.${column.DataType.ToUpper()},")
+			#set($symbols = "${symbols}?,")
+			#end
+			#set($index = $index + 1)
+		#end
+		sqlBuidler.append(")");
+		sqlBuidler.append("values ($symbols)");
+
+		Object[] parameters = new Object[] { ${params} };
+		int[] types = new int[] { ${types} };
+		String sqlCmd = sqlBuidler.toString();
+
+		return new SqlExpression(sqlCmd, parameters, types);
+	}
+}
