@@ -277,7 +277,19 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Templates Include="Templates\**\*.*" />
+    <Templates Include="Templates\csharp\Ader\LightFramework-DTO.adr" />
+    <Templates Include="Templates\csharp\NVelocity\LightFramework-Biz.nv" />
+    <Templates Include="Templates\csharp\NVelocity\LightFramework-DAL.nv" />
+    <Templates Include="Templates\csharp\NVelocity\LightFramework-DTO.nv" />
+    <Templates Include="Templates\csharp\NVelocity\LightFramework-View.nv" />
+    <Templates Include="Templates\csharp\Razor\LightFramework-DTO.raz" />
+    <Templates Include="Templates\csharp\Vici\LightFramework-DTO.vic" />
+    <Templates Include="Templates\java\NVelocity\JPA-VO.nv" />
+    <Templates Include="Templates\java\NVelocity\LightFramework-DAL.nv" />
+    <Templates Include="Templates\java\NVelocity\LightFramework-DTO.nv" />
+	<Templates Include="Templates\java\NVelocity\ijinshan-daoimpl.nv" />
+    <Templates Include="Templates\java\NVelocity\ijinshan-idao.nv" />
+    <Templates Include="Templates\java\NVelocity\ijinshan-po.nv" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodeBuilder.Framework\CodeBuilder.Framework.csproj">
