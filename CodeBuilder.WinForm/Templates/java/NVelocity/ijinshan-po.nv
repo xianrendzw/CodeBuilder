@@ -19,8 +19,6 @@ public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix} implements Serializable {
 		#elseif($column.Name.Length > 1)
 			#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
 		#end
-
-		@Column(name = "$column.OriginalName" #if($column.IsAutoIncremented),isIgnored = true #end)
 		private $column.LanguageType $colName;
 	#end
 

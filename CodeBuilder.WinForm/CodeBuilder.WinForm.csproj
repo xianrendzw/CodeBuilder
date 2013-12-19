@@ -237,6 +237,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Templates\java\NVelocity\ijinshan-idaoimpl.nv" />
+    <None Include="Templates\java\NVelocity\ijinshan-iservice-controller.nv" />
+    <None Include="Templates\java\NVelocity\ijinshan-iservice.nv" />
+    <None Include="Templates\java\NVelocity\ijinshan-iserviceimpl.nv" />
+    <None Include="Templates\java\NVelocity\ijinshan-service-controller.nv" />
+    <None Include="Templates\java\NVelocity\ijinshan-service.nv" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\cb.bmp" />
@@ -287,7 +293,6 @@
     <Templates Include="Templates\java\NVelocity\JPA-VO.nv" />
     <Templates Include="Templates\java\NVelocity\LightFramework-DAL.nv" />
     <Templates Include="Templates\java\NVelocity\LightFramework-DTO.nv" />
-	<Templates Include="Templates\java\NVelocity\ijinshan-daoimpl.nv" />
     <Templates Include="Templates\java\NVelocity\ijinshan-idao.nv" />
     <Templates Include="Templates\java\NVelocity\ijinshan-po.nv" />
   </ItemGroup>
