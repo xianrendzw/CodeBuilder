@@ -243,6 +243,7 @@
     <None Include="Templates\java\NVelocity\ijinshan-iserviceimpl.nv" />
     <None Include="Templates\java\NVelocity\ijinshan-service-controller.nv" />
     <None Include="Templates\java\NVelocity\ijinshan-service.nv" />
+    <None Include="Templates\jsp\NVelocity\ijinshan-jqueryeasyui.nv" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\cb.bmp" />
@@ -250,6 +251,7 @@
     <Content Include="Resources\Images\folderClosed.gif" />
     <Content Include="Resources\Images\folderOpen.gif" />
     <Content Include="Resources\Images\leaf.gif" />
+    <None Include="Templates\javascript\NVelocity\ijinshan-jqueryeasyui.nv" />
   </ItemGroup>
   <ItemGroup>
     <ConfigFile Include="Config\DataSources.xml" />
@@ -303,6 +305,7 @@
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

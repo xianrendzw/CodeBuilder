@@ -38,7 +38,7 @@ public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix} implements Serializable {
 		 #end
 		public ${column.LanguageType} get${column.Name}() {
 			#if($column.LanguageType == "Date") 
-			return this.createTime == null ? Calendar.getInstance().getTime() : this.createTime;
+			return this.$colName == null ? Calendar.getInstance().getTime() : this.$colName;
 			#else
 			return this.$colName;
 			#end
