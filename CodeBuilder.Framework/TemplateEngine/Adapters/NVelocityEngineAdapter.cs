@@ -33,9 +33,13 @@ namespace CodeBuilder.TemplateEngine
                 velocityEngine.SetProperty(RuntimeConstants.FILE_RESOURCE_LOADER_PATH, loaderPath);
                 velocityEngine.Init();
 
+                Encoding encoding = Encoding.GetEncoding(templateData.Encoding);
+                if (templateData.Encoding == "UTF-7")
+                {
+                    encoding = new UTF8Encoding(false);
+                }
                 Template template = velocityEngine.GetTemplate(templateFile);
-                using (StreamWriter StreamWriter = new StreamWriter(templateData.CodeFileName,
-                    false, Encoding.GetEncoding(templateData.Encoding)))
+                using (StreamWriter StreamWriter = new StreamWriter(templateData.CodeFileName, false, encoding))
                 {
                     template.Merge(context, StreamWriter);
                 }
@@ -94,7 +98,7 @@ namespace CodeBuilder.TemplateEngine
             if (methodInfo != null) { return methodInfo.Invoke(_instance, args); }
 
             object[] extensionArgs = new object[args.Length + 1];
-            extensionArgs[0] = _instance; 
+            extensionArgs[0] = _instance;
             Array.Copy(args, 0, extensionArgs, 1, args.Length);
             foreach (Type extensionType in _extensionTypes)
             {
