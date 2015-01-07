@@ -1,0 +1,4 @@
+language: csharp
+solution: CodeBuilder.sln
+before_install:
+  - mysql -e "create database IF NOT EXISTS easy_admin;" -uroot
