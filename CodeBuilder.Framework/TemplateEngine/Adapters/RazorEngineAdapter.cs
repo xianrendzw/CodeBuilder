@@ -22,7 +22,7 @@ namespace CodeBuilder.TemplateEngine
                 using (StreamWriter streamWriter = new StreamWriter(templateData.CodeFileName,
                     false, Encoding.GetEncoding(templateData.Encoding)))
                 {
-                    streamWriter.Write(Razor.Parse(File.ReadAllText(templateData.TemplateFileName), templateData));
+                    //streamWriter.Write(Razor.Parse(File.ReadAllText(templateData.TemplateFileName), templateData));
                 }
                 return true;
             }
