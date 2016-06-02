@@ -3,16 +3,10 @@
 <mapper namespace="${tdo.Package}.I${tdo.Name}Dao">
   <resultMap id="${tdo.Name}Map" type="${tdo.Package}.pojo.${tdo.Name}">
   	#foreach($column in $tdo.ModelObject.Columns.Values)
-		#set($colName = $column.Name)
-		#if($column.Name.Length == 1) 
-			#set($colName = $colName.ToLower())
-		#elseif($column.Name.Length > 1)
-			#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
-		#end
 		#if($column.IsAutoIncremented) 
-		 <id column="${column.OriginalName}" property="${colName}" jdbcType="${column.DataType}" />
+		 <id column="${column.OriginalName}" property="${column.CamelName}" jdbcType="${column.LanguageType}" />
 		#else
-		<result column="${column.OriginalName}" property="${colName}" jdbcType="${column.DataType}" />
+		<result column="${column.OriginalName}" property="${column.CamelName}" jdbcType="${column.LanguageType}" />
 		#end
 	#end
   </resultMap>
@@ -35,24 +29,16 @@
     insert into ${tdo.ModelObject.OriginalName}
     <trim prefix="(" suffix=")" suffixOverrides=",">
     #foreach($column in $tdo.ModelObject.Columns.Values)
-		#set($colName = $column.Name)
-		#if($column.Name.Length == 1) 
-			#set($colName = $colName.ToLower())
-		#elseif($column.Name.Length > 1)
-			#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
+		#if(!$column.IsAutoIncremented) 
+		<if test="${column.CamelName} != null">${column.OriginalName},</if>
 		#end
-		<if test="${colName} != null">${column.OriginalName},</if>
 	#end
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
     #foreach($column in $tdo.ModelObject.Columns.Values)
-		#set($colName = $column.Name)
-		#if($column.Name.Length == 1) 
-			#set($colName = $colName.ToLower())
-		#elseif($column.Name.Length > 1)
-			#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
+		#if(!$column.IsAutoIncremented) 
+		<if test="${column.CamelName} != null">#{${column.CamelName},jdbcType=${column.LanguageType}},</if>
 		#end
-		<if test="${colName} != null">#{${colName},jdbcType=${column.DataType}},</if>
 	#end
     </trim>
   </insert>
@@ -63,13 +49,7 @@
     from ${tdo.ModelObject.OriginalName}
     <where>
     #foreach($column in $tdo.ModelObject.Columns.Values)
-		#set($colName = $column.Name)
-		#if($column.Name.Length == 1) 
-			#set($colName = $colName.ToLower())
-		#elseif($column.Name.Length > 1)
-			#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
-		#end
-		<if test="${colName} != null"> and ${column.OriginalName} = #{${colName},jdbcType=${column.DataType}} </if>
+		<if test="${column.CamelName} != null"> and ${column.OriginalName} = #{${column.CamelName},jdbcType=${column.LanguageType}} </if>
 	#end
     </where>
   </select>
@@ -80,13 +60,7 @@
     from ${tdo.ModelObject.OriginalName}
     <where>
     #foreach($column in $tdo.ModelObject.Columns.Values)
-		#set($colName = $column.Name)
-		#if($column.Name.Length == 1) 
-			#set($colName = $colName.ToLower())
-		#elseif($column.Name.Length > 1)
-			#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
-		#end
-		<if test="${colName} != null"> and ${column.OriginalName} = #{${colName},jdbcType=${column.DataType}} </if>
+		<if test="${column.CamelName} != null"> and ${column.OriginalName} = #{${column.CamelName},jdbcType=${column.LanguageType}} </if>
 	#end
     </where>
   </select>
@@ -97,13 +71,7 @@
     from ${tdo.ModelObject.OriginalName}
     <where>
     #foreach($column in $tdo.ModelObject.Columns.Values)
-		#set($colName = $column.Name)
-		#if($column.Name.Length == 1) 
-			#set($colName = $colName.ToLower())
-		#elseif($column.Name.Length > 1)
-			#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
-		#end
-		<if test="${colName} != null"> and ${column.OriginalName} = #{${colName},jdbcType=${column.DataType}} </if>
+		<if test="${column.CamelName} != null"> and ${column.OriginalName} = #{${column.CamelName},jdbcType=${column.LanguageType}} </if>
 	#end
     </where>
     limit 1
@@ -115,13 +83,7 @@
     from ${tdo.ModelObject.OriginalName}
     <where>
     #foreach($column in $tdo.ModelObject.Columns.Values)
-		#set($colName = $column.Name)
-		#if($column.Name.Length == 1) 
-			#set($colName = $colName.ToLower())
-		#elseif($column.Name.Length > 1)
-			#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
-		#end
-		<if test="${colName} != null"> and ${column.OriginalName} = #{${colName},jdbcType=${column.DataType}} </if>
+		<if test="${column.CamelName} != null"> and ${column.OriginalName} = #{${column.CamelName},jdbcType=${column.LanguageType}} </if>
 	#end
     </where>
     limit 1
@@ -131,24 +93,16 @@
     update ${tdo.ModelObject.OriginalName}
     <set>
     #foreach($column in $tdo.ModelObject.Columns.Values)
-		#set($colName = $column.Name)
-		#if($column.Name.Length == 1) 
-			#set($colName = $colName.ToLower())
-		#elseif($column.Name.Length > 1)
-			#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
+		#if(!$column.IsAutoIncremented) 
+		<if test="set.${column.CamelName} != null">${column.OriginalName} = #{set.${column.CamelName},jdbcType=${column.LanguageType}},</if>
 		#end
-		<if test="set.${colName} != null">${column.OriginalName} = #{set.${colName},jdbcType=${column.DataType}},</if>
 	#end
     </set>
     <where>
     #foreach($column in $tdo.ModelObject.Columns.Values)
-		#set($colName = $column.Name)
-		#if($column.Name.Length == 1) 
-			#set($colName = $colName.ToLower())
-		#elseif($column.Name.Length > 1)
-			#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
+		#if(!$column.IsAutoIncremented) 
+		<if test="where.${column.CamelName} != null"> and ${column.OriginalName} = #{where.${column.CamelName},jdbcType=${column.LanguageType}} </if>
 		#end
-		<if test="where.${colName} != null"> and ${column.OriginalName} = #{where.${colName},jdbcType=${column.DataType}} </if>
 	#end
     </where>
   </update>
@@ -156,13 +110,9 @@
     update ${tdo.ModelObject.OriginalName}
     <set>
     #foreach($column in $tdo.ModelObject.Columns.Values)
-		#set($colName = $column.Name)
-		#if($column.Name.Length == 1) 
-			#set($colName = $colName.ToLower())
-		#elseif($column.Name.Length > 1)
-			#set($colName = "$colName.Substring(0,1).ToLower()$colName.Substring(1)")
+		#if(!$column.IsAutoIncremented) 
+		<if test="${column.CamelName} != null"> ${column.OriginalName} = #{${column.CamelName},jdbcType=${column.LanguageType}}, </if>
 		#end
-		<if test="${colName} != null"> ${column.OriginalName} = #{${colName},jdbcType=${column.DataType}}, </if>
 	#end
     </set>
     where id = #{id,jdbcType=INTEGER}

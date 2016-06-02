@@ -181,10 +181,10 @@
     <value>NoControl</value>
   </data>
   <data name="noteTextLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 267</value>
+    <value>246, 262</value>
   </data>
   <data name="noteTextLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 63</value>
+    <value>207, 43</value>
   </data>
   <data name="noteTextLbl.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -208,7 +208,7 @@
     <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
   </data>
   <data name="noteLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 267</value>
+    <value>190, 262</value>
   </data>
   <data name="noteLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 18</value>
@@ -325,7 +325,7 @@
     <value>200</value>
   </data>
   <data name="nameTxtbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 20</value>
+    <value>179, 21</value>
   </data>
   <data name="nameTxtbox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -346,7 +346,7 @@
     <value>True</value>
   </metadata>
   <data name="connstrTxtbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>On</value>
+    <value>Alpha</value>
   </data>
   <data name="connstrTxtbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>274, 65</value>
@@ -358,7 +358,7 @@
     <value>True</value>
   </data>
   <data name="connstrTxtbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 105</value>
+    <value>179, 100</value>
   </data>
   <data name="connstrTxtbox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -436,7 +436,7 @@
     <value>274, 176</value>
   </data>
   <data name="exporterCombox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 21</value>
+    <value>121, 20</value>
   </data>
   <data name="exporterCombox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -456,11 +456,14 @@
   <metadata name="datasourceListbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="datasourceListbox.ItemHeight" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
   <data name="datasourceListbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 30</value>
   </data>
   <data name="datasourceListbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 303</value>
+    <value>160, 292</value>
   </data>
   <data name="datasourceListbox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -484,7 +487,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>6, 12</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>DataSourceOptionsPage</value>

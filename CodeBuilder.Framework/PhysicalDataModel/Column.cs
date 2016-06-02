@@ -64,6 +64,17 @@ namespace CodeBuilder.PhysicalDataModel
             set { this._name = value; }
         }
 
+        public string CamelName
+        {
+            get
+            {
+                var name = this._name ?? string.Empty;
+                if (name.Length == 1) return name.ToLower();
+                if (name.Length > 1) return name.Substring(0, 1).ToLower() + name.Substring(1);
+                return name;
+            }
+        }
+
         public string OriginalName
         {
             get { return this._originalName ?? string.Empty; }

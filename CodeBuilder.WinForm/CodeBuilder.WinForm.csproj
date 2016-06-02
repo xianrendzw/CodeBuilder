@@ -237,8 +237,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Templates\mybatis\NVelocity\mybatis-mapper-id.nv" />
-    <None Include="Templates\mybatis\NVelocity\mybatis-mapper-without-id.nv" />
+    <None Include="Templates\mybatisMapper\NVelocity\mybatis-mapper-id.nv" />
+    <None Include="Templates\mybatisMapper\NVelocity\mybatis-mapper-without-id.nv" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\cb.bmp" />

@@ -126,7 +126,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="splitContainer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
+    <value>0, 25</value>
   </data>
   <data name="splitContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -138,32 +138,32 @@
     <value>557, 17</value>
   </metadata>
   <data name="exportPDMCtxMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 22</value>
+    <value>276, 22</value>
   </data>
   <data name="exportPDMCtxMenuItem.Text" xml:space="preserve">
     <value>Export PowerDesigner PDM Files...</value>
   </data>
   <data name="exportDataSourceCtxMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 22</value>
+    <value>276, 22</value>
   </data>
   <data name="exportDataSourceCtxMenuItem.Text" xml:space="preserve">
     <value>Export From DataSource</value>
   </data>
   <data name="ctxSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 6</value>
+    <value>273, 6</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="clearCtxMenuItem.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="clearCtxMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 22</value>
+    <value>276, 22</value>
   </data>
   <data name="clearCtxMenuItem.Text" xml:space="preserve">
     <value>Clear</value>
   </data>
   <data name="treeViewContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 76</value>
+    <value>277, 76</value>
   </data>
   <data name="&gt;&gt;treeViewContextMenu.Name" xml:space="preserve">
     <value>treeViewContextMenu</value>
@@ -185,7 +185,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB8
-        CQAAAk1TRnQBSQFMAgEBAwEAAegBAQHoAQEBEgEAARIBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CQAAAk1TRnQBSQFMAgEBAwEAAfgBAQH4AQEBEgEAARIBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABSAMAARIDAAEBAQABCAUAARABBRgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -235,7 +235,7 @@
     <value>0</value>
   </data>
   <data name="treeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 376</value>
+    <value>202, 375</value>
   </data>
   <data name="treeView.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -279,6 +279,9 @@
   <metadata name="errorFileCountLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="errorFileCountLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="errorFileCountLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>399, 55</value>
   </data>
@@ -303,6 +306,9 @@
   <metadata name="errorFilesLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="errorFilesLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="errorFilesLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>329, 55</value>
   </data>
@@ -330,6 +336,9 @@
   <metadata name="genFileCountLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="genFileCountLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="genFileCountLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>260, 55</value>
   </data>
@@ -354,6 +363,9 @@
   <metadata name="genFilesLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="genFilesLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="genFilesLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 55</value>
   </data>
@@ -383,6 +395,9 @@
   </metadata>
   <data name="completedLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
+  </data>
+  <data name="completedLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="completedLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>469, 55</value>
@@ -414,6 +429,9 @@
   <metadata name="totalFileCountLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="totalFileCountLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="totalFileCountLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>98, 55</value>
   </data>
@@ -438,6 +456,9 @@
   <metadata name="totalFilesLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="totalFilesLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="totalFilesLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 55</value>
   </data>
@@ -468,6 +489,9 @@
   <data name="currentGenFileNameLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="currentGenFileNameLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="currentGenFileNameLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>129, 78</value>
   </data>
@@ -492,6 +516,9 @@
   <metadata name="currentGenFileLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="currentGenFileLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="currentGenFileLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 78</value>
   </data>
@@ -522,6 +549,9 @@
   <data name="genProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="genProgressBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="genProgressBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 24</value>
   </data>
@@ -547,7 +577,7 @@
     <value>1, 254</value>
   </data>
   <data name="resultGbx.Size" type="System.Drawing.Size, System.Drawing">
-    <value>538, 124</value>
+    <value>538, 123</value>
   </data>
   <data name="resultGbx.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -577,28 +607,28 @@
     <value>730, 17</value>
   </metadata>
   <data name="openGenSettingsCtxMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 22</value>
+    <value>258, 22</value>
   </data>
   <data name="openGenSettingsCtxMenuItem.Text" xml:space="preserve">
     <value>Open Generation Settings File...</value>
   </data>
   <data name="saveGenSettingCtxMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 22</value>
+    <value>258, 22</value>
   </data>
   <data name="saveGenSettingCtxMenuItem.Text" xml:space="preserve">
     <value>Save Generation Setting...</value>
   </data>
   <data name="genSettingsCtxSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>226, 6</value>
+    <value>255, 6</value>
   </data>
   <data name="generateCtxMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 22</value>
+    <value>258, 22</value>
   </data>
   <data name="generateCtxMenuItem.Text" xml:space="preserve">
     <value>Generate</value>
   </data>
   <data name="genSettingsCtxMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 76</value>
+    <value>259, 76</value>
   </data>
   <data name="&gt;&gt;genSettingsCtxMenuStrip.Name" xml:space="preserve">
     <value>genSettingsCtxMenuStrip</value>
@@ -639,6 +669,9 @@
   <metadata name="databaseNameLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="databaseNameLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="databaseNameLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 24</value>
   </data>
@@ -663,6 +696,9 @@
   <metadata name="databaseLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="databaseLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="databaseLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 24</value>
   </data>
@@ -714,6 +750,9 @@
   <metadata name="templateEngineLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="templateEngineLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="templateEngineLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 121</value>
   </data>
@@ -741,6 +780,9 @@
   <metadata name="isStandardizeNameChkbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="isStandardizeNameChkbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="isStandardizeNameChkbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 216</value>
   </data>
@@ -768,6 +810,9 @@
   <metadata name="isOmitTablePrefixChkbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="isOmitTablePrefixChkbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="isOmitTablePrefixChkbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 185</value>
   </data>
@@ -819,6 +864,9 @@
   <metadata name="codeFileEncodingLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="codeFileEncodingLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="codeFileEncodingLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 153</value>
   </data>
@@ -873,6 +921,9 @@
   <metadata name="languageLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="languageLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="languageLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 24</value>
   </data>
@@ -900,6 +951,9 @@
   <metadata name="templateLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="templateLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="templateLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 121</value>
   </data>
@@ -931,7 +985,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="versionTxtBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>On</value>
+    <value>Alpha</value>
   </data>
   <data name="versionTxtBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>357, 82</value>
@@ -960,6 +1014,9 @@
   <metadata name="versionLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="versionLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="versionLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 89</value>
   </data>
@@ -988,7 +1045,7 @@
     <value>True</value>
   </metadata>
   <data name="authorTxtBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>On</value>
+    <value>Alpha</value>
   </data>
   <data name="authorTxtBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 82</value>
@@ -1017,6 +1074,9 @@
   <metadata name="authorLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="authorLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="authorLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 89</value>
   </data>
@@ -1048,7 +1108,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="tablePrefixTxtBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>On</value>
+    <value>Alpha</value>
   </data>
   <data name="tablePrefixTxtBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>357, 51</value>
@@ -1077,6 +1137,9 @@
   <metadata name="tablePrefixLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="tablePrefixLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="tablePrefixLbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 57</value>
   </data>
@@ -1108,7 +1171,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="packageTxtBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>On</value>
+    <value>Alpha</value>
   </data>
   <data name="packageTxtBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 50</value>
@@ -1137,6 +1200,9 @@
   <metadata name="packageLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="packageLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="packageLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 56</value>
   </data>
@@ -1167,6 +1233,9 @@
   <data name="saveSettingsBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
+  <data name="saveSettingsBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="saveSettingsBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>353, 216</value>
   </data>
@@ -1196,6 +1265,9 @@
   </metadata>
   <data name="generateBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
+  </data>
+  <data name="generateBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="generateBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>454, 216</value>
@@ -1261,7 +1333,7 @@
     <value>1</value>
   </data>
   <data name="splitContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>752, 382</value>
+    <value>752, 381</value>
   </data>
   <data name="splitContainer.SplitterDistance" type="System.Int32, mscorlib">
     <value>208</value>
@@ -1288,70 +1360,70 @@
     <value>True</value>
   </metadata>
   <data name="fileExportPdmMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 22</value>
+    <value>276, 22</value>
   </data>
   <data name="fileExportPdmMenuItem.Text" xml:space="preserve">
     <value>Export &amp;PowerDesigner PDM Files...</value>
   </data>
   <data name="fileExportDataSourceMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 22</value>
+    <value>276, 22</value>
   </data>
   <data name="fileExportDataSourceMenuItem.Text" xml:space="preserve">
     <value>Export From &amp;DataSource</value>
   </data>
   <data name="fileSeparator2MenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 6</value>
+    <value>273, 6</value>
   </data>
   <data name="fileOpenMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 22</value>
+    <value>276, 22</value>
   </data>
   <data name="fileOpenMenuItem.Text" xml:space="preserve">
     <value>&amp;Open Generation Settings File</value>
   </data>
   <data name="fileSaveMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 22</value>
+    <value>276, 22</value>
   </data>
   <data name="fileSaveMenuItem.Text" xml:space="preserve">
     <value>&amp;Save Generation Setting...</value>
   </data>
   <data name="fileSeparator1MenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 6</value>
+    <value>273, 6</value>
   </data>
   <data name="fileExitMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 22</value>
+    <value>276, 22</value>
   </data>
   <data name="fileExitMenuItem.Text" xml:space="preserve">
     <value>&amp;Exit</value>
   </data>
   <data name="fileMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
+    <value>39, 21</value>
   </data>
   <data name="fileMenu.Text" xml:space="preserve">
     <value>&amp;File</value>
   </data>
   <data name="toolsDSConfigMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 22</value>
+    <value>235, 22</value>
   </data>
   <data name="toolsDSConfigMenuItem.Text" xml:space="preserve">
     <value>&amp;DataSource Configuration...</value>
   </data>
   <data name="toolsTemplatesMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 22</value>
+    <value>235, 22</value>
   </data>
   <data name="toolsTemplatesMenuItem.Text" xml:space="preserve">
     <value>&amp;Templates...</value>
   </data>
   <data name="toolsSeparator1MenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 6</value>
+    <value>232, 6</value>
   </data>
   <data name="toolsOptionsMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 22</value>
+    <value>235, 22</value>
   </data>
   <data name="toolsOptionsMenuItem.Text" xml:space="preserve">
     <value>&amp;Options...</value>
   </data>
   <data name="toolsMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 20</value>
+    <value>52, 21</value>
   </data>
   <data name="toolsMenu.Text" xml:space="preserve">
     <value>&amp;Tools</value>
@@ -1360,28 +1432,28 @@
     <value>F1</value>
   </data>
   <data name="helpF1MenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 22</value>
+    <value>209, 22</value>
   </data>
   <data name="helpF1MenuItem.Text" xml:space="preserve">
     <value>CodeBuilder Help...</value>
   </data>
   <data name="helpFeedbackMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 22</value>
+    <value>209, 22</value>
   </data>
   <data name="helpFeedbackMenuItem.Text" xml:space="preserve">
     <value>Customer Feedback...</value>
   </data>
   <data name="helpSeparator1MenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 6</value>
+    <value>206, 6</value>
   </data>
   <data name="helpAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 22</value>
+    <value>209, 22</value>
   </data>
   <data name="helpAboutMenuItem.Text" xml:space="preserve">
     <value>About CodeBuilder...</value>
   </data>
   <data name="helpMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
+    <value>47, 21</value>
   </data>
   <data name="helpMenu.Text" xml:space="preserve">
     <value>&amp;Help</value>
@@ -1390,7 +1462,7 @@
     <value>0, 0</value>
   </data>
   <data name="mainMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>752, 24</value>
+    <value>752, 25</value>
   </data>
   <data name="mainMenuStrip.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1564,6 +1636,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAA==
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>760, 455</value>
@@ -1782,7 +1857,7 @@
     <value>codeGeneration</value>
   </data>
   <data name="&gt;&gt;codeGeneration.Type" xml:space="preserve">
-    <value>CodeBuilder.WinForm.UI.CodeGeneration, CodeBuilder, Version=1.0.11.1210, Culture=neutral, PublicKeyToken=null</value>
+    <value>CodeBuilder.WinForm.UI.CodeGeneration, CodeBuilder, Version=1.1.16.602, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

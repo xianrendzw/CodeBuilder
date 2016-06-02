@@ -87,6 +87,7 @@
             // 
             // connstrTxtbox
             // 
+            this.connstrTxtbox.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.connstrTxtbox, "connstrTxtbox");
             this.connstrTxtbox.Name = "connstrTxtbox";
             // 
