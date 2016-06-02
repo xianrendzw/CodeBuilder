@@ -3,6 +3,6 @@
   <dataSources>
     <clear/>
     <dataSource name="test_pdm" connectionString="d:\test.pdm" exporter="PowerDesigner12" />
-    <dataSource name="test_db" connectionString="server=localhost;user id=root; password=ddd;database=codebook;Pooling=true" exporter="MySQL5" />
+    <dataSource name="test_db" connectionString="server=localhost;user id=root; password=ddd;database=codebuilder;Pooling=true" exporter="MySQL5" />
   </dataSources>
 </dataSourceSection>
