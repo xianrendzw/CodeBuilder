@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("CodeBuilder.Console")]
 [assembly: AssemblyDescription("CodeBuilder Command Line")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("www.dengzhiwei.com")]
+[assembly: AssemblyCompany("http://www.easytoolsoft.com/")]
 [assembly: AssemblyProduct("CodeBuilder.WinForm")]
-[assembly: AssemblyCopyright("Copyright © Tom Deng 2011-2012")]
+[assembly: AssemblyCopyright("Copyright © Tom Deng 2009-2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.11.1210")]
-[assembly: AssemblyFileVersion("1.0.11.1210")]
+[assembly: AssemblyVersion("1.1.16.0602")]
+[assembly: AssemblyFileVersion("1.1.16.0602")]

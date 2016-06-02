@@ -10,11 +10,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CodeBuilder.Framework.Test")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("CodeBuilder Framework Test")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("http://www.easytoolsoft.com/")]
 [assembly: AssemblyProduct("CodeBuilder.Framework.Test")]
-[assembly: AssemblyCopyright("Copyright 2011")]
+[assembly: AssemblyCopyright("Copyright © Tom Deng 2009-2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -28,4 +28,4 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can use the default the Revision and 
 // Build Numbers by using the '*' as shown below:
-[assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.1.16.0602")]

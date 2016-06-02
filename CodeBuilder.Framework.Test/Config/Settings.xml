@@ -5,6 +5,8 @@
     <language name="JAVA" alias="java" ext=".java" isDynamic="false"/>
     <language name="Ruby" alias="ruby" ext=".rb" isDynamic="true"/>
     <language name="PHP" alias="php" ext=".php" isDynamic="true"/>
+    <language name="XML" alias="xml" ext=".xml" isDynamic="false"/>
+    <language name="MyBatisMapper" alias="mybatisMapper" ext=".xml" isDynamic="false"/>
   </languages>
   <exporters>
     <exporter name="PowerDesigner12" type="CodeBuilder.DataSource.Exporter.PowerDesigner12Exporter,CodeBuilder.Framework"/>
@@ -36,14 +38,11 @@
   </pdmDatabases>
   <templateEngines>
     <templateEngine name="NVelocity" ext=".nv" adapter="CodeBuilder.TemplateEngine.NVelocityEngineAdapter,CodeBuilder.Framework" />
-    <templateEngine name="Razor" ext=".raz" adapter="CodeBuilder.TemplateEngine.RazorEngineAdapter,CodeBuilder.Framework" />
-    <templateEngine name="Vici" ext=".vic" adapter="CodeBuilder.TemplateEngine.ViciEngineAdapter,CodeBuilder.Framework" />
-    <templateEngine name="Ader" ext=".adr" adapter="CodeBuilder.TemplateEngine.AderEngineAdapter,CodeBuilder.Framework" />
   </templateEngines>
   <appSettings>
     <add key="typeMapper" value="CodeBuilder.TypeMapping.DefaultTypeMapper,CodeBuilder.Framework" />
-    <add key="onlineTemplateUrl" value="http://www.dengzhiwei.com/category/codebuilder/templates"/>
-    <add key="helpUrl" value="http://www.dengzhiwei.com/category/codebuilder"/>
-    <add key="feedbackUrl" value="http://www.dengzhiwei.com/category/codebuilder-feedback"/>
+    <add key="onlineTemplateUrl" value="https://github.com/xianrendzw/CodeBuilder/tree/master/CodeBuilder.WinForm/Templates"/>
+    <add key="helpUrl" value="https://github.com/xianrendzw/CodeBuilder/blob/master/README.MD"/>
+    <add key="feedbackUrl" value="https://github.com/xianrendzw/CodeBuilder/issues"/>
   </appSettings>
 </settingsSection>

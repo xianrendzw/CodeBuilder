@@ -183,7 +183,7 @@
     <value>23</value>
   </data>
   <data name="copyright.Text" xml:space="preserve">
-    <value>Copyright (C) 2009-2012 Tom Deng
+    <value>Copyright (C) 2009-2016 Tom Deng
 All Rights Reserved.</value>
   </data>
   <data name="&gt;&gt;copyright.Name" xml:space="preserve">
@@ -323,8 +323,7 @@ All Rights Reserved.</value>
     <value>18</value>
   </data>
   <data name="infoLinkLabel.Text" xml:space="preserve">
-    <value>http://www.dengzhiwei.com/category/codebuilder
-</value>
+    <value>https://github.com/xianrendzw/CodeBuilder/</value>
   </data>
   <data name="&gt;&gt;infoLinkLabel.Name" xml:space="preserve">
     <value>infoLinkLabel</value>
@@ -351,7 +350,8 @@ All Rights Reserved.</value>
     <value>17</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Tom Deng,Peter Chen,Gallop Chen,Taven Li,Chanle Chen</value>
+    <value>Tom Deng,Peter Chen,Gallop Chen,Taven Li,Chanle Chen
+Bea rSen,Yie Shu</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -405,7 +405,7 @@ All Rights Reserved.</value>
     <value>15</value>
   </data>
   <data name="versionLabel.Text" xml:space="preserve">
-    <value>1.0.11.1210</value>
+    <value>1.1.16.0602</value>
   </data>
   <data name="&gt;&gt;versionLabel.Name" xml:space="preserve">
     <value>versionLabel</value>

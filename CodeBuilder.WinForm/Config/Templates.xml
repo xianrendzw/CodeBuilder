@@ -14,15 +14,6 @@
     <template name="LightFramework-View.cs.nv" displayName="LightFramework-View"
       language="C#" engine="NVelocity" fileName="csharp\NVelocity\LightFramework-View.nv"
       prefix="" suffix="" url="" desc="" category="" version="1.0" />
-    <template name="LightFramework-DTO.cs.adr" displayName="LightFramework-DTO"
-      language="C#" engine="Ader" fileName="csharp\Ader\LightFramework-DTO.adr"
-      prefix="" suffix="DTO" url="" desc="" category="" version="1.0" />
-    <template name="LightFramework-DTO.cs.raz" displayName="LightFramework-DTO"
-      language="C#" engine="Razor" fileName="csharp\Razor\LightFramework-DTO.raz"
-      prefix="" suffix="DTO" url="" desc="" category="" version="1.0" />
-    <template name="LightFramework-DTO.cs.vic" displayName="LightFramework-DTO"
-      language="C#" engine="Vici" fileName="csharp\Vici\LightFramework-DTO.vic"
-      prefix="" suffix="DTO" url="" desc="" category="" version="1.0" />
     <template name="LightFramework-DTO.java.nv" displayName="LightFramework-DTO"
       language="JAVA" engine="NVelocity" fileName="java\NVelocity\LightFramework-DTO.nv"
       prefix="" suffix="Entity" url="" desc="" category="" version="1.0" />
@@ -32,29 +23,11 @@
     <template name="JPA-VO.java.nv" displayName="JPA-VO" language="JAVA"
       engine="NVelocity" fileName="java\NVelocity\JPA-VO.nv" prefix=""
       suffix="VO" url="" desc="" category="" version="1.0" />
-    <template name="ijinshan-po.java.nv" displayName="ijinshan-po"
-      language="JAVA" engine="NVelocity" fileName="java\NVelocity\ijinshan-po.nv"
-      prefix="" suffix="Po" url="" desc="" category="" version="" />
-    <template name="ijinshan-idao.java.nv" displayName="ijinshan-idao"
-      language="JAVA" engine="NVelocity" fileName="java\NVelocity\ijinshan-idao.nv"
-      prefix="I" suffix="Dao" url="" desc="" category="" version="" />
-    <template name="ijinshan-iservice-controller.java.nv" displayName="ijinshan-iservice-controller"
-      language="JAVA" engine="NVelocity" fileName="java\NVelocity\ijinshan-iservice-controller.nv"
-      prefix="" suffix="Controller" url="" desc="" category="" version="" />
-    <template name="ijinshan-service-controller.java.nv" displayName="ijinshan-service-controller"
-      language="JAVA" engine="NVelocity" fileName="java\NVelocity\ijinshan-service-controller.nv"
-      prefix="" suffix="Controller" url="" desc="" category="" version="" />
-    <template name="ijinshan-service.java.nv" displayName="ijinshan-service"
-      language="JAVA" engine="NVelocity" fileName="java\NVelocity\ijinshan-service.nv"
-      prefix="" suffix="Service" url="" desc="" category="" version="" />
-    <template name="ijinshan-iservice.java.nv" displayName="ijinshan-iservice"
-      language="JAVA" engine="NVelocity" fileName="java\NVelocity\ijinshan-iservice.nv"
-      prefix="I" suffix="Service" url="" desc="" category="" version="" />
-    <template name="ijinshan-idaoimpl.java.nv" displayName="ijinshan-idaoImpl"
-      language="JAVA" engine="NVelocity" fileName="java\NVelocity\ijinshan-idaoimpl.nv"
-      prefix="" suffix="DaoImpl" url="" desc="" category="" version="" />
-    <template name="ijinshan-iserviceimpl.java.nv" displayName="ijinshan-iserviceImpl"
-      language="JAVA" engine="NVelocity" fileName="java\NVelocity\ijinshan-iserviceimpl.nv"
-      prefix="" suffix="ServiceImp" url="" desc="" category="" version="" />
+    <template name="mybatis-mapper-id.nv" displayName="mybatis-mapper-id" language="MyBatisMapper"
+     engine="NVelocity" fileName="mybatisMapper\NVelocity\mybatis-mapper-id.nv" prefix=""
+     suffix="" url="" desc="" category="" version="1.0" />
+    <template name="mybatis-mapper-without-id.nv" displayName="mybatis-mapper-without-id" language="MyBatisMapper"
+     engine="NVelocity" fileName="mybatisMapper\NVelocity\mybatis-mapper-id.nv" prefix=""
+     suffix="" url="" desc="" category="" version="1.0" />
   </templates>
 </templateSection>

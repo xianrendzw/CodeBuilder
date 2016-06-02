@@ -237,13 +237,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Templates\java\NVelocity\ijinshan-idaoimpl.nv" />
-    <None Include="Templates\java\NVelocity\ijinshan-iservice-controller.nv" />
-    <None Include="Templates\java\NVelocity\ijinshan-iservice.nv" />
-    <None Include="Templates\java\NVelocity\ijinshan-iserviceimpl.nv" />
-    <None Include="Templates\java\NVelocity\ijinshan-service-controller.nv" />
-    <None Include="Templates\java\NVelocity\ijinshan-service.nv" />
-    <None Include="Templates\jsp\NVelocity\ijinshan-jqueryeasyui.nv" />
+    <None Include="Templates\mybatis\NVelocity\mybatis-mapper-id.nv" />
+    <None Include="Templates\mybatis\NVelocity\mybatis-mapper-without-id.nv" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\cb.bmp" />
@@ -251,7 +246,6 @@
     <Content Include="Resources\Images\folderClosed.gif" />
     <Content Include="Resources\Images\folderOpen.gif" />
     <Content Include="Resources\Images\leaf.gif" />
-    <None Include="Templates\javascript\NVelocity\ijinshan-jqueryeasyui.nv" />
   </ItemGroup>
   <ItemGroup>
     <ConfigFile Include="Config\DataSources.xml" />
@@ -285,18 +279,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Templates Include="Templates\csharp\Ader\LightFramework-DTO.adr" />
     <Templates Include="Templates\csharp\NVelocity\LightFramework-Biz.nv" />
     <Templates Include="Templates\csharp\NVelocity\LightFramework-DAL.nv" />
     <Templates Include="Templates\csharp\NVelocity\LightFramework-DTO.nv" />
     <Templates Include="Templates\csharp\NVelocity\LightFramework-View.nv" />
-    <Templates Include="Templates\csharp\Razor\LightFramework-DTO.raz" />
-    <Templates Include="Templates\csharp\Vici\LightFramework-DTO.vic" />
     <Templates Include="Templates\java\NVelocity\JPA-VO.nv" />
     <Templates Include="Templates\java\NVelocity\LightFramework-DAL.nv" />
     <Templates Include="Templates\java\NVelocity\LightFramework-DTO.nv" />
-    <Templates Include="Templates\java\NVelocity\ijinshan-idao.nv" />
-    <Templates Include="Templates\java\NVelocity\ijinshan-po.nv" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodeBuilder.Framework\CodeBuilder.Framework.csproj">

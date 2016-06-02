@@ -177,11 +177,14 @@
   <metadata name="noteTextLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="noteTextLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="noteTextLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 191</value>
+    <value>246, 267</value>
   </data>
   <data name="noteTextLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 142</value>
+    <value>207, 63</value>
   </data>
   <data name="noteTextLbl.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -205,7 +208,7 @@
     <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
   </data>
   <data name="noteLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 191</value>
+    <value>190, 267</value>
   </data>
   <data name="noteLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 18</value>
@@ -285,8 +288,11 @@
   <metadata name="exporterLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="exporterLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="exporterLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 100</value>
+    <value>190, 176</value>
   </data>
   <data name="exporterLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
@@ -339,14 +345,20 @@
   <metadata name="connstrTxtbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="connstrTxtbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>On</value>
+  </data>
   <data name="connstrTxtbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>274, 65</value>
   </data>
   <data name="connstrTxtbox.MaxLength" type="System.Int32, mscorlib">
     <value>500</value>
   </data>
+  <data name="connstrTxtbox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="connstrTxtbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 20</value>
+    <value>179, 105</value>
   </data>
   <data name="connstrTxtbox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -367,7 +379,7 @@
     <value>True</value>
   </metadata>
   <data name="newsaveBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 141</value>
+    <value>349, 217</value>
   </data>
   <data name="newsaveBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 23</value>
@@ -394,7 +406,7 @@
     <value>True</value>
   </metadata>
   <data name="removeBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 141</value>
+    <value>279, 217</value>
   </data>
   <data name="removeBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
@@ -421,7 +433,7 @@
     <value>True</value>
   </metadata>
   <data name="exporterCombox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 100</value>
+    <value>274, 176</value>
   </data>
   <data name="exporterCombox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -478,6 +490,6 @@
     <value>DataSourceOptionsPage</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>CodeBuilder.WinForm.UI.BaseOptionsPage, CodeBuilder, Version=1.0.11.1210, Culture=neutral, PublicKeyToken=null</value>
+    <value>CodeBuilder.WinForm.UI.BaseOptionsPage, CodeBuilder, Version=1.1.16.602, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

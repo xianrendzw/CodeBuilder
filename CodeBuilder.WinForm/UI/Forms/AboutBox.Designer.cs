@@ -84,6 +84,7 @@
             resources.ApplyResources(this.infoLinkLabel, "infoLinkLabel");
             this.infoLinkLabel.Name = "infoLinkLabel";
             this.infoLinkLabel.TabStop = true;
+            this.infoLinkLabel.UseCompatibleTextRendering = true;
             this.infoLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.infoLinkLabel_LinkClicked);
             // 
             // label3

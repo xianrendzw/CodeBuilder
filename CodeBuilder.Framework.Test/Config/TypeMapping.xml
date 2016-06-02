@@ -117,6 +117,35 @@
       <add name="varbinary" langtype="Byte[]" default="" />
       <add name="varchar" langtype="String" default="" />
     </typeMapping>
+    <typeMapping name="mysql5-mybatismapper" database="mysql5" language="xml">
+      <add name="default" langtype="VARCHAR" default="" />
+      <add name="nvarchar" langtype="NVARCHAR" default="" />
+      <add name="bigint" langtype="BIGINT" default="" />
+      <add name="binary" langtype="BINARY" default="" />
+      <add name="bit" langtype="BIT" default="" />
+      <add name="char" langtype="CHAR" default="" />
+      <add name="datetime" langtype="TIMESTAMP" default="" />
+      <add name="decimal" langtype="DECIMAL" default="" />
+      <add name="float" langtype="FLOAT" default="" />
+      <add name="image" langtype="VARBINARY" default="" />
+      <add name="int" langtype="INTEGER" default="" />
+      <add name="money" langtype="DECIMAL" default="" />
+      <add name="nchar" langtype="NCHAR" default="" />
+      <add name="ntext" langtype="LONGVARCHAR" default="" />
+      <add name="numeric" langtype="NUMERIC" default="" />
+      <add name="nvarchar" langtype="NVARCHAR" default="" />
+      <add name="real" langtype="REAL" default="" />
+      <add name="smalldatetime" langtype="DATE" default="" />
+      <add name="smallint" langtype="SMALLINT" default="" />
+      <add name="smallmoney" langtype="DOUBLE" default="" />
+      <add name="sql_variant" langtype="VARBINARY" default="" />
+      <add name="text" langtype="LONGVARCHAR" default="" />
+      <add name="timestamp" langtype="TIMESTAMP" default="" />
+      <add name="tinyint" langtype="TINYINT" default="" />
+      <add name="uniqueidentifier" langtype="Guid" default="" />
+      <add name="varbinary" langtype="VARBINARY" default="" />
+      <add name="varchar" langtype="VARCHAR" default="" />
+    </typeMapping>
     <typeMapping name="oracle-csharp" database="oracle" language="C#">
       <add name="default" langtype="String" default="" />
       <add name="bfile" langtype="Byte[]" default="" />
