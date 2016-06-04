@@ -2,7 +2,7 @@
 ===========
 CodeBuilder([中文版][]) is a lightweight base Database Physical Data Model's code (C#/java/ruby/php/xml etc.) generation tool.
 # Contents
-* [Features](#fatures)  
+* [Features](#features)  
 * [User Guide](#user-guide)  
   * [Requirements](#requirements)  
 	* [Quick Start](#quick-start)  
