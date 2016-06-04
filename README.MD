@@ -36,7 +36,7 @@ b.[net framework4.0][] or later(Optional)
        b.select programming language(c#/java/ruby/php/xml etc.)  
        c.fill root package or namespaces (eg:com.easytoolsoft.codebuilder)  
        d.fill prefix of table& view name,code author and version (Optional)
-       e.select one or more code template for generation(customize template please ref [Make Template](#make-template))     
+       e.select one or more code template for generation,if you want to customize template please ref [Make Template](#make-template)     
        f.**if want remove table&views prefix(eg:cb_table1,cb_table2's cb is prefix,also you need fill prefix of table& view name by step d) 
        and Camel-Case class or field name (eg:easy_tools_soft will transfer to EasyToolsSoft) when you generation code,
        you should check "is omit table prefix" or "is Camel-Case name"**  

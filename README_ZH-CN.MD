@@ -34,7 +34,7 @@ b.[net framework4.0][] 或 更高(Optional)
        b.选择要生成代码的程序语言(如c#/java/ruby/php/xml等)    
        c.设置代码的根命名空间(如:com.easytoolsoft.codebuilder)   
        d.设置表名前缀、代码作者、版本(这三个是可选设置)
-       e.选择一个或多个代码模板(自定义模板请参考[制作代码模板](#制做代码模板))  
+       e.选择一个或多个代码模板,自定义模板请参考[制作代码模板](#制做代码模板)
        f.**如果你想在生成代码时去掉表或视图名称前辍（你先必须在步聚d中设置好前辍名称)或想生成后的代码命名方式为驼峰式(Camel-Case)(如表名:easy_tools_soft 将变成 EasyToolsSoft),
          这时你应该选中"是否忽略表前辍" 或 "是否使用驼峰式命名"**  
        ![qs-img3][]  
@@ -59,7 +59,7 @@ b.[net framework4.0][] 或 更高(Optional)
    ![architecture][]
 ## 常见问题
 
-[二进制可执行文件包]]: https://github.com/xianrendzw/CodeBuilder/releases/download/v1.1.16.0602_Beta/CodeBuilder_1.1.16.0602.zip 
+[二进制可执行文件包]: https://github.com/xianrendzw/CodeBuilder/releases/download/v1.1.16.0602_Beta/CodeBuilder_1.1.16.0602.zip 
 [English]: https://github.com/xianrendzw/CodeBuilder/blob/master/README.MD 
 [VS2010]: https://www.visualstudio.com/  
 [sharpdevelop]: http://www.icsharpcode.net/opensource/sd/
