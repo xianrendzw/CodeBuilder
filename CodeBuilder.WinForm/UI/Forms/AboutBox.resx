@@ -117,17 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="dotNetVersionLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dotNetVersionLabel.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="dotNetVersionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 264</value>
+    <value>157, 244</value>
   </data>
   <data name="dotNetVersionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 23</value>
+    <value>284, 21</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dotNetVersionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
@@ -143,14 +143,14 @@
   <data name="&gt;&gt;dotNetVersionLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="clrTypeLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="clrTypeLabel.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="clrTypeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 264</value>
+    <value>24, 244</value>
   </data>
   <data name="clrTypeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 15</value>
+    <value>102, 14</value>
   </data>
   <data name="clrTypeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -170,14 +170,14 @@
   <data name="&gt;&gt;clrTypeLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="copyright.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="copyright.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="copyright.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 12</value>
+    <value>157, 11</value>
   </data>
   <data name="copyright.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 84</value>
+    <value>297, 78</value>
   </data>
   <data name="copyright.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -198,14 +198,14 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;copyright.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="label7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label7.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 12</value>
+    <value>24, 11</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 28</value>
+    <value>102, 26</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -225,14 +225,14 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label6.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 192</value>
+    <value>157, 177</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 29</value>
+    <value>215, 27</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -252,14 +252,14 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="label5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label5.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 192</value>
+    <value>24, 177</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 29</value>
+    <value>102, 27</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -279,14 +279,14 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label4.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 104</value>
+    <value>24, 96</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 16</value>
+    <value>102, 15</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -306,18 +306,18 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="infoLinkLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="infoLinkLabel.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="infoLinkLabel.LinkArea" type="System.Windows.Forms.LinkArea, System.Windows.Forms">
     <value>0, 48</value>
   </data>
   <data name="infoLinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 104</value>
+    <value>157, 96</value>
   </data>
   <data name="infoLinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 16</value>
+    <value>266, 15</value>
   </data>
   <data name="infoLinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -337,21 +337,20 @@ All Rights Reserved.</value>
   <data name="&gt;&gt;infoLinkLabel.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label3.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 136</value>
+    <value>157, 126</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 48</value>
+    <value>287, 44</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Tom Deng,Peter Chen,Gallop Chen,Taven Li,Chanle Chen
-Bea rSen,Yie Shu</value>
+    <value>Tom Deng,Peter Chen,Gallop Chen,Taven Li,Chanle Chen,Thomas Lee,Zerg Zhou,BearSon</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -365,14 +364,14 @@ Bea rSen,Yie Shu</value>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label2.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 136</value>
+    <value>24, 126</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 29</value>
+    <value>102, 27</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -392,14 +391,17 @@ Bea rSen,Yie Shu</value>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="versionLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="versionLabel.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
+  <data name="versionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="versionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 232</value>
+    <value>157, 214</value>
   </data>
   <data name="versionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 23</value>
+    <value>71, 12</value>
   </data>
   <data name="versionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -419,14 +421,14 @@ Bea rSen,Yie Shu</value>
   <data name="&gt;&gt;versionLabel.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label1.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 232</value>
+    <value>24, 214</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 15</value>
+    <value>102, 14</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -446,14 +448,14 @@ Bea rSen,Yie Shu</value>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <metadata name="OkButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="OkButton.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="OkButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>361, 296</value>
+    <value>361, 273</value>
   </data>
   <data name="OkButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 29</value>
+    <value>96, 27</value>
   </data>
   <data name="OkButton.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -473,17 +475,17 @@ Bea rSen,Yie Shu</value>
   <data name="&gt;&gt;OkButton.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>480, 336</value>
+    <value>480, 310</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataSourceOptionsPage));
             this.datasourceLbl = new System.Windows.Forms.Label();
             this.topGbx = new System.Windows.Forms.GroupBox();
-            this.noteTextLbl = new System.Windows.Forms.Label();
             this.noteLbl = new System.Windows.Forms.Label();
             this.connstrLbl = new System.Windows.Forms.Label();
             this.nameLbl = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.removeBtn = new System.Windows.Forms.Button();
             this.exporterCombox = new System.Windows.Forms.ComboBox();
             this.datasourceListbox = new System.Windows.Forms.ListBox();
+            this.connStrRefSiteLbl = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // datasourceLbl
@@ -54,11 +54,6 @@
             resources.ApplyResources(this.topGbx, "topGbx");
             this.topGbx.Name = "topGbx";
             this.topGbx.TabStop = false;
-            // 
-            // noteTextLbl
-            // 
-            resources.ApplyResources(this.noteTextLbl, "noteTextLbl");
-            this.noteTextLbl.Name = "noteTextLbl";
             // 
             // noteLbl
             // 
@@ -118,11 +113,18 @@
             this.datasourceListbox.Name = "datasourceListbox";
             this.datasourceListbox.SelectedIndexChanged += new System.EventHandler(this.datasourceListbox_SelectedIndexChanged);
             // 
+            // connStrRefSiteLbl
+            // 
+            resources.ApplyResources(this.connStrRefSiteLbl, "connStrRefSiteLbl");
+            this.connStrRefSiteLbl.Name = "connStrRefSiteLbl";
+            this.connStrRefSiteLbl.TabStop = true;
+            this.connStrRefSiteLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.connStrRefSiteLbl_LinkClicked);
+            // 
             // DataSourceOptionsPage
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.noteTextLbl);
+            this.Controls.Add(this.connStrRefSiteLbl);
             this.Controls.Add(this.noteLbl);
             this.Controls.Add(this.connstrLbl);
             this.Controls.Add(this.nameLbl);
@@ -145,7 +147,6 @@
 
         private System.Windows.Forms.Label datasourceLbl;
         private System.Windows.Forms.GroupBox topGbx;
-        private System.Windows.Forms.Label noteTextLbl;
         private System.Windows.Forms.Label noteLbl;
         private System.Windows.Forms.Label connstrLbl;
         private System.Windows.Forms.Label nameLbl;
@@ -156,5 +157,6 @@
         private System.Windows.Forms.Button removeBtn;
         private System.Windows.Forms.ComboBox exporterCombox;
         private System.Windows.Forms.ListBox datasourceListbox;
+        private System.Windows.Forms.LinkLabel connStrRefSiteLbl;
     }
 }

@@ -132,7 +132,7 @@
     <value>39</value>
   </data>
   <data name="datasourceLbl.Text" xml:space="preserve">
-    <value>数据源列表</value>
+    <value>数据源</value>
   </data>
   <data name="&gt;&gt;datasourceLbl.Name" xml:space="preserve">
     <value>datasourceLbl</value>
@@ -174,30 +174,6 @@
   <data name="&gt;&gt;topGbx.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="noteTextLbl.Locked" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="noteTextLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 191</value>
-  </data>
-  <data name="noteTextLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 142</value>
-  </data>
-  <data name="noteTextLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;noteTextLbl.Name" xml:space="preserve">
-    <value>noteTextLbl</value>
-  </data>
-  <data name="&gt;&gt;noteTextLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;noteTextLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;noteTextLbl.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="noteLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -205,7 +181,7 @@
     <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
   </data>
   <data name="noteLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 191</value>
+    <value>179, 162</value>
   </data>
   <data name="noteLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 18</value>
@@ -214,7 +190,7 @@
     <value>10</value>
   </data>
   <data name="noteLbl.Text" xml:space="preserve">
-    <value>说明:</value>
+    <value>参考:</value>
   </data>
   <data name="&gt;&gt;noteLbl.Name" xml:space="preserve">
     <value>noteLbl</value>
@@ -231,11 +207,14 @@
   <data name="connstrLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="connstrLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="connstrLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 65</value>
+    <value>179, 83</value>
   </data>
   <data name="connstrLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 13</value>
+    <value>89, 12</value>
   </data>
   <data name="connstrLbl.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -259,7 +238,7 @@
     <value>True</value>
   </data>
   <data name="nameLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 30</value>
+    <value>179, 30</value>
   </data>
   <data name="nameLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
@@ -285,8 +264,11 @@
   <data name="exporterLbl.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="exporterLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="exporterLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 100</value>
+    <value>179, 57</value>
   </data>
   <data name="exporterLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
@@ -295,7 +277,7 @@
     <value>6</value>
   </data>
   <data name="exporterLbl.Text" xml:space="preserve">
-    <value>导出器:</value>
+    <value>来源:</value>
   </data>
   <data name="&gt;&gt;exporterLbl.Name" xml:space="preserve">
     <value>exporterLbl</value>
@@ -319,7 +301,7 @@
     <value>200</value>
   </data>
   <data name="nameTxtbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 20</value>
+    <value>179, 21</value>
   </data>
   <data name="nameTxtbox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -339,14 +321,17 @@
   <data name="connstrTxtbox.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="connstrTxtbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Alpha</value>
+  </data>
   <data name="connstrTxtbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 65</value>
+    <value>274, 83</value>
   </data>
   <data name="connstrTxtbox.MaxLength" type="System.Int32, mscorlib">
     <value>500</value>
   </data>
   <data name="connstrTxtbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 20</value>
+    <value>179, 21</value>
   </data>
   <data name="connstrTxtbox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -367,7 +352,7 @@
     <value>True</value>
   </data>
   <data name="newsaveBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 141</value>
+    <value>349, 117</value>
   </data>
   <data name="newsaveBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 23</value>
@@ -394,7 +379,7 @@
     <value>True</value>
   </data>
   <data name="removeBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 141</value>
+    <value>279, 117</value>
   </data>
   <data name="removeBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
@@ -421,10 +406,10 @@
     <value>True</value>
   </data>
   <data name="exporterCombox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 100</value>
+    <value>274, 57</value>
   </data>
   <data name="exporterCombox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 21</value>
+    <value>121, 20</value>
   </data>
   <data name="exporterCombox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -444,11 +429,14 @@
   <data name="datasourceListbox.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="datasourceListbox.ItemHeight" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
   <data name="datasourceListbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 30</value>
   </data>
   <data name="datasourceListbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 303</value>
+    <value>160, 292</value>
   </data>
   <data name="datasourceListbox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -465,6 +453,36 @@
   <data name="&gt;&gt;datasourceListbox.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="connStrRefSiteLbl.Locked" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="connStrRefSiteLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="connStrRefSiteLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 163</value>
+  </data>
+  <data name="connStrRefSiteLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 12</value>
+  </data>
+  <data name="connStrRefSiteLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="connStrRefSiteLbl.Text" xml:space="preserve">
+    <value>http://www.connectionstrings.com/</value>
+  </data>
+  <data name="&gt;&gt;connStrRefSiteLbl.Name" xml:space="preserve">
+    <value>connStrRefSiteLbl</value>
+  </data>
+  <data name="&gt;&gt;connStrRefSiteLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;connStrRefSiteLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;connStrRefSiteLbl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -472,12 +490,12 @@
     <value>True</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>6, 12</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>DataSourceOptionsPage</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>CodeBuilder.WinForm.UI.BaseOptionsPage, CodeBuilder, Version=1.0.11.1210, Culture=neutral, PublicKeyToken=null</value>
+    <value>CodeBuilder.WinForm.UI.BaseOptionsPage, CodeBuilder, Version=1.1.16.602, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

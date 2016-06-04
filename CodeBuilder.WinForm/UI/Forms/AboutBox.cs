@@ -25,7 +25,7 @@ namespace CodeBuilder.WinForm.UI
 
         private void infoLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.dengzhiwei.com/category/codebuilder");
+            System.Diagnostics.Process.Start(this.infoLinkLabel.Text);
             infoLinkLabel.LinkVisited = true;
         }
 

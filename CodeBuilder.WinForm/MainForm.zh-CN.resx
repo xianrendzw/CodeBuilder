@@ -982,7 +982,7 @@
     <value>是否忽略表前缀</value>
   </data>
   <data name="isStandardizeNameChkbox.Text" xml:space="preserve">
-    <value>是否标准化表与字段的名称</value>
+    <value>是否驼峰化(Camle-Case)表与字段的名称</value>
   </data>
   <data name="languageLbl.Text" xml:space="preserve">
     <value>语言:</value>

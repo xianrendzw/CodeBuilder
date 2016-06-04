@@ -139,6 +139,7 @@
             this.Name = "AboutBox";
             this.ShowInTaskbar = false;
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

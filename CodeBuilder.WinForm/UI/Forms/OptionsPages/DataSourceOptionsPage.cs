@@ -129,8 +129,9 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             {
                 this.datasourceListbox.Items.Add(dataSource.Name);
                 string name = dataSource.Name.Trim().ToLower();
-                if (!listBoxItems.ContainsKey(name))
+                if (!listBoxItems.ContainsKey(name)) { 
                     listBoxItems.Add(name, new DataSourceItem(dataSource.Name, dataSource.ConnectionString, dataSource.Exporter));
+                }
             }
         }
 
@@ -205,6 +206,12 @@ namespace CodeBuilder.WinForm.UI.OptionsPages
             Edit,
             New,
             Deleted,
+        }
+
+        private void connStrRefSiteLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(this.connStrRefSiteLbl.Text);
+            connStrRefSiteLbl.LinkVisited = true;
         }
     }
 }

@@ -174,33 +174,6 @@
   <data name="&gt;&gt;topGbx.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <metadata name="noteTextLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="noteTextLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="noteTextLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 262</value>
-  </data>
-  <data name="noteTextLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 43</value>
-  </data>
-  <data name="noteTextLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;noteTextLbl.Name" xml:space="preserve">
-    <value>noteTextLbl</value>
-  </data>
-  <data name="&gt;&gt;noteTextLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;noteTextLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;noteTextLbl.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="noteLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -208,7 +181,7 @@
     <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
   </data>
   <data name="noteLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 262</value>
+    <value>179, 162</value>
   </data>
   <data name="noteLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 18</value>
@@ -217,7 +190,7 @@
     <value>10</value>
   </data>
   <data name="noteLbl.Text" xml:space="preserve">
-    <value>Note:</value>
+    <value>Ref:</value>
   </data>
   <data name="&gt;&gt;noteLbl.Name" xml:space="preserve">
     <value>noteLbl</value>
@@ -234,11 +207,14 @@
   <metadata name="connstrLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="connstrLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="connstrLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 65</value>
+    <value>179, 83</value>
   </data>
   <data name="connstrLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 13</value>
+    <value>89, 12</value>
   </data>
   <data name="connstrLbl.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -262,7 +238,7 @@
     <value>True</value>
   </metadata>
   <data name="nameLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 30</value>
+    <value>179, 30</value>
   </data>
   <data name="nameLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
@@ -292,7 +268,7 @@
     <value>NoControl</value>
   </data>
   <data name="exporterLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 176</value>
+    <value>179, 57</value>
   </data>
   <data name="exporterLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
@@ -301,7 +277,7 @@
     <value>6</value>
   </data>
   <data name="exporterLbl.Text" xml:space="preserve">
-    <value>Exporter:</value>
+    <value>Source:</value>
   </data>
   <data name="&gt;&gt;exporterLbl.Name" xml:space="preserve">
     <value>exporterLbl</value>
@@ -349,16 +325,13 @@
     <value>Alpha</value>
   </data>
   <data name="connstrTxtbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 65</value>
+    <value>274, 83</value>
   </data>
   <data name="connstrTxtbox.MaxLength" type="System.Int32, mscorlib">
     <value>500</value>
   </data>
-  <data name="connstrTxtbox.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="connstrTxtbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 100</value>
+    <value>179, 21</value>
   </data>
   <data name="connstrTxtbox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -379,7 +352,7 @@
     <value>True</value>
   </metadata>
   <data name="newsaveBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 217</value>
+    <value>349, 117</value>
   </data>
   <data name="newsaveBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 23</value>
@@ -406,7 +379,7 @@
     <value>True</value>
   </metadata>
   <data name="removeBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 217</value>
+    <value>279, 117</value>
   </data>
   <data name="removeBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
@@ -433,7 +406,7 @@
     <value>True</value>
   </metadata>
   <data name="exporterCombox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 176</value>
+    <value>274, 57</value>
   </data>
   <data name="exporterCombox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 20</value>
@@ -479,6 +452,36 @@
   </data>
   <data name="&gt;&gt;datasourceListbox.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <metadata name="connStrRefSiteLbl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="connStrRefSiteLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="connStrRefSiteLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 163</value>
+  </data>
+  <data name="connStrRefSiteLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 12</value>
+  </data>
+  <data name="connStrRefSiteLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="connStrRefSiteLbl.Text" xml:space="preserve">
+    <value>http://www.connectionstrings.com/</value>
+  </data>
+  <data name="&gt;&gt;connStrRefSiteLbl.Name" xml:space="preserve">
+    <value>connStrRefSiteLbl</value>
+  </data>
+  <data name="&gt;&gt;connStrRefSiteLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;connStrRefSiteLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;connStrRefSiteLbl.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
