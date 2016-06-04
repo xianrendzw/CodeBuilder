@@ -25,10 +25,10 @@ b.[net framework4.0][] 或 更高(Optional)
 2. 配置数据源  
        双击CodeBuilder目录下codebuilder.exe文件运行应用程序，
        然后在菜单栏中选择(**工具->数据源配置**),新增你需要的数据源，然后"确定"  
-       ![qs-img1][Config Dataource]  
+       ![qs-img1][]  
 3. 导入数据源中表与视图 
        在菜单栏中选择(**文件->从数据源导出->选择指定数据库**)然后等待几秒中将列出当前数据库中所有的表及视图    
-       ![qs-img2][Import Database]  
+       ![qs-img2][]  
 4. 生成代码    
        a.选择全部或指定几个表及视图  
        b.选择要生成代码的程序语言(如c#/java/ruby/php/xml等)    
@@ -37,9 +37,9 @@ b.[net framework4.0][] 或 更高(Optional)
        e.选择一个或多个代码模板(自定义模板请参考[制作代码模板](#制做代码模板))  
        f.**如果你想在生成代码时去掉表或视图名称前辍（你先必须在步聚d中设置好前辍名称)或想生成后的代码命名方式为驼峰式(Camel-Case)(如表名:easy_tools_soft 将变成 EasyToolsSoft),
          这时你应该选中"是否忽略表前辍" 或 "是否使用驼峰式命名"**  
-       ![qs-img3][Generate Codes]  
+       ![qs-img3][]  
        g.点击 "生成" 按钮执行代码生成，然后点击生成的文件可以进入的生成代码的目录  
-       ![qs-img4][Code Build]  
+       ![qs-img4][]  
 ### 制作代码模板
 ### 配置
 #### 数据源管理
@@ -69,7 +69,7 @@ b.[net framework4.0][] 或 更高(Optional)
 [velocity]: http://velocity.apache.org/engine/releases/velocity-1.5/user-guide.html
 [architecture]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/architecture/architecture-general.jpg 
 [net framework4.0]: https://www.microsoft.com/en-US/download/details.aspx?id=17718 
-[qs-img1]: 
-[qs-img2]: 
-[qs-img3]: 
-[qs-img4]: 
+[qs-img1]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/cn/images/qs-img1.png
+[qs-img2]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/cn/images/qs-img2.png
+[qs-img3]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/cn/images/qs-img3.png
+[qs-img4]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/cn/images/qs-img4.png

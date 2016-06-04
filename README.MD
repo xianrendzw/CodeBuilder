@@ -27,10 +27,10 @@ b.[net framework4.0][] or later(Optional)
 2. Config Dataource   
        Open CodeBuilder folder then double click codebuilder.exe file run Appliction  
        click (**tools->datasource configuration**) add new datasource item  
-       ![qs-img1][Config Dataource]
+       ![qs-img1][]
 3. Import Database Tables & Views  
        click (**files->export from datasource->selected database**) and watting until list all tables and views of current database  
-       ![qs-img2][Import Database]
+       ![qs-img2][]
 4. Generate Codes    
        a.checked some(or all) tables and views  
        b.select programming language(c#/java/ruby/php/xml etc.)  
@@ -40,9 +40,9 @@ b.[net framework4.0][] or later(Optional)
        f.**if want remove table&views prefix(eg:cb_table1,cb_table2's cb is prefix,also you need fill prefix of table& view name by step d) 
        and Camel-Case class or field name (eg:easy_tools_soft will transfer to EasyToolsSoft) when you generation code,
        you should check "is omit table prefix" or "is Camel-Case name"**  
-       ![qs-img3][Generate Codes]  
+       ![qs-img3][]  
        g.click "generate" button start execute code build then click file bar open genenrated code file directory  
-       ![qs-img4][Code Build]  
+       ![qs-img4][]  
        
 ### Make Template
 ### Configuration
@@ -73,7 +73,7 @@ b.[net framework4.0][] or later(Optional)
 [nunit]: http://nunit.org
 [velocity]: http://velocity.apache.org/engine/releases/velocity-1.5/user-guide.html
 [architecture]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/architecture/architecture-general.jpg 
-[qs-img1]: 
-[qs-img2]: 
-[qs-img3]: 
-[qs-img4]: 
+[qs-img1]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/en/images/qs-img1.png
+[qs-img2]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/en/images/qs-img2.png
+[qs-img3]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/en/images/qs-img3.png
+[qs-img4]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/en/images/qs-img4.png
