@@ -5,6 +5,8 @@ using System.Text;
 
 namespace CodeBuilder.PhysicalDataModel
 {
+    using Util;
+
     public class Column : IMetaData
     {
         protected string _id;
@@ -64,14 +66,12 @@ namespace CodeBuilder.PhysicalDataModel
             set { this._name = value; }
         }
 
-        public string CamelName
+        public string LowerCamelName
         {
             get
             {
                 var name = this._name ?? string.Empty;
-                if (name.Length == 1) return name.ToLower();
-                if (name.Length > 1) return name.Substring(0, 1).ToLower() + name.Substring(1);
-                return name;
+                return name.LowerCamelCaseName();
             }
         }
 

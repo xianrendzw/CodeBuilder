@@ -42,6 +42,71 @@ b.[net framework4.0][] 或 更高(Optional)
        ![qs-img4][]  
          
 ### 制作代码模板
+1.使用[velocity]语言创建代码模板文件  
+  创建一个**UTF-8**编码格式的文本文件(如:example.txt),从TDO对象中读取模板中需要使用的内容   
+  ![qs-img5][]  
+2.模板数据对象(TDO)  
+**a.TDO属性**  
+      
+名称 | 类型 | 说明
+-----  | ---- | --------
+Name|string| 模板数据名称 
+Language|string|程序设计语言名称 (如:csharp/java/ruby/php/xml etc.)
+Database|string|数据库名称 (如:mysql5/sqlserver2000/2005/2008/oralce etc.)
+Package|string|命名空间或包名 (如:com.easytoolsoft)
+TablePrefix|string|表名前辍(如:cb_table表的前辍为"cb")
+Author|string|代码作者
+Version|string|代码版本
+TemplateEngine|string|模板引擎名称,默认为"nvelocity"
+TemplateName|string|模板显示名称(如:example.java.nv 模板文件的显示名为"example")
+Prefix|string|模板前辍
+Suffix|string|模板后辍 
+Encoding|string|生成的代码文件字符集编码(如:utf8/utf7/ascii etc.)
+TemplateFileName|string|模板对应的文件名(如:example.java.nv)
+CodeFileName|string|生成的代码文件名(如:Example.java)
+IsOmitTablePrefix|bool|生成代码时是否忽略表前辍(如:cb_table表生成代码时将去掉"cb")
+IsCamelCaseName|bool|是否驼峰化(Camel-Case)命名(如:cb_table -> CbTable)
+ModelObject|object| 模型对象，对应一个数据库的表或视图.相关属性请参考:**b.ModelObject属性**
+
+**b.ModelObject属性**  
+     
+名称 | 类型 | 说明
+-----  | ---- | --------
+Id|string|对应数据库中的表或视图表(如:cb_table)
+DisplayName|string|显示名,默认为属性"Name"的值
+Name|string|表或视图首字母大写驼峰式(Camel-Case)名.(如:cb_table -> CbTable)
+OriginalName|string|表或视图在数据库中的名称(如:cb_table)
+Comment|string|表或视图在数据库中的注释
+MetaTypeName|string|当前ModelObject元数据类型名:table|view
+Columns|Dictionary<string,Column>|表或视图中所有列集合,相关属性请参考:**c.Column Proprities**
+PrimaryKeys|Dictionary<string,Column>|表中所有主键列集合
+Keys|Dictionary<string,Column>|表中所有非主键列集合
+
+**c.Column属性**  
+      
+名称 | 类型 | 说明
+-----  | ---- | --------
+Id|string| 对应数据库中表或视图的列名 (如:first_name)
+DisplayName|string|列显示名,默认为属性"Name"的值
+Name|string|列名，首字母大写驼峰式(Camel-Case)名(如:first_name -> FirstName)
+LowerCamelName|string|列名，首字母小写驼峰式(Camel-Case)名(如:first_name -> firstName)
+OriginalName|string|原始列名 (如:first_name)
+Comment|string|列说明
+DataType|string|列在数据库中的数据类型(如: mysql int/bigint/varchar etc.)
+DefaultValue|string|列在数据库中的默认值
+LanguageType|string|列在对应的程序设计语言(如:c#/java/ruby etc.)中的数据类型(如: C# int/long/string etc.)
+LanguageDefaultValue|string|列在对应的程序设计语言(如:c#/java/ruby etc.)中的默认值
+Length|int|列在数据库中数据类型对应的长度
+Ordinal|int|列在数据库中表或视图的顺序
+IsAutoIncremented|bool|列是否为自增列
+IsNullable|bool|列是否可为空
+IsComputed|bool|列是否为计算列
+HasDefault|bool|列是否有默认值
+MetaTypeName|string|元数据类型名，值为"column"
+
+3.添加模板
+  把创建好的代码模板文件加入到CodeBuilder的模板列表中
+  ![qs-img6][] 
 ### 配置
 #### 数据源管理
 #### 模板管理
@@ -67,10 +132,12 @@ b.[net framework4.0][] 或 更高(Optional)
 [ms.net]: https://www.microsoft.com/en-US/download/details.aspx?id=17718  
 [moq3]: https://github.com/Moq  
 [nunit]: http://nunit.org
-[velocity]: http://velocity.apache.org/engine/releases/velocity-1.5/user-guide.html
+[velocity]: http://velocity.apache.org/engine/1.7/user-guide.html
 [architecture]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/architecture/architecture-general.jpg 
 [net framework4.0]: https://www.microsoft.com/en-US/download/details.aspx?id=17718 
 [qs-img1]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/cn/images/qs-img1.png
 [qs-img2]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/cn/images/qs-img2.png
 [qs-img3]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/cn/images/qs-img3.png
 [qs-img4]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/cn/images/qs-img4.png
+[qs-img5]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/cn/images/qs-img5.png
+[qs-img6]: https://raw.githubusercontent.com/xianrendzw/CodeBuilder/master/docs/manual/cn/images/qs-img6.png

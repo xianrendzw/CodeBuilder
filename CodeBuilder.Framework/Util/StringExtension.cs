@@ -6,13 +6,20 @@ namespace CodeBuilder.Util
 {
     public static class StringExtension
     {
-        public static string StandardizeName(this string str)
+        public static string CamelCaseName(this string str)
         {
             if (String.IsNullOrEmpty(str)) return str;
             string[] words = Regex.Split(str, "[_\\-\\. ]");
             return string.Join("", words.Select(FirstCharToUpper));
         }
 
+        public static string LowerCamelCaseName(this string str)
+        {
+            if (String.IsNullOrEmpty(str)) return str;
+            string[] words = Regex.Split(str, "[_\\-\\. ]");
+            return string.Join("", words.Select(FirstCharToLower));
+        }
+        
         public static string FirstCharToLower(this string str)
         {
             if (String.IsNullOrEmpty(str) || str.Length == 0)

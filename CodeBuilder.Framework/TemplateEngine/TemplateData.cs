@@ -26,14 +26,14 @@ namespace CodeBuilder.TemplateEngine
         private string _templateFileName;
         private string _codeFileName;
         private bool _isOmitTablePrefix;
-        private bool _isStandardizeName;
+        private bool _isCamelCaseName;
         private object _modelObject;
 
         public TemplateData() { }
 
-        public TemplateData(string name,string language, string database,string templateEngine, string package,
-            string tablePrefix, string author, string version, string templateName,string prefix,string suffix,
-            string encoding,string templateFileName,string codeFileName,bool isOmitTablePrefix, bool isStandardizeName,object modelObject)
+        public TemplateData(string name, string language, string database, string templateEngine, string package,
+            string tablePrefix, string author, string version, string templateName, string prefix, string suffix,
+            string encoding, string templateFileName, string codeFileName, bool isOmitTablePrefix, bool isCamelCaseName, object modelObject)
         {
             this._name = name;
             this._language = language;
@@ -50,7 +50,7 @@ namespace CodeBuilder.TemplateEngine
             this._templateFileName = templateFileName;
             this._codeFileName = codeFileName;
             this._isOmitTablePrefix = isOmitTablePrefix;
-            this._isStandardizeName = isStandardizeName;
+            this._isCamelCaseName = isCamelCaseName;
             this._modelObject = modelObject;
         }
 
@@ -110,7 +110,7 @@ namespace CodeBuilder.TemplateEngine
 
         public string Prefix
         {
-            get { return this._prefix ?? string.Empty ; }
+            get { return this._prefix ?? string.Empty; }
             set { this._prefix = value; }
         }
 
@@ -144,10 +144,10 @@ namespace CodeBuilder.TemplateEngine
             set { this._isOmitTablePrefix = value; }
         }
 
-        public bool IsStandardizeName
+        public bool IsCamelCaseName
         {
-            get { return this._isStandardizeName; }
-            set { this._isStandardizeName = value; }
+            get { return this._isCamelCaseName; }
+            set { this._isCamelCaseName = value; }
         }
 
         public object ModelObject

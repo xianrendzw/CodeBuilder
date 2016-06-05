@@ -19,7 +19,7 @@ namespace CodeBuilder.Configuration
         private string[] _templateNames;
         private string _encoding;
         private bool _isOmitTablePrefix;
-        private bool _isStandardizeName;
+        private bool _isCamelCaseName;
 
         public GenerationSettings() { }
 
@@ -31,7 +31,7 @@ namespace CodeBuilder.Configuration
 
         public GenerationSettings(string language, string templateEngine, string package,
             string tablePrefix, string author, string version, string[] templateNames, string encoding,
-            bool isOmitTablePrefix, bool isStandardizeName)
+            bool isOmitTablePrefix, bool isCamelCaseName)
         {
             this._language = language;
             this._templateEngine = templateEngine;
@@ -42,7 +42,7 @@ namespace CodeBuilder.Configuration
             this._templateNames = templateNames;
             this._encoding = encoding;
             this._isOmitTablePrefix = isOmitTablePrefix;
-            this._isStandardizeName = isStandardizeName;
+            this._isCamelCaseName = isCamelCaseName;
         }
 
         [XmlElement("Language")]
@@ -109,11 +109,11 @@ namespace CodeBuilder.Configuration
             set { this._isOmitTablePrefix = value; }
         }
 
-        [XmlElement("IsStandardizeName")]
-        public bool IsStandardizeName
+        [XmlElement("IsCamelCaseName")]
+        public bool IsCamelCaseName
         {
-            get { return this._isStandardizeName; }
-            set { this._isStandardizeName = value; }
+            get { return this._isCamelCaseName; }
+            set { this._isCamelCaseName = value; }
         }
     }
 }

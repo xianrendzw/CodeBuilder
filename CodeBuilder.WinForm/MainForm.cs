@@ -444,7 +444,7 @@ namespace CodeBuilder.WinForm
             this.versionTxtBox.Text = settings.Version;
             this.codeFileEncodingCombox.Text = settings.Encoding;
             this.isOmitTablePrefixChkbox.Checked = settings.IsOmitTablePrefix;
-            this.isStandardizeNameChkbox.Checked = settings.IsStandardizeName;
+            this.isStandardizeNameChkbox.Checked = settings.IsCamelCaseName;
 
             this.templateListBox.Items.Clear();
             foreach (string templateName in settings.TemplatesNames)

@@ -4,9 +4,9 @@
   <resultMap id="${tdo.Name}Map" type="${tdo.Package}.pojo.${tdo.Name}">
   	#foreach($column in $tdo.ModelObject.Columns.Values)
 		#if($column.IsAutoIncremented) 
-		 <id column="${column.OriginalName}" property="${column.CamelName}" jdbcType="${column.LanguageType}" />
+		 <id column="${column.OriginalName}" property="${column.LowerCamelName}" jdbcType="${column.LanguageType}" />
 		#else
-		<result column="${column.OriginalName}" property="${column.CamelName}" jdbcType="${column.LanguageType}" />
+		<result column="${column.OriginalName}" property="${column.LowerCamelName}" jdbcType="${column.LanguageType}" />
 		#end
 	#end
   </resultMap>
@@ -30,14 +30,14 @@
     <trim prefix="(" suffix=")" suffixOverrides=",">
     #foreach($column in $tdo.ModelObject.Columns.Values)
 		#if(!$column.IsAutoIncremented) 
-		<if test="${column.CamelName} != null">${column.OriginalName},</if>
+		<if test="${column.LowerCamelName} != null">${column.OriginalName},</if>
 		#end
 	#end
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
     #foreach($column in $tdo.ModelObject.Columns.Values)
 		#if(!$column.IsAutoIncremented) 
-		<if test="${column.CamelName} != null">#{${column.CamelName},jdbcType=${column.LanguageType}},</if>
+		<if test="${column.LowerCamelName} != null">#{${column.LowerCamelName},jdbcType=${column.LanguageType}},</if>
 		#end
 	#end
     </trim>
@@ -49,7 +49,7 @@
     from ${tdo.ModelObject.OriginalName}
     <where>
     #foreach($column in $tdo.ModelObject.Columns.Values)
-		<if test="${column.CamelName} != null"> and ${column.OriginalName} = #{${column.CamelName},jdbcType=${column.LanguageType}} </if>
+		<if test="${column.LowerCamelName} != null"> and ${column.OriginalName} = #{${column.LowerCamelName},jdbcType=${column.LanguageType}} </if>
 	#end
     </where>
   </select>
@@ -60,7 +60,7 @@
     from ${tdo.ModelObject.OriginalName}
     <where>
     #foreach($column in $tdo.ModelObject.Columns.Values)
-		<if test="${column.CamelName} != null"> and ${column.OriginalName} = #{${column.CamelName},jdbcType=${column.LanguageType}} </if>
+		<if test="${column.LowerCamelName} != null"> and ${column.OriginalName} = #{${column.LowerCamelName},jdbcType=${column.LanguageType}} </if>
 	#end
     </where>
   </select>
@@ -71,7 +71,7 @@
     from ${tdo.ModelObject.OriginalName}
     <where>
     #foreach($column in $tdo.ModelObject.Columns.Values)
-		<if test="${column.CamelName} != null"> and ${column.OriginalName} = #{${column.CamelName},jdbcType=${column.LanguageType}} </if>
+		<if test="${column.LowerCamelName} != null"> and ${column.OriginalName} = #{${column.LowerCamelName},jdbcType=${column.LanguageType}} </if>
 	#end
     </where>
     limit 1
@@ -83,7 +83,7 @@
     from ${tdo.ModelObject.OriginalName}
     <where>
     #foreach($column in $tdo.ModelObject.Columns.Values)
-		<if test="${column.CamelName} != null"> and ${column.OriginalName} = #{${column.CamelName},jdbcType=${column.LanguageType}} </if>
+		<if test="${column.LowerCamelName} != null"> and ${column.OriginalName} = #{${column.LowerCamelName},jdbcType=${column.LanguageType}} </if>
 	#end
     </where>
     limit 1
@@ -94,14 +94,14 @@
     <set>
     #foreach($column in $tdo.ModelObject.Columns.Values)
 		#if(!$column.IsAutoIncremented) 
-		<if test="set.${column.CamelName} != null">${column.OriginalName} = #{set.${column.CamelName},jdbcType=${column.LanguageType}},</if>
+		<if test="set.${column.LowerCamelName} != null">${column.OriginalName} = #{set.${column.LowerCamelName},jdbcType=${column.LanguageType}},</if>
 		#end
 	#end
     </set>
     <where>
     #foreach($column in $tdo.ModelObject.Columns.Values)
 		#if(!$column.IsAutoIncremented) 
-		<if test="where.${column.CamelName} != null"> and ${column.OriginalName} = #{where.${column.CamelName},jdbcType=${column.LanguageType}} </if>
+		<if test="where.${column.LowerCamelName} != null"> and ${column.OriginalName} = #{where.${column.LowerCamelName},jdbcType=${column.LanguageType}} </if>
 		#end
 	#end
     </where>
@@ -111,7 +111,7 @@
     <set>
     #foreach($column in $tdo.ModelObject.Columns.Values)
 		#if(!$column.IsAutoIncremented) 
-		<if test="${column.CamelName} != null"> ${column.OriginalName} = #{${column.CamelName},jdbcType=${column.LanguageType}}, </if>
+		<if test="${column.LowerCamelName} != null"> ${column.OriginalName} = #{${column.LowerCamelName},jdbcType=${column.LanguageType}}, </if>
 		#end
 	#end
     </set>
