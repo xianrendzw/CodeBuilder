@@ -78,9 +78,9 @@ Name|string|表或视图首字母大写驼峰式(Camel-Case)名.(如:cb_table ->
 OriginalName|string|表或视图在数据库中的名称(如:cb_table)
 Comment|string|表或视图在数据库中的注释
 MetaTypeName|string|当前ModelObject元数据类型名:table|view
-Columns|Dictionary<string,Column>|表或视图中所有列集合,相关属性请参考:**c.Column Proprities**
-PrimaryKeys|Dictionary<string,Column>|表中所有主键列集合
-Keys|Dictionary<string,Column>|表中所有非主键列集合
+Columns|Dictionary[string,Column]|表或视图中所有列集合,相关属性请参考:**c.Column Proprities**
+PrimaryKeys|Dictionary[string,Column]|表中所有主键列集合
+Keys|Dictionary[string,Column]|表中所有非主键列集合
 
 **c.Column属性**  
       

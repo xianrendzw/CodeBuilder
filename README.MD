@@ -81,9 +81,9 @@ Name|string|table or view Upper Camel-Case name(eg:cb_table -> CbTable)
 OriginalName|string|talbe or view name(eg:cb_table)
 Comment|string|table or view's comment
 MetaTypeName|string|meta data type is:(table|view)
-Columns|Dictionary<string,Column>|table or view's column collection,please ref:**c.Column Properties**
-PrimaryKeys|Dictionary<string,Column>|table's Primary key column collection
-Keys|Dictionary<string,Column>|table's Non-Primary key column collection  
+Columns|Dictionary[string,Column]|table or view's column collection,please ref:**c.Column Properties**
+PrimaryKeys|Dictionary[string,Column]|table's Primary key column collection
+Keys|Dictionary[string,Column]|table's Non-Primary key column collection  
 
 **c.Column Properties**  
       
