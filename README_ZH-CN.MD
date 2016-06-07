@@ -116,7 +116,7 @@ MetaTypeName|string|元数据类型名，值为"column"
 #### 其他
 ## 开发者
 ### 开发及运行环境
-  b.[VS2010][]+ or [sharpdevelop][]4.1+  
+  a.[VS2010][]+ or [sharpdevelop][]4.1+  
   b.[ms.net][]4.0+ or [mono.net][]2.10+   
   c.[nunit][]2.5 or later  
   d.[moq3][] or later   
