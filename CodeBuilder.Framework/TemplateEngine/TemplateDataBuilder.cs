@@ -100,9 +100,8 @@ namespace CodeBuilder.TemplateEngine
 
         private static string GetTemplateDataName(bool isOmitPrefix, bool isCamelCaseName, string tablePrefix, string name)
         {
-            if (isOmitPrefix) name = name.Replace(tablePrefix, "");
+            if (isOmitPrefix && (tablePrefix ?? "").Length > 0) name = name.Replace(tablePrefix, "");
             if (isCamelCaseName) name = name.CamelCaseName();
-
             return name;
         }
 
