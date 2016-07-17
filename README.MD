@@ -4,7 +4,7 @@ CodeBuilder([中文版][]) is a lightweight base Database Physical Data Model's 
 # Contents
 * [Features](#features)  
 * [User Guide](#user-guide)  
-  * [Requirements](#requirements)  
+	* [Requirements](#requirements)  
 	* [Quick Start](#quick-start)  
 	* [Make Template](#make-template)  
 	* [Configuration](#configuration) 
