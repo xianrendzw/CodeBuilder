@@ -237,6 +237,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Templates Include="Templates\java\NVelocity\Lombok-PO.nv" />
+    <None Include="Templates\mybatisMapper\NVelocity\easyreport2-mapper.nv" />
     <None Include="Templates\mybatisMapper\NVelocity\mybatis-mapper-id.nv" />
     <None Include="Templates\mybatisMapper\NVelocity\mybatis-mapper-without-id.nv" />
   </ItemGroup>
