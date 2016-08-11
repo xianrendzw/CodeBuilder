@@ -71,12 +71,21 @@
             </foreach>
         </where>
     </sql>
-  <sql id="Base_Column_List">
+	<sql id="Base_Column_List_Without_Id">
   	#set($index = 1)
   	#set($count = $tdo.ModelObject.Columns.Values.Count)
   	#foreach($column in $tdo.ModelObject.Columns.Values)
-  		${column.OriginalName} #if($index < $count),#end
+		#if(!$column.IsAutoIncremented) 
+			${column.OriginalName} #if($index < $count),#end
+		#end
 		#set($index = $index+1)
+	#end
+  </sql>
+  <sql id="Base_Column_List">
+  	#foreach($column in $tdo.ModelObject.Columns.Values)
+  		#if($column.IsAutoIncremented) 
+			${column.OriginalName} ,<include refid="Base_Column_List_Without_Id"/>
+		#end
 	#end
   </sql>
     <sql id="Insert_Columns">
@@ -95,7 +104,9 @@
     </sql>
     <sql id="Batch_Insert_Values">
 	#foreach($column in $tdo.ModelObject.Columns.Values)
+		#if(!$column.IsAutoIncremented)
 		 #{item.${column.LowerCamelName},jdbcType=${column.LanguageType}},
+		 #end
 	#end
     </sql>
     <sql id="Update_Set_From_Bean">
@@ -108,14 +119,14 @@
     <sql id="Update_Set_From_Map">
 	#foreach($column in $tdo.ModelObject.Columns.Values)
 		#if(!$column.IsAutoIncremented)
-		<if test="list.${column.LowerCamelName} != null">${column.OriginalName} = #{set.${column.LowerCamelName},jdbcType=${column.LanguageType}} ,</if>
+		<if test="record.${column.LowerCamelName} != null">${column.OriginalName} = #{record.${column.LowerCamelName},jdbcType=${column.LanguageType}} ,</if>
 		#end
 	#end
     </sql>
     <sql id="BatchUpdate_Set_From_Bean">
 		#foreach($column in $tdo.ModelObject.Columns.Values)
 			#if(!$column.IsAutoIncremented)
-			${column.OriginalName} = #{item.${column.LowerCamelName},jdbcType=${column.LanguageType}} ,
+			<if test="item.${column.LowerCamelName} != null">${column.OriginalName} = #{item.${column.LowerCamelName},jdbcType=${column.LanguageType}} ,</if>
 			#end
 		#end
     </sql>
@@ -135,7 +146,7 @@
     <insert id="batchInsert" parameterType="java.util.List">
         insert into ${tdo.ModelObject.OriginalName}
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <include refid="Base_Column_List"/>
+            <include refid="Base_Column_List_Without_Id"/>
         </trim>
         values
         <foreach collection="list" item="item" index="index" separator=",">
@@ -170,7 +181,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="update" parameterType="java.util.Map">
+    <update id="updateByExample" parameterType="java.util.Map">
         update ${tdo.ModelObject.OriginalName}
         <set>
             <include refid="Update_Set_From_Map"/>
