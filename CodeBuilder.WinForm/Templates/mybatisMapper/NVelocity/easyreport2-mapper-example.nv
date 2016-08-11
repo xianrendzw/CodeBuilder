@@ -193,7 +193,9 @@
     <update id="batchUpdate" parameterType="java.util.List">
         <foreach collection="list" item="item" index="index" open="" close="" separator=";">
             update ${tdo.ModelObject.OriginalName}
-            <include refid="BatchUpdate_Set_From_Bean"/>
+            <set>
+            	<include refid="BatchUpdate_Set_From_Bean"/>
+            </set>
             where id=#{item.id,jdbcType=INTEGER}
         </foreach>
     </update>
