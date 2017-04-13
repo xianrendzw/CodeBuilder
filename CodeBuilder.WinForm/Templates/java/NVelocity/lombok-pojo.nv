@@ -1,0 +1,29 @@
+package ${tdo.Package}.domain;
+
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
+import java.util.Date;
+
+/**
+ * $tdo.ModelObject.Comment
+ * @author $tdo.Author
+ * @date $tdo.Date
+ */
+@SuppressWarnings("serial")
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix} {
+	#foreach($column in $tdo.ModelObject.Columns.Values)
+	/**
+     * $column.Comment
+     */
+	 private ${column.LanguageType} ${column.LowerCamelName}; 
+	#end
+}

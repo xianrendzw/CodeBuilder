@@ -237,7 +237,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Templates\mybatisMapper\NVelocity\mybatis-mapper.nv" />
     <Templates Include="Templates\java\NVelocity\Lombok-PO.nv" />
+    <None Include="Templates\java\NVelocity\lombok-pojo.nv" />
+    <None Include="Templates\java\NVelocity\mybatis-example.nv" />
+    <None Include="Templates\java\NVelocity\mybatis-repository.nv" />
+    <None Include="Templates\java\NVelocity\mybatis-service-impl.nv" />
+    <None Include="Templates\java\NVelocity\mybatis-service.nv" />
     <None Include="Templates\mybatisMapper\NVelocity\easyreport2-mapper.nv" />
     <None Include="Templates\mybatisMapper\NVelocity\mybatis-mapper-id.nv" />
     <None Include="Templates\mybatisMapper\NVelocity\mybatis-mapper-without-id.nv" />

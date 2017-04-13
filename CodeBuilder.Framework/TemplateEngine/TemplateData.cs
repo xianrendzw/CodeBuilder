@@ -30,13 +30,16 @@ namespace CodeBuilder.TemplateEngine
         private bool _isCamelCaseName;
         private object _modelObject;
 
-        public TemplateData() { }
+        public TemplateData()
+        {
+            this._date = DateTime.Now.ToString("yyyy-MM-dd");
+        }
 
         public TemplateData(string name, string language, string database, string templateEngine, string package,
             string tablePrefix, string author, string version, string templateName, string prefix, string suffix,
-            string encoding, string templateFileName, string codeFileName, bool isOmitTablePrefix, bool isCamelCaseName, object modelObject)
+            string encoding, string templateFileName, string codeFileName, bool isOmitTablePrefix,
+            bool isCamelCaseName, object modelObject) : base()
         {
-            this._date = DateTime.Now.ToString("yyyy-MM-dd");
             this._name = name;
             this._language = language;
             this._database = database;

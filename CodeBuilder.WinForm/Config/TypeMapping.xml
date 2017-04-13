@@ -133,7 +133,6 @@
       <add name="nchar" langtype="NCHAR" default="" alias="" />
       <add name="ntext" langtype="LONGVARCHAR" default="" alias="" />
       <add name="numeric" langtype="NUMERIC" default="" alias="" />
-      <add name="nvarchar" langtype="NVARCHAR" default="" alias="" />
       <add name="real" langtype="REAL" default="" alias="" />
       <add name="smalldatetime" langtype="DATE" default="" alias="" />
       <add name="smallint" langtype="SMALLINT" default="" alias="" />
