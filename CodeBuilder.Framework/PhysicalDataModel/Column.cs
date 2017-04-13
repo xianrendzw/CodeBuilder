@@ -17,6 +17,7 @@ namespace CodeBuilder.PhysicalDataModel
         protected string _dataType;
         protected string _defaultValue;
         protected string _languageType = string.Empty;
+        protected string _languageTypeAlias = string.Empty;
         protected string _languageDefaultValue = string.Empty;
         protected int _length;
         protected int _ordinal = -1;
@@ -121,6 +122,12 @@ namespace CodeBuilder.PhysicalDataModel
         {
             get { return this._languageType ?? string.Empty; }
             set { this._languageType = value; }
+        }
+
+        public string LanguageTypeAlias
+        {
+            get { return this._languageTypeAlias ?? string.Empty; }
+            set { this._languageTypeAlias = value; }
         }
 
         public string LanguageDefaultValue

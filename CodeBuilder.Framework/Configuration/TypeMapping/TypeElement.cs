@@ -28,5 +28,12 @@ namespace CodeBuilder.Configuration
             get { return base["default"].ToString(); }
             set { base["default"] = value; }
         }
+
+        [ConfigurationProperty("alias", IsRequired = false, DefaultValue = "")]
+        public String Alias
+        {
+            get { return base["alias"].ToString(); }
+            set { base["alias"] = value; }
+        }
     }
 }

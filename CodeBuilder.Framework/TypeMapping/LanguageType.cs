@@ -12,11 +12,13 @@ namespace CodeBuilder.TypeMapping
     {
         private string _typeName;
         private string _defaultValue;
+        private string _alias;
 
-        public LanguageType(string typeName, string defaultValue)
+        public LanguageType(string typeName, string defaultValue,string alias)
         {
             this._typeName = typeName;
             this._defaultValue = defaultValue;
+            this._alias = alias;
         }
 
         public string TypeName
@@ -29,6 +31,12 @@ namespace CodeBuilder.TypeMapping
         {
             get { return this._defaultValue; }
             set { this._defaultValue = value; }
+        }
+
+        public string Alias
+        {
+            get { return this._alias; }
+            set { this._alias = value; }
         }
     }
 }

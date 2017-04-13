@@ -127,6 +127,7 @@ namespace CodeBuilder.TemplateEngine
                     if (langType == null) continue;
                     column.LanguageType = langType.TypeName;
                     column.LanguageDefaultValue = string.IsNullOrEmpty(column.DefaultValue) ? langType.DefaultValue : column.DefaultValue;
+                    column.LanguageTypeAlias = langType.Alias;
                 }
             }
 

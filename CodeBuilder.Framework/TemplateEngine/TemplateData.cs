@@ -11,6 +11,7 @@ namespace CodeBuilder.TemplateEngine
 
     public class TemplateData
     {
+        private string _date;
         private string _name;
         private string _language;
         private string _database;
@@ -35,6 +36,7 @@ namespace CodeBuilder.TemplateEngine
             string tablePrefix, string author, string version, string templateName, string prefix, string suffix,
             string encoding, string templateFileName, string codeFileName, bool isOmitTablePrefix, bool isCamelCaseName, object modelObject)
         {
+            this._date = DateTime.Now.ToString("yyyy-MM-dd");
             this._name = name;
             this._language = language;
             this._database = database;
@@ -52,6 +54,12 @@ namespace CodeBuilder.TemplateEngine
             this._isOmitTablePrefix = isOmitTablePrefix;
             this._isCamelCaseName = isCamelCaseName;
             this._modelObject = modelObject;
+        }
+
+        public string Date
+        {
+            get { return this._date; }
+            set { this._date = value; }
         }
 
         public string Name

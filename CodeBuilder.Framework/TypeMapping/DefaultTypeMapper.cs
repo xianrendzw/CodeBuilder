@@ -40,7 +40,7 @@ namespace CodeBuilder.TypeMapping
                 dbType = mappings[name].Types[dbDataTypeName];
             }
 
-            return new LanguageType(dbType.LanguageType, dbType.DefaultValue);
+            return new LanguageType(dbType.LanguageType, dbType.DefaultValue, dbType.Alias);
         }
     }
 }

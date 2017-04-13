@@ -2,199 +2,199 @@
 <typeMappingSection>
   <typeMappings>
     <typeMapping name="sqlserver2005-csharp" database="sqlserver2005" language="C#">
-      <add name="default" langtype="String" default="" />
-      <add name="nvarchar" langtype="String" default="" />
-      <add name="bigint" langtype="Int64" default="" />
-      <add name="binary" langtype="Byte[]" default="" />
-      <add name="bit" langtype="Boolean" default="" />
-      <add name="char" langtype="Char" default="" />
-      <add name="datetime" langtype="DateTime" default="" />
-      <add name="decimal" langtype="Decimal" default="" />
-      <add name="float" langtype="Single" default="" />
-      <add name="image" langtype="Byte[]" default="" />
-      <add name="int" langtype="Int32" default="" />
-      <add name="money" langtype="Double" default="" />
-      <add name="nchar" langtype="String" default="" />
-      <add name="ntext" langtype="String" default="" />
-      <add name="numeric" langtype="Double" default="" />
-      <add name="nvarchar" langtype="String" default="" />
-      <add name="real" langtype="Single" default="" />
-      <add name="smalldatetime" langtype="DateTime" default="" />
-      <add name="smallint" langtype="Int16" default="" />
-      <add name="smallmoney" langtype="String" default="" />
-      <add name="sql_variant" langtype="Object" default="" />
-      <add name="text" langtype="String" default="" />
-      <add name="timestamp" langtype="DateTime" default="" />
-      <add name="tinyint" langtype="Byte" default="" />
-      <add name="uniqueidentifier" langtype="Guid" default="" />
-      <add name="varbinary" langtype="Byte[]" default="" />
-      <add name="varchar" langtype="String" default="" />
+      <add name="default" langtype="String" default="" alias="" />
+      <add name="nvarchar" langtype="String" default="" alias="" />
+      <add name="bigint" langtype="Int64" default="" alias="" />
+      <add name="binary" langtype="Byte[]" default="" alias="" />
+      <add name="bit" langtype="Boolean" default="" alias="" />
+      <add name="char" langtype="Char" default="" alias="" />
+      <add name="datetime" langtype="DateTime" default="" alias="" />
+      <add name="decimal" langtype="Decimal" default="" alias="" />
+      <add name="float" langtype="Single" default="" alias="" />
+      <add name="image" langtype="Byte[]" default="" alias="" />
+      <add name="int" langtype="Int32" default="" alias="" />
+      <add name="money" langtype="Double" default="" alias="" />
+      <add name="nchar" langtype="String" default="" alias="" />
+      <add name="ntext" langtype="String" default="" alias="" />
+      <add name="numeric" langtype="Double" default="" alias="" />
+      <add name="nvarchar" langtype="String" default="" alias="" />
+      <add name="real" langtype="Single" default="" alias="" />
+      <add name="smalldatetime" langtype="DateTime" default="" alias="" />
+      <add name="smallint" langtype="Int16" default="" alias="" />
+      <add name="smallmoney" langtype="String" default="" alias="" />
+      <add name="sql_variant" langtype="Object" default="" alias="" />
+      <add name="text" langtype="String" default="" alias="" />
+      <add name="timestamp" langtype="DateTime" default="" alias="" />
+      <add name="tinyint" langtype="Byte" default="" alias="" />
+      <add name="uniqueidentifier" langtype="Guid" default="" alias="" />
+      <add name="varbinary" langtype="Byte[]" default="" alias="" />
+      <add name="varchar" langtype="String" default="" alias="" />
     </typeMapping>
     <typeMapping name="sqlserver2005-java" database="sqlserver2005" language="java">
-      <add name="default" langtype="String" default="" />
-      <add name="nvarchar" langtype="String" default="" />
-      <add name="bigint" langtype="Long" default="" />
-      <add name="binary" langtype="Byte[]" default="" />
-      <add name="bit" langtype="Boolean" default="" />
-      <add name="char" langtype="Char" default="" />
-      <add name="datetime" langtype="Date" default="" />
-      <add name="decimal" langtype="Double" default="" />
-      <add name="float" langtype="Float" default="" />
-      <add name="image" langtype="Byte[]" default="" />
-      <add name="int" langtype="Integer" default="" />
-      <add name="money" langtype="Double" default="" />
-      <add name="nchar" langtype="String" default="" />
-      <add name="ntext" langtype="String" default="" />
-      <add name="numeric" langtype="Double" default="" />
-      <add name="nvarchar" langtype="String" default="" />
-      <add name="real" langtype="Float" default="" />
-      <add name="smalldatetime" langtype="Date" default="" />
-      <add name="smallint" langtype="Short" default="" />
-      <add name="smallmoney" langtype="Double" default="" />
-      <add name="sql_variant" langtype="Object" default="" />
-      <add name="text" langtype="String" default="" />
-      <add name="timestamp" langtype="Date" default="" />
-      <add name="tinyint" langtype="Byte" default="" />
-      <add name="uniqueidentifier" langtype="Guid" default="" />
-      <add name="varbinary" langtype="Byte[]" default="" />
-      <add name="varchar" langtype="String" default="" />
+      <add name="default" langtype="String" default="" alias="" />
+      <add name="nvarchar" langtype="String" default="" alias="" />
+      <add name="bigint" langtype="Long" default="" alias="" />
+      <add name="binary" langtype="Byte[]" default="" alias="" />
+      <add name="bit" langtype="Boolean" default="" alias="" />
+      <add name="char" langtype="Char" default="" alias="" />
+      <add name="datetime" langtype="Date" default="" alias="" />
+      <add name="decimal" langtype="Double" default="" alias="" />
+      <add name="float" langtype="Float" default="" alias="" />
+      <add name="image" langtype="Byte[]" default="" alias="" />
+      <add name="int" langtype="Integer" default="" alias="" />
+      <add name="money" langtype="Double" default="" alias="" />
+      <add name="nchar" langtype="String" default="" alias="" />
+      <add name="ntext" langtype="String" default="" alias="" />
+      <add name="numeric" langtype="Double" default="" alias="" />
+      <add name="nvarchar" langtype="String" default="" alias="" />
+      <add name="real" langtype="Float" default="" alias="" />
+      <add name="smalldatetime" langtype="Date" default="" alias="" />
+      <add name="smallint" langtype="Short" default="" alias="" />
+      <add name="smallmoney" langtype="Double" default="" alias="" />
+      <add name="sql_variant" langtype="Object" default="" alias="" />
+      <add name="text" langtype="String" default="" alias="" />
+      <add name="timestamp" langtype="Date" default="" alias="" />
+      <add name="tinyint" langtype="Byte" default="" alias="" />
+      <add name="uniqueidentifier" langtype="Guid" default="" alias="" />
+      <add name="varbinary" langtype="Byte[]" default="" alias="" />
+      <add name="varchar" langtype="String" default="" alias="" />
     </typeMapping>
     <typeMapping name="mysql5-csharp" database="mysql5" language="C#">
-      <add name="default" langtype="String" default="" />
-      <add name="nvarchar" langtype="String" default="" />
-      <add name="bigint" langtype="Int64" default="" />
-      <add name="binary" langtype="Byte[]" default="" />
-      <add name="bit" langtype="Boolean" default="" />
-      <add name="char" langtype="Char" default="" />
-      <add name="datetime" langtype="DateTime" default="" />
-      <add name="decimal" langtype="Decimal" default="" />
-      <add name="float" langtype="Single" default="" />
-      <add name="image" langtype="Byte[]" default="" />
-      <add name="int" langtype="Int32" default="" />
-      <add name="money" langtype="Double" default="" />
-      <add name="nchar" langtype="String" default="" />
-      <add name="ntext" langtype="String" default="" />
-      <add name="numeric" langtype="Double" default="" />
-      <add name="nvarchar" langtype="String" default="" />
-      <add name="real" langtype="Single" default="" />
-      <add name="smalldatetime" langtype="DateTime" default="" />
-      <add name="smallint" langtype="Int16" default="" />
-      <add name="smallmoney" langtype="String" default="" />
-      <add name="sql_variant" langtype="Object" default="" />
-      <add name="text" langtype="String" default="" />
-      <add name="timestamp" langtype="DateTime" default="" />
-      <add name="tinyint" langtype="Byte" default="" />
-      <add name="uniqueidentifier" langtype="Guid" default="" />
-      <add name="varbinary" langtype="Byte[]" default="" />
-      <add name="varchar" langtype="String" default="" />
+      <add name="default" langtype="String" default="" alias="" />
+      <add name="nvarchar" langtype="String" default="" alias="" />
+      <add name="bigint" langtype="Int64" default="" alias="" />
+      <add name="binary" langtype="Byte[]" default="" alias="" />
+      <add name="bit" langtype="Boolean" default="" alias="" />
+      <add name="char" langtype="Char" default="" alias="" />
+      <add name="datetime" langtype="DateTime" default="" alias="" />
+      <add name="decimal" langtype="Decimal" default="" alias="" />
+      <add name="float" langtype="Single" default="" alias="" />
+      <add name="image" langtype="Byte[]" default="" alias="" />
+      <add name="int" langtype="Int32" default="" alias="" />
+      <add name="money" langtype="Double" default="" alias="" />
+      <add name="nchar" langtype="String" default="" alias="" />
+      <add name="ntext" langtype="String" default="" alias="" />
+      <add name="numeric" langtype="Double" default="" alias="" />
+      <add name="nvarchar" langtype="String" default="" alias="" />
+      <add name="real" langtype="Single" default="" alias="" />
+      <add name="smalldatetime" langtype="DateTime" default="" alias="" />
+      <add name="smallint" langtype="Int16" default="" alias="" />
+      <add name="smallmoney" langtype="String" default="" alias="" />
+      <add name="sql_variant" langtype="Object" default="" alias="" />
+      <add name="text" langtype="String" default="" alias="" />
+      <add name="timestamp" langtype="DateTime" default="" alias="" />
+      <add name="tinyint" langtype="Byte" default="" alias="" />
+      <add name="uniqueidentifier" langtype="Guid" default="" alias="" />
+      <add name="varbinary" langtype="Byte[]" default="" alias="" />
+      <add name="varchar" langtype="String" default="" alias="" />
     </typeMapping>
     <typeMapping name="mysql5-java" database="mysql5" language="java">
-      <add name="default" langtype="String" default="" />
-      <add name="nvarchar" langtype="String" default="" />
-      <add name="bigint" langtype="Long" default="" />
-      <add name="binary" langtype="Byte[]" default="" />
-      <add name="bit" langtype="Boolean" default="" />
-      <add name="char" langtype="Char" default="" />
-      <add name="datetime" langtype="Date" default="" />
-      <add name="decimal" langtype="Double" default="" />
-      <add name="float" langtype="Float" default="" />
-      <add name="image" langtype="Byte[]" default="" />
-      <add name="int" langtype="Integer" default="" />
-      <add name="money" langtype="Double" default="" />
-      <add name="nchar" langtype="String" default="" />
-      <add name="ntext" langtype="String" default="" />
-      <add name="numeric" langtype="Double" default="" />
-      <add name="nvarchar" langtype="String" default="" />
-      <add name="real" langtype="Float" default="" />
-      <add name="smalldatetime" langtype="Date" default="" />
-      <add name="smallint" langtype="Short" default="" />
-      <add name="smallmoney" langtype="Double" default="" />
-      <add name="sql_variant" langtype="Object" default="" />
-      <add name="text" langtype="String" default="" />
-      <add name="timestamp" langtype="Date" default="" />
-      <add name="tinyint" langtype="Byte" default="" />
-      <add name="uniqueidentifier" langtype="Guid" default="" />
-      <add name="varbinary" langtype="Byte[]" default="" />
-      <add name="varchar" langtype="String" default="" />
+      <add name="default" langtype="String" default="" alias="" />
+      <add name="nvarchar" langtype="String" default="" alias="" />
+      <add name="bigint" langtype="Long" default="" alias="" />
+      <add name="binary" langtype="Byte[]" default="" alias="" />
+      <add name="bit" langtype="Boolean" default="" alias="" />
+      <add name="char" langtype="Char" default="" alias="" />
+      <add name="datetime" langtype="Date" default="" alias="" />
+      <add name="decimal" langtype="Double" default="" alias="" />
+      <add name="float" langtype="Float" default="" alias="" />
+      <add name="image" langtype="Byte[]" default="" alias="" />
+      <add name="int" langtype="Integer" default="" alias="" />
+      <add name="money" langtype="Double" default="" alias="" />
+      <add name="nchar" langtype="String" default="" alias="" />
+      <add name="ntext" langtype="String" default="" alias="" />
+      <add name="numeric" langtype="Double" default="" alias="" />
+      <add name="nvarchar" langtype="String" default="" alias="" />
+      <add name="real" langtype="Float" default="" alias="" />
+      <add name="smalldatetime" langtype="Date" default="" alias="" />
+      <add name="smallint" langtype="Short" default="" alias="" />
+      <add name="smallmoney" langtype="Double" default="" alias="" />
+      <add name="sql_variant" langtype="Object" default="" alias="" />
+      <add name="text" langtype="String" default="" alias="" />
+      <add name="timestamp" langtype="Date" default="" alias="" />
+      <add name="tinyint" langtype="Byte" default="" alias="" />
+      <add name="uniqueidentifier" langtype="Guid" default="" alias="" />
+      <add name="varbinary" langtype="Byte[]" default="" alias="" />
+      <add name="varchar" langtype="String" default="" alias="" />
     </typeMapping>
     <typeMapping name="mysql5-mybatismapper" database="mysql5" language="xml">
-      <add name="default" langtype="VARCHAR" default="" />
-      <add name="nvarchar" langtype="NVARCHAR" default="" />
-      <add name="bigint" langtype="BIGINT" default="" />
-      <add name="binary" langtype="BINARY" default="" />
-      <add name="bit" langtype="BIT" default="" />
-      <add name="char" langtype="CHAR" default="" />
-      <add name="datetime" langtype="TIMESTAMP" default="" />
-      <add name="decimal" langtype="DECIMAL" default="" />
-      <add name="float" langtype="FLOAT" default="" />
-      <add name="image" langtype="VARBINARY" default="" />
-      <add name="int" langtype="INTEGER" default="" />
-      <add name="money" langtype="DECIMAL" default="" />
-      <add name="nchar" langtype="NCHAR" default="" />
-      <add name="ntext" langtype="LONGVARCHAR" default="" />
-      <add name="numeric" langtype="NUMERIC" default="" />
-      <add name="nvarchar" langtype="NVARCHAR" default="" />
-      <add name="real" langtype="REAL" default="" />
-      <add name="smalldatetime" langtype="DATE" default="" />
-      <add name="smallint" langtype="SMALLINT" default="" />
-      <add name="smallmoney" langtype="DOUBLE" default="" />
-      <add name="sql_variant" langtype="VARBINARY" default="" />
-      <add name="text" langtype="LONGVARCHAR" default="" />
-      <add name="timestamp" langtype="TIMESTAMP" default="" />
-      <add name="tinyint" langtype="TINYINT" default="" />
-      <add name="uniqueidentifier" langtype="Guid" default="" />
-      <add name="varbinary" langtype="VARBINARY" default="" />
-      <add name="varchar" langtype="VARCHAR" default="" />
+      <add name="default" langtype="VARCHAR" default="" alias="" />
+      <add name="nvarchar" langtype="NVARCHAR" default="" alias="" />
+      <add name="bigint" langtype="BIGINT" default="" alias="" />
+      <add name="binary" langtype="BINARY" default="" alias="" />
+      <add name="bit" langtype="BIT" default="" alias="" />
+      <add name="char" langtype="CHAR" default="" alias="" />
+      <add name="datetime" langtype="TIMESTAMP" default="" alias="" />
+      <add name="decimal" langtype="DECIMAL" default="" alias="" />
+      <add name="float" langtype="FLOAT" default="" alias="" />
+      <add name="image" langtype="VARBINARY" default="" alias="" />
+      <add name="int" langtype="INTEGER" default="" alias="" />
+      <add name="money" langtype="DECIMAL" default="" alias="" />
+      <add name="nchar" langtype="NCHAR" default="" alias="" />
+      <add name="ntext" langtype="LONGVARCHAR" default="" alias="" />
+      <add name="numeric" langtype="NUMERIC" default="" alias="" />
+      <add name="nvarchar" langtype="NVARCHAR" default="" alias="" />
+      <add name="real" langtype="REAL" default="" alias="" />
+      <add name="smalldatetime" langtype="DATE" default="" alias="" />
+      <add name="smallint" langtype="SMALLINT" default="" alias="" />
+      <add name="smallmoney" langtype="DOUBLE" default="" alias="" />
+      <add name="sql_variant" langtype="VARBINARY" default="" alias="" />
+      <add name="text" langtype="LONGVARCHAR" default="" alias="" />
+      <add name="timestamp" langtype="TIMESTAMP" default="" alias="" />
+      <add name="tinyint" langtype="TINYINT" default="" alias="" />
+      <add name="uniqueidentifier" langtype="Guid" default="" alias="" />
+      <add name="varbinary" langtype="VARBINARY" default="" alias="" />
+      <add name="varchar" langtype="VARCHAR" default="" alias="" />
     </typeMapping>
     <typeMapping name="oracle-csharp" database="oracle" language="C#">
-      <add name="default" langtype="String" default="" />
-      <add name="bfile" langtype="Byte[]" default="" />
-      <add name="blob" langtype="Byte[]" default="" />
-      <add name="char" langtype="String" default="" />
-      <add name="clob" langtype="String" default="" />
-      <add name="date" langtype="DateTime" default="" />
-      <add name="float" langtype="Decimal" default="" />
-      <add name="integer" langtype="Decimal" default="" />
-      <add name="interval year to month" langtype="Int32" default="" />
-      <add name="interval year to second" langtype="TimeSpan" default="" />
-      <add name="long" langtype="String" default="" />
-      <add name="long raw" langtype="Byte[]" default="" />
-      <add name="nchar" langtype="String" default="" />
-      <add name="nclob" langtype="String" default="" />
-      <add name="number" langtype="Decimal" default="" />
-      <add name="nvarchar2" langtype="String" default="" />
-      <add name="raw" langtype="Byte[]" default="" />
-      <add name="rowid" langtype="String" default="" />
-      <add name="timestamp" langtype="DateTime" default="" />
-      <add name="timestamp with local time zone" langtype="DateTime" default="" />
-      <add name="timestamp with time zone" langtype="DateTime" default="" />
-      <add name="unsigned integer" langtype="Decimal" default="" />
-      <add name="varchar2" langtype="String" default="" />
+      <add name="default" langtype="String" default="" alias="" />
+      <add name="bfile" langtype="Byte[]" default="" alias="" />
+      <add name="blob" langtype="Byte[]" default="" alias="" />
+      <add name="char" langtype="String" default="" alias="" />
+      <add name="clob" langtype="String" default="" alias="" />
+      <add name="date" langtype="DateTime" default="" alias="" />
+      <add name="float" langtype="Decimal" default="" alias="" />
+      <add name="integer" langtype="Decimal" default="" alias="" />
+      <add name="interval year to month" langtype="Int32" default="" alias="" />
+      <add name="interval year to second" langtype="TimeSpan" default="" alias="" />
+      <add name="long" langtype="String" default="" alias="" />
+      <add name="long raw" langtype="Byte[]" default="" alias="" />
+      <add name="nchar" langtype="String" default="" alias="" />
+      <add name="nclob" langtype="String" default="" alias="" />
+      <add name="number" langtype="Decimal" default="" alias="" />
+      <add name="nvarchar2" langtype="String" default="" alias="" />
+      <add name="raw" langtype="Byte[]" default="" alias="" />
+      <add name="rowid" langtype="String" default="" alias="" />
+      <add name="timestamp" langtype="DateTime" default="" alias="" />
+      <add name="timestamp with local time zone" langtype="DateTime" default="" alias="" />
+      <add name="timestamp with time zone" langtype="DateTime" default="" alias="" />
+      <add name="unsigned integer" langtype="Decimal" default="" alias="" />
+      <add name="varchar2" langtype="String" default="" alias="" />
     </typeMapping>
     <typeMapping name="oracle-java" database="oracle" language="java">
-      <add name="default" langtype="String" default="" />
-      <add name="bfile" langtype="Byte[]" default="" />
-      <add name="blob" langtype="Byte[]" default="" />
-      <add name="char" langtype="String" default="" />
-      <add name="clob" langtype="String" default="" />
-      <add name="date" langtype="Date" default="" />
-      <add name="float" langtype="Double" default="" />
-      <add name="integer" langtype="Double" default="" />
-      <add name="interval year to month" langtype="Integer" default="" />
-      <add name="interval year to second" langtype="Date" default="" />
-      <add name="long" langtype="String" default="" />
-      <add name="long raw" langtype="Byte[]" default="" />
-      <add name="nchar" langtype="String" default="" />
-      <add name="nclob" langtype="String" default="" />
-      <add name="number" langtype="Double" default="" />
-      <add name="nvarchar2" langtype="String" default="" />
-      <add name="raw" langtype="Byte[]" default="" />
-      <add name="rowid" langtype="String" default="" />
-      <add name="timestamp" langtype="Date" default="" />
-      <add name="timestamp with local time zone" langtype="Date" default="" />
-      <add name="timestamp with time zone" langtype="Date" default="" />
-      <add name="unsigned integer" langtype="Double" default="" />
-      <add name="varchar2" langtype="String" default="" />
+      <add name="default" langtype="String" default="" alias="" />
+      <add name="bfile" langtype="Byte[]" default="" alias="" />
+      <add name="blob" langtype="Byte[]" default="" alias="" />
+      <add name="char" langtype="String" default="" alias="" />
+      <add name="clob" langtype="String" default="" alias="" />
+      <add name="date" langtype="Date" default="" alias="" />
+      <add name="float" langtype="Double" default="" alias="" />
+      <add name="integer" langtype="Double" default="" alias="" />
+      <add name="interval year to month" langtype="Integer" default="" alias="" />
+      <add name="interval year to second" langtype="Date" default="" alias="" />
+      <add name="long" langtype="String" default="" alias="" />
+      <add name="long raw" langtype="Byte[]" default="" alias="" />
+      <add name="nchar" langtype="String" default="" alias="" />
+      <add name="nclob" langtype="String" default="" alias="" />
+      <add name="number" langtype="Double" default="" alias="" />
+      <add name="nvarchar2" langtype="String" default="" alias="" />
+      <add name="raw" langtype="Byte[]" default="" alias="" />
+      <add name="rowid" langtype="String" default="" alias="" />
+      <add name="timestamp" langtype="Date" default="" alias="" />
+      <add name="timestamp with local time zone" langtype="Date" default="" alias="" />
+      <add name="timestamp with time zone" langtype="Date" default="" alias="" />
+      <add name="unsigned integer" langtype="Double" default="" alias="" />
+      <add name="varchar2" langtype="String" default="" alias="" />
     </typeMapping>
   </typeMappings>
 </typeMappingSection>
