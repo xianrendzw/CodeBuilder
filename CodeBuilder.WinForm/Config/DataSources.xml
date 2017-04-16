@@ -1,8 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <dataSourceSection>
   <dataSources>
-    <clear/>
-    <dataSource name="test_pdm" connectionString="d:\test.pdm" exporter="PowerDesigner12" />
-    <dataSource name="test_db" connectionString="server=localhost;user id=root; password=ddd;database=codebuilder;Pooling=true" exporter="MySQL5" />
+    <clear />
+    <dataSource name="test_db" connectionString="server=localhost;user id=root; password=ddd;database=codebuilder;Pooling=true"
+      exporter="MySQL5" />
+    <dataSource name="easyreport2" connectionString="server=localhost;user id=root;password=ddd;database=easyreport2;Pooling=true"
+      exporter="MySQL5" />
   </dataSources>
 </dataSourceSection>

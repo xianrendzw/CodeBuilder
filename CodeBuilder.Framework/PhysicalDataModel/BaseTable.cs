@@ -5,6 +5,8 @@ using System.Text;
 
 namespace CodeBuilder.PhysicalDataModel
 {
+    using Util;
+
     public abstract class BaseTable : IMetaData
     {
         protected string _id;
@@ -52,6 +54,15 @@ namespace CodeBuilder.PhysicalDataModel
         {
             get { return this._originalName ?? string.Empty; }
             set { this._originalName = value; }
+        }
+
+        public string LowerCamelName
+        {
+            get
+            {
+                var name = this._name ?? string.Empty;
+                return name.LowerCamelCaseName();
+            }
         }
 
         public string Comment

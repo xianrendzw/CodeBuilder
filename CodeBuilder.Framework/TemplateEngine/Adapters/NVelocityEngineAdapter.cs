@@ -34,7 +34,7 @@ namespace CodeBuilder.TemplateEngine
                 velocityEngine.Init();
 
                 Encoding encoding = Encoding.GetEncoding(templateData.Encoding);
-                if (templateData.Encoding == "UTF-7")
+                if (templateData.Encoding == "UTF-8")
                 {
                     encoding = new UTF8Encoding(false);
                 }

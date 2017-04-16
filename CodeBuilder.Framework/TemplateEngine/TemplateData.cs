@@ -71,6 +71,15 @@ namespace CodeBuilder.TemplateEngine
             set { this._name = value; }
         }
 
+        public string LowerCamelName
+        {
+            get
+            {
+                var name = this._name ?? string.Empty;
+                return name.LowerCamelCaseName();
+            }
+        }
+
         public string Language
         {
             get { return this._language; }

@@ -1,28 +1,21 @@
-package ${tdo.Package}.domain;
+﻿package ${tdo.Package}.data;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.okcoin.commons.mybatis.data.CrudRepository;
+import ${tdo.Package}.domain.${tdo.Name};
+import ${tdo.Package}.domain.example.${tdo.Name}Example;
+import org.springframework.stereotype.Repository;
 
-import java.io.Serializable;
-import java.util.Date;
-
-/**
- * $tdo.ModelObject.Comment
- * @author $tdo.Author
- */
-@SuppressWarnings("serial")
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix} implements Serializable {
-	#foreach($column in $tdo.ModelObject.Columns.Values)
-	/**
-     * $column.Comment
-     */
-	 private ${column.LanguageType} ${column.LowerCamelName}; 
+#foreach($column in $tdo.ModelObject.Columns.Values)
+	#if($column.IsAutoIncremented) 
+		#set($keyColumn = $column)
 	#end
+#end
+/**
+ * $tdo.ModelObject.Comment 数据访问类
+ * @author $tdo.Author
+ * @date $tdo.Date
+ */
+@Repository
+public interface ${tdo.Name}Repository
+    extends CrudRepository<${tdo.Name}, ${tdo.Name}Example, ${keyColumn.LanguageType}> {
 }

@@ -1,4 +1,4 @@
-package ${tdo.Package}.domain;
+﻿package ${tdo.Package}.domain;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -14,7 +14,6 @@ import java.util.Date;
  * @author $tdo.Author
  * @date $tdo.Date
  */
-@SuppressWarnings("serial")
 @Data
 @Builder
 @NoArgsConstructor

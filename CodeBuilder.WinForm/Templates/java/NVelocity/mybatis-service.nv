@@ -1,28 +1,21 @@
-package ${tdo.Package}.domain;
+﻿package ${tdo.Package}.service;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.util.List;
 
-import java.io.Serializable;
-import java.util.Date;
+import com.okcoin.commons.mybatis.service.CrudService;
+import ${tdo.Package}.domain.${tdo.Name};
+import ${tdo.Package}.domain.example.${tdo.Name}Example;
 
-/**
- * $tdo.ModelObject.Comment
- * @author $tdo.Author
- */
-@SuppressWarnings("serial")
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix} implements Serializable {
-	#foreach($column in $tdo.ModelObject.Columns.Values)
-	/**
-     * $column.Comment
-     */
-	 private ${column.LanguageType} ${column.LowerCamelName}; 
+#foreach($column in $tdo.ModelObject.Columns.Values)
+	#if($column.IsAutoIncremented) 
+		#set($keyColumn = $column)
 	#end
+#end
+/**
+ * $tdo.ModelObject.Comment 服务接口
+ * @author $tdo.Author
+ * @date $tdo.Date
+ */
+public interface ${tdo.Name}Service
+    extends CrudService<${tdo.Name}, ${tdo.Name}Example, ${keyColumn.LanguageType}> {
 }

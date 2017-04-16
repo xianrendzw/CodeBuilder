@@ -1,28 +1,41 @@
-package ${tdo.Package}.domain;
+﻿package ${tdo.Package}.service.impl;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.util.List;
 
-import java.io.Serializable;
-import java.util.Date;
+import com.okcoin.commons.mybatis.service.AbstractCrudService;
+import ${tdo.Package}.data.${tdo.Name}Repository;
+import ${tdo.Package}.domain.${tdo.Name};
+import ${tdo.Package}.domain.example.${tdo.Name}Example;
+import ${tdo.Package}.domain.example.${tdo.Name}Example.Criteria;
+import ${tdo.Package}.service.${tdo.Name}Service;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-/**
- * $tdo.ModelObject.Comment
- * @author $tdo.Author
- */
-@SuppressWarnings("serial")
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class ${tdo.Prefix}${tdo.Name}${tdo.Suffix} implements Serializable {
-	#foreach($column in $tdo.ModelObject.Columns.Values)
-	/**
-     * $column.Comment
-     */
-	 private ${column.LanguageType} ${column.LowerCamelName}; 
+
+#foreach($column in $tdo.ModelObject.Columns.Values)
+	#if($column.IsAutoIncremented) 
+		#set($keyColumn = $column)
 	#end
+#end
+/**
+ * $tdo.ModelObject.Comment 服务实现
+ * @author $tdo.Author
+ * @date $tdo.Date
+ */
+@Slf4j
+@Service
+public class ${tdo.Name}ServiceImpl
+    extends AbstractCrudService<${tdo.Name}Repository, ${tdo.Name}, ${tdo.Name}Example, ${keyColumn.LanguageType}>
+    implements ${tdo.Name}Service {
+
+    @Autowired
+    private ${tdo.Name}Repository ${tdo.LowerCamelName}Repos;
+
+    @Override
+    protected ${tdo.Name}Example getPageExample(final String fieldName, final String keyword) {
+        final ${tdo.Name}Example example = new ${tdo.Name}Example();
+        example.createCriteria().andFieldLike(fieldName, keyword);
+        return example;
+    }
 }

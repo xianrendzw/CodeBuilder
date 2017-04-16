@@ -119,18 +119,18 @@
     </typeMapping>
     <typeMapping name="mysql5-mybatismapper" database="mysql5" language="xml">
       <add name="default" langtype="VARCHAR" default="" alias="" />
-      <add name="nvarchar" langtype="NVARCHAR" default="" alias="" />
-      <add name="bigint" langtype="BIGINT" default="" alias="" />
+      <add name="nvarchar" langtype="NVARCHAR" default="" alias="java.lang.String" />
+      <add name="bigint" langtype="BIGINT" default="" alias="java.lang.Long" />
       <add name="binary" langtype="BINARY" default="" alias="" />
       <add name="bit" langtype="BIT" default="" alias="" />
-      <add name="char" langtype="CHAR" default="" alias="" />
+      <add name="char" langtype="CHAR" default="" alias="java.lang.String" />
       <add name="datetime" langtype="TIMESTAMP" default="" alias="" />
       <add name="decimal" langtype="DECIMAL" default="" alias="" />
       <add name="float" langtype="FLOAT" default="" alias="" />
       <add name="image" langtype="VARBINARY" default="" alias="" />
-      <add name="int" langtype="INTEGER" default="" alias="" />
+      <add name="int" langtype="INTEGER" default="" alias="java.lang.Integer" />
       <add name="money" langtype="DECIMAL" default="" alias="" />
-      <add name="nchar" langtype="NCHAR" default="" alias="" />
+      <add name="nchar" langtype="NCHAR" default="" alias="java.lang.String" />
       <add name="ntext" langtype="LONGVARCHAR" default="" alias="" />
       <add name="numeric" langtype="NUMERIC" default="" alias="" />
       <add name="real" langtype="REAL" default="" alias="" />

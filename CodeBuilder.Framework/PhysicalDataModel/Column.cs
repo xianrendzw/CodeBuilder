@@ -130,6 +130,15 @@ namespace CodeBuilder.PhysicalDataModel
             set { this._languageTypeAlias = value; }
         }
 
+        public string LanguageTypeAliasAbbr
+        {
+            get
+            {
+                var name = this._languageTypeAlias ?? string.Empty;
+                return name.Split('.').LastOrDefault();
+            }
+        }
+
         public string LanguageDefaultValue
         {
             get { return this._languageDefaultValue ?? string.Empty; }
