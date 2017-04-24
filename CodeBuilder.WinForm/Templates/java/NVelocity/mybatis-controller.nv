@@ -23,7 +23,6 @@ import ${tdo.Package}.web.model.ResponseResult;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -64,7 +63,7 @@ public class ${tdo.Name}Controller
 	@ApiOperation(value = "获取指定id的${tdo.ModelObject.Comment}", notes = "根据url的id获取指定对象")
     @OpLog(name = "获取指定id的${tdo.ModelObject.Comment}")
     @GetMapping(value = "/{id}")
-    public ${tdo.Name} get(final Integer id) {
+    public ${tdo.Name} get(final ${keyColumn.LanguageType} id) {
         return this.service.selectById(id);
     }
 
@@ -79,7 +78,7 @@ public class ${tdo.Name}Controller
     @ApiOperation(value = "删除${tdo.ModelObject.Comment}", notes = "根据url的id来指定删除对象")
     @OpLog(name = "删除${tdo.ModelObject.Comment}")
     @DeleteMapping(value = "/{id}")
-    public int remove(final Integer id) {
+    public int remove(final ${keyColumn.LanguageType} id) {
         return this.service.removeById(id);
     }
 }
