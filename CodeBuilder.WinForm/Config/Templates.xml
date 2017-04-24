@@ -20,5 +20,8 @@
     <template name="mybatis-service-impl.java.nv" displayName="mybatis-service-impl"
       language="JAVA" engine="NVelocity" fileName="java\NVelocity\mybatis-service-impl.nv"
       prefix="" suffix="ServiceImpl" url="" desc="" category="" version="" />
+    <template name="mybatis-controller.java.nv" displayName="mybatis-controller"
+      language="JAVA" engine="NVelocity" fileName="java\NVelocity\mybatis-controller.nv"
+      prefix="" suffix="Controller" url="" desc="" category="" version="" />
   </templates>
 </templateSection>
