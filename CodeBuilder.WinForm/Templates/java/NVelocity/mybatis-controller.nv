@@ -1,0 +1,85 @@
+﻿package ${tdo.Package}.web.controller;
+#foreach($column in $tdo.ModelObject.Columns.Values)
+	#if($column.IsAutoIncremented) 
+		#set($keyColumn = $column)
+	#end
+#end
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+
+import com.easytoolsoft.mybatis.pager.PageInfo;
+import ${tdo.Package}.annotation.OpLog;
+import ${tdo.Package}.domain.${tdo.Name};
+import ${tdo.Package}.domain.example.${tdo.Name}rExample;
+import ${tdo.Package}.service.${tdo.Name}Service;
+import ${tdo.Package}.web.controller.common.BaseController;
+import ${tdo.Package}.web.model.DataGridPager;
+import ${tdo.Package}.web.model.ResponseResult;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * $tdo.ModelObject.Comment 控制器类
+ * @author $tdo.Author
+ * @date $tdo.Date
+ */
+@RestController
+@RequestMapping(value = "/rest/${tdo.ModelObject.OriginalName}s")
+public class ${tdo.Name}Controller
+    extends BaseController<${tdo.Name}Service, ${tdo.Name}, ${tdo.Name}Example, ${keyColumn.LanguageType}> {
+
+	@ApiOperation(value = "修改${tdo.ModelObject.Comment}", notes = "修改${tdo.ModelObject.Comment}")
+    @OpLog(name = "新增${tdo.ModelObject.Comment}")
+    @PostMapping(value = "")
+    public ${tdo.Name} add(final ${tdo.Name} po) {
+        this.service.add(po);
+        return po;
+    }
+
+    @ApiOperation(value = "分页获取${tdo.ModelObject.Comment}列表", notes = "分页获取${tdo.ModelObject.Comment}列表")
+    @OpLog(name = "分页获取${tdo.ModelObject.Comment}列表")
+    @GetMapping(value = "")
+    public Map<String, Object> get(final DataGridPager pager,final String fieldName, final String keyword) {
+        final PageInfo pageInfo = pager.toPageInfo();
+        final List<${tdo.Name}> list = this.service.getByPage(pageInfo, fieldName, "%" + keyword + "%");
+        final Map<String, Object> modelMap = new HashMap<>(2);
+        modelMap.put("total", pageInfo.getTotals());
+        modelMap.put("rows", list);
+        return modelMap;
+    }
+
+	@ApiOperation(value = "获取指定id的${tdo.ModelObject.Comment}", notes = "根据url的id获取指定对象")
+    @OpLog(name = "获取指定id的${tdo.ModelObject.Comment}")
+    @GetMapping(value = "/{id}")
+    public ${tdo.Name} get(final Integer id) {
+        return this.service.selectById(id);
+    }
+
+    @ApiOperation(value = "修改${tdo.ModelObject.Comment}", notes = "修改${tdo.ModelObject.Comment}")
+    @OpLog(name = "修改${tdo.ModelObject.Comment}")
+    @PutMapping(value = "")
+    public int edit(final ${tdo.Name} po) {
+        this.service.encryptPassword(po);
+        return this.service.editById(po);
+    }
+
+    @ApiOperation(value = "删除${tdo.ModelObject.Comment}", notes = "根据url的id来指定删除对象")
+    @OpLog(name = "删除${tdo.ModelObject.Comment}")
+    @DeleteMapping(value = "/{id}")
+    public int remove(final Integer id) {
+        return this.service.removeById(id);
+    }
+}

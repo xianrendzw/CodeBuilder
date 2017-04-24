@@ -2,7 +2,7 @@
 
 import java.util.List;
 
-import com.okcoin.commons.mybatis.service.CrudService;
+import com.easytoolsoft.mybatis.service.CrudService;
 import ${tdo.Package}.domain.${tdo.Name};
 import ${tdo.Package}.domain.example.${tdo.Name}Example;
 
