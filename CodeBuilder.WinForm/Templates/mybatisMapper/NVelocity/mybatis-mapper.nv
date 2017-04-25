@@ -16,37 +16,7 @@
 		#end
 	#end
   </resultMap>
-  <sql id="Example_Where_Clause1">
-        <where>
-            <foreach collection="oredCriteria" item="criteria" separator="or">
-                <if test="criteria.valid">
-                    <trim prefix="(" suffix=")" prefixOverrides="and">
-                        <foreach collection="criteria.criteria" item="criterion">
-                            <choose>
-                                <when test="criterion.noValue">
-                                    and ${criterion.condition}
-                                </when>
-                                <when test="criterion.singleValue">
-                                    and ${criterion.condition} #{criterion.value}
-                                </when>
-                                <when test="criterion.betweenValue">
-                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                                </when>
-                                <when test="criterion.listValue">
-                                    and ${criterion.condition}
-                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
-                                             separator=",">
-                                        #{listItem}
-                                    </foreach>
-                                </when>
-                            </choose>
-                        </foreach>
-                    </trim>
-                </if>
-            </foreach>
-        </where>
-    </sql>
-    <sql id="Example_Where_Clause2">
+    <sql id="Example_Where_Clause">
         <where>
             <foreach collection="example.oredCriteria" item="criteria" separator="or">
                 <if test="criteria.valid">
@@ -165,10 +135,10 @@
     <delete id="deleteById" parameterType="${keyColumn.LanguageTypeAlias}">
         delete from ${tdo.ModelObject.OriginalName} where ${keyColumn.OriginalName} = #{id,jdbcType=${keyColumn.LanguageType}}
     </delete>
-    <delete id="deleteByExample" parameterType="${tdo.Package}.domain.example.${tdo.Name}Example">
+    <delete id="deleteByExample" parameterType="java.util.Map">
         delete from ${tdo.ModelObject.OriginalName}
-        <if test="_parameter != null">
-            <include refid="Example_Where_Clause1"/>
+        <if test="example!= null">
+            <include refid="Example_Where_Clause"/>
         </if>
     </delete>
     <delete id="deleteIn">
@@ -191,8 +161,8 @@
         <set>
             <include refid="Update_Set_From_Map"/>
         </set>
-        <if test="_parameter != null">
-            <include refid="Example_Where_Clause2"/>
+        <if test="example!= null">
+            <include refid="Example_Where_Clause"/>
         </if>
     </update>
     <update id="batchUpdate" parameterType="java.util.List">
@@ -212,26 +182,26 @@
         from ${tdo.ModelObject.OriginalName}
         where ${keyColumn.OriginalName} = #{id,jdbcType=${keyColumn.LanguageType}}
     </select>
-    <select id="selectByExample" resultMap="${tdo.Name}Map" parameterType="${tdo.Package}.domain.example.${tdo.Name}Example">
+    <select id="selectByExample" resultMap="${tdo.Name}Map" parameterType="java.util.Map">
 	   select
-        <if test="distinct">
+        <if test="example.distinct">
             distinct
         </if>
         <include refid="Base_Column_List"/>
         from ${tdo.ModelObject.OriginalName}
-        <if test="_parameter != null">
-            <include refid="Example_Where_Clause1"/>
+        <if test="example != null">
+            <include refid="Example_Where_Clause"/>
         </if>
         <if test="orderByClause != null">
-            order by ${orderByClause}
+            order by ${example.orderByClause}
         </if>
     </select>
-    <select id="selectOneByExample" resultMap="${tdo.Name}Map" parameterType="${tdo.Package}.domain.example.${tdo.Name}Example">
+    <select id="selectOneByExample" resultMap="${tdo.Name}Map" parameterType="java.util.Map">
         select
         <include refid="Base_Column_List"/>
         from ${tdo.ModelObject.OriginalName}
-		<if test="_parameter != null">
-            <include refid="Example_Where_Clause1"/>
+		<if test="example != null">
+            <include refid="Example_Where_Clause"/>
         </if>
         limit 1
     </select>
@@ -244,16 +214,16 @@
             #{item.id,jdbcType=${keyColumn.LanguageType}}
         </foreach>
     </select>
-    <select id="countByExample" resultType="java.lang.Integer" parameterType="${tdo.Package}.domain.example.${tdo.Name}Example">
+    <select id="countByExample" resultType="java.lang.Integer" parameterType="java.util.Map">
         select count(*) as total from ${tdo.ModelObject.OriginalName}
-       <if test="_parameter != null">
-            <include refid="Example_Where_Clause1"/>
+       <if test="example != null">
+            <include refid="Example_Where_Clause"/>
         </if>
     </select>
     <select id="countByPager" resultType="java.lang.Integer" parameterType="java.util.Map">
         select count(*) as total from ${tdo.ModelObject.OriginalName}
 		<if test="example != null">
-            <include refid="Example_Where_Clause2"/>
+            <include refid="Example_Where_Clause"/>
         </if>
     </select>
     <select id="selectByPager" resultMap="${tdo.Name}Map" parameterType="java.util.Map">
@@ -261,7 +231,7 @@
         <include refid="Base_Column_List"/>
         from ${tdo.ModelObject.OriginalName}
         <if test="example != null">
-            <include refid="Example_Where_Clause2"/>
+            <include refid="Example_Where_Clause"/>
         </if>
         <if test="pager.sortItem != null and pager.sortItem != '' ">
             order by ${pager.sortItem} ${pager.sortType}
