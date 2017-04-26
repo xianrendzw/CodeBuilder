@@ -161,7 +161,7 @@
         <set>
             <include refid="Update_Set_From_Map"/>
         </set>
-        <if test="example!= null">
+        <if test="example != null">
             <include refid="Example_Where_Clause"/>
         </if>
     </update>
@@ -192,7 +192,7 @@
         <if test="example != null">
             <include refid="Example_Where_Clause"/>
         </if>
-        <if test="orderByClause != null">
+        <if test="example.orderByClause != null">
             order by ${example.orderByClause}
         </if>
     </select>
