@@ -60,6 +60,14 @@ public class ${tdo.Name}Controller
         return modelMap;
     }
 
+    @ApiOperation(value = "新增${tdo.ModelObject.Comment}", notes = "新增${tdo.ModelObject.Comment}")
+    @OpLog(name = "新增${tdo.ModelObject.Comment}")
+    @PostMapping(value = "")
+    public ${tdo.Name} add(final ${tdo.Name} po) {
+        this.service.add(po);
+        return po;
+    }
+
 	@ApiOperation(value = "获取指定id的${tdo.ModelObject.Comment}", notes = "根据url的id获取指定对象")
     @OpLog(name = "获取指定id的${tdo.ModelObject.Comment}")
     @GetMapping(value = "/{id}")
@@ -71,7 +79,6 @@ public class ${tdo.Name}Controller
     @OpLog(name = "修改${tdo.ModelObject.Comment}")
     @PutMapping(value = "")
     public int edit(final ${tdo.Name} po) {
-        this.service.encryptPassword(po);
         return this.service.editById(po);
     }
 
