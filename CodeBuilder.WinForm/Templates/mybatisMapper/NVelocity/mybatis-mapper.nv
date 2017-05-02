@@ -184,7 +184,7 @@
     </select>
     <select id="selectByExample" resultMap="${tdo.Name}Map" parameterType="java.util.Map">
 	   select
-        <if test="example.distinct">
+        <if test="example != null and example.distinct">
             distinct
         </if>
         <include refid="Base_Column_List"/>
@@ -192,7 +192,7 @@
         <if test="example != null">
             <include refid="Example_Where_Clause"/>
         </if>
-        <if test="example.orderByClause != null">
+        <if test="example != null and example.orderByClause != null">
             order by ${example.orderByClause}
         </if>
     </select>
