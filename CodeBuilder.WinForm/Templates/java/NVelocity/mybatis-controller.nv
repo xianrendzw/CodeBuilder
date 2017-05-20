@@ -72,11 +72,18 @@ public class ${tdo.Name}Controller
         return this.service.selectById(id);
     }
 
+    @ApiOperation(value = "新增${tdo.ModelObject.Comment}", notes = "新增${tdo.ModelObject.Comment}")
+    @OpLog(name = "新增${tdo.ModelObject.Comment}")
+    @PostMapping(value = "")
+    public ${tdo.Name} add(final ${tdo.Name} po) {
+        this.service.add(po);
+        return po;
+    }
+
     @ApiOperation(value = "修改${tdo.ModelObject.Comment}", notes = "修改${tdo.ModelObject.Comment}")
     @OpLog(name = "修改${tdo.ModelObject.Comment}")
     @PutMapping(value = "")
-    public int edit(final ${tdo.Name} po) {
-        this.service.encryptPassword(po);
+    public int edit(@RequestBody final ${tdo.Name} po) {
         return this.service.editById(po);
     }
 
