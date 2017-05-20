@@ -1,15 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="${tdo.Package}.data.${tdo.Name}Repository">
+#set($isAutoIncremented = false)
 #foreach($column in $tdo.ModelObject.Columns.Values)
 	#if($column.IsAutoIncremented) 
 		#set($keyColumn = $column)
+		#set($isAutoIncremented = true)
 	#end
 #end
-#if($keyColumn != null)
+#if(!$isAutoIncremented)
 	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
 		#set($keyColumn = $column)
 	#end
+	#set($keyColumn = $tdo.ModelObject.Columns.get_Item($keyColumn.Id))
 #end
   <!-- CodeBuilder  Generated-->
   <resultMap id="${tdo.Name}Map" type="${tdo.Package}.domain.${tdo.Name}">
@@ -65,9 +68,10 @@
   <sql id="Base_Column_List">
   	#foreach($column in $tdo.ModelObject.Columns.Values)
   		#if($column.IsAutoIncremented) 
-			${column.OriginalName} ,<include refid="Base_Column_List_Without_Id"/>
+			${column.OriginalName} ,
 		#end
 	#end
+	<include refid="Base_Column_List_Without_Id"/>
   </sql>
     <sql id="Insert_Columns">
      #foreach($column in $tdo.ModelObject.Columns.Values)
@@ -97,25 +101,13 @@
 		#end
 	#end
     </sql>
-    <sql id="Update_Set_From_Map">
-	#foreach($column in $tdo.ModelObject.Columns.Values)
-		#if(!$column.IsAutoIncremented)
-		<if test="record.${column.LowerCamelName} != null">${column.OriginalName} = #{record.${column.LowerCamelName},jdbcType=${column.LanguageType}} ,</if>
-		#end
-	#end
-    </sql>
-    <sql id="BatchUpdate_Set_From_Bean">
-		#foreach($column in $tdo.ModelObject.Columns.Values)
-			#if(!$column.IsAutoIncremented)
-			<if test="record.${column.LowerCamelName} != null">${column.OriginalName} = #{record.${column.LowerCamelName},jdbcType=${column.LanguageType}} ,</if>
-			#end
-		#end
-    </sql>
 	<!-- insert -->
 	<insert id="insert" parameterType="java.util.Map">
-        <selectKey resultType="${keyColumn.LanguageTypeAlias}" keyProperty="${keyColumn.OriginalName}" order="AFTER">
+		#if($isAutoIncremented)
+		<selectKey resultType="${keyColumn.LanguageTypeAlias}" keyProperty="${keyColumn.OriginalName}" order="AFTER">
             SELECT LAST_INSERT_ID()
         </selectKey>
+		#end
         insert into <include refid="Table_Name"/>
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <include refid="Insert_Columns"/>
@@ -130,7 +122,7 @@
             <include refid="Base_Column_List_Without_Id"/>
         </trim>
         values
-        <foreach collection="list" item="record" index="index" separator=",">
+        <foreach collection="records" item="record" index="index" separator=",">
             <trim prefix="(" suffix=")" suffixOverrides=",">
                 <include refid="Batch_Insert_Values"/>
             </trim>
@@ -149,7 +141,7 @@
     </delete>
     <delete id="deleteIn" parameterType="java.util.Map">
         delete from <include refid="Table_Name"/> where ${keyColumn.OriginalName} in
-        <foreach collection="list" item="record" index="index" open="(" separator="," close=")">
+        <foreach collection="records" item="record" index="index" open="(" separator="," close=")">
           #{record.id,jdbcType=${keyColumn.LanguageType}}
         </foreach>
     </delete>
@@ -165,17 +157,17 @@
     <update id="updateByExample" parameterType="java.util.Map">
         update <include refid="Table_Name"/>
         <set>
-            <include refid="Update_Set_From_Map"/>
+            <include refid="Update_Set_From_Bean"/>
         </set>
         <if test="example != null">
             <include refid="Example_Where_Clause"/>
         </if>
     </update>
     <update id="batchUpdate" parameterType="java.util.Map">
-        <foreach collection="list" item="record" index="index" open="" close="" separator=";">
+        <foreach collection="records" item="record" index="index" open="" close="" separator=";">
             update <include refid="Table_Name"/>
             <set>
-            	<include refid="BatchUpdate_Set_From_Bean"/>
+            	<include refid="Update_Set_From_Bean"/>
             </set>
             where ${keyColumn.OriginalName}=#{item.id,jdbcType=${keyColumn.LanguageType}}
         </foreach>
@@ -216,7 +208,7 @@
         <include refid="Base_Column_List"/>
         from <include refid="Table_Name"/>
         where ${keyColumn.OriginalName} IN
-        <foreach collection="list" item="record" index="index" open="(" separator="," close=")">
+        <foreach collection="records" item="record" index="index" open="(" separator="," close=")">
           #{record.id,jdbcType=${keyColumn.LanguageType}}
         </foreach>
     </select>

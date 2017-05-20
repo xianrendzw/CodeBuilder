@@ -5,12 +5,14 @@ import ${tdo.Package}.domain.${tdo.Name};
 import ${tdo.Package}.domain.example.${tdo.Name}Example;
 import org.springframework.stereotype.Repository;
 
+#set($isAutoIncremented = false)
 #foreach($column in $tdo.ModelObject.Columns.Values)
 	#if($column.IsAutoIncremented) 
 		#set($keyColumn = $column)
+		#set($isAutoIncremented = true)
 	#end
 #end
-#if($keyColumn != null)
+#if(!$isAutoIncremented)
 	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
 		#set($keyColumn = $column)
 	#end

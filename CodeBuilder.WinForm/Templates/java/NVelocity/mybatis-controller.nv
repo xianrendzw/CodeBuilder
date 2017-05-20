@@ -1,10 +1,12 @@
 ﻿package ${tdo.Package}.web.controller;
+#set($isAutoIncremented = false)
 #foreach($column in $tdo.ModelObject.Columns.Values)
 	#if($column.IsAutoIncremented) 
 		#set($keyColumn = $column)
+		#set($isAutoIncremented = true)
 	#end
 #end
-#if($keyColumn != null)
+#if(!$isAutoIncremented)
 	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
 		#set($keyColumn = $column)
 	#end
