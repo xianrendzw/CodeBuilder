@@ -12,6 +12,7 @@
 	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
 		#set($keyColumn = $column)
 	#end
+	#set($keyColumn = $tdo.ModelObject.Columns.get_Item($keyColumn.Id))
 #end
   <!-- CodeBuilder  Generated-->
   <resultMap id="${tdo.Name}Map" type="${tdo.Package}.domain.${tdo.Name}">
@@ -25,7 +26,7 @@
   </resultMap>
   <sql id="Example_Where_Clause">
         <where>
-            <foreach collection="oredCriteria" item="criteria" separator="or">
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
                 <if test="criteria.valid">
                     <trim prefix="(" suffix=")" prefixOverrides="and">
                         <foreach collection="criteria.criteria" item="criterion">
@@ -53,6 +54,7 @@
             </foreach>
         </where>
     </sql>
+  <sql id="Table_Name">${tdo.ModelObject.OriginalName}</sql>
 	<sql id="Base_Column_List_Without_Id">
   	#set($index = 1)
   	#set($count = $tdo.ModelObject.Columns.Values.Count)
@@ -74,7 +76,7 @@
     <sql id="Insert_Columns">
      #foreach($column in $tdo.ModelObject.Columns.Values)
 		#if(!$column.IsAutoIncremented) 
-		<if test="record.${column.LowerCamelName} != null">record.${column.OriginalName},</if>
+		<if test="record.${column.LowerCamelName} != null">${column.OriginalName},</if>
 		#end
 	#end
     </sql>
@@ -92,6 +94,14 @@
 		 #end
 	#end
     </sql>
+	<sql id="Batch_Insert_Values_On_DuplicateKey">
+		#foreach($column in $tdo.ModelObject.Columns.Values)
+			#if($column.IsAutoIncremented)
+				#{record.${column.LowerCamelName},jdbcType=${column.LanguageType}},
+			#end
+		#end
+		<include refid="Batch_Insert_Values"/>
+	</sql>
     <sql id="Update_Set_From_Bean">
 	 #foreach($column in $tdo.ModelObject.Columns.Values)
 		#if(!$column.IsAutoIncremented)
@@ -126,6 +136,26 @@
             </trim>
         </foreach>
     </insert>
+	<insert id="batchInsertOnDuplicateKey" parameterType="java.util.Map">
+		insert into ${shardTable.name}
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<include refid="Base_Column_List"/>
+		</trim>
+		values
+		<foreach collection="records" item="record" index="index" separator=",">
+			<trim prefix="(" suffix=")" suffixOverrides=",">
+				<include refid="Batch_Insert_Values_On_DuplicateKey"/>
+			</trim>
+		</foreach>
+		ON DUPLICATE KEY UPDATE 
+		#set($index = 1)
+		#foreach($column in $tdo.ModelObject.Columns.Values)
+			#if(!$column.IsAutoIncremented || ($column.id != $keyColumn.id))
+				${column.OriginalName} = VALUES(${column.OriginalName})  #if($index < $count),#end
+			#end
+			#set($index = $index+1)
+		#end
+	</insert>
 	<!-- end insert -->
     <!-- delete -->
     <delete id="deleteById" parameterType="java.util.Map">
@@ -140,8 +170,8 @@
     <delete id="deleteIn" parameterType="java.util.Map">
         delete from ${shardTable.name} where ${keyColumn.OriginalName} in
         <foreach collection="records" item="record" index="index" open="(" separator="," close=")">
-          #{record.id,jdbcType=${keyColumn.LanguageType}}
-        </foreach>
+			#{record.${keyColumn.LowerCamelName},jdbcType=${keyColumn.LanguageType}}
+		</foreach>
     </delete>
     <!-- end delete -->
     <!-- update -->
@@ -150,8 +180,8 @@
         <set>
             <include refid="Update_Set_From_Bean"/>
         </set>
-        where ${keyColumn.OriginalName} = #{id,jdbcType=${keyColumn.LanguageType}}
-    </update>
+		where ${keyColumn.OriginalName} = #{record.${keyColumn.LowerCamelName},jdbcType=${keyColumn.LanguageType}}
+	</update>
     <update id="updateByExample" parameterType="java.util.Map">
         update ${shardTable.name}
         <set>
@@ -167,8 +197,8 @@
             <set>
             	<include refid="Update_Set_From_Bean"/>
             </set>
-            where ${keyColumn.OriginalName}=#{item.id,jdbcType=${keyColumn.LanguageType}}
-        </foreach>
+			where ${keyColumn.OriginalName}=#{record.${keyColumn.LowerCamelName},jdbcType=${keyColumn.LanguageType}}
+		</foreach>
     </update>
 	 <!-- end update -->
     <!-- select -->
@@ -207,8 +237,8 @@
         from ${shardTable.name}
         where ${keyColumn.OriginalName} IN
         <foreach collection="records" item="record" index="index" open="(" separator="," close=")">
-          #{record.id,jdbcType=${keyColumn.LanguageType}}
-        </foreach>
+			#{record.${keyColumn.LowerCamelName},jdbcType=${keyColumn.LanguageType}}
+		</foreach>
     </select>
     <select id="countByExample" resultType="java.lang.Integer" parameterType="java.util.Map">
         select count(*) as total from ${shardTable.name}
