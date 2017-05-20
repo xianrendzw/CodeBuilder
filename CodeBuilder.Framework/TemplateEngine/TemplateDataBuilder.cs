@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace CodeBuilder.TemplateEngine
 {
@@ -100,7 +101,7 @@ namespace CodeBuilder.TemplateEngine
 
         private static string GetTemplateDataName(bool isOmitPrefix, bool isCamelCaseName, string tablePrefix, string name)
         {
-            if (isOmitPrefix && (tablePrefix ?? "").Length > 0) name = name.Replace(tablePrefix, "");
+            if (isOmitPrefix && (tablePrefix ?? "").Length > 0) name = Regex.Replace(name, tablePrefix, "");
             if (isCamelCaseName) name = name.CamelCaseName();
             return name;
         }

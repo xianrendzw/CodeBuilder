@@ -4,6 +4,11 @@
 		#set($keyColumn = $column)
 	#end
 #end
+#if($keyColumn != null)
+	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
+		#set($keyColumn = $column)
+	#end
+#end
 
 import java.util.Date;
 import java.util.HashMap;

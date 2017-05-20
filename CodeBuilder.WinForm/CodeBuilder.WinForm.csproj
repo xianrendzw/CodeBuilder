@@ -243,7 +243,10 @@
     <None Include="Templates\java\NVelocity\mybatis-controller.nv" />
     <None Include="Templates\java\NVelocity\mybatis-service-impl.nv" />
     <None Include="Templates\java\NVelocity\mybatis-service.nv" />
-    <None Include="Templates\mybatisMapper\NVelocity\mybatis-mapper.nv" />
+    <None Include="Templates\mybatisMapper\NVelocity\mybatis-sharding-mapper.nv" />
+    <None Include="Templates\mybatisMapper\NVelocity\mybatis-mapper.nv">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\cb.bmp" />

@@ -8,6 +8,9 @@
     <template name="mybatis-mapper.xml.nv" displayName="mybatis-mapper"
       language="MyBatisMapper" engine="NVelocity" fileName="mybatisMapper\NVelocity\mybatis-mapper.nv"
       prefix="" suffix="Mapper" url="" desc="" category="" version="" />
+    <template name="mybatis-sharding-mapper.xml.nv" displayName="mybatis-sharding-mapper"
+      language="MyBatisMapper" engine="NVelocity" fileName="mybatisMapper\NVelocity\mybatis-sharding-mapper.nv"
+      prefix="" suffix="Mapper" url="" desc="" category="" version="" />
     <template name="mybatis-example.java.nv" displayName="mybatis-example"
       language="JAVA" engine="NVelocity" fileName="java\NVelocity\mybatis-example.nv"
       prefix="" suffix="Example" url="" desc="" category="" version="" />

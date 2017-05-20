@@ -51,7 +51,6 @@
             </foreach>
         </where>
     </sql>
-  <sql id="Table_Name">${tdo.ModelObject.OriginalName}</sql>
 	<sql id="Base_Column_List_Without_Id">
   	#set($index = 1)
   	#set($count = $tdo.ModelObject.Columns.Values.Count)
@@ -116,7 +115,7 @@
         <selectKey resultType="${keyColumn.LanguageTypeAlias}" keyProperty="${keyColumn.OriginalName}" order="AFTER">
             SELECT LAST_INSERT_ID()
         </selectKey>
-        insert into <include refid="Table_Name"/>
+        insert into ${shardTable.name}
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <include refid="Insert_Columns"/>
         </trim>
@@ -125,7 +124,7 @@
         </trim>
     </insert>
     <insert id="batchInsert" parameterType="java.util.Map">
-        insert into <include refid="Table_Name"/>
+        insert into ${shardTable.name}
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <include refid="Base_Column_List_Without_Id"/>
         </trim>
@@ -139,16 +138,16 @@
 	<!-- end insert -->
     <!-- delete -->
     <delete id="deleteById" parameterType="java.util.Map">
-        delete from <include refid="Table_Name"/> where ${keyColumn.OriginalName} = #{id,jdbcType=${keyColumn.LanguageType}}
+        delete from ${shardTable.name} where ${keyColumn.OriginalName} = #{id,jdbcType=${keyColumn.LanguageType}}
     </delete>
     <delete id="deleteByExample" parameterType="java.util.Map">
-        delete from <include refid="Table_Name"/>
+        delete from ${shardTable.name}
         <if test="example != null">
             <include refid="Example_Where_Clause"/>
         </if>
     </delete>
     <delete id="deleteIn" parameterType="java.util.Map">
-        delete from <include refid="Table_Name"/> where ${keyColumn.OriginalName} in
+        delete from ${shardTable.name} where ${keyColumn.OriginalName} in
         <foreach collection="list" item="record" index="index" open="(" separator="," close=")">
           #{record.id,jdbcType=${keyColumn.LanguageType}}
         </foreach>
@@ -156,14 +155,14 @@
     <!-- end delete -->
     <!-- update -->
 	<update id="updateById" parameterType="java.util.Map">
-        update <include refid="Table_Name"/>
+        update ${shardTable.name}
         <set>
             <include refid="Update_Set_From_Bean"/>
         </set>
         where ${keyColumn.OriginalName} = #{id,jdbcType=${keyColumn.LanguageType}}
     </update>
     <update id="updateByExample" parameterType="java.util.Map">
-        update <include refid="Table_Name"/>
+        update ${shardTable.name}
         <set>
             <include refid="Update_Set_From_Map"/>
         </set>
@@ -173,7 +172,7 @@
     </update>
     <update id="batchUpdate" parameterType="java.util.Map">
         <foreach collection="list" item="record" index="index" open="" close="" separator=";">
-            update <include refid="Table_Name"/>
+            update ${shardTable.name}
             <set>
             	<include refid="BatchUpdate_Set_From_Bean"/>
             </set>
@@ -185,7 +184,7 @@
     <select id="selectById" resultMap="${tdo.Name}Map" parameterType="java.util.Map">
         select
         <include refid="Base_Column_List"/>
-        from <include refid="Table_Name"/>
+        from ${shardTable.name}
         where ${keyColumn.OriginalName} = #{id,jdbcType=${keyColumn.LanguageType}}
     </select>
     <select id="selectByExample" resultMap="${tdo.Name}Map" parameterType="java.util.Map">
@@ -194,7 +193,7 @@
         distinct
       </if>
       <include refid="Base_Column_List"/>
-      from <include refid="Table_Name"/>
+      from ${shardTable.name}
       <if test="example != null">
         <include refid="Example_Where_Clause"/>
       </if>
@@ -205,7 +204,7 @@
     <select id="selectOneByExample" resultMap="${tdo.Name}Map" parameterType="java.util.Map">
         select
         <include refid="Base_Column_List"/>
-        from <include refid="Table_Name"/>
+        from ${shardTable.name}
 		<if test="example != null">
             <include refid="Example_Where_Clause"/>
         </if>
@@ -214,20 +213,20 @@
     <select id="selectIn" resultMap="${tdo.Name}Map" parameterType="java.util.Map">
         select
         <include refid="Base_Column_List"/>
-        from <include refid="Table_Name"/>
+        from ${shardTable.name}
         where ${keyColumn.OriginalName} IN
         <foreach collection="list" item="record" index="index" open="(" separator="," close=")">
           #{record.id,jdbcType=${keyColumn.LanguageType}}
         </foreach>
     </select>
     <select id="countByExample" resultType="java.lang.Integer" parameterType="java.util.Map">
-        select count(*) as total from <include refid="Table_Name"/>
+        select count(*) as total from ${shardTable.name}
        <if test="example != null">
             <include refid="Example_Where_Clause"/>
         </if>
     </select>
     <select id="countByPager" resultType="java.lang.Integer" parameterType="java.util.Map">
-        select count(*) as total from <include refid="Table_Name"/>
+        select count(*) as total from ${shardTable.name}
 		<if test="example != null">
             <include refid="Example_Where_Clause"/>
         </if>
@@ -235,7 +234,7 @@
     <select id="selectByPager" resultMap="${tdo.Name}Map" parameterType="java.util.Map">
         select
         <include refid="Base_Column_List"/>
-        from <include refid="Table_Name"/>
+        from ${shardTable.name}
         <if test="example != null">
             <include refid="Example_Where_Clause"/>
         </if>

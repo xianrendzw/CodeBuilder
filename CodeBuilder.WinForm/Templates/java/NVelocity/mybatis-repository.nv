@@ -10,6 +10,11 @@ import org.springframework.stereotype.Repository;
 		#set($keyColumn = $column)
 	#end
 #end
+#if($keyColumn != null)
+	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
+		#set($keyColumn = $column)
+	#end
+#end
 /**
  * $tdo.ModelObject.Comment 数据访问类
  * @author $tdo.Author

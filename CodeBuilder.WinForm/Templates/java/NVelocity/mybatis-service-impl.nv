@@ -12,9 +12,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 #foreach($column in $tdo.ModelObject.Columns.Values)
 	#if($column.IsAutoIncremented) 
+		#set($keyColumn = $column)
+	#end
+#end
+#if($keyColumn != null)
+	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
 		#set($keyColumn = $column)
 	#end
 #end

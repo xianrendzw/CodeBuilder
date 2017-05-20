@@ -11,6 +11,11 @@ import ${tdo.Package}.domain.example.${tdo.Name}Example;
 		#set($keyColumn = $column)
 	#end
 #end
+#if($keyColumn != null)
+	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
+		#set($keyColumn = $column)
+	#end
+#end
 /**
  * $tdo.ModelObject.Comment 服务接口
  * @author $tdo.Author
