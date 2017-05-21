@@ -23,6 +23,7 @@ import org.springframework.stereotype.Service;
 	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
 		#set($keyColumn = $column)
 	#end
+	#set($keyColumn = $tdo.ModelObject.Columns.get_Item($keyColumn.Id))
 #end
 /**
  * $tdo.ModelObject.Comment 服务实现

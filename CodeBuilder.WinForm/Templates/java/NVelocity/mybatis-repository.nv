@@ -16,6 +16,7 @@ import org.springframework.stereotype.Repository;
 	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
 		#set($keyColumn = $column)
 	#end
+	#set($keyColumn = $tdo.ModelObject.Columns.get_Item($keyColumn.Id))
 #end
 /**
  * $tdo.ModelObject.Comment 数据访问类

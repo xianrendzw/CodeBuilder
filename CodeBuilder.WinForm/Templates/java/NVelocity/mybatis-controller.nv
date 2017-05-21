@@ -10,6 +10,7 @@
 	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
 		#set($keyColumn = $column)
 	#end
+	#set($keyColumn = $tdo.ModelObject.Columns.get_Item($keyColumn.Id))
 #end
 
 import java.util.Date;
