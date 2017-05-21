@@ -48,14 +48,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class ${tdo.Name}Controller
     extends BaseController<${tdo.Name}Service, ${tdo.Name}, ${tdo.Name}Example, ${keyColumn.LanguageType}> {
 
-	@ApiOperation(value = "修改${tdo.ModelObject.Comment}", notes = "修改${tdo.ModelObject.Comment}")
-    @OpLog(name = "新增${tdo.ModelObject.Comment}")
-    @PostMapping(value = "")
-    public ${tdo.Name} add(final ${tdo.Name} po) {
-        this.service.add(po);
-        return po;
-    }
-
     @ApiOperation(value = "分页获取${tdo.ModelObject.Comment}列表", notes = "分页获取${tdo.ModelObject.Comment}列表")
     @OpLog(name = "分页获取${tdo.ModelObject.Comment}列表")
     @GetMapping(value = "")
