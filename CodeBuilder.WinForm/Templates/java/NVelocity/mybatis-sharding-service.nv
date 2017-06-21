@@ -1,0 +1,29 @@
+﻿package ${tdo.Package}.service;
+
+import java.util.List;
+
+import com.easytoolsoft.mybatis.service.CrudService;
+import ${tdo.Package}.domain.${tdo.Name};
+import ${tdo.Package}.domain.example.${tdo.Name}Example;
+
+#set($isAutoIncremented = false)
+#foreach($column in $tdo.ModelObject.Columns.Values)
+	#if($column.IsAutoIncremented) 
+		#set($keyColumn = $column)
+		#set($isAutoIncremented = true)
+	#end
+#end
+#if(!$isAutoIncremented)
+	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
+		#set($keyColumn = $column)
+	#end
+	#set($keyColumn = $tdo.ModelObject.Columns.get_Item($keyColumn.Id))
+#end
+/**
+ * $tdo.ModelObject.Comment 服务接口
+ * @author $tdo.Author
+ * @date $tdo.Date
+ */
+public interface ${tdo.Name}Service
+    extends CrudService<${tdo.Name}, ${tdo.Name}Example, ${keyColumn.LanguageType}> {
+}

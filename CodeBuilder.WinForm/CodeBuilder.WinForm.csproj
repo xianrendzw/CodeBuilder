@@ -239,6 +239,9 @@
     </Compile>
     <None Include="Templates\java\NVelocity\lombok-pojo.nv" />
     <None Include="Templates\java\NVelocity\mybatis-example.nv" />
+    <None Include="Templates\java\NVelocity\mybatis-sharding-service.nv" />
+    <None Include="Templates\java\NVelocity\mybatis-sharding-service-impl.nv" />
+    <None Include="Templates\java\NVelocity\mybatis-sharding-repository.nv" />
     <None Include="Templates\java\NVelocity\mybatis-repository.nv" />
     <None Include="Templates\java\NVelocity\mybatis-controller.nv" />
     <None Include="Templates\java\NVelocity\mybatis-service-impl.nv" />

@@ -112,7 +112,7 @@
 	<!-- insert -->
 	<insert id="insert" parameterType="java.util.Map">
 		#if($isAutoIncremented)
-		<selectKey resultType="${keyColumn.LanguageTypeAlias}" keyProperty="${keyColumn.OriginalName}" order="AFTER">
+		<selectKey resultType="${keyColumn.LanguageTypeAlias}" keyProperty="record.${keyColumn.OriginalName}" order="AFTER">
             SELECT LAST_INSERT_ID()
         </selectKey>
 		#end

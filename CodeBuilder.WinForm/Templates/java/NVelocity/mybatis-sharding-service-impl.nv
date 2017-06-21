@@ -1,0 +1,48 @@
+﻿package ${tdo.Package}.service.impl;
+
+import java.util.List;
+
+import com.easytoolsoft.mybatis.service.AbstractCrudService;
+import ${tdo.Package}.data.${tdo.Name}Repository;
+import ${tdo.Package}.domain.${tdo.Name};
+import ${tdo.Package}.domain.example.${tdo.Name}Example;
+import ${tdo.Package}.domain.example.${tdo.Name}Example.Criteria;
+import ${tdo.Package}.service.${tdo.Name}Service;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+#set($isAutoIncremented = false)
+#foreach($column in $tdo.ModelObject.Columns.Values)
+	#if($column.IsAutoIncremented) 
+		#set($keyColumn = $column)
+		#set($isAutoIncremented = true)
+	#end
+#end
+#if(!$isAutoIncremented)
+	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
+		#set($keyColumn = $column)
+	#end
+	#set($keyColumn = $tdo.ModelObject.Columns.get_Item($keyColumn.Id))
+#end
+/**
+ * $tdo.ModelObject.Comment 服务实现
+ * @author $tdo.Author
+ * @date $tdo.Date
+ */
+@Slf4j
+@Service
+public class ${tdo.Name}ServiceImpl
+    extends AbstractCrudService<${tdo.Name}Repository, ${tdo.Name}, ${tdo.Name}Example, ${keyColumn.LanguageType}>
+    implements ${tdo.Name}Service {
+
+    @Autowired
+    private ${tdo.Name}Repository ${tdo.LowerCamelName}Repos;
+
+    @Override
+    protected ${tdo.Name}Example getPageExample(final String fieldName, final String keyword) {
+        final ${tdo.Name}Example example = new ${tdo.Name}Example();
+        example.createCriteria().andFieldLike(fieldName, keyword);
+        return example;
+    }
+}

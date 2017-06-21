@@ -44,7 +44,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date $tdo.Date
  */
 @RestController
-@RequestMapping(value = "/rest/${tdo.ModelObject.OriginalName}s")
+@RequestMapping(value = "/v1/${tdo.ModelObject.OriginalName}")
 public class ${tdo.Name}Controller
     extends BaseController<${tdo.Name}Service, ${tdo.Name}, ${tdo.Name}Example, ${keyColumn.LanguageType}> {
 

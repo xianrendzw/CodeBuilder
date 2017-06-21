@@ -1,0 +1,29 @@
+﻿package ${tdo.Package}.data;
+
+import com.easytoolsoft.mybatis.data.CrudRepository;
+import ${tdo.Package}.domain.${tdo.Name};
+import ${tdo.Package}.domain.example.${tdo.Name}Example;
+import org.springframework.stereotype.Repository;
+
+#set($isAutoIncremented = false)
+#foreach($column in $tdo.ModelObject.Columns.Values)
+	#if($column.IsAutoIncremented) 
+		#set($keyColumn = $column)
+		#set($isAutoIncremented = true)
+	#end
+#end
+#if(!$isAutoIncremented)
+	#foreach($column in $tdo.ModelObject.PrimaryKeys.Values)
+		#set($keyColumn = $column)
+	#end
+	#set($keyColumn = $tdo.ModelObject.Columns.get_Item($keyColumn.Id))
+#end
+/**
+ * $tdo.ModelObject.Comment 数据访问类
+ * @author $tdo.Author
+ * @date $tdo.Date
+ */
+@Repository
+public interface ${tdo.Name}Repository
+    extends CrudRepository<${tdo.Name}, ${tdo.Name}Example, ${keyColumn.LanguageType}> {
+}
