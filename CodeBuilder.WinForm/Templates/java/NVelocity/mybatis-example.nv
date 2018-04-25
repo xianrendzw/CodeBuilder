@@ -186,25 +186,24 @@ public class ${tdo.Name}Example {
 	#end
     #end
 	
-		
 	public Criteria andFieldIsNull(final String fieldName) {
             addCriterion(fieldName + " is null");
-            return this;
+            return (Criteria) this;
         }
 		
 	public Criteria andFieldIsNotNull(final String fieldName) {
             addCriterion(fieldName + " is not null");
-            return this;
+            return (Criteria) this;
         }
 		
 	public Criteria andFieldEqualTo(final String fieldName, final Object fieldValue) {
             addCriterion(fieldName + " = ", fieldValue, fieldName);
-            return this;
+            return (Criteria) this;
         }
 		
 	public Criteria andFieldNotEqualTo(final String fieldName, final Object fieldValue) {
             addCriterion(fieldName + " <> ", fieldValue, fieldName);
-            return this;
+            return (Criteria) this;
         }
 		
 		public Criteria andFieldIn(final String fieldName, final List<Object> values) {
@@ -213,49 +212,48 @@ public class ${tdo.Name}Example {
         }
 		
 	public Criteria andFieldNotIn(final String fieldName, final List<Object> values) {
-            addCriterion(fieldName + " not in ", fieldValue, values);
-            return this;
+            addCriterion(fieldName + " not in ", values, fieldName);
+            return (Criteria) this;
         }
 		
 	public Criteria andFieldBetween(final String fieldName, final Object fieldValue1,final Object fieldValue2) {
             addCriterion(fieldName + " between ", fieldValue1, fieldValue2, fieldName);
-            return this;
+            return (Criteria) this;
         }
 		
 	public Criteria andFieldNotBetween(final String fieldName, final Object fieldValue1,final Object fieldValue2) {
             addCriterion(fieldName + "  not between ", fieldValue1, fieldValue2, fieldName);
-            return this;
+            return (Criteria) this;
         }
 		
-	
 		public Criteria andFieldGreaterThan(final String fieldName, final Object fieldValue) {
             addCriterion(fieldName + " > ", fieldValue, fieldName);
-            return this;
+            return (Criteria) this;
         }
 
 	public Criteria andFieldGreaterThanOrEqualTo(final String fieldName, final Object fieldValue) {
             addCriterion(fieldName + " >= ", fieldValue, fieldName);
-            return this;
+            return (Criteria) this;
         }
 		
 	public Criteria andFieldLessThan(final String fieldName, final Object fieldValue) {
             addCriterion(fieldName + " < ", fieldValue, fieldName);
-            return this;
+            return (Criteria) this;
         }
 		
 		public Criteria andFieldLessThanOrEqualTo(final String fieldName, final Object fieldValue) {
             addCriterion(fieldName + " <= ", fieldValue, fieldName);
-            return this;
+            return (Criteria) this;
         }
 		
 	public Criteria andFieldLike(final String fieldName, final String fieldValue) {
             addCriterion(fieldName + " like ", fieldValue, fieldName);
-            return this;
+            return (Criteria) this;
         }
 		
 	public Criteria andFieldNotLike(final String fieldName, final String fieldValue) {
             addCriterion(fieldName + "  not like ", fieldValue, fieldName);
-            return this;
+            return (Criteria) this;
         }
     }
 
