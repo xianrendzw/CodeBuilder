@@ -171,26 +171,6 @@ public class ${tdo.Name}Example {
             addCriterion("${column.OriginalName} <=", value, "${column.LowerCamelName}");
             return (Criteria)this;
         }
-	
-		public Criteria andFieldGreaterThan(final String fieldName, final String fieldValue) {
-            addCriterion(fieldName + " > ", fieldValue, fieldName);
-            return this;
-        }
-
-	public Criteria andFieldGreaterThanOrEqualTo(final String fieldName, final String fieldValue) {
-            addCriterion(fieldName + " >= ", fieldValue, fieldName);
-            return this;
-        }
-		
-	public Criteria andFieldLessThan(final String fieldName, final String fieldValue) {
-            addCriterion(fieldName + " < ", fieldValue, fieldName);
-            return this;
-        }
-		
-		public Criteria andFieldLessThanOrEqualTo(final String fieldName, final String fieldValue) {
-            addCriterion(fieldName + " <= ", fieldValue, fieldName);
-            return this;
-        }
 	#end
 		
 	#if(${column.LanguageType} == "String")
@@ -244,6 +224,27 @@ public class ${tdo.Name}Example {
 		
 	public Criteria andFieldNotBetween(final String fieldName, final Object fieldValue1,final Object fieldValue2) {
             addCriterion(fieldName + "  not between ", fieldValue1, fieldValue2, fieldName);
+            return this;
+        }
+		
+	
+		public Criteria andFieldGreaterThan(final String fieldName, final Object fieldValue) {
+            addCriterion(fieldName + " > ", fieldValue, fieldName);
+            return this;
+        }
+
+	public Criteria andFieldGreaterThanOrEqualTo(final String fieldName, final Object fieldValue) {
+            addCriterion(fieldName + " >= ", fieldValue, fieldName);
+            return this;
+        }
+		
+	public Criteria andFieldLessThan(final String fieldName, final Object fieldValue) {
+            addCriterion(fieldName + " < ", fieldValue, fieldName);
+            return this;
+        }
+		
+		public Criteria andFieldLessThanOrEqualTo(final String fieldName, final Object fieldValue) {
+            addCriterion(fieldName + " <= ", fieldValue, fieldName);
             return this;
         }
 		
