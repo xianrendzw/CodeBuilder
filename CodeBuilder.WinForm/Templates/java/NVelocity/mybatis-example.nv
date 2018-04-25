@@ -185,7 +185,6 @@ public class ${tdo.Name}Example {
         }
 	#end
     #end
-	
 	public Criteria andFieldIsNull(final String fieldName) {
             addCriterion(fieldName + " is null");
             return (Criteria) this;
@@ -208,7 +207,7 @@ public class ${tdo.Name}Example {
 		
 		public Criteria andFieldIn(final String fieldName, final List<Object> values) {
             addCriterion(fieldName + " in ", values, fieldName);
-            return this;
+           return (Criteria) this;
         }
 		
 	public Criteria andFieldNotIn(final String fieldName, final List<Object> values) {
